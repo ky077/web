@@ -1,0 +1,153 @@
+.test-score{ 
+	width:100%;
+	height:888px;
+	background-image:url(../images/radar4-bg.png);
+	background-repeat:no-repeat;
+	background-size:auto 100%;
+	background-position:center center;
+	position:relative;
+	.test-score__overall{ 
+		 width:24%;
+		 height:16%;
+		 position:absolute;
+		 top:0;
+		 left:50%;
+		 margin-left:-12%;
+		 border:2px solid #643f33;
+		 background-color:#FFF;
+		 border-radius:20px;
+		 color:#643f33;
+		 text-align:center;
+		 padding:0px 5px 10px 5px;
+		 margin-top:25px;
+		.test-score__overall-title{
+			background-color:#efefef;
+			border:2px solid #643f33;
+			border-radius:20px;
+			font-size:1.4em;
+			line-height:1.8em;
+			white-space:nowrap;
+			font-weight: bold;
+			padding:0 20px;
+			display:inline-block;
+			margin-top:-25px;
+			margin-bottom:5px;
+		}
+		.test-score__overall-score{
+			font-size:1.1em;
+			line-height:1.9em;
+			> big{ 
+				display:inline-block;
+				width:2.5em;
+				overflow:hidden;
+				font-size:2em;
+				vertical-align: text-bottom;
+			}
+		}
+	}
+	.test-score__item{
+		position:absolute;
+		width:25%;
+		background-color:#FFF;
+		text-align:center;
+		box-shadow:1px 1px 5px rgba(0,0,0,.1), -1px -1px 5px rgba(0,0,0,.1), -1px 1px 5px rgba(0,0,0,.1),1px -1px 5px rgba(0,0,0,.1);
+		padding:2px;
+		.test-score__item-chartLabel{
+			color:#FFF;
+			font-size:1.6em;
+			line-height:1em;
+			position:absolute;
+			width:4em;
+		}
+		.test-score__item-block{
+			border:2px solid;
+			border-radius:8px;
+			h4{
+				font-size:1.1em;
+				line-height:1em;
+				color:#FFF;
+				border-radius:6px;
+				padding:8px 0 10px 0;
+				margin-top:-2px;
+				width:calc(100% + 4px);
+				margin-left:-2px;
+				font-weight: bold;
+				border:2px solid;
+			}
+			p{ 
+				font-size:0.8em;
+				line-height:1.2em;
+				text-align:left;
+				padding:2px 8px;
+				font-weight:normal;
+				height:1.2em*4;
+				overflow:hidden;
+				margin-bottom:2px;
+			}
+		}
+	}
+	.test-score__item.green{ top:18%; right:3%;
+		.test-score__item-chartLabel{ bottom:-30%; left:-55%; transform:rotate(45deg);}
+		.test-score__item-block{
+			border-color:#00a73c;
+			h4{ background-color:#00a73c; border-color:#00a73c; }
+			.test-score__item-block__scoreTitle{ 
+				@include scoreTitle-bolck($WandH:48px, $margin:4px 0px, $color-bg:#58b431, $color-border:#00a73c);
+				&:nth-child(5){ margin-left:4px;}
+			}
+			.test-score__item-block__score{
+				@include score-bolck($WandH:48px, $margin:4px 0px, $color-border:#00a73c);
+			}
+		}
+	}
+	.test-score__item.blue{ top:79%; right:3%;
+		.test-score__item-chartLabel{ top:-30%; left:-55%; transform:rotate(-45deg);}
+		.test-score__item-block{
+			border-color:#0068b7;
+			h4{ background-color:#00a0e9; border-color:#0068b7; }
+			.test-score__item-block__scoreTitle{ 
+				@include scoreTitle-bolck($WandH:48px, $margin:4px 0px, $color-bg:#00a0e9, $color-border:#0068b7);
+				&:nth-child(5){ margin-left:4px;}
+			}
+			.test-score__item-block__score{
+				@include score-bolck($WandH:48px, $margin:4px 0px, $color-border:#0068b7);
+			}
+		}
+	}
+	.test-score__item.orange{ top:79%; left:3%;
+		.test-score__item-chartLabel{ top:-30%; right:-55%; transform:rotate(45deg); }
+		.test-score__item-block{
+			border-color:#c76c17;
+			h4{ background-color:#eb6112; border-color:#c76c17; }
+			.test-score__item-block__scoreTitle{ 
+				@include scoreTitle-bolck($WandH:48px, $margin:4px 0px, $color-bg:#ee7300, $color-border:#c76c17);
+				&:nth-child(5){ margin-left:4px;}
+			}
+			.test-score__item-block__score{
+				@include score-bolck($WandH:48px, $margin:4px 0px, $color-border:#c76c17);
+			}
+		}
+	}
+	.test-score__item.purple{ top:18%; left:3%;
+		.test-score__item-chartLabel{ bottom:-30%; right:-55%; transform:rotate(-45deg); }
+		.test-score__item-block{
+			border-color:#92308d;
+			h4{ background-color:#ab66a7; border-color:#92308d; }
+			.test-score__item-block__scoreTitle{ 
+				@include scoreTitle-bolck($WandH:48px, $margin:4px 0px, $color-bg:#ab66a7, $color-border:#92308d);
+				&:nth-child(5){ margin-left:4px;}
+			}
+			.test-score__item-block__score{
+				@include score-bolck($WandH:48px, $margin:4px 0px, $color-border:#92308d);
+			}
+		}
+	}
+	/**/
+	.test-score__radarGraph{ 
+		position:absolute;
+		width:100%;
+		top:42.0%;
+		padding:0 17.5%;
+		transform:rotate(45deg);
+	}
+}
