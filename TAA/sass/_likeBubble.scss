@@ -1,0 +1,153 @@
+.result-description{
+	.result-description__graph{
+		width:100%;
+		height:740px;
+		margin-bottom:10px;
+		background-image:url(../images/likeBubble-bg.png);
+		background-repeat:no-repeat;
+		background-size:100% auto;
+		background-position:center top;
+		position:relative;
+		.result-description__graph-x{
+			position:absolute;
+			width:14%;
+			right:0;
+			top:54%;
+			margin-top:-0.8em;
+			text-align:left;
+			h4{
+				font-size:1.6em;
+				line-height:1em;
+				font-weight: bold;
+				color:#1f654c;
+				margin-bottom:8px;
+			}
+			.result-description__graph-x__scoreTitle{
+				@include scoreTitle-bolck($WandH:48px, $margin:2px 0, $color-bg:#00a73c, $color-border:#008742);
+			}
+			.result-description__graph-x__score{
+				@include score-bolck($WandH:48px, $margin:2px 0, $color-border:#008742);
+			}
+		}
+		.result-description__graph-y{ 
+			position:absolute;
+			width:24%;
+			left:50%;
+			top:1%;
+			margin-left:-12%;
+			text-align:center;
+			h4{
+				font-size:1.6em;
+				line-height:1em;
+				font-weight: bold;
+				color:#643f33;
+				margin-bottom:8px;
+			}
+			.result-description__graph-y__scoreTitle{
+				@include scoreTitle-bolck($WandH:48px, $margin:2px 0, $color-bg:#f39a00, $color-border:#c76c17);
+			}
+			.result-description__graph-y__score{
+				@include score-bolck($WandH:48px, $margin:2px 0, $color-border:#c76c17);
+			}
+		}
+		.result-description__graph-panel{ 
+			position:absolute;
+			width:66%;
+			height:75%;
+			top:16.8%;
+			left:17%;
+			.result-description__graph-panel__value{ 
+				position:absolute;
+				display:block;
+				width:100px;
+				height:calc(64px + 4px + 1em);
+				padding-top:64px + 4px;
+				background-image:url(../images/position-person.png);
+				background-repeat:no-repeat;
+				background-position:center top;
+				background-size:40px 64px;
+				white-space:nowrap; 
+				overflow:hidden;
+				margin-bottom:calc(-1em - 4px);
+				margin-left:-50px;
+				text-align:center;
+				&.HH{ left:79%; top:3%;}
+				&.HL{ left:79%; top:57%;}
+				&.LH{ left:23%; top:57%;}
+				&.LL{ left:23%; top:3%;}
+			}
+		}
+	}
+	.result-description__text{
+		background-color:#FFF;
+		text-align:center;
+		box-shadow:1px 1px 5px rgba(0,0,0,.1), -1px -1px 5px rgba(0,0,0,.1), -1px 1px 5px rgba(0,0,0,.1),1px -1px 5px rgba(0,0,0,.1);
+		padding:2px;
+		.result-description__text-block{
+			border:1px solid #898989;
+			border-radius:6px;
+			h4{
+				border:1px solid #898989;
+				font-size:1.26em;
+				line-height:1em;
+				font-weight: bold;
+				padding:6px 0;
+				background-color:#e6e6e6;
+				border-radius:6px;
+				margin:-1px -1px 0 -1px;
+			}
+			p{
+				text-align:left;
+				font-size:1em;
+				line-height:1.5;
+				font-weight:normal;
+				margin-bottom:10px;
+				padding-left:10px;
+				padding-right:10px;
+			}
+		}
+	}
+	.result-description__text.teacherType{
+		margin-bottom:20px;
+		.result-description__text-block{
+			height:calc(1.4em*6 + 10px);
+			overflow:hidden;
+			h4{color:#643f33;}
+		}
+	}
+	.result-description__text.SandS{
+		margin-bottom:15px;
+		.result-description__text-block{
+			height:calc(1.4em*10 + 10px + 10px);
+			overflow:hidden;
+			h4{color:#1f654c;}
+		}
+	}
+	
+	//202503 added
+	&.explain{
+		margin-left: 1.25em*-1;
+		.result-description__graph{  
+			height: 435px;
+			background-image: url("../images/likeBubble-bg-explain.png");
+			margin-bottom: 0;
+			.result-description__graph-x{
+				top:52.5%;
+			}
+			.result-description__graph-panel{ 
+				height:auto;
+				top:12.6%;
+			}
+			.result-description__explain-table{ 
+				td{  
+					height: 175px;
+					padding: 5px 20px;
+				}
+				.explain-TL{ color: darken(#f3f8ec, 60%); }
+				.explain-TR{ color: darken(#dff2fc, 60%); }
+				.explain-BL{ color: darken(#fdedeb, 60%); }
+				.explain-BR{ color: darken(#fef2cf, 60%); }
+			}
+		}
+	}
+}
