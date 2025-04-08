@@ -182,7 +182,7 @@ padding:0 17.7%;*/ top: 36.7%; padding: 0 23.6% 0 23.9%; transform: rotate(36deg
 .result-description .result-description__text.SandS .result-description__text-block h4 { color: #1f654c; }
 .result-description.explain { margin-left: -1.25em; }
 .result-description.explain .result-description__graph { height: 435px; background-image: url("../images/likeBubble-bg-explain.png"); margin-bottom: 0; }
-.result-description.explain .result-description__graph .result-description__graph-x { top: 50%; }
+.result-description.explain .result-description__graph .result-description__graph-x { top: 52.5%; }
 .result-description.explain .result-description__graph .result-description__graph-panel { height: auto; top: 12.6%; }
 .result-description.explain .result-description__graph .result-description__explain-table td { height: 175px; padding: 5px 20px; }
 .result-description.explain .result-description__graph .result-description__explain-table .explain-TL { color: #608230; }

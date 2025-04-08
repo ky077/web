@@ -1,0 +1,337 @@
+@charset "UTF-8";
+@import "reset";
+@import "master";
+@import "print";
+$report-path:"PST";
+/* ******* ******* ******* ******* ******* ******* ******* */
+.report-wrapper{
+	@include report-wrapper-Styles($bg-color:#f2f0e8, $get-path:$report-path, $title-color:#009944);
+	
+	.report-section{
+		border:1px solid #fff;
+		.report-section_title{
+			display:block;
+			background-image:url(../images/#{$report-path}/section-title.png);
+			background-repeat:repeat-x;
+			background-size:100% 100%;
+		}
+	}
+}
+//202503 added
+.text-section{
+	.text-title{
+		color: #1f654c;
+		&::before{
+			background: linear-gradient(to bottom right, rgba(#00a73c,1) 0%, rgba(#9ac717,1) 50%, rgba(#1f654c,1) 50%, rgba(#009944,1) 100%); 
+		}
+	}
+}
+/* ******* ******* ******* ******* ******* ******* ******* */
+.table-primary{
+	@extend %table-space;
+	thead{
+		tr th{
+			>span{
+				background-color:#1f654c;
+				color:#FFF;
+				padding:6px;
+				font-size:0.9em;
+				@extend %span-border;
+			}
+		}
+	}
+	tbody{
+		tr th{
+			>span{
+				background-color:#ddd8c3;
+				color:#4f4c3f;
+				padding:25px 0;
+				font-size:1.1em;
+				font-weight: bold;
+				@extend %span-border;
+			}
+		}
+		tr td{
+			font-size:0.9em;
+			color:#595757;
+			line-height:1.4em;
+			padding:6px 8px;
+			vertical-align:middle;
+		}
+	}
+}
+/*PAGE1*/
+.table-personalityType{
+	tbody{
+		tr td{ 
+			position:relative;
+			.table-personalityType__canvas{ 
+				position:absolute;
+				top: 0;
+				left: 50%;
+				width:120%;
+				transform: translateX(-50%) scale(.95);
+			}
+		}
+		tr th{
+			.table-personalityType__title{
+				@extend %span-border;
+				background-color:#d6eace;
+				color:#377e39;
+				font-weight: bold;
+				font-size:1.5em;
+				padding:10px 0;
+				margin:10px;
+				position:relative;
+				z-index:1;
+			}
+			.table-personalityType__text{
+				@extend %span-border;
+				background-color:#d6eace;
+				text-align:left;
+				font-size:.9em;
+				line-height:1.6em;
+				font-weight:normal;
+				padding:4px 15px;
+				margin:10px;
+				min-height:calc(1.6em*9 + 8px);
+				max-height:calc(1.6em*9 + 8px);
+				overflow:hidden;
+				position:relative;
+				z-index:1;
+				margin-bottom: 0;
+			}
+		}
+	}
+}
+.table-personalityTypeScore{
+	thead{
+		tr th{
+			text-align:center;
+			font-size: .9em;
+			font-weight: bold;
+			background-repeat:no-repeat;
+			background-position:center center;
+			background-size:auto 100%;
+			padding-bottom:20px;
+			&:nth-child(1){background-image:url(../images/PST/table-personalityType-1.png); color:#00a73c;}
+			&:nth-child(2){background-image:url(../images/PST/table-personalityType-2.png); color:#0068b7;}
+			&:nth-child(3){background-image:url(../images/PST/table-personalityType-3.png); color:#92308d;}
+			&:nth-child(4){background-image:url(../images/PST/table-personalityType-4.png); color:#a8005d;}
+			&:nth-child(5){background-image:url(../images/PST/table-personalityType-5.png); color:#c76c17;}
+		}
+	}
+	tbody{
+		tr td{
+			text-align:center;
+			vertical-align:top;
+			h4{
+				font-size: .9em;
+				font-weight:normal;
+				margin-top:4px;
+				> small{
+					display:block;
+					font-size:0.9em;
+					margin-top: 2px;
+					margin-bottom: 2px;
+					font-weight:bold;
+				}
+			}
+			p{
+				font-size:0.8em;
+				text-align:left;
+				padding:0 4px;
+				margin-bottom:2px;
+			}
+			&:nth-child(1){
+				h4 > small{color:#00a73c;}
+				.table-personalityTypeScore__scoreTitle{
+					@include scoreTitle-bolck($WandH:44px, $margin:1px, $color-bg:#58b431, $color-border:#00a73c);
+				}
+				.table-personalityTypeScore__score{
+					@include score-bolck($WandH:44px, $margin:1px, $color-border:#00a73c);
+				}
+			}
+			&:nth-child(2){
+				h4 > small{color:#0068b7;}
+				.table-personalityTypeScore__scoreTitle{
+					@include scoreTitle-bolck($WandH:44px, $margin:1px, $color-bg:#00a0e9, $color-border:#0068b7);
+				}
+				.table-personalityTypeScore__score{
+					@include score-bolck($WandH:44px, $margin:1px, $color-border:#0068b7);
+				}
+			}
+			&:nth-child(3){
+				h4 > small{color:#92308d;}
+				.table-personalityTypeScore__scoreTitle{
+					@include scoreTitle-bolck($WandH:44px, $margin:1px, $color-bg:#ab66a7, $color-border:#92308d);
+				}
+				.table-personalityTypeScore__score{
+					@include score-bolck($WandH:44px, $margin:1px, $color-border:#92308d);
+				}
+			}
+			&:nth-child(4){
+				h4 > small{color:#e50063;}
+				.table-personalityTypeScore__scoreTitle{
+					@include scoreTitle-bolck($WandH:44px, $margin:1px, $color-bg:#eb6b8d, $color-border:#e50061);
+				}
+				.table-personalityTypeScore__score{
+					@include score-bolck($WandH:44px, $margin:1px, $color-border:#e50061);
+				}
+			}
+			&:nth-child(5){
+				h4 > small{color:#f39800;}
+				.table-personalityTypeScore__scoreTitle{
+					@include scoreTitle-bolck($WandH:44px, $margin:1px, $color-bg:#ee7300, $color-border:#c76c17);
+				}
+				.table-personalityTypeScore__score{
+					@include score-bolck($WandH:44px, $margin:1px, $color-border:#c76c17);
+				}
+			}
+		}
+	}
+}
+/*PAGE2*/
+.table-valueType{
+	width:calc(100% + 5px + 5px);
+	margin-left:-5px;
+	margin-right:-5px;
+	.table-valueType__bar{ 
+		display:inline-block;
+		position:relative;
+		height: 12px;
+		border-radius:10px;
+		background-size:100% 100%;
+		> label{ 
+			position:absolute;
+			width:3em;
+			top:-2px;
+			text-align:center;
+		}
+	}
+	
+	thead{
+		tr{
+			th, td{
+				font-size:1.25em;
+				line-height:1em;
+				text-align:center;
+				padding: 2px 0;
+				font-weight: bold;
+			}
+			td:nth-child(1){ color:#004896; }
+			th:nth-child(2){ color:#643f33; border-left: 1px dashed #231815; border-right: 1px dashed #231815; }
+			td:nth-child(3){ color:#007851; }
+		}
+	}
+	tbody{
+		tr{
+			th, td{
+				line-height:1em;
+				padding:8px 0;
+			}
+			td:nth-child(1){ }
+			td:nth-child(2){ 
+				font-size:0.85em; 
+				color:#231815; 
+				text-align:right; 
+				padding-left:2px;
+				padding-right:2px;
+				.table-valueType__bar{ 
+					background-color:#00a9eb; 
+					border:1px solid #0068b7; 
+					background-image:url(../images/bar-blue.png);
+					>label{
+						left:-3em;
+					}
+				}
+			}
+			th:nth-child(3){ font-size:1em; color:#643f33;text-align:center;border-left: 1px dashed #231815;border-right: 1px dashed #231815; }
+			td:nth-child(4){ 
+				font-size:0.85em; 
+				color:#231815; 
+				text-align:left;
+				padding-left:2px;
+				padding-right:2px; 
+				.table-valueType__bar{ 
+					background-color:#9ac717; 
+					border:1px solid #00a73c; 
+					background-image:url(../images/bar-green.png);
+					>label{
+						right:-3em;
+					}
+				}
+			}
+			td:nth-child(5){ }
+		}
+		tr:nth-child(odd) {
+			th, td{ 
+				background-color:#f3f2ea;
+			}
+		}
+	}
+}
+
+.table-degreefit{
+	background-image:url(../images/#{$report-path}/table-degreefit-bg.png);
+	background-repeat:no-repeat;
+	background-position:center bottom;
+	background-size:100% 100%;
+	border-top:1px solid #231815;
+	border-bottom:1px solid #231815;
+	tbody{
+		tr th{
+			vertical-align:top;
+			.table-degreefit__score{ 
+				display:block;
+				font-size:1.4em;
+				line-height:1.4em;
+				color:#FFF;
+				padding: 0.15em 0;
+				text-align:center;
+			}
+		}
+		tr td{ 
+			vertical-align:top;
+			font-size: .95em;
+			line-height:1.4em;
+			padding-left:10px;
+			padding-right:10px;
+			overflow:hidden;
+		}
+	}
+}
+.report-mark{
+	padding-top:5px;
+	padding-bottom:5px;
+	padding-left: calc(58px + 1em + 10px);
+    text-indent: calc(-58px - 1em);
+	padding-right: 10px;
+	font-size: 0.8em;
+	margin-bottom: -5px;
+}
+.table-dimensionalDescription{
+	font-size: .9em;
+	th, td{
+		padding: 2px 6px;
+	}
+	tbody{
+		tr{
+			th{
+				>span{
+					padding: 12px 0;
+					font-size: 1.1em;
+				}
+			}
+			td{
+				border-bottom: 1px dashed #231815;
+			}
+		}
+		tr:last-child{
+			td{
+				border-bottom: none;
+			}
+		}
+	}
+}
+

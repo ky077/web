@@ -1,0 +1,23 @@
+@charset "UTF-8";
+@import "reset";
+@import "master";
+@import "print";
+$report-path:"SJTT-special";
+/* ******* ******* ******* ******* ******* ******* ******* */
+.report-wrapper{
+	@include report-wrapper-Styles($bg-color:#ebeef7, $get-path:$report-path, $title-color:#3d5ca4);
+	
+	&.page4{
+		.report-section {
+			@media print {
+			margin-top: 20px;
+			margin-bottom: 40px;
+			}
+		}
+	}
+}
+/* ******* ******* ******* ******* ******* ******* ******* */
+/*PAGE1*/
+@import "radar5";
+/*PAGE2*/
+@import "likeBubble";
