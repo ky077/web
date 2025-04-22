@@ -3431,7 +3431,7 @@ p { font-size: .95rem; line-height: 2; color: #343a40; }
 .issue .issue-item h4, .issue .issue-item .h4 { font-size: 1rem; padding-left: .75rem; }
 .issue .issue-item .item-imgLink { position: relative; display: block; overflow: hidden; }
 .issue .issue-item .item-imgLink:hover::before { content: ""; display: block; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(0, 0, 0, 0.5); z-index: 2; }
-.issue .issue-item .item-imgLink:hover::after { content: "Know More"; display: inline-block; padding: 0.25rem 0.75rem; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: #91252a; background-image: url("../images/banner-bg.png"); background-size: 100% 100%; color: #fff; font-family: 'Helvetica', 'Helvetica Narrow'; font-stretch: condensed; font-weight: bold; z-index: 3; }
+.issue .issue-item .item-imgLink:hover::after { content: "Know More"; display: inline-block; padding: 0.25rem 0.75rem; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: #91252a; color: #fff; font-family: 'Helvetica', 'Helvetica Narrow'; font-stretch: condensed; font-weight: bold; z-index: 3; }
 .issue .issue-item .item-list { padding: 0; margin: 0; padding-left: .75rem; }
 .issue .issue-item .item-list li { list-style-type: none; color: #91252a; font-size: .9rem; margin-bottom: .5rem; width: 100%; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .issue .issue-item .item-list li::before { content: "\F285"; font-family: "bootstrap-icons"; font-size: .75em; margin-right: .5em; }
