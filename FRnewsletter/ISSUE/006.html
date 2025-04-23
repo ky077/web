@@ -1,0 +1,42 @@
+<!doctype html>
+<html class="h-100">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Issue 6 | NTNU Featured Research Newsletter</title>
+<link rel="shortcut icon" type="image/x-icon" href="../Content/images/favicon.ico">
+<link rel="stylesheet" type="text/css" href="../Content/css/styles.css">
+</head>
+
+<body class="py-3 bg-gray-500">
+<!-- ------- ------- ------- ------- ------- ------- ------- -->
+<main>
+  <div class="tool">
+    <div class="container">
+      <a target="_blank" class="btn btn-primary" href="../index.html">Newsletter Archive</a> <a target="_blank" class="btn btn-primary" href="../Content/images/006/NTNU_Featured_Research_Newsletter_ISSUE6.pdf">Download PDF</a>
+    </div>
+  </div>
+  <div class="pdf-content">
+    <div class="container py-3">
+        <div id="pdf-container">
+            <!--<canvas></canvas>-->
+        </div>
+    </div>
+  </div>
+</main>
+<!-- ------- ------- ------- ------- ------- ------- ------- --> 
+<!-- ------- ------- ------- ------- ------- ------- ------- --> 
+<!-- ------- ------- ------- ------- ------- ------- ------- --> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> 
+<script src="../Content/js/bootstrap.bundle.min.js"></script> 
+<script src="../Content/widgets/pdfjs-4.2.67-dist/build/pdf.mjs" type="module">//pdf.js</script> 
+<script src="../Content/js/showPdf.js">//pdf.js</script> 
+<script>
+$(document).ready(function() {
+    //show pdf (pdf.js)
+    var url = '../Content/images/006/NTNU_Featured_Research_Newsletter_ISSUE6.pdf';
+    showPdf(url);
+});  
+</script>
+</body>
+</html>
