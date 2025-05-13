@@ -1,0 +1,405 @@
+.page-banner.about{
+    background-image: url("../images/about/banner-bg.jpeg");
+    position: relative;
+    &:after{
+        content: "";
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top:0;
+        left: 0;
+        right: 0;
+        bottom: 0; 
+        background-color: rgba(0,0,0, .1);
+    }
+    > [class*="container"]{ 
+        .page-banner__text{
+            h2{
+                text-align: center;
+                color: #FFF;
+                font-style: italic;
+                text-shadow: 5px 5px 10px rgba(0,0,0, .75);
+                position: relative;
+                z-index: 10;
+            } 
+        }
+    }  
+}
+
+.about-workshop{ 
+	.flex-center{
+		display: block;
+		@media screen and (min-width: 576px) {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+	}
+    .btn-workshop{
+        color: #fff;
+        font-weight: 500;
+        font-size: 1.25rem;
+        border-radius: 50rem;
+        background-image: url(../images/bg-parallel.png);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        border: 0;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        text-shadow: 0 0 3px rgba(0,0,0, .25);
+        > i {
+            animation: btnToLeft 1s infinite alternate ease-in;
+            position: relative;
+        }
+        &:hover{
+            transform: scale(1.1);
+            transition: transform .3s ease-out;
+            > i {
+                animation: none;
+            } 
+        }
+    }
+    .btn-exp{
+        color: #fff;
+        font-weight: 500;
+        font-size: 1.25rem;
+        border-radius: 50rem;
+        background-image: url(../images/bg-parallel.png);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        border: 0;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        text-shadow: 0 0 3px rgba(0,0,0, .25);
+        > i {
+            animation: btnToTop 1s infinite alternate ease-in;
+            position: relative;
+        } 
+        &:hover{
+            transform: scale(1.1);
+            transition: transform .3s ease-out;
+            > i {
+                animation: none;
+            } 
+        }
+    }
+}
+@keyframes btnToLeft {
+from {
+    left: 0;
+}
+to {
+	left: .5em;
+}
+}
+@keyframes btnToTop {
+from {
+    transform: scale(1);
+   
+}
+to {
+    transform: scale(.8);
+}
+}
+
+.about-section1{
+   background-color: #FFF;
+    padding-top: 2rem;
+    .carousel{
+        .carousel-indicators{ 
+            position: relative;
+            width: 100%;
+            bottom: 0;
+            left: 0;
+            z-index: 15;
+            padding-left: 0;
+            margin-left: 0;
+            text-align: center;
+            list-style: none;
+            li{ 
+                width: 50%;
+                height: 0;
+                padding-bottom: 20%;
+                margin: 0;
+                background-color: transparent;
+                display: block;
+                float: left;
+                text-indent: 0;
+                cursor: pointer;
+                border: none;
+                border-radius: 0;
+                position: relative;
+                @media screen and (min-width: 768px) {
+                width: 20%; 
+                padding-bottom: 15%;    
+                }
+                &::before{ 
+                    content: "";
+                    display: block;
+                    width: 28%;
+                    height: 100%;
+                    position: absolute;
+                    top:0;
+                    left: 0;
+                    bottom: 0;
+                    background-repeat: no-repeat;
+                    background-size: 100% 100%;
+                }
+                >span{ 
+                    position: absolute;
+                    width: 89%; 
+                    height: 58%;
+                    bottom: 10%;
+                    left: 11%;
+                    display: flex;
+                    align-items: center; 
+                    justify-content: center;
+                    text-align: center;
+                    >img{
+                        max-width: 100%;
+                        max-height: 100%;
+                    }
+                }
+                &.eM{ 
+                    &::before{
+                       background-image: url("../images/about/indicators-l.svg"); 
+                    }
+                    >span{
+                       >img{
+                            width: 94%;
+                            height: auto;
+                            margin-left: 5%;
+                       }
+                    }
+                }
+                &.SP{  
+                    &::before{
+                        background-image: url("../images/about/indicators-s.svg");
+                    }
+                    >span{
+                        >img{
+                            width: auto;
+                            height: 100%;    
+                        }
+                    }
+                }
+                &.SRM{ 
+                    &::before{
+                        background-image: url("../images/about/indicators-r.svg");
+                    }
+                    >span{
+                       >img{
+                            width: auto;
+                            height: 100%; 
+                            @media screen and (min-width: 768px) {
+                            width: 90%;
+                            height: auto;    
+                            }    
+                       }
+                    }
+                }
+                &.SWM{ 
+                    &::before{
+                        background-image: url("../images/about/indicators-w.svg");
+                    }
+                    >span{
+                        >img{
+                            width: auto;
+                            height: 100%;
+                        } 
+                    }
+                }
+                &.CCS{ 
+                    &::before{
+                        background-image: url("../images/about/indicators-f.svg");
+                    }
+                    >span{
+                        >img{
+                            width: auto;
+                            height: 100%;
+                        } 
+                    }
+                }
+            }
+            li:hover {
+                transform:scale(1.1);
+            }
+        }
+        .carousel-inner{
+            @media screen and (min-width: 992px) {
+            padding-left: calc(8.33333333% + 15px);  
+            padding-right:calc(8.33333333% + 15px);
+            }
+            .item {
+                @media screen and (min-width: 1200px) {
+                min-height: 19rem;    
+                }
+                h3{
+                    font-size: 2.1rem;
+                    text-align: center;
+                    margin-top: 2rem;
+                    margin-bottom: 1rem;
+                    >small{
+                        display: block;
+                        margin-top: .5rem;
+                        font-size: 1.5rem;
+                    }
+                }
+                p{
+                    font-size: 1.1rem;
+                    margin-bottom: 1.5rem;
+                    
+                }
+                &.eM{ h3, h3>small{ color: $color-l;}}
+                &.SP{ h3, h3>small{ color: $color-s;}}
+                &.SRM{h3, h3>small{ color: $color-r;}}
+                &.SWM{h3, h3>small{ color: $color-w;}}
+                &.CCS{h3, h3>small{ color: $color-f;}}
+                
+                .btn-about-yt{
+                    font-size: 1rem;
+                    font-weight: 500;
+                    border-radius: 50rem;
+                    animation: btnWave 3s infinite alternate;
+                    text-shadow: 0 0 3px rgba(0,0,0, .25);
+                    &:hover{
+                        animation: none;
+                        transform: scale(1.1);
+                        transition: transform .3s ease-out;
+                    }
+                }
+            }
+        }
+        .carousel-control{  
+            display: none;
+            @media screen and (min-width: 992px) {
+            display: block;   
+            }
+            background-image: none;
+            width:50px;
+            height: 50px;
+            top: 15rem;
+            @media screen and (min-width: 1200px) {
+            top: 20rem;    
+            }
+            .glyphicon{
+                width: 50px;
+                height: 50px;
+                line-height: 50px;
+                background-color: #ccc;
+                border-radius: 100%; 
+                margin: 0;
+                top:0;
+                left: 0;
+                position: relative;
+            }
+        }
+    }
+}
+@keyframes btnWave {
+0% {   transform: scale(1.0); }
+33% {  transform: scale(1.0); }
+66% {  transform: scale(1.0); } 
+82.5%{ transform: scale(1.05);}
+99% {  transform: scale(1.0); }     
+100% { transform: scale(1.0); }    
+}
+
+.about-section2{
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    h3{
+        margin-top: 0;
+        margin-bottom: 0;
+        background-image: url("../images/bg-parallel.png");
+        background-size: 100% 100%;
+        color: #FFF;
+        border-radius: 100px;
+        text-align: center;
+        font-size: 2rem;
+        padding: .5rem 0 .75rem 0;
+        >small{
+            color: #FFF;
+            font-size: 1.5rem;
+            margin-top: .5rem;
+            @media screen and (min-width: 768px) {
+            display: block;   
+            }
+        }
+    }
+    h4{
+        text-align: center;
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+        padding-bottom: .5rem;
+        background-image: url("../images/bg-parallel.png");
+        background-size: 100% 100%;
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        -ms-background-clip: text;
+        -o-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        @media screen and (-ms-high-contrast: active),(-ms-high-contrast: none){/*for ie10 、 ie11*/
+        background-image: none;
+        color: $color-main-blue;
+        }
+    }
+    p{
+        margin-bottom: 3rem;
+        font-size: 1.1rem;
+    }
+    .section2-img{ 
+        @media screen and (min-width: 992px) {
+        background-image: url("../images/about/img-line.svg");
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        }
+        .section2-img__block{ 
+            width: 100%;
+            img{
+                margin-top: 30px;
+            }
+            h4{ 
+                text-align:  center;
+                margin-top:0px;
+                margin-bottom: 30px;
+                color: #5b5b5d;
+                font-size: 1rem;
+            }
+            @media screen and (min-width: 992px) {
+            width: calc(100% + 15px + 15px); 
+            margin-left: -15px;
+            margin-right: -15px; 
+            /*set img*/
+            &.l{
+                img{margin-top: 30px;}
+                h4{margin-bottom: 30px;}
+            }    
+            &.s{ 
+                img{margin-top: 40px;}
+                h4{margin-bottom: 20px;}
+            }
+            &.r{
+                img{margin-top: 30px;}
+                h4{margin-bottom: 30px;}
+            }
+            &.w{ 
+                img{margin-top: 40px;}
+                h4{margin-bottom: 20px;}
+            }    
+            /*set height position*/    
+            &.l{}    
+            &.s{ margin-top: calc(30px + 52.5% + 20px*1.1 + 30px);}
+            &.r{}
+            &.w{ margin-top: calc(30px + 52.5% + 20px*1.1 + 30px);}    
+            /*set width position*/  
+            &.l{ margin-left: calc((25%/3*12)*0.10);}    
+            &.s{ margin-left: calc((25%/3*12)*0.0);}
+            &.r{ margin-left: calc((-25%/3*12)*0.135);}
+            &.w{ margin-left: calc((-25%/3*12)*0.25);}    
+            }
+        }   
+    }
+}

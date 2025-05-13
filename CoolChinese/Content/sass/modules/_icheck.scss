@@ -1,0 +1,152 @@
+/* for font-size:16px*/
+
+/*bootstrap*/
+.form-horizontal .radio, 
+.form-horizontal .checkbox, 
+.form-horizontal .radio-inline, 
+.form-horizontal .checkbox-inline{
+	padding-top: 0px;
+}
+.checkbox, .checkbox-inline{ 
+	label{
+		font-size:0.8em;
+		font-weight:300 !important;
+	}
+}
+
+/*icheck-bootstrap-master*/
+ [class*="icheck-"] {
+    min-height: 16px;
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+    padding-left: 0px;
+	line-height:16px;
+}
+
+.icheck-inline {
+    display: inline-block;
+}
+.icheck-inline + .icheck-inline {
+	margin-left: .75rem;
+	margin-top: 6px;
+}
+
+[class*="icheck-"] > label {
+    padding-left: 25px !important;
+    min-height: 16px;
+    line-height: 16px;
+    display: inline-block;
+    position: relative;
+    vertical-align: top;
+    margin-bottom: 0;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+[class*="icheck-"] > input:first-child {
+    position: absolute !important;
+    opacity: 0;
+    margin: 0;
+}
+
+    [class*="icheck-"] > input:first-child:disabled {
+        cursor: default;
+    }
+
+    [class*="icheck-"] > input:first-child + label::before,
+    [class*="icheck-"] > input:first-child + input[type="hidden"] + label::before {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        border: 1px solid #ccc;
+        border-radius: 0px;
+        margin-left: -25px;
+    }
+
+    [class*="icheck-"] > input:first-child:checked + label::after,
+    [class*="icheck-"] > input:first-child:checked + input[type="hidden"] + label::after {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        top: -5px;
+		left: -2px;
+        width: 7px;
+        height: 14px;
+        border: solid 2px #FFF;
+        border-left: none;
+        border-top: none;
+        transform: translate(7.75px, 4.5px) rotate(45deg);
+        -ms-transform: translate(7.75px, 4.5px) rotate(45deg);
+    }
+
+[class*="icheck-"] > input[type="radio"]:first-child + label::before,
+[class*="icheck-"] > input[type="radio"]:first-child + input[type="hidden"] + label::before {
+    border-radius: 50%;
+}
+
+[class*="icheck-"] > input:first-child:not(:checked):not(:disabled):hover + label::before,
+[class*="icheck-"] > input:first-child:not(:checked):not(:disabled):hover + input[type="hidden"] + label::before {
+    border-width: 2px;
+}
+
+[class*="icheck-"] > input:first-child:disabled + label,
+[class*="icheck-"] > input:first-child:disabled + input[type="hidden"] + label,
+[class*="icheck-"] > input:first-child:disabled + label::before,
+[class*="icheck-"] > input:first-child:disabled + input[type="hidden"] + label::before {
+    pointer-events: none;
+    cursor: default;
+    filter: alpha(opacity=65);
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    opacity: .65;
+}
+
+
+
+
+
+.icheck-main-blue{
+	@include icheck-color($color-main-blue);	
+}
+.icheck-main-sky{
+	@include icheck-color($color-main-sky);	
+}
+.icheck-main-green{
+	@include icheck-color($color-main-green);	
+}
+.icheck-main-yellow{
+	@include icheck-color(darken($color-main-yellow, 5%));	
+}
+.icheck-main-purple{
+	@include icheck-color(darken($color-main-purple, 5%));	
+}
+.icheck-main-orange{
+	@include icheck-color($color-main-orange);	
+}
+.icheck-main-skin{
+	@include icheck-color(darken($color-main-skin, 5%));	
+}
+
+.icheck-main-blue-white{
+	@include icheck-color-white($color-main-blue);	
+}
+.icheck-main-sky-white{
+	@include icheck-color-white($color-main-sky);	
+}
+.icheck-main-green-white{
+	@include icheck-color-white($color-main-green);	
+}
+.icheck-main-yellow-white{
+	@include icheck-color-white(darken($color-main-yellow, 5%));	
+}
+.icheck-main-purple-white{
+	@include icheck-color-white(darken($color-main-purple, 5%));	
+}
+.icheck-main-orange-white{
+	@include icheck-color-white($color-main-orange);	
+}
+.icheck-main-skin-white{
+	@include icheck-color-white(darken($color-main-skin, 5%));	
+}

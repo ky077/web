@@ -1,0 +1,8 @@
+.progress-bar-blue{ background-color: $color-main-blue;} 
+.progress-bar-sky{ background-color: $color-main-sky; } 
+.progress-bar-green{ background-color: $color-main-green; } 
+.progress-bar-yellow{ background-color: darken($color-main-yellow, 5%); } 
+.progress-bar-purple{ background-color: darken($color-main-purple, 5%); } 
+.progress-bar-orange{ background-color: $color-main-orange; } 
+.progress-bar-skin{ background-color: darken($color-main-skin, 5%); }   
+.progress-bar-gray{ background-color: lighten($color-default-gray, 20%); }  

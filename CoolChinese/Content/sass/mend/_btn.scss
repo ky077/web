@@ -1,0 +1,141 @@
+.btn {
+	font-size:.8rem;
+	font-weight:300;
+}
+.btn-xs{
+	font-size:.75rem;
+}
+.btn-lg{
+	font-size:.9rem;
+}
+.btn{
+	text-decoration:none !important;
+}
+
+.btn-main-blue {
+  @include button-variant(#FFF, $color-main-blue, $color-main-blue);
+}
+.btn-main-blue-white {
+  @include button-variant($color-main-blue, #fff, $color-main-blue);
+}
+.btn-main-blue-lighten {
+	@include button-variant($color-main-blue, lighten($color-main-blue, 45%), lighten($color-main-blue, 45%));
+}
+
+.btn-main-sky {
+  @include button-variant(#FFF, $color-main-sky, $color-main-sky);
+}
+.btn-main-sky-white {
+  @include button-variant($color-main-sky, #fff, $color-main-sky);
+}
+.btn-main-sky-lighten {
+	@include button-variant($color-main-sky, lighten($color-main-sky, 45%), lighten($color-main-sky, 45%));
+}
+
+.btn-main-green {
+  @include button-variant(#FFF, $color-main-green, $color-main-green);
+}
+.btn-main-green-white {
+  @include button-variant($color-main-green, #fff, $color-main-green);
+}
+.btn-main-green-lighten {
+	@include button-variant($color-main-green, lighten($color-main-green, 45%), lighten($color-main-green, 45%));
+}
+
+.btn-main-yellow {
+  @include button-variant(#FFF, darken($color-main-yellow, 5%), darken($color-main-yellow, 5%));
+}
+.btn-main-yellow-white {
+  @include button-variant(darken($color-main-yellow, 5%), #fff, darken($color-main-yellow, 5%));
+}
+.btn-main-yellow-lighten {
+	@include button-variant(darken($color-main-yellow, 15%), lighten($color-main-yellow, 35%), lighten($color-main-yellow, 35%));
+}
+
+.btn-main-purple {
+  @include button-variant(#FFF, darken($color-main-purple, 5%), darken($color-main-purple, 5%));
+}
+.btn-main-purple-white {
+  @include button-variant(darken($color-main-purple, 5%), #fff, darken($color-main-purple, 5%));
+}
+.btn-main-purple-lighten {
+	@include button-variant(darken($color-main-purple, 10%), lighten($color-main-purple, 25%), lighten($color-main-purple, 25%));
+}
+
+.btn-main-orange {
+  @include button-variant(#FFF, $color-main-orange, $color-main-orange);
+}
+.btn-main-orange-white {
+  @include button-variant($color-main-orange, #fff, $color-main-orange);
+}
+.btn-main-orange-lighten {
+	@include button-variant($color-main-orange, lighten($color-main-orange, 40%), lighten($color-main-orange, 40%));
+}
+
+.btn-main-skin {
+  @include button-variant(#FFF, darken($color-main-skin, 5%), darken($color-main-skin, 5%));
+}
+.btn-main-skin-white {
+  @include button-variant(darken($color-main-skin, 5%), #fff, darken($color-main-skin, 5%));
+}
+.btn-main-skin-lighten {
+	@include button-variant(darken($color-main-skin, 15%), lighten($color-main-skin, 20%), lighten($color-main-skin, 20%));
+}
+
+.btn-default-gray {
+  @include button-variant(#FFF, lighten($color-default-gray, 20%), lighten($color-default-gray, 20%));
+}
+.btn-default-gray-white {
+  @include button-variant(lighten($color-default-gray, 20%), #fff, lighten($color-default-gray, 20%));
+}
+
+
+/*COOL Chinese*/
+.btn-l {
+  @include button-variant(#FFF, $color-l, $color-l);
+}
+.btn-t {
+  @include button-variant(#FFF, $color-t, $color-t);
+}
+.btn-s {
+  @include button-variant(#FFF, $color-s, $color-s);
+}
+.btn-r {
+  @include button-variant(#FFF, $color-r, $color-r);
+}
+.btn-w {
+  @include button-variant(#FFF, $color-w, $color-w);
+}
+.btn-f {
+  @include button-variant(#FFF, $color-f, $color-f);
+}
+.btn-eM {
+  @include button-variant(#FFF, $color-eM, $color-eM);
+}
+.btn-ST {
+  @include button-variant(#FFF, $color-ST, $color-ST);
+}
+.btn-SP {
+  @include button-variant(#FFF, $color-SP, $color-SP);
+}
+.btn-SZ {
+  @include button-variant(#FFF, $color-SZ, $color-SZ);
+}
+.btn-SRM {
+  @include button-variant(#FFF, $color-SRM, $color-SRM);
+}
+.btn-SWM {
+  @include button-variant(#FFF, $color-SWM, $color-SWM);
+}
+.btn-CCS {
+  @include button-variant(#FFF, $color-CCS, $color-CCS);
+}
+
+.input-group{
+	.form-control{}
+	.input-group-btn{
+		.btn{
+			padding:5px 12px;
+		}
+	}
+}

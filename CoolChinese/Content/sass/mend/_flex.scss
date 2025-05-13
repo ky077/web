@@ -1,0 +1,45 @@
+@mixin flex-center{
+	display: flex;
+	align-items: center; 
+	justify-content: center;
+}
+.flex-center{
+	display: flex;
+	align-items: center; 
+	justify-content: center;
+}
+%flex-center{
+	display: flex;
+	align-items: center; 
+	justify-content: center;
+}
+
+
+.flex-center-sm{
+	@media screen and (min-width: 768px) {
+	display: flex;
+	align-items: center; 
+	justify-content: center;
+	}
+}
+.flex-center-md{
+	@media screen and (min-width: 992px) {
+	display: flex;
+	align-items: center; 
+	justify-content: center;
+	}
+}
+.flex-center-lg{
+	@media screen and (min-width: 1200px) {
+	display: flex;
+	align-items: center; 
+	justify-content: center;
+	}
+}
+.flex-center-xl{
+	@media screen and (min-width: 1600px) {
+	display: flex;
+	align-items: center; 
+	justify-content: center;
+	}
+}

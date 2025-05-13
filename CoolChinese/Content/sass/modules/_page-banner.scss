@@ -1,0 +1,70 @@
+.page-banner{
+	background-color: $color-main-blue;
+	background-repeat:no-repeat;
+	background-size:cover;
+	background-position:center center;
+	> [class*="container"]{ 
+		position:relative;
+		.page-banner__text{
+			color:#FFF;
+			min-height:12rem;
+			text-align:center;
+			display: table;
+			width:100%;
+			> div{ 
+				display: table-cell;
+				vertical-align:middle;
+			}
+			h2{
+				font-size:2rem;
+				font-weight:700;
+				text-align:left;
+			}
+			p {
+				text-align:left;
+                font-size:1.2rem;
+			}
+		}
+	}
+	&.chineseSeries{
+		background-image:url("../images/chineseSeries/chineseSeries-bg.jpg");
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+	&.customized{
+		background-image:url("../images/customized/customized-bg.jpg");
+		background-repeat: no-repeat;
+		background-size: cover;
+		> [class*="container"]{
+			h2{
+				color: $color-default-black;
+			}
+            p{
+                color: $color-default-gray;
+            }
+		}
+	}
+	&.classMgt{
+		background-image:url("../images/classMgt/classMgt-bg.jpg");
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+	&.learning{
+		background-image:url("../images/classMgt/classMgt-bg.jpg");
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+	&.score{
+		background-image:url("../images/classMgt/classMgt-bg.jpg");
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+	/*&.forPaperUP{
+		> [class*="container"]{
+			h2{
+				margin-top:-95px;
+			}
+		}
+	}*/
+}
+
