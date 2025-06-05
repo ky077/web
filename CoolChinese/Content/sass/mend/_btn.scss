@@ -94,9 +94,6 @@
 .btn-l {
   @include button-variant(#FFF, $color-l, $color-l);
 }
-.btn-t {
-  @include button-variant(#FFF, $color-t, $color-t);
-}
 .btn-s {
   @include button-variant(#FFF, $color-s, $color-s);
 }
@@ -109,11 +106,11 @@
 .btn-f {
   @include button-variant(#FFF, $color-f, $color-f);
 }
+.btn-t {
+  @include button-variant(#FFF, $color-t, $color-t);
+}
 .btn-eM {
   @include button-variant(#FFF, $color-eM, $color-eM);
-}
-.btn-ST {
-  @include button-variant(#FFF, $color-ST, $color-ST);
 }
 .btn-SP {
   @include button-variant(#FFF, $color-SP, $color-SP);
@@ -129,6 +126,9 @@
 }
 .btn-CCS {
   @include button-variant(#FFF, $color-CCS, $color-CCS);
+}
+.btn-STM {
+  @include button-variant(#FFF, $color-STM, $color-STM);
 }
 
 .input-group{

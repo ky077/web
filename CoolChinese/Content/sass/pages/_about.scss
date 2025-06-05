@@ -54,7 +54,7 @@
         }
         &:hover{
             transform: scale(1.1);
-            transition: transform .3s ease-out;
+            transition: transform .35s ease-out;
             > i {
                 animation: none;
             } 
@@ -78,7 +78,7 @@
         } 
         &:hover{
             transform: scale(1.1);
-            transition: transform .3s ease-out;
+            transition: transform .35s ease-out;
             > i {
                 animation: none;
             } 
@@ -108,6 +108,8 @@ to {
     padding-top: 2rem;
     .carousel{
         .carousel-indicators{ 
+			display: flex;
+			flex-wrap: wrap;
             position: relative;
             width: 100%;
             bottom: 0;
@@ -117,113 +119,90 @@ to {
             margin-left: 0;
             text-align: center;
             list-style: none;
-            li{ 
-                width: 50%;
-                height: 0;
-                padding-bottom: 20%;
-                margin: 0;
-                background-color: transparent;
-                display: block;
-                float: left;
-                text-indent: 0;
-                cursor: pointer;
-                border: none;
-                border-radius: 0;
-                position: relative;
-                @media screen and (min-width: 768px) {
-                width: 20%; 
-                padding-bottom: 15%;    
+            li{  
+				display: inline-block;
+				width: 50%;
+				height: auto;
+				margin: 0;
+				text-indent: 0;
+				cursor: pointer;
+				background-color: transparent;
+				border: none;
+				border-radius: 0;
+				flex: 1 1 50%;
+				position: relative;
+				overflow: visible;
+				opacity: .75;
+				transition: transform .35s ease-in;
+				@media screen and (min-width: 768px) {
+				width: 33.333333%; 	
+				flex:  1 1 33.333333%; 	
                 }
-                &::before{ 
+				@media screen and (min-width: 1200px) {
+				width: auto; 		
+                flex: 1 1 auto;   
+                }
+				&::before{ 
                     content: "";
                     display: block;
                     width: 28%;
-                    height: 100%;
-                    position: absolute;
-                    top:0;
-                    left: 0;
-                    bottom: 0;
-                    background-repeat: no-repeat;
-                    background-size: 100% 100%;
+					height: 0;
+					padding-bottom: 28% * (50/22);
+					background-repeat: no-repeat;
+					background-size: 100% 100%;
                 }
-                >span{ 
-                    position: absolute;
-                    width: 89%; 
-                    height: 58%;
-                    bottom: 10%;
-                    left: 11%;
-                    display: flex;
-                    align-items: center; 
-                    justify-content: center;
-                    text-align: center;
-                    >img{
-                        max-width: 100%;
+				>span{ 
+					 position: absolute;
+					 width: 85%;
+					 height: 70%;
+					 top: 50%;
+					 transform: translateY(-40%);
+					 right: 5%;
+					 display: flex;
+					 justify-content: center;
+					 align-items: center;
+                    >img{ 
+                    	max-width: 100%;
                         max-height: 100%;
                     }
                 }
-                &.eM{ 
+
+				&.eM{ 
                     &::before{
                        background-image: url("../images/about/indicators-l.svg"); 
                     }
-                    >span{
-                       >img{
-                            width: 94%;
-                            height: auto;
-                            margin-left: 5%;
-                       }
-                    }
                 }
+				&.STM{  
+                    &::before{
+                        background-image: url("../images/about/indicators-s2.svg");
+                    }
+               }
                 &.SP{  
                     &::before{
                         background-image: url("../images/about/indicators-s.svg");
-                    }
-                    >span{
-                        >img{
-                            width: auto;
-                            height: 100%;    
-                        }
                     }
                 }
                 &.SRM{ 
                     &::before{
                         background-image: url("../images/about/indicators-r.svg");
                     }
-                    >span{
-                       >img{
-                            width: auto;
-                            height: 100%; 
-                            @media screen and (min-width: 768px) {
-                            width: 90%;
-                            height: auto;    
-                            }    
-                       }
-                    }
-                }
+               }
                 &.SWM{ 
                     &::before{
                         background-image: url("../images/about/indicators-w.svg");
-                    }
-                    >span{
-                        >img{
-                            width: auto;
-                            height: 100%;
-                        } 
                     }
                 }
                 &.CCS{ 
                     &::before{
                         background-image: url("../images/about/indicators-f.svg");
                     }
-                    >span{
-                        >img{
-                            width: auto;
-                            height: 100%;
-                        } 
-                    }
                 }
+
             }
-            li:hover {
-                transform:scale(1.1);
+            li:hover, li.hover,
+			li:active, li.active,{
+                transform: scale(1.15);
+				opacity: 1.0;
             }
         }
         .carousel-inner{
@@ -252,6 +231,7 @@ to {
                     
                 }
                 &.eM{ h3, h3>small{ color: $color-l;}}
+				&.STM{h3, h3>small{ color: $color-t;}}
                 &.SP{ h3, h3>small{ color: $color-s;}}
                 &.SRM{h3, h3>small{ color: $color-r;}}
                 &.SWM{h3, h3>small{ color: $color-w;}}
@@ -266,7 +246,7 @@ to {
                     &:hover{
                         animation: none;
                         transform: scale(1.1);
-                        transition: transform .3s ease-out;
+                        transition: transform .35s ease-out;
                     }
                 }
             }
