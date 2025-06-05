@@ -255,17 +255,23 @@
                 margin-top: -.25rem;
             }
         }
-        li:nth-child(1) a{
+        li:nth-child(1) a, li[alt="eM"] a{
             &:hover, &:focus, &:active{ color: $color-l; }
         }
-        li:nth-child(2) a{
+        li:nth-child(2) a, li[alt="STM"] a{
+            &:hover, &:focus, &:active{ color: $color-t; }
+        }
+        li:nth-child(3) a, li[alt="SP"] a{
             &:hover, &:focus, &:active{ color: $color-s; }
         }
-        li:nth-child(3) a{
+        li:nth-child(4) a, li[alt="SRM"] a{
             &:hover, &:focus, &:active{ color: $color-r; }
         }
-        li:nth-child(4) a{
+		li:nth-child(5) a, li[alt="SWM"] a{
             &:hover, &:focus, &:active{ color: $color-w; }
+        }
+        li:nth-child(6) a, li[alt="CCS"] a{
+            &:hover, &:focus, &:active{ color: $color-f; }
         }
     }
 }
