@@ -1,8 +1,11 @@
 .page-banner.product.STM{
     img{
-       margin-top: 1rem;
-       filter:drop-shadow(5px 5px 10px rgba(255,255,255, .5));
-       max-height: 120px;
+		margin-top: 1rem;
+		filter:drop-shadow(5px 5px 10px rgba(255,255,255, .5));
+		max-height: 160px;
+		@media screen and (min-width: 992px) {
+        margin-top: 0;  
+        }
     }
     h2{ 
         margin-top: 1rem;
@@ -18,10 +21,15 @@
         }
     }
     .btn{
-        display: inline-block;
+		float: none !important;
         margin-top: .5rem;
-        margin-bottom: 1rem;
+        margin-bottom: .5rem;
         font-weight: 500;
+        @media screen and (min-width: 992px) {
+        float: right !important;  
+        margin-top: -.25rem;
+        margin-bottom: 0rem;    
+        }
     }
 }
 .STM-why{

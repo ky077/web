@@ -2293,12 +2293,14 @@ i.fas.fa-film::after { content: ""; display: block; width: 1em; height: .77em; b
 .eM-trial .trial__effect:hover img { transform: scale(1.1); filter: brightness(1.1); }
 .eM-trial .trial__effect:hover .trial__btn { background-color: #719816; border-color: #6a8f15; }
 
-.page-banner.product.STM img { margin-top: 1rem; filter: drop-shadow(5px 5px 10px rgba(255, 255, 255, 0.5)); max-height: 120px; }
+.page-banner.product.STM img { margin-top: 1rem; filter: drop-shadow(5px 5px 10px rgba(255, 255, 255, 0.5)); max-height: 160px; }
+@media screen and (min-width: 992px) { .page-banner.product.STM img { margin-top: 0; } }
 .page-banner.product.STM h2 { margin-top: 1rem; text-align: center; }
 @media screen and (min-width: 992px) { .page-banner.product.STM h2 { text-align: left; } }
 .page-banner.product.STM p { text-align: center; }
 @media screen and (min-width: 992px) { .page-banner.product.STM p { text-align: left; } }
-.page-banner.product.STM .btn { display: inline-block; margin-top: .5rem; margin-bottom: 1rem; font-weight: 500; }
+.page-banner.product.STM .btn { float: none !important; margin-top: .5rem; margin-bottom: .5rem; font-weight: 500; }
+@media screen and (min-width: 992px) { .page-banner.product.STM .btn { float: right !important; margin-top: -.25rem; margin-bottom: 0rem; } }
 
 .STM-why { padding-top: 4rem; padding-bottom: 4rem; }
 .STM-why h3 { color: #314675; font-size: 2rem; font-weight: 500; }
@@ -2320,7 +2322,7 @@ i.fas.fa-film::after { content: ""; display: block; width: 1em; height: .77em; b
 .STM-trial .trial__effect.SZ { margin-left: -.4267rem; margin-right: -.4267rem; }
 .STM-trial .trial__effect:hover img { transform: scale(1.1); filter: brightness(1.1); }
 
-.page-banner.product.SP img { margin-top: 1rem; filter: drop-shadow(5px 5px 10px rgba(255, 255, 255, 0.5)); max-height: 120px; }
+.page-banner.product.SP img { margin-top: 1rem; filter: drop-shadow(5px 5px 10px rgba(255, 255, 255, 0.5)); max-height: 100px; }
 .page-banner.product.SP h2 { margin-top: 1rem; text-align: center; }
 @media screen and (min-width: 992px) { .page-banner.product.SP h2 { text-align: left; } }
 .page-banner.product.SP p { text-align: center; }
