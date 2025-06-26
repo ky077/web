@@ -1,0 +1,57 @@
+.more{ 
+	text-decoration: none;
+	position: relative;
+	margin-right: .6rem;
+	font-size: .8rem !important;
+	font-weight: 300 !important;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    line-height: 1.1;
+	&::after{
+		content: "";
+		display: inline-block;
+		border-top: 1px solid inherit;
+		border-top: 1px solid inherit;
+		width: .4rem;
+		height: .4rem;
+		transform: rotate(45deg);
+		margin-top: -.1rem;
+		vertical-align: middle;
+		position: absolute;
+		top:50%;
+		right:-.4rem;
+	}
+	&:hover, &:focus, &:active{
+		text-decoration: none;
+		box-shadow: 0 1px inherit;
+	}
+}
+.more.more-down{
+	margin-right: .8rem;
+    &::after{
+		transform: rotate(135deg);
+        margin-top: -.2rem;
+        right:-.6rem;
+    }
+}
+.more.more-up{
+	margin-right: .8rem;
+    &::after{
+		transform: rotate(-45deg);
+        margin-top: 0;
+        right:-.6rem;
+    }
+}
+.more-red{
+	color: $color-text-red;
+	&::after{
+		border-top: 1px solid $color-text-red;
+		border-right: 1px solid $color-text-red;
+	}
+	&:hover, &:focus, &:active{
+		color: $color-text-red;
+		text-decoration: none;
+		box-shadow: 0 1px $color-text-red;
+	}
+}

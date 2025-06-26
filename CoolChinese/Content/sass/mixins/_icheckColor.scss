@@ -1,0 +1,36 @@
+@mixin icheck-color($color) {
+	> input:first-child:not(:checked):not(:disabled):hover + label::before,
+	> input:first-child:not(:checked):not(:disabled):hover + input[type="hidden"] + label::before {
+    	border-color: $color;
+	}
+	> input:first-child:checked + label::before,
+	> input:first-child:checked + input[type="hidden"] + label::before {
+		background-color: $color;
+		border-color: $color;
+	}
+}
+@mixin icheck-color-white($color) {
+	> input:first-child + label::before,
+	> input:first-child + input[type="hidden"] + label::before {
+		border: 1px solid $color;
+	}
+	> input:first-child:checked + label::after,
+	> input:first-child:checked + input[type="hidden"] + label::after {
+		border: solid 2px $color;
+		border-left: none;
+		border-top: none;
+		transform: translate(7.75px, 4.5px) rotate(45deg);
+		-ms-transform: translate(7.75px, 4.5px) rotate(45deg);
+		box-shadow:2px 0px #FFF, 0px -2px #FFF;
+	}
+	> input:first-child:not(:checked):not(:disabled):hover + label::before,
+	> input:first-child:not(:checked):not(:disabled):hover + input[type="hidden"] + label::before {
+		border-color: $color;
+	}
+	
+	> input:first-child:checked + label::before,
+	> input:first-child:checked + input[type="hidden"] + label::before {
+		background-color: #FFF;
+		border-color: $color;
+	}
+}

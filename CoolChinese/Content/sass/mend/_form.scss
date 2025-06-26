@@ -1,0 +1,237 @@
+label{
+	font-weight:300;
+	margin-bottom:0;
+	display:inline;
+}
+textarea{
+	resize: vertical;
+}
+.input-inline{
+	width:auto !important;
+}
+.form-disabled-noBorder{
+	&.disabled, &:disabled, &[disabled], &[disabled="disabled"]{
+		border:none;
+		padding:0;
+		background-color:transparent;
+		box-shadow:none;
+		font-size:0.8rem;
+		color:$color-default-black;
+		height: auto;
+	}
+	
+}
+.form-control{
+	font-size:0.8rem;
+}
+
+.form-style-1{
+	.form-group{
+		.control-label{ 
+			font-size:0.8rem;
+			padding-top: 0px;
+			margin-top:10px;
+		}
+		.form-control{
+			font-size:0.8rem;
+		}
+		.help-block{ 
+			font-size:0.8rem;
+			padding-top: 0px;
+			margin-top: 0px;
+			@media screen and (min-width: 768px) {
+			height:43px;	
+			display:table-cell;
+			vertical-align:middle;
+			}
+		}
+	}
+}
+.form-style-2{
+	.form-group{
+		.control-label{ 
+			font-size:0.8rem;
+			padding-top: 0px;
+			margin-top:5px;
+		}
+		.form-control{
+			font-size:0.8rem;
+			padding: 4px 12px;
+		}
+		.help-block{ 
+			font-size:0.8rem;
+			padding-top: 0px;
+			margin-top: 0px;
+			@media screen and (min-width: 768px) {
+			height:43px;	
+			display:table-cell;
+			vertical-align:middle;
+			}
+		}
+		.mark-block{
+			font-size:0.8rem;
+			color: #737373;
+		}
+	}
+}
+.has-error{
+	.control-label, 
+	.radio, 
+	.checkbox, 
+	.radio-inline, 
+	.checkbox-inline, 
+	&.radio label, 
+	&.checkbox label, 
+	&.radio-inline label, 
+	&.checkbox-inline label{
+		color: $color-default-black;
+	}
+	.form-control {
+		border-color: $color-text-red;
+		&:focus{
+			border-color: $color-text-red;
+			box-shadow: 0 0 6px lighten($color-text-red, 15%);
+		}
+	}
+	.help-block{
+		color: $color-text-red;
+	}
+}
+/*.form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control{
+	opacity: 0.65; 
+    filter: alpha(opacity=65);
+}
+textarea.form-control[disabled], textarea.form-control[readonly]{
+	background-color:#f1f1f1;
+}
+.form-horizontal .control-label{ 
+	display:inline-block;
+	margin-bottom:5px;
+}
+.input-inline{
+	display:inline-block;
+	width:auto;
+}
+.form-control:focus {
+    border-color: rgba(67,160,70,.6);
+    outline: 0;
+	box-shadow: 0 0 8px rgba(67,160,70,.6);
+}
+.SR-form-style1{ 
+	.form-group{
+		.control-label{
+			font-size:0.8em;
+			.text-red{
+				font-size: 1.5em;
+    			line-height: 0.25em;
+			}
+		}
+		.form-control{
+			border-radius:0;
+		}
+		.input-group{
+			.form-control{}
+			.input-group-addon{
+				border-radius:0;
+				a{
+					color:$default-gray;
+				}
+			}
+		}
+		.input-group.show_hide_password{
+			input[type="password"].hidePD{
+				font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;
+			}
+			input[type="password"].showPD{
+				font-family: 'Noto Sans TC', 'Microsoft JhengHei', 'PingFang TC', 'Heiti TC', 'LiHei Pro', sans-serif !important;
+			}
+		}
+		label{
+			font-size:0.8em;
+			font-weight:300;
+		}
+	}
+}
+
+.SR-form-select{
+	display:inline-block;
+	position:relative;
+	>select{
+		cursor:pointer;
+		font-size:16px;
+		padding: 0px 40px 0px 10px;
+		border-radius:0px;
+		position:relative;
+		z-index:5;
+		background-color:transparent;
+		-webkit-appearance:none; 
+		-moz-appearance:none;
+		-ms-appearance:none;
+		-o-appearance:none;
+		appearance:none;
+		&::-ms-expand{ display: none;}
+	}
+	&::before{ 
+		content:"";
+		display:block;
+		width:30px;
+		height:30px;
+		border:1px solid transparent;
+		border-left:1px solid #ccc;
+		background-color:#f1f1f1;
+		position:absolute;
+		top:0;
+		bottom:0;
+		right:0;
+	}
+	&::after{
+		content:"";
+		display:block;
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-width: 6px 5px 0 5px;
+		border-color: #ababab transparent transparent transparent;
+		position:absolute;
+		top:50%;
+		margin-top:-3px;
+		right:10px;
+	}
+}
+.SR-datepicker{
+	display:inline-block;
+	position:relative;
+	box-sizing: border-box;
+	.form-control{
+		border-radius:0;
+		height: 24px;
+		padding: 0px 34px 0px 10px;
+		font-size: 16px;
+	}
+	&::before{ 
+		content:"";
+		display:block;
+		width:22px;
+		height:22px;
+		border:1px solid transparent;
+		border-left:1px solid #ccc;
+		background-color:#f1f1f1;
+		position:absolute;
+		top:1px;
+		bottom:1px;
+		right:1px;
+	}
+	&::after{
+		content:"";
+		display:block;
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-width: 6px 5px 0 5px;
+		border-color: #434446 transparent transparent transparent;
+		position:absolute;
+		top:50%;
+		margin-top:-3px;
+		right:7px;
+	}
+}*/

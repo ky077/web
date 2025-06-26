@@ -1,0 +1,280 @@
+.page-banner.product.SWM{
+    img{
+        margin-top: .75rem;
+        filter:drop-shadow(5px 5px 10px rgba(255,255,255, .2));
+        max-height: 180px;
+        @media screen and (min-width: 992px) {
+        margin-top: 0;    
+        }
+    }
+    h2{ 
+        margin-top: .5rem;
+        text-align: center;
+        @media screen and (min-width: 992px) {
+        text-align: left;    
+        }
+    }
+    p{ 
+        text-align: center;
+        @media screen and (min-width: 992px) {
+        text-align: left;    
+        }
+    }
+    .btn{
+        float: none !important;
+        margin-top: .5rem;
+        margin-bottom: .5rem;
+        font-weight: 500;
+        @media screen and (min-width: 992px) {
+        float: right !important;  
+        margin-top: -.25rem;
+        margin-bottom: 0rem;    
+        }
+    }  
+}
+.SWM-why{
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    h3{
+        color: $color-w;
+        font-size: 2rem;
+        font-weight: 500;
+        img{
+            max-width: 100%;
+            height: 3rem;
+            display: inline-block;
+            vertical-align: bottom;
+            margin-bottom: -.25rem; 
+            margin-top: .5rem; 
+        }
+    }
+    .why__img{
+     @media screen and (min-width: 992px) {
+        max-width: 85%;
+    }    
+    }
+    .why__dialogue{
+        background-color: #FFF;
+        border:1px dashed #ccc;
+        padding: 1.5rem;
+        border-radius: 1rem;
+        margin: 1rem 0;
+        font-size: 1.1rem;
+        color: $color-default-gray;
+        @media screen and (min-width: 768px) {
+            margin-left: calc(-25% - 15px - 15px - 15px);   
+        }
+        @media screen and (min-width: 992px) {
+            margin-left: 0;
+        }
+    }
+}
+
+.SWM-about-what{
+    background-color: #FFF;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    h3{
+        background-color: $color-w;
+        color: #FFF;
+        font-size: 1.5rem;
+        font-weight: 500;
+        display: inline-block;
+        padding: .5rem 2rem;
+        border-radius: 2rem;
+    }
+    h4{
+       font-size: 1.5rem;
+        color: $color-default-gray;
+    }
+    p{
+        font-size: 1.1rem; 
+    }
+}
+.SWM-about-who{
+    padding-top: 2rem;
+    h3{
+        color:$color-w;
+        text-align: center;
+        font-size: 1.5rem;
+        font-weight: 500;
+        margin-bottom: 2rem;
+    }
+    .who__block{
+        background-color: #FFF;
+        border:1px solid #ccc;
+        padding: .5rem 1.0rem 0 1.0rem;
+        position: relative;
+        margin-bottom: .75rem;
+        &.learners{ 
+            @media screen and (min-width: 992px) {
+            &::before{
+                content: "";
+                display: block;
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 130px 20px 0 20px;
+                border-color: #ccc transparent transparent transparent;
+                position: absolute;
+                right: 10%;
+                bottom: -130px;
+                z-index: 10;
+            }
+            &::after{
+                content: "";
+                display: block;
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 130px 19px 0 19px;
+                border-color: #FFF transparent transparent transparent; 
+                position: absolute;
+                right: calc(10% + 1px);
+                bottom: -128px;
+                z-index: 10;
+            }
+            } 
+            @media screen and (min-width: 1200px) {
+            &::before{
+                content: "";
+                display: block;
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 20px 0 20px 40px;
+                border-color: transparent transparent transparent #ccc; 
+                position: absolute;
+                right: -40px;
+                top:50%;
+                z-index: 10;
+            }
+            &::after{
+                content: "";
+                display: block;
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 19px 0 19px 40px;
+                border-color: transparent transparent transparent #FFF; 
+                position: absolute;
+                right: -38px;
+                top: calc(50% + 1px);
+                z-index: 10;
+            }
+            }
+            @media screen and (min-width: 1280px) {
+            margin-top: 2rem;  
+            }
+            @media screen and (min-width: 1440px) {
+            margin-top: 4rem;  
+            }
+        }
+        &.teachers{
+            @media screen and (min-width: 992px) {
+            &::before{
+                content: "";
+                display: block;
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 20px 20px 0 20px;
+                border-color: #ccc transparent transparent transparent;
+                position: absolute;
+                left: 8%;
+                bottom: -20px;
+                z-index: 10;
+            }
+            &::after{
+                content: "";
+                display: block;
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 20px 19px 0 19px;
+                border-color: #FFF transparent transparent transparent; 
+                position: absolute;
+                left: calc(8% + 1px);
+                bottom: -18px;
+                z-index: 10;
+            }
+            }
+            @media screen and (min-width: 1200px) {
+            margin-top: -1rem;
+            &::before{
+                content: "";
+                display: block;
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 20px 40px 20px 0;
+                border-color: transparent #ccc transparent transparent;
+                position: absolute;
+                left: -40px;
+                top:40%;
+                z-index: 10;
+            }
+            &::after{
+                content: "";
+                display: block;
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 19px 40px 19px 0;
+                border-color: transparent #FFF transparent transparent;
+                position: absolute;
+                left: -38px;
+                top: calc(40% + 1px);
+                z-index: 10;
+            }
+            }
+        }
+    }
+    h4{
+        font-size: 1.4rem;
+        color:$color-default-gray;
+        font-weight: 500;
+        border-bottom: 1px dashed #ccc;
+        margin-bottom: 1rem;
+        padding-bottom: .5rem;
+    }
+    ul{
+        padding: 0;
+        margin: 0;
+        li{
+            list-style: none;
+            background-image: url("../images/products-SWM/li-dot.png");
+            background-repeat: no-repeat;
+            background-position: left top;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 1.0rem;
+            padding-left: 42px + 5px;
+            min-height: 42px;
+            
+        }
+    }
+}
+.SWM-trial{
+    margin-top: -4%;
+    position: relative;
+    z-index: 10;
+    background-color: #FFF;
+    padding-top: 4rem;
+    padding-bottom: 3rem;
+    .trial__btn{
+        border-radius: 20px;
+        margin: 1rem 0;
+        font-weight: 500;
+    }
+    .trial__effect:hover{
+        img{
+            transform:scale(1.1);
+            filter:brightness(1.1); 
+        } 
+        .trial__btn{
+            background-color: darken($color-w, 10%);
+            border-color: darken($color-w, 12%);
+        }
+    }
+}

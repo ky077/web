@@ -1,0 +1,328 @@
+.navi-main{
+	font-size:1rem;
+	background-color:#FFF;
+	margin-bottom:0;
+	padding-top:.5rem;
+	padding-bottom:.5rem;
+	border-radius:0;
+	border:none;
+	min-height:.5rem + 3.6rem + .5rem;
+    border-bottom: 1px solid #ddd;
+	.navbar-header{
+		@media screen and (min-width: 1200px) {
+		margin-right:1.5rem;
+		}
+        a:hover{
+            img{
+                -webkit-filter:brightness(1.1); 
+                -moz-filter:brightness(1.1); 
+                -ms-filter:brightness(1.1); 
+                -o-filter:brightness(1.1); 
+                filter:brightness(1.1); 
+            }   
+        }
+		.navbar-toggle[data-target="#navbar"]{
+			border-color: $color-main-blue;
+			background-color:$color-main-blue;
+			margin-top:1.2rem;
+            margin-bottom:0;
+			margin-right: 0;
+            @media screen and (min-width: 768px) {
+            margin-top:1.65rem;    
+            }
+			.icon-bar{
+				background-color:#FFF;
+			}
+		}
+		.navbar-toggle[data-target="#navbar"]:hover{
+			border-color: darken($color-main-blue, 10%);
+			background-color:darken($color-main-blue, 10%);
+			.icon-bar{
+				background-color:#FFF;
+			}
+		}
+
+		.navbar-toggle[data-target="#navbar"]:not(.collapsed){/*its means open*/
+			+ .navbar-toggle[data-target="#sidebar"] {
+				display: none; 
+			}
+		}
+		.navbar-toggle[data-target="#navbar"]:not(.collapsed){/*its means open*/
+			+ .navbar-toggle[data-target="#sidebar-right"] {
+				display: none; 
+			}
+		}
+        .navbar-toggle{
+            
+        }
+		.navbar-brand{
+			margin-left: 0px;
+			padding: 0;
+			height:3.6rem;			
+			@extend .flex-center;
+			@media screen and (max-width: 768px) {
+			max-width: calc(100% - 15px - 15px - 34px);	
+			}
+			> img{
+				width:auto;
+				height:2.5rem;
+			}
+		}
+		h1{ 
+            margin: 0;
+            line-height: 0;
+            >img{
+                max-height: 4rem;
+                margin-top: 0px;
+            }
+            
+            small{ 
+                display: none;
+                @media screen and (min-width: 768px) {
+                display: inline-block;    
+                }
+                font-size: 1vw;
+                font-weight: 700;
+                margin-top: -.5rem;
+                margin-left: 10px;
+                white-space:nowrap;
+                background-image: url("../images/bg-parallel.png");
+                background-size: 200% 100%;
+                background-position: right center;
+                padding-bottom: .25em;
+                -webkit-background-clip: text;
+                -moz-background-clip: text;
+                -ms-background-clip: text;
+                -o-background-clip: text;
+                background-clip: text;
+                color: transparent;
+                letter-spacing: .05px;
+                @media screen and (-ms-high-contrast: active),(-ms-high-contrast: none){/*for ie10 、 ie11*/
+                background-image: none;
+                color: $color-main-blue;
+                }
+                >span{
+                    color: #c0d600;
+                    text-shadow: 1px 1px $color-main-blue;
+                    margin-right:1px;
+                }
+            }
+		}
+	}
+	/*left nav*/
+	.nav.navbar-nav{
+		> li{ 
+			margin:calc(1rem - 1px) 1rem 0 1rem;
+			border-bottom:3px solid transparent;
+			/*@media screen and (min-width: 1200px) {margin:calc(1rem - 1px) .2rem 0 .2rem;}
+			@media screen and (min-width: 1260px) {margin:calc(1rem - 1px) .4rem 0 .4rem;}
+			@media screen and (min-width: 1360px) {margin:calc(1rem - 1px) 1rem 0 1rem;}*/
+			> a { 
+				color:#333;
+				padding:0.25rem 0;
+				line-height:1rem;
+				position:relative;
+				background-color:transparent;
+				&:active, &:focus, &:hover{
+					background-color:transparent;
+				}
+			}
+		}
+		> li:hover, > li:focus, > li:active{
+			> a { 
+				color: $color-main-blue;
+				background-color:transparent;
+			}
+		}
+		> li.active{ 
+			> a{
+				color: $color-main-blue;
+				font-weight:500;
+			}
+		}
+		> li.active.dropdown.open{
+			> a, > a:hover, > a:focus, > a:active{
+				background-color: transparent;
+			}
+		}
+		> li.dropdown.open{
+			> a, > a:hover, > a:focus, > a:active{
+				background-color: transparent;
+				color: $color-main-blue;
+			}
+		}
+		.dropdown-menu{ 
+			border:none;
+			border-radius:0;
+			padding:0;
+			font-size:0.85rem;
+			font-weight:300;
+			background-color:#FFF;
+			position: relative !important;
+			> li{
+				a{
+					font-weight:300;
+					color:$color-default-black;
+					padding:.4rem 1.1rem;
+					background-color: #FFF;
+					white-space: normal;
+					&:hover, &:focus, &:active{
+						color: $color-main-blue;
+						background-color:#f1f1f1;
+					}
+				}
+			}
+		}
+	}
+	@media screen and (min-width: 1200px) {
+	.nav.navbar-nav{
+		> li.dropdown:hover {
+			.dropdown-menu{
+				display: block;
+			}
+		}
+		.dropdown-menu{
+			position: absolute !important;	
+			box-shadow: none;
+			border-top:10px solid transparent;
+			> li{
+				padding-top:0.25rem;
+				padding-bottom:0.25rem;
+				a{ 
+					padding:3px 10px;	
+					text-align:center;
+                    &.lots{
+                        font-size: .78rem;
+                    } 
+				}
+			}
+			> li:first-child{ 
+				margin-top:10px;
+			}
+			> li:last-child{ 
+				margin-bottom:10px;
+			}
+		}
+        li.navTab-products{
+            .dropdown-menu{ 
+                left: -1.5rem;
+            }
+        }
+	}	
+	}
+	/*right nav*/
+	.nav.navbar-nav.navbar-right{ 
+		margin-right: 0px;
+        @media screen and (min-width: 1200px) {
+            position: absolute;
+            top: -5px; 
+            right: 15px;
+        }
+        @media screen and (min-width: 1400px) {
+            position: relative;
+            top: auto;
+            right: auto;
+        }
+		> li{
+			margin:19px 1rem 0 1rem;
+            @media screen and (min-width: 992px) {
+            margin:2rem .75rem 0 .75rem;
+            }
+            @media screen and (min-width: 1580px) {
+            margin:2rem 1rem 0 1rem;
+            }
+		}
+        > li.navi-main__login{
+            margin-top: 1.75rem;
+            @media screen and (min-width: 120px) {
+            margin-right: 0.5rem;   
+            }
+            > a{
+                color: $color-main-green !important;
+                font-weight: bold;
+                padding: .5rem 1rem;
+                border: 1px solid $color-main-green;
+                border-radius: 2rem;
+                text-align: center;
+                &:hover{
+                    background-color: rgba(#f7ed00, .2);    
+                }
+            }
+        }
+        > li.navi-main__language, > li.navi-main__language.open{
+            margin-top: 1.75rem;
+            @media screen and (min-width: 120px) {
+            margin-left: 0.5rem;
+            margin-right: 0.5rem;   
+            }
+            > a{
+                background-color: $color-main-green;
+                color: #fff;
+                font-weight: bold;
+                padding: .5rem 1.5rem .5rem 2rem;
+                border-radius: 2rem;
+                position: relative; 
+                text-align: center;
+                &:hover{
+                    color: #f7ed00;    
+                }
+                &::before{
+                    content: "\f0ac";
+                    font-family: "Font Awesome 5 Free"; 
+                    font-weight: 900; 
+                    position: absolute;
+                    top: 50%;
+                    left: .5rem;
+                    transform: translateY(-45%);
+                }
+                &::after{
+                    content: "\f0d7";
+                    font-family: "Font Awesome 5 Free"; 
+                    font-weight: 900; 
+                    position: absolute;
+                    top: 50%;
+                    right: .5rem;
+                    transform: translateY(-50%);
+                }
+               
+            }
+            > .dropdown-menu{
+                border-top: 10px solid transparent;
+                background-color: transparent;
+                min-width: 100%;
+                > li{
+                    padding: 0;
+                    margin: 0;
+                    a{ 
+                        background-color: $color-main-green;
+                        color: #fff;
+                        padding: .5rem 10px;
+                        text-align: center;
+                        &:hover{
+                            color: #f7ed00;
+                        } 
+                    }
+                }
+                > li:first-child{ 
+                    margin-top: 0px;
+                    a{
+                        padding-top: 0.75rem;
+                        border-radius: 1rem 1rem 0 0;    
+                    }
+                }
+                > li:last-child{ 
+                    margin-bottom: 0px;
+                    a{
+                        padding-bottom: 0.75rem;
+                        border-radius: 0 0 1rem 1rem;    
+                    }
+                }
+            } 
+        }
+        > li.navi-main__language:hover, > li.navi-main__language.open{
+            > a{
+                color: #f7ed00;
+            }
+        }
+	}
+}

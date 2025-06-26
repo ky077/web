@@ -1,0 +1,48 @@
+.editUnit-icon{
+	border-radius: 50%;
+	padding: 0;
+	display: inline-block;
+	width: 2rem;
+	height: 2rem;
+	text-align: center;
+	overflow: hidden;
+	vertical-align: middle;
+	> img{
+		width: 64%;
+		height: auto;
+		margin: 18% auto 0 auto;
+	}
+	&.btn-main-green {/*https://fontawesome.com/v5.15/icons/book-reader?style=solid*/	
+	}
+	&.btn-main-yellow {/*https://fontawesome.com/v5.15/icons/readme?style=brands*/
+		> img{ margin-top: 24%;}}
+	&.btn-main-purple {
+		> img{ width: 70%; margin-top: 15%; margin-left: 5%;}}
+	&.btn-main-orange {
+	}
+	&.btn-main-skin {/*https://fontawesome.com/v5.15/icons/tasks?style=solid*/	
+	}
+	
+	&.btn-main-green-white {/*https://fontawesome.com/v5.15/icons/book-reader?style=solid*/
+		>img{filter: invert(49%) sepia(13%) saturate(4917%) hue-rotate(96deg) brightness(100%) contrast(84%);}}
+	&.btn-main-yellow-white {/*https://fontawesome.com/v5.15/icons/readme?style=brands*/
+		>img{ margin-top: 24%; filter: invert(48%) sepia(100%) saturate(402%) hue-rotate(8deg) brightness(102%) contrast(106%);}}
+	&.btn-main-purple-white {
+		>img{ width: 70%; margin-top: 15%; margin-left: 5%;filter: invert(50%) sepia(50%) saturate(398%) hue-rotate(252deg) brightness(87%) contrast(95%);}}
+	&.btn-main-orange-white {
+		>img{
+			filter: invert(49%) sepia(41%) saturate(6469%) hue-rotate(3deg) brightness(93%) contrast(89%);
+		}
+	}
+	&.btn-main-skin-white {/*https://fontawesome.com/v5.15/icons/tasks?style=solid*/
+		>img{filter: invert(54%) sepia(76%) saturate(359%) hue-rotate(331deg) brightness(106%) contrast(102%);}}
+	
+	&.disabled, &[disabled], &[disabled="disabled"],
+	&.disabled:hover,  &[disabled]:hover,  &[disabled="disabled"]:hover,
+	&.disabled:focus,  &[disabled]:focus,  &[disabled="disabled"]:focus,
+	&.disabled:active, &[disabled]:active, &[disabled="disabled"]:active{
+		background-color: #ccc;
+		border-color: #ccc;	
+		>img{filter: brightness(100%);}
+	}
+}

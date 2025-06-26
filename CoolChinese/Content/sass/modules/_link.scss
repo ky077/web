@@ -1,0 +1,52 @@
+.link-border.link-main-blue{
+	@include link-border($color-main-blue);	
+}
+.link-border.link-main-sky{
+	@include link-border($color-main-sky);	
+}
+.link-border.link-main-green{
+	@include link-border($color-main-green);	
+}
+.link-border.link-main-yellow{
+	@include link-border($color-main-yellow);	
+}
+.link-border.link-main-purple{
+	@include link-border($color-main-purple);	
+}
+.link-border.link-main-orange{
+	@include link-border($color-main-orange);	
+}
+.link-border.link-main-skin{
+	@include link-border($color-main-skin);	
+}
+.link-border.link-main-red{
+	@include link-border($color-text-red);		
+}
+
+
+/**/
+
+.link-noBorder.link-main-blue{
+	@include link-noBorder($color-main-blue);	
+}
+.link-noBorder.link-main-sky{
+	@include link-noBorder($color-main-sky);	
+}
+.link-noBorder.link-main-green{
+	@include link-noBorder($color-main-green);	
+}
+.link-noBorder.link-main-yellow{
+	@include link-noBorder($color-main-yellow);	
+}
+.link-noBorder.link-main-purple{
+	@include link-noBorder($color-main-purple);	
+}
+.link-noBorder.link-main-orange{
+	@include link-noBorder($color-main-orange);	
+}
+.link-noBorder.link-main-skin{
+	@include link-noBorder($color-main-skin);	
+}
+.link-noBorder.link-main-red{
+	@include link-noBorder($color-text-red);		
+}

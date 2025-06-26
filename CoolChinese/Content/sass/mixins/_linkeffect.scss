@@ -1,0 +1,17 @@
+@mixin link-border($color) {
+	text-decoration:none;
+	color:$color;
+	&:hover, &:focus, &:active{
+		text-decoration:none;
+		box-shadow:0 1px $color;
+	}
+}
+@mixin link-noBorder($color) {
+	text-decoration:none;
+	color:$color;
+	&:hover, &:focus, &:active{
+		text-decoration:none;
+		box-shadow:none;
+		color:darken($color, 10%);
+	}
+}
