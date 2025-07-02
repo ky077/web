@@ -2167,11 +2167,11 @@ i.fas.fa-film::after { content: ""; display: block; width: 1em; height: .77em; b
 
 .about-workshop .flex-center, .about-workshop .navi-main .navbar-header .navbar-brand, .navi-main .navbar-header .about-workshop .navbar-brand, .about-workshop .footer-products .img-flex, .footer-products .about-workshop .img-flex { display: block; }
 @media screen and (min-width: 576px) { .about-workshop .flex-center, .about-workshop .navi-main .navbar-header .navbar-brand, .navi-main .navbar-header .about-workshop .navbar-brand, .about-workshop .footer-products .img-flex, .footer-products .about-workshop .img-flex { display: flex; align-items: center; justify-content: center; } }
-.about-workshop .btn-workshop { color: #fff; font-weight: 500; font-size: 1.25rem; border-radius: 50rem; background-image: url(../images/bg-parallel.png); background-repeat: no-repeat; background-size: 100% 100%; border: 0; padding-left: 2rem; padding-right: 2rem; text-shadow: 0 0 3px rgba(0, 0, 0, 0.25); }
+.about-workshop .btn-workshop { color: #fff; font-weight: 500; font-size: 1.25rem; border-radius: 50rem; background-image: url(../images/bg-parallel.png); background-repeat: no-repeat; background-size: 100% 100%; border: 0; padding-left: 2rem; padding-right: 2rem; text-shadow: 0 0 3px rgba(0, 0, 0, 0.25); white-space: normal; }
 .about-workshop .btn-workshop > i { animation: btnToLeft 1s infinite alternate ease-in; position: relative; }
 .about-workshop .btn-workshop:hover { transform: scale(1.1); transition: transform .35s ease-out; }
 .about-workshop .btn-workshop:hover > i { animation: none; }
-.about-workshop .btn-exp { color: #fff; font-weight: 500; font-size: 1.25rem; border-radius: 50rem; background-image: url(../images/bg-parallel.png); background-repeat: no-repeat; background-size: 100% 100%; border: 0; padding-left: 2rem; padding-right: 2rem; text-shadow: 0 0 3px rgba(0, 0, 0, 0.25); }
+.about-workshop .btn-exp { color: #fff; font-weight: 500; font-size: 1.25rem; border-radius: 50rem; background-image: url(../images/bg-parallel.png); background-repeat: no-repeat; background-size: 100% 100%; border: 0; padding-left: 2rem; padding-right: 2rem; text-shadow: 0 0 3px rgba(0, 0, 0, 0.25); white-space: normal; }
 .about-workshop .btn-exp > i { animation: btnToTop 1s infinite alternate ease-in; position: relative; }
 .about-workshop .btn-exp:hover { transform: scale(1.1); transition: transform .35s ease-out; }
 .about-workshop .btn-exp:hover > i { animation: none; }

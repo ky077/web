@@ -48,6 +48,7 @@
         padding-left: 2rem;
         padding-right: 2rem;
         text-shadow: 0 0 3px rgba(0,0,0, .25);
+		white-space: normal;
         > i {
             animation: btnToLeft 1s infinite alternate ease-in;
             position: relative;
@@ -72,6 +73,7 @@
         padding-left: 2rem;
         padding-right: 2rem;
         text-shadow: 0 0 3px rgba(0,0,0, .25);
+		white-space: normal;
         > i {
             animation: btnToTop 1s infinite alternate ease-in;
             position: relative;
