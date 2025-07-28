@@ -1,0 +1,31 @@
+.header{
+	.navbar-toggler{
+		filter: invert(45%) sepia(66%) saturate(4415%) hue-rotate(203deg) brightness(102%) contrast(101%);
+	}
+	.navbar-collapse{
+		@media screen and (max-width: 1199px) {
+			background-color: $white;
+			position: absolute;
+			top: 100%;
+			width: 100%;
+		}
+	}
+	.navbar-nav{
+		.nav-item{}
+		.nav-link{
+			padding-right: $navbar-nav-link-padding-x*3;
+        	padding-left: $navbar-nav-link-padding-x*3;
+			@media screen and (min-width: 1200px) {
+			color: $white;	
+			}
+			&:hover, &:active,
+			&.hover, &.active{
+				text-decoration: underline;
+			}
+		}
+	}
+	.logo{
+		width: 18rem;
+	}
+}
+
