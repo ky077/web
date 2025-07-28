@@ -1,0 +1,5 @@
+.logged-table{
+	> :not(caption) > * > * {
+		border-bottom-width: 0;
+	}
+}

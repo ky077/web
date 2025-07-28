@@ -9,21 +9,28 @@ body { background-color: transparent; }
 
 a { text-underline-offset: 5px; }
 
+.header { box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15); }
 .header .navbar-toggler { filter: invert(45%) sepia(66%) saturate(4415%) hue-rotate(203deg) brightness(102%) contrast(101%); }
 @media screen and (max-width: 1199px) { .header .navbar-collapse { background-color: #fff; position: absolute; top: 100%; width: 100%; } }
+.header .navbar-nav { align-items: center; }
 .header .navbar-nav .nav-link { padding-right: 1.5rem; padding-left: 1.5rem; }
-@media screen and (min-width: 1200px) { .header .navbar-nav .nav-link { color: #fff; } }
+@media screen and (min-width: 1200px) { .header .navbar-nav .nav-link { color: #6666ff; } }
 .header .navbar-nav .nav-link:hover, .header .navbar-nav .nav-link:active, .header .navbar-nav .nav-link.hover, .header .navbar-nav .nav-link.active { text-decoration: underline; }
-.header .logo { width: 18rem; }
+.header .logo { width: 17rem; filter: drop-shadow(0 0 10px white); }
 
-.footer { padding-top: 1rem; padding-bottom: 1rem; text-align: end; color: #fff; }
+.avater { border-radius: 100%; background-color: #2cceeb; width: calc(1em*1.5 + 0.375rem*2 + 2px); height: calc(1em*1.5 + 0.375rem*2 + 2px); background-image: url("data:image/svg+xml,%3Csvg version='1.1' id='icon-user' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 28 28' style='enable-background:new 0 0 28 28;' xml:space='preserve'%3E %3Cstyle type='text/css'%3E .st0%7Bfill:%236666FF;%7D %3C/style%3E %3Cpath class='st0' d='M23,18.9c-1.2-1.4-2.8-2.4-4.8-2.9c2.5-1.4,4.1-3.2,4.1-7.1c0-4.5-3.7-8.2-8.2-8.2S5.8,4.4,5.8,8.9 c0,4,1.5,5.8,4,7.1c-2,0.6-3.6,1.5-4.8,2.9c-2.5,2.9-2.6,6.6-2.5,8.1l0,0.3l2.5-0.3l0-0.2c0,0-0.4-3.7,1.8-6.2 c1.6-1.7,4-2.5,7.1-2.5s5.5,0.8,7.1,2.5c2.2,2.5,1.8,6.2,1.8,6.2l0,0.2l2.2,0.2l0.3,0l0-0.3C25.6,25.6,25.5,21.8,23,18.9z M14,3.2 c3.2,0,5.8,2.6,5.8,5.8s-2.6,5.7-5.8,5.7c-3.2,0-5.8-2.6-5.8-5.7S10.8,3.2,14,3.2z'/%3E %3C/svg%3E "); background-repeat: no-repeat; background-position: center center; background-size: 70%; }
+
+.footer { padding-top: 1rem; padding-bottom: 1rem; text-align: end; color: #6666ff; }
 
 .index { background-image: url("../img/index/wave.png"), url("../img/index/bg-v.png"); background-position: center bottom; background-size: 100% 55%; background-repeat: no-repeat; background-attachment: fixed; }
 @media screen and (min-width: 1200px) { .index { background-image: url("../img/index/wave.png"), url("../img/index/bg-p.png"); background-position: right center; background-size: 61% 100%, 70% 100%; background-repeat: no-repeat; background-attachment: fixed; } }
+.index .header { box-shadow: none; }
+@media screen and (min-width: 1200px) { .index .header .navbar-nav .nav-link { color: #fff; } }
+.index .footer { color: #fff; }
 
 .login-img { display: block; margin: 0 auto 1rem auto; max-width: 30rem; filter: drop-shadow(0 0 10px white); }
 
-.login-text-en { color: #9939fe; font-size: 1.85rem; white-space: nowrap; letter-spacing: 0; text-align: center; margin-bottom: 1rem; filter: drop-shadow(0 0 10px white); }
+.login-text-en { color: #2781ff; font-size: 1.85rem; white-space: nowrap; letter-spacing: 0; text-align: center; margin-bottom: 1rem; filter: drop-shadow(0 0 10px white); }
 
 .login-text-describe { color: #2cceeb; font-size: 1.5rem; white-space: nowrap; text-align: center; margin-bottom: 1rem; filter: drop-shadow(0 0 10px white); }
 
@@ -32,3 +39,5 @@ a { text-underline-offset: 5px; }
 .login-email { background-image: url("data:image/svg+xml,%3Csvg version='1.1' id='icon-user' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 28 28' style='enable-background:new 0 0 28 28;' xml:space='preserve'%3E %3Cstyle type='text/css'%3E .st0%7Bfill:%236666FF;%7D %3C/style%3E %3Cpath class='st0' d='M23,18.9c-1.2-1.4-2.8-2.4-4.8-2.9c2.5-1.4,4.1-3.2,4.1-7.1c0-4.5-3.7-8.2-8.2-8.2S5.8,4.4,5.8,8.9 c0,4,1.5,5.8,4,7.1c-2,0.6-3.6,1.5-4.8,2.9c-2.5,2.9-2.6,6.6-2.5,8.1l0,0.3l2.5-0.3l0-0.2c0,0-0.4-3.7,1.8-6.2 c1.6-1.7,4-2.5,7.1-2.5s5.5,0.8,7.1,2.5c2.2,2.5,1.8,6.2,1.8,6.2l0,0.2l2.2,0.2l0.3,0l0-0.3C25.6,25.6,25.5,21.8,23,18.9z M14,3.2 c3.2,0,5.8,2.6,5.8,5.8s-2.6,5.7-5.8,5.7c-3.2,0-5.8-2.6-5.8-5.7S10.8,3.2,14,3.2z'/%3E %3C/svg%3E "); background-repeat: no-repeat; background-size: 1.4rem; background-position: .5rem center; padding-left: 2.25rem; }
 
 .login-password { background-image: url("data:image/svg+xml,%3Csvg version='1.1' id='icon-lock' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 28 28' style='enable-background:new 0 0 28 28;' xml:space='preserve'%3E %3Cstyle type='text/css'%3E .st0%7Bfill:%236666FF;%7D %3C/style%3E %3Cg%3E %3Cpath class='st0' d='M25,9.2l-3,0c-0.1-2.8-1.9-7.6-8-7.8c-2.4,0-4.3,0.7-5.7,2c-2,2-2.4,5-2.5,5.8l-3.2,0c-1.1,0.1-1.9,1-2,2.2v13 c0,1.2,1,2.2,2.2,2.2h22c1.2,0,2.2-1,2.2-2.2v-13C27.2,10.2,26.2,9.2,25,9.2z M8.5,9.2c0.1-0.7,0.3-2.8,1.7-4.1 c1-0.9,2.3-1.3,3.8-1.2C18.9,4,19.5,8,19.5,9.2H8.5z M24.8,11.7v12.5H3.2V11.7H24.8z'/%3E %3Cpath class='st0' d='M14,20.6c1,0,1.8-1.2,1.8-2.8S15,15.1,14,15.1s-1.8,1.2-1.8,2.8S13,20.6,14,20.6z'/%3E %3C/g%3E %3C/svg%3E "); background-repeat: no-repeat; background-size: 1.4rem; background-position: .5rem center; padding-left: 2.25rem; }
+
+.logged-table > :not(caption) > * > * { border-bottom-width: 0; }

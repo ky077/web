@@ -36,40 +36,46 @@
 <link rel="stylesheet" href="Content/css/styles.css">
 </head>
 
-<body class="index">
+<body class="about">
 <form>
   <header class="header"> </header>
   <main class="main">
-    <div class="container-fluid">
-      <div class="row align-items-center px-lg-5 justify-content-center gy-4">
-        <div class="col-12 col-xl-5">
-          <div class="row justify-content-center py-5">
-            <div class="col-12"> <img src="Content/img/logoSVG/VIEWlogoword.svg" class="img-fluid login-img" alt="VIEW"/>
-              <h2 class="login-text-en">Vibrant Images in Education Worlds</h2>
-              <h3 class="login-text-describe">專為教學設計的線上視訊教室</h3>
-            </div>
-            <div class="col-9">
-              <div class="mb-3">
-                <input type="email" class="form-control rounded-pill login-input login-email" id="inputAccount" placeholder="email or username" autocomplete="off">
-                <label for="inputAccount" class="visually-hidden">email or username</label>
-              </div>
-              <div class="mb-3">
-                <input type="password" class="form-control rounded-pill login-input login-password" id="inputPassword" placeholder="Password">
-                <label for="inputPassword" class="visually-hidden">Password</label>
-              </div>
-              <div class="row mb-3">
-                <div class="col">
-                  <button class="btn btn-primary btn-lg text-white rounded-pill w-100" type="button" onClick="window.location='logged.html'">登入</button>
-                </div>
-                <div class="col">
-                  <button class="btn btn-primary btn-lg text-white rounded-pill w-100" type="button">註冊</button>
-                </div>
-              </div>
-              <div class="text-primary"><a href="">Forgot your Password?</a></div>
-            </div>
-          </div>
+    <div class="container">
+      <div class="row mb-5 align-items-center justify-content-center">
+        <div class="col-2">
+          <div class="ratio ratio-1x1"> <img src="https://api.fnkr.net/testimg/500x500/777777/FFF/?text=1x1" class="img-responsive rounded-circle" alt=""> </div>
         </div>
-        <div class="col-12 col-xl-7"><img src="Content/img/index/img.png" class="img-fluid" alt=""/></div>
+        <div class="col-auto fs-4 fw-semibold">專為教育設計的虛擬教室</div>
+      </div>
+      <div class="row mb-5 align-items-center justify-content-center">
+        <div class="col-2 order-last">
+          <div class="ratio ratio-1x1"> <img src="https://api.fnkr.net/testimg/500x500/777777/FFF/?text=1x1" class="img-responsive rounded-circle" alt=""> </div>
+        </div>
+        <div class="col-auto fs-4 fw-semibold">教學白板可切換教學/協作模式</div>
+      </div>
+      <div class="row mb-5 align-items-center justify-content-center">
+        <div class="col-2">
+          <div class="ratio ratio-1x1"> <img src="https://api.fnkr.net/testimg/500x500/777777/FFF/?text=1x1" class="img-responsive rounded-circle" alt=""> </div>
+        </div>
+        <div class="col-auto fs-4 fw-semibold">教師主控台可便利進行教室管理</div>
+      </div>
+      <div class="row mb-5 align-items-center justify-content-center">
+        <div class="col-2 order-last">
+          <div class="ratio ratio-1x1"> <img src="https://api.fnkr.net/testimg/500x500/777777/FFF/?text=1x1" class="img-responsive rounded-circle" alt=""> </div>
+        </div>
+        <div class="col-auto fs-4 fw-semibold">內建教學互動工具 <small>(舉手、課堂獎勵計分、作答回饋)</small></div>
+      </div>
+      <div class="row mb-5 align-items-center justify-content-center">
+        <div class="col-2">
+          <div class="ratio ratio-1x1"> <img src="https://api.fnkr.net/testimg/500x500/777777/FFF/?text=1x1" class="img-responsive rounded-circle" alt=""> </div>
+        </div>
+        <div class="col-auto fs-4 fw-semibold">內建教室錄影</div>
+      </div>
+      <div class="row mb-5 align-items-center justify-content-center">
+        <div class="col-2 order-last">
+          <div class="ratio ratio-1x1"> <img src="https://api.fnkr.net/testimg/500x500/777777/FFF/?text=1x1" class="img-responsive rounded-circle" alt=""> </div>
+        </div>
+        <div class="col-auto fs-4 fw-semibold">聊天室內建AI輔助翻譯</div>
       </div>
     </div>
   </main>
@@ -82,11 +88,11 @@
 <!-- This web Javascript --> 
 <script src="Content/js/fn.js"></script> 
 <script src="Content/js/main.js"></script> 
-<script>
+<script>	
 $(document).ready(function () {
 	//nav當前頁active
-	navActive('index');
-});
+	navActive('about');
+});	
 </script>
 </body>
 </html>

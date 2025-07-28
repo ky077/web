@@ -11,6 +11,19 @@
 	background-repeat: no-repeat;	
 	background-attachment: fixed;
 	}
+	.header{
+		box-shadow: none;
+		.navbar-nav{
+			.nav-link{
+				@media screen and (min-width: 1200px) {
+				color: $white;	
+				}
+			}
+		}
+	}
+	.footer{
+		color: $white;
+	}
 }
 
 .login-img{

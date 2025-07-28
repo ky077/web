@@ -48,24 +48,30 @@
               <h2 class="login-text-en">Vibrant Images in Education Worlds</h2>
               <h3 class="login-text-describe">專為教學設計的線上視訊教室</h3>
             </div>
+            <div class="col-9 py-5">
+              <div class="mb-3">
+                <input type="email" class="form-control rounded-pill login-input login-email" id="inputAccount" placeholder="輸入教室代碼" autocomplete="off">
+                <label for="inputAccount" class="visually-hidden">輸入教室代碼</label>
+              </div>
+              <div class="mb-3">
+                <button class="btn btn-primary btn-lg text-white rounded-pill w-100" type="button" onClick="window.location='logged.html'">進入教室</button>
+              </div>
+            </div>
             <div class="col-9">
-              <div class="mb-3">
-                <input type="email" class="form-control rounded-pill login-input login-email" id="inputAccount" placeholder="email or username" autocomplete="off">
-                <label for="inputAccount" class="visually-hidden">email or username</label>
-              </div>
-              <div class="mb-3">
-                <input type="password" class="form-control rounded-pill login-input login-password" id="inputPassword" placeholder="Password">
-                <label for="inputPassword" class="visually-hidden">Password</label>
-              </div>
-              <div class="row mb-3">
-                <div class="col">
-                  <button class="btn btn-primary btn-lg text-white rounded-pill w-100" type="button" onClick="window.location='logged.html'">登入</button>
-                </div>
-                <div class="col">
-                  <button class="btn btn-primary btn-lg text-white rounded-pill w-100" type="button">註冊</button>
-                </div>
-              </div>
-              <div class="text-primary"><a href="">Forgot your Password?</a></div>
+              <hr>
+              <h4 class="fs-6">最近使用教室</h4>
+              <table class="table logged-table">
+                <tbody>
+                  <tr>
+                    <td>全方位中文1教室(ABC-DEF-XYG)</td>
+                    <td><a href="">進入教室</a></td>
+                  </tr>
+                  <tr>
+                    <td>全方位中文2教室(123-456-ABC) </td>
+                    <td><a href="">進入教室</a></td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </div>
         </div>
@@ -82,11 +88,11 @@
 <!-- This web Javascript --> 
 <script src="Content/js/fn.js"></script> 
 <script src="Content/js/main.js"></script> 
-<script>
+<script>	
 $(document).ready(function () {
 	//nav當前頁active
-	navActive('index');
-});
+	navActive('about');
+});	
 </script>
 </body>
 </html>
