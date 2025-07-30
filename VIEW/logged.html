@@ -29,6 +29,11 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Noto+Sans+TC:wght@100..900&&display=swap">
 
+<!-- Icon Font Stylesheet -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+
+<!-- Libraries Stylesheet --> 
+
 <!-- Customized Bootstrap Stylesheet -->
 <link rel="stylesheet" href="Content/css/bootstrap-custom.css">
 
@@ -36,7 +41,7 @@
 <link rel="stylesheet" href="Content/css/styles.css">
 </head>
 
-<body class="index">
+<body class="index logged">
 <form>
   <header class="header"> </header>
   <main class="main">
@@ -50,11 +55,14 @@
             </div>
             <div class="col-9 py-5">
               <div class="mb-3">
-                <input type="email" class="form-control rounded-pill login-input login-email" id="inputAccount" placeholder="輸入教室代碼" autocomplete="off">
-                <label for="inputAccount" class="visually-hidden">輸入教室代碼</label>
+                <input type="text" class="form-control rounded-pill border-2 border-primary login-code" id="inputCode" placeholder="輸入教室代碼" autocomplete="off">
+                <label for="inputCode" class="visually-hidden">輸入教室代碼</label>
               </div>
               <div class="mb-3">
                 <button class="btn btn-primary btn-lg text-white rounded-pill w-100" type="button" onClick="window.location='logged.html'">進入教室</button>
+              </div>
+              <div>
+                <button class="btn btn-link" type="button" data-bs-toggle="modal" data-bs-target="#classroomModal"><i class="fa-solid fa-plus me-1"></i>新增教室</button>
               </div>
             </div>
             <div class="col-9">
@@ -65,10 +73,12 @@
                   <tr>
                     <td>全方位中文1教室(ABC-DEF-XYG)</td>
                     <td><a href="">進入教室</a></td>
+                    <td><a href="#" role="button" data-bs-toggle="modal" data-bs-target="#classroomModal">編輯</a></td>
                   </tr>
                   <tr>
                     <td>全方位中文2教室(123-456-ABC) </td>
                     <td><a href="">進入教室</a></td>
+                    <td><a href="#" role="button" data-bs-toggle="modal" data-bs-target="#classroomModal">編輯</a></td>
                   </tr>
                 </tbody>
               </table>
@@ -76,6 +86,60 @@
           </div>
         </div>
         <div class="col-12 col-xl-7"><img src="Content/img/index/img.png" class="img-fluid" alt=""/></div>
+      </div>
+    </div>
+    
+    <!-- Modal #classroomModal -->
+    <div class="modal fade classroom-modal" id="classroomModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="classroomModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content bg-primary-subtle">
+          <div class="modal-header border-0">
+            <h2 class="modal-title fs-4 text-primary" id="classroomModalLabel">新增/編輯教室</h2>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="mb-3">
+              <label for="inputClassCode" class="form-label">教室代碼</label>
+              <input type="text" class="form-control rounded-pill border-0" id="inputClassCode" placeholder="XXX-XXX-XXX">
+            </div>
+            <div class="mb-3">
+              <label for="inputClassName" class="form-label">教室名稱</label>
+              <input type="text" class="form-control rounded-pill border-0" id="inputClassName" placeholder="輸入教室名稱">
+            </div>
+            <div class="mb-3">
+              <label for="inputInviteCode" class="form-label">教室開放</label>
+              <div class="form-check form-switch">
+                <input class="form-check-input border-0 switch-classroom" type="checkbox" role="switch" id="switchCheckChecked" checked>
+                <label class="form-check-label" for="switchCheckChecked">開放/關閉</label>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer justify-content-center border-0">
+            <button type="button" class="btn btn-primary btn-lg text-white rounded-pill w-25" data-bs-toggle="modal" data-bs-target="#creatCopyModal">新增/修改</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Modal #creatCopyModal -->
+    <div class="modal fade creatCopy-modal" id="creatCopyModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="creatCopyModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content bg-primary-subtle">
+          <div class="modal-header border-0">
+            <h2 class="modal-title fs-4 text-primary" id="creatCopyModalLabel">線上教室資訊</h2>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p>您可以將以下教室資訊連結提供給參與者。</p>
+            <div class="input-group mb-3">
+              <input type="text" class="form-control border-2 border-primary" placeholder="教室代碼" aria-label="教室代碼" aria-describedby="buttonCopy" value="https://viewnet.tw/class/abc-123-def" id="copyLink">
+              <button class="btn btn-primary text-white" type="button" id="buttonCopy" onClick="goCopy()"><i class="fa-solid fa-copy"></i></button>
+            </div>
+          </div>
+          <div class="modal-footer justify-content-center border-0">
+            <button type="button" class="btn btn-primary btn-lg text-white rounded-pill w-25" data-bs-dismiss="modal" aria-label="Close">關閉</button>
+          </div>
+        </div>
       </div>
     </div>
   </main>
@@ -91,7 +155,17 @@
 <script>	
 $(document).ready(function () {
 	//nav當前頁active
-	navActive('about');
+	navActive('index');
+	
+	// [開放/不開放]
+	$('#switchCheckChecked').on('change', function () {
+		const isChecked = $(this).is(':checked');
+		const label = $('label[for="switchCheckChecked"]');
+		label.text(isChecked ? '開放' : '關閉');
+	});
+
+	// 頁面載入時先初始化文字
+	$('#switchCheckChecked').trigger('change');
 });	
 </script>
 </body>

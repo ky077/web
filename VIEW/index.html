@@ -29,6 +29,11 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Noto+Sans+TC:wght@100..900&&display=swap">
 
+<!-- Icon Font Stylesheet -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+
+<!-- Libraries Stylesheet -->
+
 <!-- Customized Bootstrap Stylesheet -->
 <link rel="stylesheet" href="Content/css/bootstrap-custom.css">
 
@@ -50,11 +55,11 @@
             </div>
             <div class="col-9">
               <div class="mb-3">
-                <input type="email" class="form-control rounded-pill login-input login-email" id="inputAccount" placeholder="email or username" autocomplete="off">
+                <input type="email" class="form-control rounded-pill border-2 border-primary login-email" id="inputAccount" placeholder="email or username" autocomplete="off">
                 <label for="inputAccount" class="visually-hidden">email or username</label>
               </div>
               <div class="mb-3">
-                <input type="password" class="form-control rounded-pill login-input login-password" id="inputPassword" placeholder="Password">
+                <input type="password" class="form-control rounded-pill border-2 border-primary login-password" id="inputPassword" placeholder="Password">
                 <label for="inputPassword" class="visually-hidden">Password</label>
               </div>
               <div class="row mb-3">
@@ -62,7 +67,7 @@
                   <button class="btn btn-primary btn-lg text-white rounded-pill w-100" type="button" onClick="window.location='logged.html'">登入</button>
                 </div>
                 <div class="col">
-                  <button class="btn btn-primary btn-lg text-white rounded-pill w-100" type="button">註冊</button>
+                  <button class="btn btn-primary btn-lg text-white rounded-pill w-100" type="button" data-bs-toggle="modal" data-bs-target="#registerModal">註冊</button>
                 </div>
               </div>
               <div class="text-primary"><a href="">Forgot your Password?</a></div>
@@ -70,6 +75,43 @@
           </div>
         </div>
         <div class="col-12 col-xl-7"><img src="Content/img/index/img.png" class="img-fluid" alt=""/></div>
+      </div>
+    </div>
+    
+    <!-- Modal #registerModal -->
+    <div class="modal fade register-modal" id="registerModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content bg-primary-subtle">
+          <div class="modal-header border-0">
+            <h2 class="modal-title fs-4 text-primary" id="registerModalLabel">註冊</h2>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="mb-3">
+              <label for="inputEmail" class="form-label">Email</label>
+              <input type="email" class="form-control rounded-pill border-0" id="inputEmail" placeholder="name@ntnu.edu.tw">
+            </div>
+            <div class="mb-3">
+              <label for="inputPD" class="form-label">密碼</label>
+			 <input type="password" class="form-control rounded-pill border-0" id="inputPD" placeholder="請輸入 8-15 個字元，包含大小寫英文字母與數字之密碼">	
+            </div>
+            <div class="mb-3">
+              <label for="inputPDCheck" class="form-label">再次輸入密碼</label>
+              <input type="password" class="form-control rounded-pill border-0" id="inputPDCheck" placeholder="再次輸入密碼">	
+            </div>
+            <div class="mb-3">
+              <label for="inputName" class="form-label">姓名</label>
+              <input type="text" class="form-control rounded-pill border-0" id="inputName" placeholder="真實姓名">	
+            </div>
+            <div class="mb-3">
+              <label for="inputInviteCode" class="form-label">邀請碼</label>
+              <input type="text" class="form-control rounded-pill border-0" id="inputInviteCode" placeholder="">	
+            </div>
+          </div>
+          <div class="modal-footer justify-content-center border-0">
+            <button type="button" class="btn btn-primary btn-lg text-white rounded-pill w-25">註冊</button>
+          </div>
+        </div>
       </div>
     </div>
   </main>

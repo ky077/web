@@ -3,6 +3,34 @@ function navActive(page){
 	$('.nav-' + page).addClass('active'); 
 }
 
+//選單 nav-user < 1200 為展開狀態
+function toggleDropdownByScreenWidth() {
+	const $dropdown = $('.nav-user').parents('.dropdown');
+	const $menu = $dropdown.find('.dropdown-menu');
+	const $button = $dropdown.find('.dropdown-toggle');
+
+	if ($(window).width() < 1200) {
+		$dropdown.addClass('show');
+		$menu.addClass('show');
+		$button.attr('aria-expanded', 'true');
+	} else {
+		$dropdown.removeClass('show');
+		$menu.removeClass('show');
+		$button.attr('aria-expanded', 'false');
+	}
+}
+
+function goCopy(){
+    var _copy = $('#copyLink');
+    _copy.select();
+    document.execCommand('Copy');
+    //$('body').append('<div class="copyMsg"><span>連結已複製</span></div>');
+    
+    //var interval = setInterval(function() {
+//        $('.copyMsg').remove();
+//    }, 3000);
+}  
+
 //alertModal 警報視窗 (無右上X，不可點黑處關閉)  [sm|md|lg|xl]
 function alertModalDOM(html, size='md', btnOkText='Ok'){
     $('body').append(`<div class="modal fade" id="alertModal" tabindex="-1" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">

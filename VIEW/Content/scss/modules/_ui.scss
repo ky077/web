@@ -13,7 +13,17 @@ html{
 }
 body{
 	background-color: transparent;
-	
+	&::-webkit-scrollbar{  
+        width: 10px;     
+        background-color: transparent;
+    }  
+    &::-webkit-scrollbar-track {
+        background-color: transparent;
+    } 
+    &::-webkit-scrollbar-thumb {
+        background-color: $secondary;
+        border-radius: 10px;
+    } 
 }
 html, body, body > form{
 	@media screen and (min-width: 992px) {
@@ -28,3 +38,17 @@ html, body, body > form{
 a{
 	text-underline-offset: 5px;
 }
+.btn-link {
+	text-underline-offset: 5px;
+}
+
+[class*="btn-"].text-white{
+	text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+/*.form-control{
+	border: 2px solid $primary;
+	+ [class*="btn-outline"]{
+		border-width: 2px;	
+	}
+}*/

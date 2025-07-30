@@ -3,9 +3,13 @@
 	
 	//load header
 	$('header').load('master-header.html', function () {
-		logState();
+		//logState();
+		
+		toggleDropdownByScreenWidth(); 
+		$(window).on('resize', toggleDropdownByScreenWidth);
 	});
 
 	//load header
-	$('footer').load('master-footer.html');  
+	$('footer').load('master-footer.html');
+	
 })(jQuery);
