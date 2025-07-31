@@ -25,14 +25,17 @@
 	.navbar-nav{
 		align-items: center;
 		.nav-link{
-			padding-right: $navbar-nav-link-padding-x*3;
-        	padding-left: $navbar-nav-link-padding-x*3;
+			padding: calc(#{$navbar-padding-y} + .425rem) $navbar-nav-link-padding-x*3;
 			@media screen and (min-width: 1200px) {
 			color: $secondary;	
 			}
 			&:hover, &:active,
 			&.hover, &.active{
 				text-decoration: underline;
+			}
+			&.nav-user{
+				padding-top: $navbar-padding-y;
+				padding-bottom: $navbar-padding-y;
 			}
 		}
 	}
