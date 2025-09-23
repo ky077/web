@@ -3512,3 +3512,5 @@ main > .bg-light { background-color: #f8f9fa !important; }
 .issue4__item-list li a:hover, .issue4__item-list li a:focus, .issue4__item-list li a:active { color: #652593 !important; box-shadow: 0 1px #652593 !important; }
 
 .pdf-container canvas { min-width: 100%; }
+
+.tool { position: sticky; top: 1rem; }
