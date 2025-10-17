@@ -13,11 +13,11 @@
 </head>
 
 <body>
-<a href="#content" title="跳到主要內容" tabindex="1" class="sr-only sr-only-goContent">跳到主要內容</a>
+<a href="#content" title="跳到主要內容" tabindex="1" class="visually-hidden visually-hidden-goContent">跳到主要內容</a>
 <!-- ------- ------- ------- ------- ------- ------- ------- -->
 <div class="header">
   <div class="container">
-  	<h1 class="sr-only"><a class="navbar-brand" href="News.html" title="TAA師資生潛能測驗系統首頁"> <img class="img-responsive" src="../images/logo.png" alt="TAA師資生潛能測驗系統Logo"> </a></h1>
+  	<h1 class="visually-hidden"><a class="navbar-brand" href="News.html" title="TAA師資生潛能測驗系統首頁"> <img class="img-fluid" src="../images/logo.png" alt="TAA師資生潛能測驗系統Logo"> </a></h1>
   </div>
 </div>
 <!-- ------- ------- ------- ------- ------- ------- ------- -->
@@ -29,7 +29,7 @@
       <li><a href="News.html" title="首頁"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>&nbsp;首頁</a></li>
       <li class="active">師資生潛能測驗系統(TAA)四大特色完整說明</li>
     </ol>
-    <h2>師資生潛能測驗系統(TAA)四大特色 完整說明</h2>
+     <h2 class="page-title"> 師資生潛能測驗系統(TAA)四大特色 完整說明</h2>
     <p><strong>1、領先世界的師資生自我檢測系統</strong><br>
       <span style="padding-left:1.5em;">2015年即上線提供使用。是領先世界的師資生自我檢測系統。</span></p>
     <p> <strong>2、師資培育白皮書的具體實踐</strong><br>

@@ -1,12 +1,18 @@
 html {
   position: relative;
-  min-height: 100%; }
+  width: 100%;
+  height: 100%; }
 
 body {
   font-family: "Microsoft JhengHei", Arial, Helvetica, sans-serif;
   line-height: 2;
   color: #333;
-  padding-bottom: 0px; }
+  padding-bottom: 0px;
+  width: 100%;
+  height: 100%; }
+
+.header {
+  border-bottom: none; }
 
 .index-header {
   background-color: #524932;
@@ -15,35 +21,70 @@ body {
 
 .index-banner {
   width: 100%;
+  height: calc(100% - 10px);
+  max-width: 100%;
+  max-height: calc(100% - 10px);
   background-image: url(../images/indexBG.jpg);
   background-repeat: no-repeat;
-  background-size: 100% 100%;
-  background-position: center top;
+  background-size: auto 100%;
+  background-position: center center;
   text-align: center; }
-  .index-banner .discribe {
-    padding: 5px 5px;
-    margin: 5px 0 0 0;
-    border-left: 5px solid #999;
-    line-height: 1.4em;
-    font-size: 12px;
-    color: #666666;
-    text-shadow: 1px 1px rgba(255, 255, 255, 0.5);
-    display: inline-block;
-    text-align: left; }
-    @media screen and (min-width: 1200px) {
-      .index-banner .discribe {
-        font-size: 14px; } }
-  .index-banner .index-enter {
-    position: absolute;
-    left: 50%;
-    overflow: hidden;
-    text-indent: -9999px;}
+  @media screen and (min-width: 768px) {
+    .index-banner {
+      background-size: 100% 100%; } }
+  .index-banner > .container {
+    height: 100%; }
+    .index-banner > .container > .row {
+      height: 100%;
+      align-items: center; }
+  .index-banner .index-block {
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    z-index: 2; }
+    .index-banner .index-block .index-icon {
+      width: auto;
+      height: 70%; }
+    .index-banner .index-block .discribe {
+      padding: 5px 5px;
+      margin: 5px 0 0 0;
+      border-left: 5px solid #999;
+      line-height: 1.4em;
+      font-size: 12px;
+      color: #666666;
+      text-shadow: 1px 1px rgba(255, 255, 255, 0.5);
+      display: inline-block;
+      text-align: left; }
+      @media screen and (min-width: 1200px) {
+        .index-banner .index-block .discribe {
+          font-size: 14px; } }
+    .index-banner .index-block.WVS {
+      transform: translateY(15%); }
+    .index-banner .index-block.PS {
+      transform: translateY(15%); }
   .index-banner h1 {
     margin: 0;
-    padding: 0; }
+    padding: 0;
+    position: relative; }
+    @media screen and (min-width: 768px) {
+      .index-banner h1 .index-logo {
+        height: calc(100vh - 10px); } }
+    @media screen and (min-width: 992px) {
+      .index-banner h1 .index-logo {
+        height: calc((100vh - 10px)*.6); } }
+    .index-banner h1 .index-enter {
+      text-indent: -9999px;
+      overflow: hidden;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0; }
 
 .footer {
   position: relative;
   box-shadow: none; }
-
-/*# sourceMappingURL=TAAindex.css.map */
