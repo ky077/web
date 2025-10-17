@@ -1,0 +1,49 @@
+html {
+  position: relative;
+  min-height: 100%; }
+
+body {
+  font-family: "Microsoft JhengHei", Arial, Helvetica, sans-serif;
+  line-height: 2;
+  color: #333;
+  padding-bottom: 0px; }
+
+.index-header {
+  background-color: #524932;
+  min-height: 10px;
+  color: #FFF; }
+
+.index-banner {
+  width: 100%;
+  background-image: url(../images/indexBG.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center top;
+  text-align: center; }
+  .index-banner .discribe {
+    padding: 5px 5px;
+    margin: 5px 0 0 0;
+    border-left: 5px solid #999;
+    line-height: 1.4em;
+    font-size: 12px;
+    color: #666666;
+    text-shadow: 1px 1px rgba(255, 255, 255, 0.5);
+    display: inline-block;
+    text-align: left; }
+    @media screen and (min-width: 1200px) {
+      .index-banner .discribe {
+        font-size: 14px; } }
+  .index-banner .index-enter {
+    position: absolute;
+    left: 50%;
+    overflow: hidden;
+    text-indent: -9999px;}
+  .index-banner h1 {
+    margin: 0;
+    padding: 0; }
+
+.footer {
+  position: relative;
+  box-shadow: none; }
+
+/*# sourceMappingURL=TAAindex.css.map */

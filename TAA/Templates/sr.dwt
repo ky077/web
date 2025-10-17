@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="utf-8">
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>測驗系統與題庫系統規劃圖 | TAA師資生潛能測驗系統入口網</title>
+<!-- TemplateEndEditable -->
+<link rel="icon" href="../images/favicon.ico" mce_href="images/favicon.ico" type="image/x-icon">
+<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="../css/TAAstyles.css">
+<!-- TemplateBeginEditable name="head" -->
+<!-- TemplateEndEditable -->
+</head>
+
+<body>
+<a href="#content" title="跳到主要內容" tabindex="1" class="sr-only sr-only-goContent">跳到主要內容</a>
+<!-- ------- ------- ------- ------- ------- ------- ------- -->
+<div class="header">
+  <div class="container">
+  	<h1 class="sr-only"><a class="navbar-brand" href="News.html" title="TAA師資生潛能測驗系統首頁"> <img class="img-responsive" src="../images/logo.png" alt="TAA師資生潛能測驗系統Logo"> </a></h1>
+  </div>
+</div>
+<!-- ------- ------- ------- ------- ------- ------- ------- -->
+<div class="content" id="content">
+  <div class="container">
+    <a href="#C" name="C" accesskey="C" title="中央內容區塊" class="pull-left guide-C">:::</a>
+    <!-- TemplateBeginEditable name="EditRegion3" -->
+    <ol class="breadcrumb">
+      <li><a href="News.html" title="首頁"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>&nbsp;首頁</a></li>
+      <li class="active">師資生潛能測驗系統(TAA)四大特色完整說明</li>
+    </ol>
+    <h2>師資生潛能測驗系統(TAA)四大特色 完整說明</h2>
+    <p><strong>1、領先世界的師資生自我檢測系統</strong><br>
+      <span style="padding-left:1.5em;">2015年即上線提供使用。是領先世界的師資生自我檢測系統。</span></p>
+    <p> <strong>2、師資培育白皮書的具體實踐</strong><br>
+      <span style="padding-left:1.5em;">最能夠具體實踐師資培育白皮書之「強化師資生遴選」目標。</span></p>
+    <p> <strong>3、擁有各種運用可能的未來性</strong><br>
+      <span style="padding-left:1.5em;">提供給師資培育之大學有更多樣的使用可能及未來性。</span></p>
+    <p> <strong>4、持續精進師培課程方案</strong><br>
+      <span style="padding-left:1.5em;">整合資深教師現場經驗，提供更寬廣的學習來源。</span></p>
+    <div class="text-center" style="padding:30px 0;">
+      <a class="btn btn-primary btn-lg" href="../CN/News.html" role="button" title="回上一頁">回上一頁</a>
+    </div>
+    <!-- TemplateEndEditable -->
+  </div>
+</div>
+<!-- ------- ------- ------- ------- ------- ------- ------- -->
+<div class="footer">
+  <div class="footer-map">
+    <div class="container">
+      <a href="#Z" name="Z" accesskey="Z" title="下方功能區塊" class="guide-Z">:::</a> 
+      <ul class="nav nav-pills nav-justified nav-map">
+        <li><a href="News.html" title="最新消息">最新消息</a> </li>
+        <li><a href="About.html" title="關於本計畫">關於本計畫</a>
+          <ul>
+            <li><a href="About.html" title="計畫簡介">計畫簡介</a></li>
+            <li><a href="About2.html" title="執行團隊">執行團隊</a></li>
+            <li><a href="About3.html" title="計畫歷程">計畫歷程</a></li>
+            <li><a href="About4.html" title="研究成果">研究成果</a></li>
+          </ul>
+        </li>
+        <li><a href="Content.html" title="測驗內容">測驗內容</a>
+          <ul>
+            <li><a href="Content.html" title="測驗介紹">測驗介紹</a></li>
+            <li><a href="Content2.html" title="教師情境判斷測驗">教師情境判斷測驗</a></li>
+            <li><a href="Content3.html" title="教師工作價值觀測驗">教師工作價值觀測驗</a></li>
+            <li><a href="Content4.html" title="教師人格測驗">教師人格測驗</a></li>
+            <li><a href="Content5.html" title="資料下載">資料下載</a></li>
+          </ul>
+        </li>
+        <li><a href="Course.html" title="融入課程">融入課程</a>
+          <ul>
+            <li><a href="Course.html" title="實務案例教學">實務案例教學</a></li>
+            <li><a href="Course2.html" title="教學分享">教學分享</a></li>
+            <li><a href="Course3.html" title="瞭解更多">瞭解更多</a></li>
+            <li><a href="Course4.html" title="協作與發展">協作與發展</a></li>
+          </ul>
+        </li>
+        <li><a href="Activity.html" title="活動訊息">活動訊息</a>
+          <ul>
+            <li><a href="Activity.html" title="全部活動">全部活動</a></li>
+            <li><a href="Activity2.html" title="研習活動">研習活動</a></li>
+            <li><a href="Activity3.html" title="測驗活動">測驗活動</a></li>
+            <li><a href="Activity4.html" title="其他活動">其他活動</a></li>
+          </ul>
+        </li>
+        <li><a href="FAQ.html" title="常見問題">常見問題</a>
+          <ul>
+            <li><a href="FAQ.html" title="管理者常見問題">管理者常見問題</a></li>
+            <li><a href="FAQ2.html" title="測驗者常見問題">測驗者常見問題</a></li>
+            <li><a href="FAQ3.html" title="其他問題">其他問題</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-copyright">
+    <div class="container">
+      <table class="">
+        <tbody>
+          <tr>
+            <td class="col-xs-7 col-sm-7 col-md-7 col-lg-7 text-left"><a target="_blank" href="https://www.edu.tw/" title="(另開新視窗)教育部網站"><img src="../images/logo-edu.png" height="50" alt="教育部圖片"></a><a target="_blank" href="https://www.rcpet.ntnu.edu.tw/" title="(另開新視窗)國立臺灣師範大學心理與教育測驗研究發展中心網站"><img src="../images/logo-rcpet.png" height="50" alt="國立臺灣師範大學心理與教育測驗研究發展中心圖片"></a></td>
+            <td class="col-xs-5 col-sm-5 col-md-5 col-lg-5 text-right"><a target="_blank" href="https://accessibility.ncc.gov.tw/Applications/Detail?category=20200825172105" title="(另開新視窗)無障礙網站"><img src="../images/Accessubility2.0.jpg" height="40" alt="通過A無障礙網頁檢測"></a><br>
+        © 2019 TAA. All rights reserved.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<!-- ------- ------- ------- ------- ------- ------- ------- --> 
+<!-- ------- ------- ------- ------- ------- ------- ------- --> 
+<!-- ------- ------- ------- ------- ------- ------- ------- -->
+</body>
+</html>

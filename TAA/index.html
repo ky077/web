@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>首頁 | TAA師資生潛能測驗系統入口網</title>
+<link rel="icon" href="images/favicon.ico" mce_href="images/favicon.ico" type="image/x-icon">
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="css/TAAstyles.css">
+<link rel="stylesheet" type="text/css" href="css/TAAindex.css">
+<style>
+body{
+	margin-bottom: 0px;
+}
+.index-banner .container{
+	position:relative;
+}
+.guide-C{
+	position:absolute;
+	top:0;
+	left:0;	
+}
+</style>
+</head>
+
+<body>
+<a href="#content" title="跳到主要內容" tabindex="1" class="sr-only sr-only-goContent">跳到主要內容</a>
+<!-- ------- ------- ------- ------- ------- ------- ------- -->
+<div class="header">
+  <div class="container">
+  </div>
+</div>
+<!-- ------- ------- ------- ------- ------- ------- ------- -->
+<div class="index-banner" id="content">
+  <div class="container">
+    <a href="#C" name="C" accesskey="C" title="中央內容區塊" class="pull-left guide-C">:::</a>
+    <div class="row">
+      <div class="hidden-xs hidden-sm col-md-4 col-lg-4 index-block WVS">
+        <img class="index-icon center-block img-responsive" src="images/WVS.png" alt="教師工作價值觀測驗的特色與優勢">
+        <div class="discribe">
+          您想瞭解自己適合選擇老師這份工作嗎？<br>
+          教師工作能不能滿足您的職業追求？<br>
+          教師工作價值觀將幫助您釐清困惑。<br>
+        </div>
+      </div>
+      <div class="hidden-xs hidden-sm col-md-4 col-lg-4 index-block SJT">
+        <img class="index-icon center-block img-responsive" src="images/SJT.png" alt="教師情境判斷測驗的特色與優勢">
+        <div class="discribe">
+          您想瞭解當一位老師需要面對什麼樣的情境嗎？<br>
+          您想瞭解您的處理方式是否貼近教育現場實務考量？<br>
+          教師情境判斷測驗將協助您雙向釐清疑問。<br>
+        </div>
+      </div>
+      <div class="hidden-xs hidden-sm col-md-4 col-lg-4 index-block PS">
+        <img class="index-icon center-block img-responsive" src="images/PS.png" alt="教師人格測驗的特色與優勢">
+        <div class="discribe">
+          您知道人格與個人工作表現有顯著相關嗎？<br>
+          您想瞭解您的人格特質與資深優良教師的貼近程度？<br>
+          教師人格測驗將提供您豐富的訊息。<br>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+      	<h1><img class="index-logo center-block img-responsive" src="images/index-logo.png" alt="T_A_A師資生潛能測驗系統入口網圖片"> <a class="index-enter" href="CN/News.html" title="點擊進入T_A_A師資生潛能測驗系統">ENTER</a></h1>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- ------- ------- ------- ------- ------- ------- ------- -->
+
+<!-- ------- ------- ------- ------- ------- ------- ------- --> 
+<!-- ------- ------- ------- ------- ------- ------- ------- --> 
+<!-- ------- ------- ------- ------- ------- ------- ------- --> 
+<script src="js/jquery.min.js"></script> 
+<script src="js/bootstrap.min.js"></script> 
+<script>
+$('html').on('click', function(){
+  // console.log('click0');
+   location.href='CN/News.html';
+})
+
+$(window).on('resize',function() {
+	var $bannerH = $(window).height()-$(".header").outerHeight();
+	$(".index-banner").height($bannerH);
+		
+	if( $('.index-banner .container').width() <= 750 ){
+		$('.index-logo').height($bannerH);
+	}else{
+		$('.index-block').outerHeight($bannerH*0.4);
+		$('.index-logo').height($bannerH*0.6);
+		
+		$('.index-block .index-icon').css('max-height',$bannerH*0.4*0.7);
+		//計算margin-top
+		$('.index-block.WVS .index-icon').css('margin-top', $bannerH*0.07);
+		$('.index-block.SJT .index-icon').css('margin-top', $bannerH*0.01);
+		$('.index-block.PS .index-icon').css('margin-top', $bannerH*0.07);
+	}
+	$('.index-enter').css({
+		'width' : $('.index-logo').width()*0.3075,			//310/1008
+		'height': $('.index-logo').width()*0.3075*0.3483,	//310/1008*220/310
+		'bottom': $('.index-logo').height()*0.1098,						//95/865
+		'margin-left': '-'+($('.index-logo').width()*0.3075/2)+'px'
+	});
+	//$('.index-enter').css({
+//		'width' : $('.index-logo').width()*0.3075,			//310/1008
+//		'height': $('.index-logo').width()*0.3075*0.3483,	//310/1008*220/310
+//		'bottom': $('.index-logo').height()*0.1098,						//95/865
+//		'margin-left': '-'+($('.index-logo').width()*0.3075/2)+'px'
+//	}).hover(function(){
+//		$(this).find('img').attr('src','images/index-enter-hover.png');
+//		},function(){
+//		$(this).find('img').attr('src','images/index-enter-a.png');
+//	});
+});
+$(document).ready(function() {
+    $(window).trigger('resize');
+});
+$(window).load(function() {
+    $(window).trigger('resize');
+});
+</script>
+</body>
+</html>
