@@ -68,12 +68,13 @@ body {
       .index-banner .index-banner-content {
         height: 60%; } }
     .index-banner .index-banner-content h1 {
-      display: block;
       margin: 0;
       padding: 0;
-      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       height: 100%;
-      overflow: hidden; }
+      position: relative; }
       .index-banner .index-banner-content h1 .index-logo {
         max-width: 100%;
         max-height: 100%; }
