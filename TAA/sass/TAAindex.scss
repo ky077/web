@@ -28,8 +28,8 @@ body {
 	max-height: calc(100% - 10px);
 	background-image: url(../images/indexBG.jpg);
 	background-repeat: no-repeat;
-	background-size: 100% 100%;	
-	background-position: center top;
+	background-size: cover;	
+	background-position: center center;
 	text-align: center;
 	>.container{
 		height: 100%;	
