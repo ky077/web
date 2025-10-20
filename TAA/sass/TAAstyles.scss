@@ -498,8 +498,17 @@ a.sr-only-goContent, a.visually-hidden-goContent{
 	vertical-align:middle;
 	th, td{vertical-align:middle!important;}
 }
+.text-left{
+	text-align:left;
+	th, td{ text-align: left !important;}
+}
 .text-center{
-	th, td{ text-align:center!important;}
+	text-align: center;
+	th, td{ text-align: center !important;}
+}
+.text-right{
+	text-align: right;
+	th, td{ text-align: right !important;}
 }
 .TAA-page{
 	margin: 20px 0 40px 0;

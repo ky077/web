@@ -372,8 +372,20 @@ a.sr-only-goContent, a.visually-hidden-goContent {
   .align-middle th, .align-middle td {
     vertical-align: middle !important; }
 
-.text-center th, .text-center td {
-  text-align: center !important; }
+.text-left {
+  text-align: left; }
+  .text-left th, .text-left td {
+    text-align: left !important; }
+
+.text-center {
+  text-align: center; }
+  .text-center th, .text-center td {
+    text-align: center !important; }
+
+.text-right {
+  text-align: right; }
+  .text-right th, .text-right td {
+    text-align: right !important; }
 
 .TAA-page {
   margin: 20px 0 40px 0; }
