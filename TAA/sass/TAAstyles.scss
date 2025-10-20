@@ -11,15 +11,8 @@ html {
 body {
 	font-family:Arial, Helvetica, sans-serif, "Microsoft JhengHei";
 	font-size: 18px;
-	line-height:2;
+	line-height: 2;
 	color:#555;
-	margin-bottom:835px;
-	@media screen and (min-width: 768px) {
-	margin-bottom:373px;
-	}
-	@media screen and (min-width: 992px) {
-	margin-bottom:270px;	
-	}
 }
 a{
 	text-decoration: none;
@@ -81,7 +74,7 @@ a.sr-only-goContent, a.visually-hidden-goContent{
 	.navbar-collapse{
 		position: fixed;
 		background-color: #fff;
-		top: 15%;
+		//top: 15%; //JS設定
 		left: 0;
 		right: 0;
 		bottom: 0;

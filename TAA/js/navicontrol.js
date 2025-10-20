@@ -1,7 +1,23 @@
 document.addEventListener('DOMContentLoaded', function () {
-  //點擊顯示導覽列時，body scroll隱藏
   const navbarCollapse = document.getElementById('navbars');
+  const header = document.querySelector('.header');
+  const mediaQuery = window.matchMedia("(max-width: 991.98px)");
+	
+  // 更新navbar位置 (小螢幕lg 以下啟用)
+  function updateNavbarPosition() {
+    if (mediaQuery.matches && header) {
+      const headerHeight = Math.ceil(header.getBoundingClientRect().height);  console.log(headerHeight);
+      navbarCollapse.style.top = `${headerHeight}px`;
+    } else {
+      navbarCollapse.style.top = '';
+    }
+  }
 
+  updateNavbarPosition();
+  window.addEventListener('resize', updateNavbarPosition);	
+	
+	
+  // body scroll 控制
   navbarCollapse.addEventListener('show.bs.collapse', () => {
     document.body.style.overflow = 'hidden'; // 禁止捲動
   });
@@ -11,9 +27,8 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
 
-  // 只在小螢幕啟用 (lg 以下)
+  // nav-main-sub收合 (小螢幕lg 以下啟用)
   function enableSubmenuToggle() {
-    const mediaQuery = window.matchMedia("(max-width: 991.98px)");
     const navItems = document.querySelectorAll("#navbars .navbar-nav .nav-item");
 
     navItems.forEach(item => {
