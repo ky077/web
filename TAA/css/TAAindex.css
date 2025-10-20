@@ -26,12 +26,9 @@ body {
   max-height: calc(100% - 10px);
   background-image: url(../images/indexBG.jpg);
   background-repeat: no-repeat;
-  background-size: auto 100%;
-  background-position: center center;
+  background-size: 100% 100%;
+  background-position: center top;
   text-align: center; }
-  @media screen and (min-width: 768px) {
-    .index-banner {
-      background-size: 100% 100%; } }
   .index-banner > .container {
     height: 100%; }
     .index-banner > .container > .row {
@@ -64,26 +61,32 @@ body {
       transform: translateY(15%); }
     .index-banner .index-block.PS {
       transform: translateY(15%); }
-  .index-banner h1 {
-    margin: 0;
-    padding: 0;
-    position: relative; }
-    @media screen and (min-width: 768px) {
-      .index-banner h1 .index-logo {
-        height: calc(100vh - 10px); } }
+  .index-banner .index-banner-content {
+    width: 100%;
+    height: 100%; }
     @media screen and (min-width: 992px) {
-      .index-banner h1 .index-logo {
-        height: calc((100vh - 10px)*.6); } }
-    .index-banner h1 .index-enter {
-      text-indent: -9999px;
-      overflow: hidden;
-      width: 100%;
+      .index-banner .index-banner-content {
+        height: 60%; } }
+    .index-banner .index-banner-content h1 {
+      display: block;
+      margin: 0;
+      padding: 0;
+      position: relative;
       height: 100%;
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0; }
+      overflow: hidden; }
+      .index-banner .index-banner-content h1 .index-logo {
+        max-width: 100%;
+        max-height: 100%; }
+      .index-banner .index-banner-content h1 .index-enter {
+        text-indent: -9999px;
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0; }
 
 .footer {
   position: relative;
