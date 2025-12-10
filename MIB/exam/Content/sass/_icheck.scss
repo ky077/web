@@ -1,0 +1,35 @@
+[class*="icheck-"] > input:first-child + label::before,
+[class*="icheck-"] > input:first-child + input[type="hidden"] + label::before {
+    border: 1px solid #747474;
+}
+
+[class*="icheck-"] > input:first-child:checked + label::after,
+[class*="icheck-"] > input:first-child:checked + input[type="hidden"] + label::after {
+    background-color: $primary;
+}
+
+[class*="icheck-"] > input:first-child:checked + label,
+[class*="icheck-"] > input:first-child:checked + input[type="hidden"] + label {
+    color: $primary;
+    *{
+        color: $primary;    
+    }
+}
+
+.icheck-nephritis > input:first-child:not(:checked):not(:disabled):hover + label::before,
+.icheck-nephritis > input:first-child:not(:checked):not(:disabled):hover + input[type="hidden"] + label::before {
+    border-color: $primary;
+	background-color: $secondary;
+}
+.icheck-nephritis > input:first-child:not(:checked):not(:disabled):hover + label,
+.icheck-nephritis > input:first-child:not(:checked):not(:disabled):hover + input[type="hidden"] + label {
+    color: $primary;
+    *{
+        color: $primary;    
+    }
+}
+.icheck-nephritis > input:first-child:checked + label::before,
+.icheck-nephritis > input:first-child:checked + input[type="hidden"] + label::before {
+    border-color: $primary;
+	background-color: $secondary;
+}

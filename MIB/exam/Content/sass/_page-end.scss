@@ -1,0 +1,174 @@
+.page-end{
+	.bg{
+		background-image: url("../images/bg-4.png"), 
+                          linear-gradient(to bottom right, #2c489c 20%, #81ccd8 90%);
+		background-repeat: no-repeat;
+		background-position: center bottom, 
+							 center center;
+		background-size: 100% 33.333334%, 
+						 100% 100%;
+		animation: bg-waveIn-1 2s linear alternate infinite;
+		@media screen and (min-width: 992px) {
+		background-image: url("../images/vision.png"),
+			              url("../images/bg-4.png"), 
+                          linear-gradient(to bottom right, #2c489c 20%, #81ccd8 90%);
+		background-repeat: no-repeat;
+		background-position:  right bottom,
+							 center bottom, 
+							 center center;
+		background-size: auto 85%,
+						 100% 33.333334%, 
+						 100% 100%;	
+		animation: bg-waveIn-2 2s linear alternate infinite;	
+		}
+		
+		&::after{ 
+			background-image: url("../images/bg-left-2-spot.png"), url("../images/bg-right-2-spot.png");
+			mix-blend-mode: normal;
+			animation: spot-fadeIn 3s ease-in-out alternate infinite;	
+		}
+	}
+    .content{
+        .container{
+            text-align:center;
+            background-color: transparent;
+            h2{ 
+                display: block;
+                position: relative;
+                > img{
+                    display: block;
+                    margin: 0;
+                    filter: drop-shadow(0 0 5px rgba(white, .5));
+				}
+				&::before{
+                   content: "";
+                    display: block;
+                    background-image: url("../images/vision.png");
+                    background-repeat: no-repeat;
+                    background-size: 100% 100%;
+                    width: 0;
+                    height: calc(120px + 3.5vh);
+                    padding-left: calc((120px + 3.5vh)*1.0);
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    transform: translate(0, calc(-100% + 3.5vh + 3.5vh/2));
+                }
+			}
+            @media screen and (min-width: 992px) {//col-md-6 col-md-offset-3
+            h2{ 
+                display: block;
+				> img{
+                    margin: 0;
+                }
+                &::before{
+					display: none;
+                }
+            }
+			.col-xs-10.col-xs-offset-1.col-sm-8.col-sm-offset-2.col-md-6.col-md-offset-3.col-lg-4.col-lg-offset-4{
+				margin-left: 0;
+			}
+            }
+            @media screen and (min-width: 1200px) { //col-lg-4 col-lg-offset-4 33.33333333%
+            .col-xs-10.col-xs-offset-1.col-sm-8.col-sm-offset-2.col-md-6.col-md-offset-3.col-lg-4.col-lg-offset-4{
+                margin-left: 8.33333333% * 1.5;   
+            }    
+            }
+			@media screen and (min-width: 1400px) { 
+            h2{
+                &::before, &::after{
+                    //待+機器人
+                }
+            }   
+            }
+				
+            h3{
+                font-size: 2.4em;
+                color: $secondary;
+				font-weight: 600;
+				letter-spacing: .125em;
+                margin: 40px 0;
+                text-align: center;
+                animation: word-fadeIn 1s ease-out;
+                opacity: 1;
+                transform: scale(1);
+				text-shadow: 1px  1px darken($primary, 15%),
+					 		-1px -1px darken($primary, 15%),
+					 		-1px  1px darken($primary, 15%),
+					 		 1px -1px darken($primary, 15%);
+				filter: drop-shadow( 1px  1px 1px $primary)
+						drop-shadow(-1px -1px 1px $primary)
+						drop-shadow(-1px  1px 1px $primary)
+						drop-shadow( 1px -1px 1px $primary)
+						drop-shadow( 0    0   5px rgba($primary, .5) );
+            }
+        }
+    }
+}
+
+@keyframes bg-waveIn-1 {
+	  0% { background-size: 100% 23.333334%, 
+						 100% 100%;	}
+	100% { background-size: 100% 43.333334%, 
+						 100% 100%;	}
+}
+@keyframes bg-waveIn-2 {
+	  0% { background-size: auto 85%,
+						 100% 23.333334%, 
+						 100% 100%;		}
+	100% { background-size: auto 85%,
+						 100% 43.333334%, 
+						 100% 100%;		}
+}
+
+@keyframes spot-fadeIn {
+	  0% { opacity: .25; }
+	100% { opacity: 1; }
+}
+
+	
+@keyframes word-fadeIn {
+	  0% { opacity: 0; transform: scale(0);}
+	100% { opacity: 1; transform: scale(1);}
+}
+
+
+.btn-logout{
+    display: block;
+    width: 3.34em;
+    height: 3.34em;
+    border: none;
+    border-radius: 100%;
+    font-size: 1.2em;
+    font-weight: 500;
+    margin: 0 auto;
+    white-space:nowrap; 
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+	
+	background-color: $primary;
+	color: $secondary;
+	border: 2px solid darken($primary, 15%);
+    box-shadow: 0 1px darken($primary, 15%),  0 2px darken($primary, 15%),  0 3px darken($primary, 15%), 0 4px darken($primary, 15%);
+    margin-bottom: 4px;
+    text-shadow: 1px 1px rgba(255,255,255, .25);
+	
+	
+    &:hover, &.hover,
+    &:active, &.active,
+    &:focus, &.focus{
+		background-color: $tertiary;
+        color: $primary;
+        &:focus, &.focus{
+            outline: none;
+            box-shadow: none;
+        }
+	}
+    &:active, &.active,
+    &:focus, &.focus{
+        transform: translate(0, 4px);
+        color: darken($primary, 15%);
+    }
+}

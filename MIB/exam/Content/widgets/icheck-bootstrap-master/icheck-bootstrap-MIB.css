@@ -1,0 +1,114 @@
+/*!
+ * icheck-bootstrap v3.0.1 (https://github.com/bantikyan/icheck-bootstrap)
+ * Copyright 2018 Hovhannes Bantikyan.
+ * Licensed under MIT (https://github.com/bantikyan/icheck-bootstrap/blob/master/LICENSE)
+ */
+
+ [class*="icheck-"] { 
+    min-height: calc(1em*1.6);
+    margin-top: 0px !important;
+    margin-bottom: 4px !important;
+    padding-left: 0px;
+}
+
+.icheck-inline {
+    display: inline-block;
+}
+
+    .icheck-inline + .icheck-inline { 
+        margin-left: .75rem;
+        margin-top: 6px;
+    }
+
+[class*="icheck-"] > label {
+    padding-left: 1.4em !important;
+    min-height: 1em;
+    line-height: 1.6;
+    display: inline-block;
+    position: relative;
+    vertical-align: top;
+    margin-bottom: 0;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+[class*="icheck-"] > input:first-child { 
+    position: absolute !important;
+    opacity: 0;
+    margin: 0;
+}
+
+    [class*="icheck-"] > input:first-child:disabled { 
+		cursor: not-allowed;
+    }
+
+    [class*="icheck-"] > input:first-child + label::before,
+    [class*="icheck-"] > input:first-child + input[type="hidden"] + label::before {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        width: 1.2em;
+        height: 1.2em;
+        border: 1px solid #747474;
+        border-radius: 0px;
+        margin-left: -1.4em;
+        margin-top: .26em;
+    }
+
+    [class*="icheck-"] > input:first-child:checked + label::after,
+    [class*="icheck-"] > input:first-child:checked + input[type="hidden"] + label::after {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        top: calc(.2em + .26em);
+        left: .2em;
+		width: calc(1.2em - .2em*2);
+        height: calc(1.2em - .2em*2);
+		background-color:#24006E;
+		border-radius:50%;
+    }
+	
+	[class*="icheck-"] > input:first-child:checked + label,
+    [class*="icheck-"] > input:first-child:checked + input[type="hidden"] + label {
+		color:#24006E;
+	}
+
+[class*="icheck-"] > input[type="radio"]:first-child + label::before,
+[class*="icheck-"] > input[type="radio"]:first-child + input[type="hidden"] + label::before {
+    border-radius: 50%;
+}
+
+[class*="icheck-"] > input:first-child:not(:checked):not(:disabled):hover + label::before,
+[class*="icheck-"] > input:first-child:not(:checked):not(:disabled):hover + input[type="hidden"] + label::before {
+    border-width: 1px;
+}
+
+[class*="icheck-"] > input:first-child:disabled + label,
+[class*="icheck-"] > input:first-child:disabled + input[type="hidden"] + label,
+[class*="icheck-"] > input:first-child:disabled + label::before,
+[class*="icheck-"] > input:first-child:disabled + input[type="hidden"] + label::before {
+    pointer-events: none;
+    /*cursor: default;*/
+	cursor: not-allowed !important;
+    filter: alpha(opacity=65);
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    opacity: .75;
+}
+
+.icheck-nephritis > input:first-child:not(:checked):not(:disabled):hover + label::before,
+.icheck-nephritis > input:first-child:not(:checked):not(:disabled):hover + input[type="hidden"] + label::before {
+    border-color: #24006E;
+	background-color:#BFFAFF;
+}
+.icheck-nephritis > input:first-child:not(:checked):not(:disabled):hover + label,
+.icheck-nephritis > input:first-child:not(:checked):not(:disabled):hover + input[type="hidden"] + label {
+    color: #24006E;
+}
+
+
+.icheck-nephritis > input:first-child:checked + label::before,
+.icheck-nephritis > input:first-child:checked + input[type="hidden"] + label::before {
+    border-color: #24006E;
+	background-color: #BFFAFF;
+}

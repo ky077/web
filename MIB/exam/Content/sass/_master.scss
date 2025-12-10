@@ -1,0 +1,183 @@
+$blue:          #2c489c;
+$yellow-light:  #FFFBCD;
+$yellow-dark:   #f6df58;
+$red:           #ff2d1d;
+
+$primary:       $blue;
+$secondary:     $yellow-dark;
+$tertiary:        $yellow-light;
+
+html{
+	width:100%;
+	height:100%;
+}
+body{
+	width:100%;
+	height:100%;
+	color:#2e3233;
+	font-size:20px;
+	line-height:1.8;
+	background-color:#e2e2e2;
+	letter-spacing:0.1em;
+    font-family: 'Noto Sans TC', 'Microsoft JhengHei', 
+                 'PingFang TC', 
+                 'Heiti TC',
+                 'LiHei Pro','STXihei',
+                 sans-serif;
+}
+/**/
+form{
+	width:100%;
+	height:100%;
+}
+.page{
+	width:100%;
+	height:100%;
+	position:relative;
+	.bg{
+		width:100%;
+		height:100%;
+		position: fixed;
+		top:0;
+		left:0;
+		z-index:-1;
+		background-image: url("../images/bg-4.png"), 
+                          linear-gradient(to bottom right, #2c489c 20%, #81ccd8 90%);
+		background-repeat: no-repeat;
+		background-position: center bottom, 
+							 center center;
+		background-size: 100% 33.333334%, 
+						 100% 100%;
+		&::before{ 
+			content: "";
+			display: block;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background-image: url("../images/bg-left-1.png"), url("../images/bg-right-1.png");
+			background-repeat: no-repeat;
+			background-position: left top, right top;	
+			background-size: 30% auto, 50% auto;
+			mix-blend-mode: soft-light;
+		}
+		&::after{ 
+			content: "";
+			display: block;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background-image: url("../images/bg-left-2.png"), url("../images/bg-right-2.png");
+			background-repeat: no-repeat;
+			background-position: left top, right top;	
+			background-size: 30% auto, 50% auto;
+			mix-blend-mode: soft-light;
+		}
+	}
+	.header{
+		width:100%;
+		min-height:120px;
+		.container{ 
+			background-color: transparent;
+			h1{
+				height:70px;
+				margin-top:25px;
+				margin-bottom:25px;
+				.header-logo{
+					height:70px;
+                    filter: drop-shadow(0 0 5px rgba(white, .75));
+				}
+			}
+		}
+        .progress-SRdemo{
+        @media screen and (min-width: 992px) {
+            margin-left: 10%;   
+        }    
+        }
+        .btn-logout{
+            font-size: 1em;
+            height: 3em;
+            width: 3em;
+            margin: 1.5em 1em 0 auto;
+            font-weight: 400;
+            @media screen and (min-width: 992px) {
+            margin: 1.5em 1em 0 100%;    
+            }
+        }
+	}
+	.content{
+		width:100%;
+        min-height:calc(100% - 120px);
+        padding-bottom: 30px;
+		.container{
+            min-height:100%;
+		}
+        .content-block{
+            background-color:rgba(#FFF, .95);
+            border-radius: 20px;
+            padding: 30px 15px;
+        }
+	}
+}
+/*UI*/
+.text-red{
+    color: $red;
+}
+.btn-demo{
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+	background-color: $primary;
+	color: $secondary;
+	font-size: 1em;
+	font-weight: 400;
+	padding: 10px 20px;
+    border-radius: 50px;
+    border: 2px solid darken($primary, 15%);
+    box-shadow: 0 1px darken($primary, 15%),  0 2px darken($primary, 15%),  0 3px darken($primary, 15%), 0 4px darken($primary, 15%);
+    margin-bottom: 4px;
+    text-shadow: 1px 1px rgba(255,255,255, .25);
+	&:hover, &.hover,
+    &:active, &.active,
+    &:focus, &.focus{
+		background-color: $secondary;
+        color: $primary;
+        &:focus, &.focus{
+            outline: none;
+            box-shadow: none;
+        }
+	}
+    &:active, &.active,
+    &:focus, &.focus{
+        transform: translate(0, 4px);
+        color: darken($primary, 15%);
+    }
+}
+.btn-demo:disabled, 
+.btn-demo.disabled{
+    background-color: $secondary;
+	color: $primary;
+	font-size:1em;
+	font-weight:400;
+	padding:10px 20px;
+    border-radius: 50px;
+    border: 2px solid $primary;
+    box-shadow: none;
+    margin-bottom: 4px;
+    text-shadow: 1px 1px rgba(255,255,255, .25);
+    transform: translate(0, 0);
+}
+
+
+@media (min-width: 1200px){
+.modal-lg {
+    width: 1000px;
+}
+}

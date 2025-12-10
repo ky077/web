@@ -1,0 +1,39 @@
+/** ******* ******* ******* ******* ******* ******* ******* */
+/** ******* ******* ******* ******* ******* ******* ******* */
+/** ******* ******* ******* ******* ******* ******* ******* */
+* { box-sizing: border-box; }
+
+body { padding: 0px; margin: 0px; font-family: Arial, Helvetica, sans-serif, "Microsoft JhengHei"; color: #333; }
+
+.wrapper { width: 960px; margin: 10px auto; }
+
+.paddingWrapper { padding: 0px 15px; }
+
+hr { margin: 20px 15px; border: none; border-top: 1px solid #ebebeb; }
+
+.redWords { color: #ec6867; }
+
+.blueWords { color: #0092d7; }
+
+.greenWords { color: #14a83b; }
+
+/** ******* ******* ******* ******* ******* ******* ******* */
+/** ******* ******* ******* ******* ******* ******* ******* */
+/** ******* ******* ******* ******* ******* ******* ******* */
+.frontCover { background-image: url(../images/pdf-MIB/frontCover.jpg); background-size: 100% 100%; padding-top: 420px; }
+.frontCover table.frontCover-table { width: 71%; margin: 0px 14% 0px 16%; }
+.frontCover table.frontCover-table th { color: #ffffff; border-bottom-color: #ffffff; text-align: left; font-weight: bold; }
+.frontCover table.frontCover-table.MIB th { color: #ffffff; }
+.frontCover table.frontCover-table td { border-bottom-color: #ffffff; color: #ffffff; letter-spacing: .1em; white-space: nowrap; overflow: hidden; font-weight: bold; }
+.frontCover table.frontCover-table tr:nth-child(2) th { letter-spacing: -.025em; }
+
+.endCover { background-image: url(../images/pdf-MIB/endCover-bg.jpg); background-size: 100% 100%; }
+
+/** ******* ******* ******* ******* ******* ******* ******* */
+/** ******* ******* ******* ******* ******* ******* ******* */
+/** ******* ******* ******* ******* ******* ******* ******* */
+/*set diffrent color*/
+/** ******* ******* ******* ******* ******* ******* ******* */
+/** ******* ******* ******* ******* ******* ******* ******* */
+/** ******* ******* ******* ******* ******* ******* ******* */
+@media print { body { color: #000; } }

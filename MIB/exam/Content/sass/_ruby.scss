@@ -1,0 +1,47 @@
+/* change 漢字標準格式 v3.3.0 */
+article strong :lang(ja-Latn), 
+article strong :lang(zh-Latn), 
+article strong :not(:lang(zh)):not(:lang(ja)), 
+article strong:lang(ja-Latn), 
+article strong:lang(zh-Latn), 
+article strong:not(:lang(zh)):not(:lang(ja)), 
+html :lang(ja-Latn), 
+html :lang(zh-Latn), 
+html :not(:lang(zh)):not(:lang(ja)), 
+html:lang(ja-Latn), 
+html:lang(zh-Latn), 
+html:not(:lang(zh)):not(:lang(ja)) {
+    font-family: 'Noto Sans TC', 'Microsoft JhengHei', 
+                 'PingFang TC', 
+                 'Heiti TC',
+                 'LiHei Pro','STXihei',
+                 sans-serif;    
+}
+
+[zhuyin] h-zhuyin {
+    vertical-align: middle;
+    margin-top: -0.2em;
+}
+
+[zhuyin] h-diao {
+    right: -0.7em;
+}
+
+
+[zhuyin] [length="2"][diao="˙"] h-diao {
+    margin-top: -0.3em;
+}
+[zhuyin] [length="3"][diao="˙"] h-diao {
+    margin-top: -0.4em;
+}
+
+.fa-classic, .fa-regular, .fa-solid, .far, .fas {
+    font-family: "Font Awesome 6 Free" !important;
+}
+
+.no-textemphasis em:lang(ja) h-char:after, 
+.no-textemphasis em:lang(zh) h-char:after, 
+[zhuyin] h-zhuyin{
+    font-weight: bold;
+    color: #666;
+}

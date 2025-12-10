@@ -1,0 +1,52 @@
+.page-data{
+	.content{
+        height:calc(100% - 120px);
+		.container{
+            background-color: transparent;
+            padding-top: 0;
+            h2{
+                color: $primary;
+                .fa-circle-user{
+                    font-size: 1.5em;
+                    vertical-align: middle;
+                    margin-top: -.2em;
+                }
+            }
+            .data-profile{
+                padding-left: 0;
+                padding-right: 0;
+                .data-profile__block{
+                    @media screen and (min-width: 576px) {
+                    padding-left: 2.7em;    
+                    }
+                    label{
+                        word-break: break-all;
+                    } 
+                }
+            }
+            .data-session{
+                margin-top: 20px;
+                margin-bottom: 20px;
+                padding-left: 0;
+                padding-right: 0;
+                .data-session__dash{
+                    display: block;
+                    transform: rotate(90deg);
+                    @media screen and (min-width: 576px) {
+                    display: inline; 
+                    transform: rotate(0deg);    
+                    }
+                }
+            }
+            .btn-demo{
+                margin-top: 30px;
+                margin-bottom: 30px;
+                line-height: 2;
+                > i{
+                    vertical-align: middle;
+                    font-size: 2em;
+                }
+            }
+		}
+	}
+}
