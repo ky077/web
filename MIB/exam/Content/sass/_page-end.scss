@@ -151,7 +151,7 @@
     &:hover, &.hover,
     &:active, &.active,
     &:focus, &.focus{
-		background-color: $tertiary;
+		background-color: $secondary;
         color: $primary;
         &:focus, &.focus{
             outline: none;
