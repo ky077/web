@@ -6,7 +6,7 @@ body {
   padding: 0px;
   margin: 0px;
   font-family: Arial, Helvetica, sans-serif, "Microsoft JhengHei";
-  color: $body-color;
+  color: $body-color !important;
 }
 .wrapper {
   width: 960px;
@@ -21,19 +21,15 @@ br{
 hr {
   margin: 20px 15px;
   border: none;
-  border-top: 1px solid #ebebeb;
+  border-top: 1px solid #ebebeb !important;
 }
 .redWords {
-  color: #ec6867;
+  color: $primary !important;
 }
 .blueWords, .correctAns {
-  color: $primary;
+  color: $primary !important;
   font-weight: bold;
 }
-
-//.greenWords {
-//	color:#14a83b;
-//}
 .grid {
   display: grid;
   &.grid-2 {
@@ -53,7 +49,7 @@ hr {
       display: block;
       width: auto;
       text-align: left;
-      color: $body-color;
+      color: $body-color !important;
     }
     i {
       text-indent: 0;
@@ -63,10 +59,10 @@ hr {
 .table-striped {
   tbody {
     tr:nth-child(odd) {
-      background-color: #FFF;
+      background-color: #FFF !important;
     }
     tr:nth-child(even) {
-      background-color: #f9f9f9;
+      background-color: #f9f9f9 !important;
     }
   }
 }
@@ -88,8 +84,8 @@ hr {
 /** ******* ******* ******* ******* ******* ******* ******* */
 h3 {
   text-align: center;
-  background-color: $primary-dark;
-  color: #FFF;
+  background-color: $primary-dark !important;
+  color: #FFF !important;
   font-size: 24px;
   > div {
     background-size: 100% 100%;
@@ -97,14 +93,14 @@ h3 {
   }
 }
 h4 {
-  background: linear-gradient(to right, darken($primary-bg, 5%) 0%, lighten($primary-bg, 20%) 100%);
-  color: lighten($tertiary-bg, 10%);
+  background: linear-gradient(to right, darken($primary-bg, 5%) 0%, lighten($primary-bg, 20%) 100%) !important;
+  color: lighten($tertiary-bg, 10%) !important;
   font-size: 20px;
   padding: 5px 15px;
   margin: 0px 0px 15px 0px;
-  text-shadow: 0 0 5px rgba($secondary, .25), 1px 1px 2px rgba($secondary, .5);
+  text-shadow: 0 0 5px rgba($secondary, .25), 1px 1px 2px rgba($secondary, .5) !important;
   > .fa, > i {
-    color: #fff;
+    color: #fff !important;
     margin-left: -15px;
     margin-right: 5px;
     text-shadow: none;
@@ -127,7 +123,7 @@ ul.paperData {
     width: 50%;
     float: left;
     line-height: 37px;
-    border-bottom: 1px dashed #898989;
+    border-bottom: 1px dashed #898989 !important;
     background-image: url(../images/paper/spot.png);
     background-repeat: no-repeat;
     background-position: 0px 3px;
@@ -135,7 +131,7 @@ ul.paperData {
     text-indent: 28px;
     font-weight: bold;
     span {
-      color: $naniColor-DACC;
+      color: $secondary-dark !important;
     }
   }
 }
@@ -156,66 +152,32 @@ ul.paperData {
 ul.paperData-integrate {
   li {
     span {
-      color: $secondary-dark;
+      color: $secondary-dark !important;
     }
   }
 }
 table.integrateTable {
   th, td {
-    border-color: lighten($myScore-color, 20%);
+    border-color: lighten($myScore-color, 20%) !important;
   }
   thead, .thead {
     th, td {
-      background-color: $myScore-color;
+      background-color: $myScore-color !important;
     }
   }
   tbody, .tbody {
     th, td {
-      background-color: lighten($tertiary-bg, 10%);
-      color: $secondary-dark;
+      background-color: lighten($tertiary-bg, 10%) !important;
+      color: $secondary-dark !important;
       font-weight: bold;
     }
   }
 }
-//table.integrateTable.main{
-//	thead, .thead {
-//		th, td {
-//			background-color:$ntnuColorSet-DACC;
-//		}
-//	}
-//}
-//table.integrateTable.blue{
-//	thead, .thead {
-//		th, td {
-//			background-color:$naniColor-Word;
-//		}
-//	}
-//}
-//table.integrateTable.gray{
-//	thead, .thead {
-//		th, td {
-//			background-color: #666;
-//		}
-//	}
-//}
 .integrate {
   h2 {
     & .icon {
-      background-color: $ntnuColor-DACC;
+      background-color: $primary-bg !important;
     }
-  }
-}
-/** ******* ******* ******* ******* ******* ******* ******* */
-/** ******* ******* ******* ******* ******* ******* ******* */
-/** ******* ******* ******* ******* ******* ******* ******* */
-.Qcomplete {
-  border: 2px solid #009943;
-  padding: 15px;
-  img {
-    vertical-align: middle;
-  }
-  small {
-    color: $naniColor-DACC;
   }
 }
 /** ******* ******* ******* ******* ******* ******* ******* */
@@ -270,10 +232,10 @@ table.integrateTable {
       font-weight: bold;
     }
     .myScore {
-      color: $body-secondary-color;
+      color: $body-secondary-color !important;
     }
     .allScore {
-      color: lighten($body-secondary-color, 20%);
+      color: lighten($body-secondary-color, 20%) !important;
     }
   }
   .rulerBar {
@@ -288,20 +250,19 @@ table.integrateTable {
 .mark{
 	table td{
 		padding: 5px 0;
-		
 	}
 }
 .block2 {
-  background-color: $bg-color;
-  border: 1px solid $border-color;
+  background-color: $bg-color !important;
+  border: 1px solid $border-color !important;
   margin-bottom: 6px;
 }
 table.table-dimension {
   text-align: center;
   th, td {
-    border-top: 1px dashed $border-color;
-    border-right: 1px dashed $border-color;
-    color: $body-color;
+    border-top: 1px dashed $border-color !important;
+    border-right: 1px dashed $border-color !important;
+    color: $body-color !important;
     &:last-child {
       border-right: none;
     }
@@ -312,7 +273,7 @@ table.table-dimension {
       font-weight: 700;
       padding: 5px;
       height: auto;
-      color: $body-color;
+      color: $body-color !important;
       &:nth-child(1) {
         width: 6em;
       }
@@ -326,14 +287,14 @@ table.table-dimension {
     td {
       font-weight: 700;
       padding: 5px;
-      color: $primary;
+      color: $primary !important;
     }
   }
   tr {
     th {
       font-weight: 700;
       height: 150px; 
-      color: $primary-dark;
+      color: $primary-dark !important;
     }
     td {
       font-size: .9em;
@@ -347,7 +308,7 @@ table.table-dimension {
     background-repeat: repeat-y;
     background-position: center bottom;
     border-radius: 2px 2px 0 0;
-    border: 1px solid $myScore-color;
+    border: 1px solid $myScore-color !important;
     border-bottom: none;
   }
   .allItemScore {
@@ -358,11 +319,11 @@ table.table-dimension {
     background-repeat: repeat-y;
     background-position: center bottom;
     border-radius: 2px 2px 0 0;
-    border: 1px solid $allScore-color;
+    border: 1px solid $allScore-color !important;
     border-bottom: none;
   }
   .myItemScore span {
-    background-color: #FFF;
+    background-color: #FFF !important;
     display: block;
   }
   .range {
@@ -370,13 +331,13 @@ table.table-dimension {
     line-height: 1;
     margin: 5px 0px;
     padding: 3px 3px;
-    text-shadow: 1px 1px #fff;
+    text-shadow: 1px 1px #fff !important;
     font-size: 8px;
-    color: #999;
-    background-color: #FAFAFA;
-    border: 1px solid #ebebeb;
+    color: #999 !important;
+    background-color: #FAFAFA !important;
+    border: 1px solid #ebebeb !important;
     border-radius: 50px;
-    box-shadow: inset 1px 1px 1px rgba(0, 0, 0, .5);
+    box-shadow: inset 1px 1px 1px rgba(0, 0, 0, .5) !important;
     /*white-space: nowrap;*/
   }
   .bar {
@@ -401,21 +362,15 @@ table.table-dimension {
 /** ******* ******* ******* ******* ******* ******* ******* */
 /** ******* ******* ******* ******* ******* ******* ******* */
 /** ******* ******* ******* ******* ******* ******* ******* */
-.title span {
-  background-color: $naniColor-DACC;
-  font-weight: 700;
-  font-size: 20px;
-  padding: 5px;
-}
 .dimension-text {
   font-size: .95em;
   h4 {
-    background: transparent;
+    background: transparent !important;
     padding: 0px;
     > span {
-      background: $primary-bg;
-      color: lighten($tertiary-bg, 10%);
-      text-shadow: 0 0 5px rgba($secondary, .25), 1px 1px 2px rgba($secondary, .5);
+      background: $primary-bg !important;
+      color: lighten($tertiary-bg, 10%) !important;
+      text-shadow: 0 0 5px rgba($secondary, .25), 1px 1px 2px rgba($secondary, .5) !important;
       padding: 5px 15px;
       border-radius: 20px;
     }
@@ -434,89 +389,17 @@ table.table-dimension {
     padding-left: 5em;
   }
   .ex {
-    border: 1px solid $border-color;
+    border: 1px solid $border-color !important;
     padding: 10px 15px;
-    background-color: $bg-color;
-    color: $secondary;
+    background-color: $bg-color !important;
+    color: $secondary !important;
     > p {
       text-indent: 0px;
     }
     .ex-ans {
-      border-top: 1px dashed $border-color;
+      border-top: 1px dashed $border-color !important;
       padding-top: 10px;
       margin: 10px -15px 0 -15px;
-    }
-  }
-}
-/** ******* ******* ******* ******* ******* ******* ******* */
-/** ******* ******* ******* ******* ******* ******* ******* */
-/** ******* ******* ******* ******* ******* ******* ******* */
-.yourScore {
-  padding-right: 15px;
-  .score {
-    width: 100%;
-    margin-right: 15px;
-    .block2 {
-      font-size: 50px;
-    }
-  }
-  .range {
-    width: 100%;
-    margin-left: 15px;
-    .block2 {
-      font-size: 42px;
-      padding: 20px 15px;
-    }
-  }
-  .title {
-    text-align: center;
-    background-color: $ntnuColorSet-DACC;
-    color: #FFF;
-    font-weight: 700;
-    padding: 5px 0px;
-  }
-  .block2 {
-    padding: 15px;
-    text-align: center;
-  }
-}
-.rangeBar {
-  width: 100%;
-  height: 25px;
-  margin-top: 12px;
-  border: 1px solid #CCC;
-  background-color: #FFF;
-  box-shadow: inset 2px 2px 5px rgba(0, 0, 0, .2);
-  > div {
-    height: 100%;
-    background-color: $naniColor-DACC;
-    background-image: url(../images/paper/h1Samall.jpg);
-  }
-}
-.QRcode {
-  height: 165px;
-  .text {
-    width: calc(100% - 165px);
-    float: left;
-    position: relative;
-    padding-left: 15px;
-    > div {
-      height: 165px;
-      padding-top: 20px;
-      padding-bottom: 20px;
-    }
-    small {
-      position: absolute;
-      bottom: 20px;
-      right: 0px;
-    }
-  }
-  .pic {
-    width: 165px;
-    float: right;
-    > img {
-      width: auto;
-      height: 165px;
     }
   }
 }
@@ -551,7 +434,7 @@ table.table-dimension {
       background-image: url(../images/pdf/Medals-5.png);
     }
     > span {
-      color: $secondary;
+      color: $secondary !important;
       font-size: 85px;
       position: absolute;
       width: 100%;
@@ -567,7 +450,7 @@ table.table-dimension {
       left: 0px;
       top: 0px;
       text-align: center;
-      color: #FFF;
+      color: #FFF !important;
       background-repeat: no-repeat;
       background-size: cover;
       padding-top: 203px;
@@ -583,22 +466,6 @@ table.table-dimension {
 /** ******* ******* ******* ******* ******* ******* ******* */
 /** ******* ******* ******* ******* ******* ******* ******* */
 /** ******* ******* ******* ******* ******* ******* ******* */
-.forRecommendedBooksTr {
-  tr:nth-child(odd) {
-    background-color: #e5f5ec;
-  }
-  tr:nth-child(even) {
-    background-color: #fdefe9;
-  }
-}
-/** ******* ******* ******* ******* ******* ******* ******* */
-/** ******* ******* ******* ******* ******* ******* ******* */
-/** ******* ******* ******* ******* ******* ******* ******* */
-h1.order {
-  text-align: center;
-  background-color: #ededed;
-  margin-bottom: 20px;
-}
 p.indent {
   text-indent: 2em;
 }
@@ -609,16 +476,12 @@ p.indent {
   }
   th, td {
     height: 40px;
-    border: 1px solid #999;
+    border: 1px solid #999 !important;
     text-align: center;
   }
   .fillMark {
-    color: #C1C1C1;
+    color: #C1C1C1 !important;
   }
-}
-h2.order {
-  text-decoration: underline;
-  font-weight: bold;
 }
 .table {
   margin: 0px auto;
@@ -633,11 +496,8 @@ h2.order {
   }
   td {
     height: 42px;
-    border-bottom: 1px solid #999;
+    border-bottom: 1px solid #999 !important;
   }
-}
-.schooldimension-text {
-  padding: 0px 81px;
 }
 /** ******* ******* ******* ******* ******* ******* ******* */
 /** ******* ******* ******* ******* ******* ******* ******* */
@@ -658,86 +518,86 @@ h2.order {
 /** ******* ******* ******* ******* ******* ******* ******* */
 /** ******* ******* ******* ******* ******* ******* ******* */
 /** ******* ******* ******* ******* ******* ******* ******* */
-.gradeAverage {
-  max-height: 1060px;
-  overflow: hidden;
-  margin-bottom: 15px;
-  .gradeAverage-item {
-    border-bottom: 1px solid #ddd;
-    > .forValign {
-      display: table-cell;
-      vertical-align: middle;
-      text-align: center;
-    }
-    .block2 {
-      margin: 0px auto;
-      padding: 15px;
-    }
-  }
-  &.gradeNum1, &.gradeNum2 {
-    .gradeAverage-item {
-      width: 960px;
-      height: calc(1060px / 2);
-      margin: 0px auto;
-      > .forValign {
-        width: 960px;
-        height: calc(1060px / 2);
-      }
-      .block2 {
-        width: 80%;
-      }
-    }
-  }
-  &.gradeNum3 {
-    .gradeAverage-item {
-      width: 960px;
-      height: calc(1060px / 3);
-      margin: 0px auto;
-      > .forValign {
-        width: 960px;
-        height: calc(1060px / 3);
-      }
-      .block2 {
-        width: 55%;
-      }
-    }
-  }
-  &.gradeNum4, &.gradeNum5, &.gradeNum6 {
-    .gradeAverage-item {
-      float: left;
-      width: 465px;
-      height: calc(1060px / 3);
-      margin: 0px auto;
-      > .forValign {
-        width: 465px;
-        height: calc(1060px / 3);
-      }
-      .block2 {
-        width: calc(100% - 15px);
-      }
-      &:nth-child(odd) {
-        .block2 {
-          margin-right: 15px;
-        }
-      }
-      &:nth-child(even) {
-        .block2 {
-          margin-left: 15px;
-        }
-      }
-    }
-  }
-  &.gradeNum5 {
-    .gradeAverage-item:nth-child(5) {
-      width: 930px;
-    }
-  }
-}
-table.table-gradelevel {
-  .tech {
-    margin: 10px 0px;
-  }
-}
+//.gradeAverage {
+//  max-height: 1060px;
+//  overflow: hidden;
+//  margin-bottom: 15px;
+//  .gradeAverage-item {
+//    border-bottom: 1px solid #ddd;
+//    > .forValign {
+//      display: table-cell;
+//      vertical-align: middle;
+//      text-align: center;
+//    }
+//    .block2 {
+//      margin: 0px auto;
+//      padding: 15px;
+//    }
+//  }
+//  &.gradeNum1, &.gradeNum2 {
+//    .gradeAverage-item {
+//      width: 960px;
+//      height: calc(1060px / 2);
+//      margin: 0px auto;
+//      > .forValign {
+//        width: 960px;
+//        height: calc(1060px / 2);
+//      }
+//      .block2 {
+//        width: 80%;
+//      }
+//    }
+//  }
+//  &.gradeNum3 {
+//    .gradeAverage-item {
+//      width: 960px;
+//      height: calc(1060px / 3);
+//      margin: 0px auto;
+//      > .forValign {
+//        width: 960px;
+//        height: calc(1060px / 3);
+//      }
+//      .block2 {
+//        width: 55%;
+//      }
+//    }
+//  }
+//  &.gradeNum4, &.gradeNum5, &.gradeNum6 {
+//    .gradeAverage-item {
+//      float: left;
+//      width: 465px;
+//      height: calc(1060px / 3);
+//      margin: 0px auto;
+//      > .forValign {
+//        width: 465px;
+//        height: calc(1060px / 3);
+//      }
+//      .block2 {
+//        width: calc(100% - 15px);
+//      }
+//      &:nth-child(odd) {
+//        .block2 {
+//          margin-right: 15px;
+//        }
+//      }
+//      &:nth-child(even) {
+//        .block2 {
+//          margin-left: 15px;
+//        }
+//      }
+//    }
+//  }
+//  &.gradeNum5 {
+//    .gradeAverage-item:nth-child(5) {
+//      width: 930px;
+//    }
+//  }
+//}
+//table.table-gradelevel {
+//  .tech {
+//    margin: 10px 0px;
+//  }
+//}
 /** ******* ******* ******* ******* ******* ******* ******* */
 /** ******* ******* ******* ******* ******* ******* ******* */
 /** ******* ******* ******* ******* ******* ******* ******* */
@@ -760,18 +620,18 @@ table.table-gradelevel {
   text-align: center;
   width: calc(100% + 15px + 15px + 1px + 1px);
   margin: -15px -16px 0 -16px;
-  background-color: $secondary;
+  background-color: $secondary !important;
   font-size: 0.9em;
-  color: #f5f5f5;
+  color: #f5f5f5 !important;
   padding: 5px 0px;
   border: 1px solid #ccc;
   border-bottom-width: 5px;
   > label {
     font-weight: bold;
     font-size: 1em;
-    text-shadow: 1px 1px rgba(0, 0, 0, .5);
-    color: #fff;
-    color: $tertiary-bg;
+    text-shadow: 1px 1px rgba(0, 0, 0, .5) !important;
+    color: #fff !important;
+    color: $tertiary-bg !important;
   }
 }
 /** ******* ******* ******* ******* ******* ******* ******* */
@@ -784,81 +644,49 @@ table.table-gradelevel {
   }
   table.frontCover-table {
     th {
-      color: $secondary-dark;
-      border-bottom-color: lighten($body-secondary-color, 30%);
+      color: $secondary-dark !important;
+      border-bottom-color: lighten($body-secondary-color, 30%) !important;
     }
     td {
-      color: $body-secondary-color;
-      border-bottom-color: lighten($body-secondary-color, 30%);
+      color: $body-secondary-color !important;
+      border-bottom-color: lighten($body-secondary-color, 30%) !important;
     }
   }
   h3 > div {
-    background-image: url(../images/pdf/h3-line-parents.png);
+    background-image: url(../images/pdf/h3-line-parents.png) !important;
   }
 }
-//.class{
-//	.frontCover {background-image: url(../images/pdf/frontCover-class.jpg);}
-//	table.frontCover-table{
-//		th {
-//			color: #007440;
-//			border-bottom-color: #007440;
-//		}
-//		&.DACC th {color: #007440;}
-//		td {
-//			border-bottom-color: #007440;
-//		}
-//	}
-//	h3 > div { 
-//		background-image:url(../images/pdf/h3-line-class.png);
-//	}
-//}
-//.school{
-//	.frontCover {background-image: url(../images/pdf/frontCover-school.jpg);}
-//	table.frontCover-table{
-//		th {
-//			color: #80422d;
-//			border-bottom-color: #80422d;
-//		}
-//		&.DACC th {color: #80422d;}
-//		td {
-//			border-bottom-color: #80422d;
-//		}
-//	}
-//	h3 > div { 
-//		background-image:url(../images/pdf/h3-line-school.png);
-//	}
-//}
 /** ******* ******* ******* ******* ******* ******* ******* */
 /** ******* ******* ******* ******* ******* ******* ******* */
 /** ******* ******* ******* ******* ******* ******* ******* */
-@media print {
+/*@media print {
   body {
-    color: #000;
+    color: #000 !important;
   }
   .scoreBlock {
     .pen {
       .myScore, .allScore {
-        color: #000;
+        color: #000 !important;
       }
     }
   }
   .forChart-yAxes-rotate {
     .yAxes-scaleLabel {
       > span {
-        color: #000;
+        color: #000 !important;
       }
     }
   }
   .scoreBlock {
     .pen {
       .allScore {
-        color: #333;
+        color: #333 !important;
       }
     }
   }
   table.table-dimension {
     .range {
-      color: #333;
+      color: #333 !important;
     }
   }
-}
+}*/
