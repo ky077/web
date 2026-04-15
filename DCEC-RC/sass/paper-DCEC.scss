@@ -15,9 +15,6 @@ body {
 .paddingWrapper {
   padding: 0px 15px;
 }
-br{
-	line-height: 1;
-}
 hr {
   margin: 20px 15px;
   border: none;
@@ -378,6 +375,7 @@ table.table-dimension {
 		table{
 			width: 100%;
 			table-layout: fixed;
+			line-height: 1.5;
 		}
   }
   .ex {
@@ -396,6 +394,7 @@ table.table-dimension {
 			table{
 				width: 100%;
 				table-layout: fixed;
+				line-height: 1.5;
 			}
     }
   }
