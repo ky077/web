@@ -14,11 +14,6 @@ hr { margin: 20px 15px; border: none; border-top: 1px solid #ebebeb !important; 
 
 .blueWords, .correctAns { color: #bf2320 !important; font-weight: bold; }
 
-.grid { display: grid; }
-.grid.grid-2 { grid-template-columns: 1fr 1fr; }
-.grid.grid-3 { grid-template-columns: 1fr 1fr 1fr; }
-.grid.grid-4 { grid-template-columns: 1fr 1fr 1fr 1fr; }
-
 .integrateMark > li { line-height: 1.8; }
 .integrateMark > li > span { display: block; width: auto; text-align: left; color: #333333 !important; }
 .integrateMark > li i { text-indent: 0; }
@@ -113,9 +108,11 @@ table.table-dimension .barGray { width: 100%; height: 110px; margin: 0px auto; b
 .dimension-text h4.h4-center > span { border-radius: 20px 20px 20px 20px; }
 .dimension-text p { line-height: 1.5; text-indent: 2.2em; }
 .dimension-text blockquote { padding-left: 5em; }
+.dimension-text blockquote table { width: 100%; table-layout: fixed; }
 .dimension-text .ex { border: 1px solid #d8d7d7 !important; padding: 10px 15px; background-color: #f7f7f7 !important; color: #562520 !important; }
 .dimension-text .ex > p { text-indent: 0px; }
-.dimension-text .ex .ex-ans { border-top: 1px dashed #d8d7d7 !important; padding-top: 10px; margin: 10px -15px 0 -15px; }
+.dimension-text .ex .ex-ans { border-top: 1px dashed #d8d7d7 !important; padding-top: 10px; margin: 10px -15px 0 -15px; padding-left: 5em; }
+.dimension-text .ex .ex-ans table { width: 100%; table-layout: fixed; }
 
 /** ******* ******* ******* ******* ******* ******* ******* */
 /** ******* ******* ******* ******* ******* ******* ******* */
@@ -148,12 +145,6 @@ p.indent { text-indent: 2em; }
 .table th > span { letter-spacing: 0.14em; }
 .table td { height: 42px; border-bottom: 1px solid #999 !important; }
 
-/** ******* ******* ******* ******* ******* ******* ******* */
-/** ******* ******* ******* ******* ******* ******* ******* */
-/** ******* ******* ******* ******* ******* ******* ******* */
-/** ******* ******* ******* ******* ******* ******* ******* */
-/** ******* ******* ******* ******* ******* ******* ******* */
-/** ******* ******* ******* ******* ******* ******* ******* */
 /** ******* ******* ******* ******* ******* ******* ******* */
 /** ******* ******* ******* ******* ******* ******* ******* */
 /** ******* ******* ******* ******* ******* ******* ******* */
