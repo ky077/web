@@ -70,7 +70,7 @@ table.integrateTable tbody th, table.integrateTable tbody td, table.integrateTab
 .scoreBlock .pen .allPen { background-image: url(../images/paper/penRed.png); }
 .scoreBlock .pen .myPenWidth, .scoreBlock .pen .allPenWidth { width: 100%; height: 100%; position: absolute; top: 0px; left: 0px; padding: 0px 65px 0px 47px; }
 .scoreBlock .pen .myPenScore, .scoreBlock .pen .allPenScore { height: 100%; text-indent: 0.5em; position: relative; }
-.scoreBlock .pen .myScore, .scoreBlock .pen .allScore { position: absolute; top: 50%; right: 0; transform: translate(100%, -50%); white-space: nowrap; text-indent: 0; font-size: 30px; font-weight: bold; }
+.scoreBlock .pen .myScore, .scoreBlock .pen .allScore { position: absolute; top: 0; left: calc(100% + 2px); white-space: nowrap; text-indent: 0; font-size: 30px; font-weight: bold; text-shadow: 1px 1px white, -1px -1px white, -1px 1px white, 1px -1px white, 2px 2px rgba(255, 255, 255, 0.1), -2px -2px rgba(255, 255, 255, 0.1), -2px 2px rgba(255, 255, 255, 0.1), 2px -2px rgba(255, 255, 255, 0.1); }
 .scoreBlock .pen .myScore { color: #595757 !important; }
 .scoreBlock .pen .allScore { color: #8c8a8a !important; }
 .scoreBlock .rulerBar { width: 100%; height: 56px; background-image: url(../images/paper/ruler.png); margin-top: 10px; background-position: center top; background-repeat: no-repeat; }
@@ -147,7 +147,7 @@ p.indent { text-indent: 2em; }
 /** ******* ******* ******* ******* ******* ******* ******* */
 /** ******* ******* ******* ******* ******* ******* ******* */
 .forChart-yAxes-rotate { margin-top: -5px; padding-right: 10px; position: relative; }
-.forChart-yAxes-rotate .yAxes-scaleLabel { width: 100%; height: auto; position: absolute; top: 0; left: 0; text-align: left; font-size: 14px; transform: translateY(calc(-100% - .5em)); }
+.forChart-yAxes-rotate .yAxes-scaleLabel { width: 100%; height: auto; position: absolute; top: calc(-1em - .75em); left: 0; text-align: left; font-size: 14px; }
 
 .encouragingWords { text-align: center; width: calc(100% + 15px + 15px + 1px + 1px); margin: -15px -16px 0 -16px; background-color: #562520 !important; font-size: 0.9em; color: #f5f5f5 !important; padding: 5px 0px; border: 1px solid #ccc; border-bottom-width: 5px; }
 .encouragingWords > label { font-weight: bold; font-size: 1em; text-shadow: 1px 1px rgba(0, 0, 0, 0.5) !important; color: #fff !important; color: #feebae !important; }

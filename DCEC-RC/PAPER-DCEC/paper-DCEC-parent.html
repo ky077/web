@@ -848,13 +848,13 @@ $(function() {
         // 判斷是否超出邊界
         if (currentPos + textWidth >= contentWidth) {
             // 計算偏移的數值
-            var diff = (currentPos + textWidth) - contentWidth - buffer;
+            var diff = ((currentPos + textWidth) - contentWidth - buffer) * -1;
 
             // 套用位移
-            $scoreLabel.css("right",  diff + "px");
+            $scoreLabel.css("margin-left",  diff + "px");
         } else {
             // 如果沒超出，確保 right 回到預設值（避免縮放視窗時樣式殘留）
-            $scoreLabel.css("right", "");
+            $scoreLabel.css("margin-left", "");
         }
     });
 });
