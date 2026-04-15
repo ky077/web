@@ -1,0 +1,864 @@
+@import "var";
+* {
+  box-sizing: border-box;
+}
+body {
+  padding: 0px;
+  margin: 0px;
+  font-family: Arial, Helvetica, sans-serif, "Microsoft JhengHei";
+  color: $body-color;
+}
+.wrapper {
+  width: 960px;
+  margin: 10px auto;
+}
+.paddingWrapper {
+  padding: 0px 15px;
+}
+br{
+	line-height: 1;
+}
+hr {
+  margin: 20px 15px;
+  border: none;
+  border-top: 1px solid #ebebeb;
+}
+.redWords {
+  color: #ec6867;
+}
+.blueWords, .correctAns {
+  color: $primary;
+  font-weight: bold;
+}
+
+//.greenWords {
+//	color:#14a83b;
+//}
+.grid {
+  display: grid;
+  &.grid-2 {
+    grid-template-columns: 1fr 1fr;
+  }
+  &.grid-3 {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  &.grid-4 {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+.integrateMark {
+  > li {
+    line-height: 1.8;
+    > span {
+      display: block;
+      width: auto;
+      text-align: left;
+      color: $body-color;
+    }
+    i {
+      text-indent: 0;
+    }
+  }
+}
+.table-striped {
+  tbody {
+    tr:nth-child(odd) {
+      background-color: #FFF;
+    }
+    tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+  }
+}
+/** ******* ******* ******* ******* ******* ******* ******* */
+/** ******* ******* ******* ******* ******* ******* ******* */
+/** ******* ******* ******* ******* ******* ******* ******* */
+.forPeople {
+  position: relative;
+  .people {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+  }
+}
+/** ******* ******* ******* ******* ******* ******* ******* */
+/** ******* ******* ******* ******* ******* ******* ******* */
+/** ******* ******* ******* ******* ******* ******* ******* */
+h3 {
+  text-align: center;
+  background-color: $primary-dark;
+  color: #FFF;
+  font-size: 24px;
+  > div {
+    background-size: 100% 100%;
+    padding: 7px 0px;
+  }
+}
+h4 {
+  background: linear-gradient(to right, darken($primary-bg, 5%) 0%, lighten($primary-bg, 20%) 100%);
+  color: lighten($tertiary-bg, 10%);
+  font-size: 20px;
+  padding: 5px 15px;
+  margin: 0px 0px 15px 0px;
+  text-shadow: 0 0 5px rgba($secondary, .25), 1px 1px 2px rgba($secondary, .5);
+  > .fa, > i {
+    color: #fff;
+    margin-left: -15px;
+    margin-right: 5px;
+    text-shadow: none;
+  }
+}
+h5 {
+  background-image: url(../images/paper/spot2.png);
+  background-repeat: no-repeat;
+  background-position: 0px 1px;
+  background-size: 20px auto;
+  font-size: 1em;
+  padding-left: 20px;
+}
+/** ******* ******* ******* ******* ******* ******* ******* */
+/** ******* ******* ******* ******* ******* ******* ******* */
+/** ******* ******* ******* ******* ******* ******* ******* */
+ul.paperData {
+  padding: 15px 15px 30px 15px;
+  li {
+    width: 50%;
+    float: left;
+    line-height: 37px;
+    border-bottom: 1px dashed #898989;
+    background-image: url(../images/paper/spot.png);
+    background-repeat: no-repeat;
+    background-position: 0px 3px;
+    background-size: 30px auto;
+    text-indent: 28px;
+    font-weight: bold;
+    span {
+      color: $naniColor-DACC;
+    }
+  }
+}
+/** ******* ******* ******* ******* ******* ******* ******* */
+/** ******* ******* ******* ******* ******* ******* ******* */
+/** ******* ******* ******* ******* ******* ******* ******* */
+.frontCover {
+  background-size: 100% 100%;
+}
+.titleCover {
+  background-image: url(../images/pdf/titleCover-bg.jpg);
+  background-size: 100% 100%;
+}
+.endCover {
+  background-image: url(../images/pdf/endCover-bg.jpg);
+  background-size: 100% 100%;
+}
+ul.paperData-integrate {
+  li {
+    span {
+      color: $secondary-dark;
+    }
+  }
+}
+table.integrateTable {
+  th, td {
+    border-color: lighten($myScore-color, 20%);
+  }
+  thead, .thead {
+    th, td {
+      background-color: $myScore-color;
+    }
+  }
+  tbody, .tbody {
+    th, td {
+      background-color: lighten($tertiary-bg, 10%);
+      color: $secondary-dark;
+      font-weight: bold;
+    }
+  }
+}
+//table.integrateTable.main{
+//	thead, .thead {
+//		th, td {
+//			background-color:$ntnuColorSet-DACC;
+//		}
+//	}
+//}
+//table.integrateTable.blue{
+//	thead, .thead {
+//		th, td {
+//			background-color:$naniColor-Word;
+//		}
+//	}
+//}
+//table.integrateTable.gray{
+//	thead, .thead {
+//		th, td {
+//			background-color: #666;
+//		}
+//	}
+//}
+.integrate {
+  h2 {
+    & .icon {
+      background-color: $ntnuColor-DACC;
+    }
+  }
+}
+/** ******* ******* ******* ******* ******* ******* ******* */
+/** ******* ******* ******* ******* ******* ******* ******* */
+/** ******* ******* ******* ******* ******* ******* ******* */
+.Qcomplete {
+  border: 2px solid #009943;
+  padding: 15px;
+  img {
+    vertical-align: middle;
+  }
+  small {
+    color: $naniColor-DACC;
+  }
+}
+/** ******* ******* ******* ******* ******* ******* ******* */
+/** ******* ******* ******* ******* ******* ******* ******* */
+/** ******* ******* ******* ******* ******* ******* ******* */
+.scoreBlock {
+  margin: 15px 0px;
+  .pen {
+    //區塊
+    height: 30px;
+    padding: 0px 65px 0px 47px;
+    background-image: url(../images/paper/penHead.png);
+    background-repeat: no-repeat;
+    position: relative;
+    font-weight: bold;
+    font-size: 1.2em;
+    // 鉛筆底圖
+    .myPen, .allPen {
+      min-width: 13%;
+      height: 100%;
+      background-position: right;
+      background-repeat: no-repeat;
+    }
+    .myPen {
+      background-image: url(../images/paper/penOrange.png);
+    }
+    .allPen {
+      background-image: url(../images/paper/penRed.png);
+    }
+    // 分數寬度
+    .myPenWidth, .allPenWidth {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      padding: 0px 65px 0px 47px;
+    }
+    .myPenScore, .allPenScore {
+      height: 100%;
+      text-indent: 0.5em;
+      position: relative;
+    }
+    .myScore, .allScore {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translate(100%, -50%);
+      white-space: nowrap;
+      text-indent: 0;
+      font-size: 30px;
+      font-weight: bold;
+    }
+    .myScore {
+      color: $body-secondary-color;
+    }
+    .allScore {
+      color: lighten($body-secondary-color, 20%);
+    }
+  }
+  .rulerBar {
+    width: 100%;
+    height: 56px;
+    background-image: url(../images/paper/ruler.png);
+    margin-top: 10px;
+    background-position: center top;
+    background-repeat: no-repeat;
+  }
+}
+.mark{
+	table td{
+		padding: 5px 0;
+		
+	}
+}
+.block2 {
+  background-color: $bg-color;
+  border: 1px solid $border-color;
+  margin-bottom: 6px;
+}
+table.table-dimension {
+  text-align: center;
+  th, td {
+    border-top: 1px dashed $border-color;
+    border-right: 1px dashed $border-color;
+    color: $body-color;
+    &:last-child {
+      border-right: none;
+    }
+  }
+  tr.thead {
+    th {
+      border-top: none;
+      font-weight: 700;
+      padding: 5px;
+      height: auto;
+      color: $body-color;
+      &:nth-child(1) {
+        width: 6em;
+      }
+      &:nth-child(2) {
+        width: 5em;
+      }
+      &:nth-child(3) {
+        width: 5em;
+      }
+    }
+    td {
+      font-weight: 700;
+      padding: 5px;
+      color: $primary;
+    }
+  }
+  tr {
+    th {
+      font-weight: 700;
+      height: 150px; 
+      color: $primary-dark;
+    }
+    td {
+      font-size: .9em;
+    }
+  }
+  .myItemScore {
+    width: 25px;
+    max-height: 125px;//設定最高
+    margin: 0 auto;
+    background-image: url(../images/paper/myItemBar.png);
+    background-repeat: repeat-y;
+    background-position: center bottom;
+    border-radius: 2px 2px 0 0;
+    border: 1px solid $myScore-color;
+    border-bottom: none;
+  }
+  .allItemScore {
+    width: 25px;
+    max-height: 125px;//設定最高
+    margin: 0 auto;
+    background-image: url(../images/paper/allItemBar.png);
+    background-repeat: repeat-y;
+    background-position: center bottom;
+    border-radius: 2px 2px 0 0;
+    border: 1px solid $allScore-color;
+    border-bottom: none;
+  }
+  .myItemScore span {
+    background-color: #FFF;
+    display: block;
+  }
+  .range {
+    height: 30px;
+    line-height: 1;
+    margin: 5px 0px;
+    padding: 3px 3px;
+    text-shadow: 1px 1px #fff;
+    font-size: 8px;
+    color: #999;
+    background-color: #FAFAFA;
+    border: 1px solid #ebebeb;
+    border-radius: 50px;
+    box-shadow: inset 1px 1px 1px rgba(0, 0, 0, .5);
+    /*white-space: nowrap;*/
+  }
+  .bar {
+    width: 100%;
+    height: 110px;
+    margin: 0px auto;
+    background-image: url(../images/paper/reward.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 85% auto;
+  }
+  .barGray {
+    width: 100%;
+    height: 110px;
+    margin: 0px auto;
+    background-image: url(../images/paper/rewardGray.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 85% auto;
+  }
+}
+/** ******* ******* ******* ******* ******* ******* ******* */
+/** ******* ******* ******* ******* ******* ******* ******* */
+/** ******* ******* ******* ******* ******* ******* ******* */
+.title span {
+  background-color: $naniColor-DACC;
+  font-weight: 700;
+  font-size: 20px;
+  padding: 5px;
+}
+.dimension-text {
+  font-size: .95em;
+  h4 {
+    background: transparent;
+    padding: 0px;
+    > span {
+      background: $primary-bg;
+      color: lighten($tertiary-bg, 10%);
+      text-shadow: 0 0 5px rgba($secondary, .25), 1px 1px 2px rgba($secondary, .5);
+      padding: 5px 15px;
+      border-radius: 20px;
+    }
+  }
+  h4.h4-center {
+    text-align: center;
+    > span {
+      border-radius: 20px 20px 20px 20px;
+    }
+  }
+  p {
+    line-height: 1.5;
+    text-indent: 2.2em;
+  }
+  blockquote {
+    padding-left: 5em;
+  }
+  .ex {
+    border: 1px solid $border-color;
+    padding: 10px 15px;
+    background-color: $bg-color;
+    color: $secondary;
+    > p {
+      text-indent: 0px;
+    }
+    .ex-ans {
+      border-top: 1px dashed $border-color;
+      padding-top: 10px;
+      margin: 10px -15px 0 -15px;
+    }
+  }
+}
+/** ******* ******* ******* ******* ******* ******* ******* */
+/** ******* ******* ******* ******* ******* ******* ******* */
+/** ******* ******* ******* ******* ******* ******* ******* */
+.yourScore {
+  padding-right: 15px;
+  .score {
+    width: 100%;
+    margin-right: 15px;
+    .block2 {
+      font-size: 50px;
+    }
+  }
+  .range {
+    width: 100%;
+    margin-left: 15px;
+    .block2 {
+      font-size: 42px;
+      padding: 20px 15px;
+    }
+  }
+  .title {
+    text-align: center;
+    background-color: $ntnuColorSet-DACC;
+    color: #FFF;
+    font-weight: 700;
+    padding: 5px 0px;
+  }
+  .block2 {
+    padding: 15px;
+    text-align: center;
+  }
+}
+.rangeBar {
+  width: 100%;
+  height: 25px;
+  margin-top: 12px;
+  border: 1px solid #CCC;
+  background-color: #FFF;
+  box-shadow: inset 2px 2px 5px rgba(0, 0, 0, .2);
+  > div {
+    height: 100%;
+    background-color: $naniColor-DACC;
+    background-image: url(../images/paper/h1Samall.jpg);
+  }
+}
+.QRcode {
+  height: 165px;
+  .text {
+    width: calc(100% - 165px);
+    float: left;
+    position: relative;
+    padding-left: 15px;
+    > div {
+      height: 165px;
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+    small {
+      position: absolute;
+      bottom: 20px;
+      right: 0px;
+    }
+  }
+  .pic {
+    width: 165px;
+    float: right;
+    > img {
+      width: auto;
+      height: 165px;
+    }
+  }
+}
+/** ******* ******* ******* ******* ******* ******* ******* */
+/** ******* ******* ******* ******* ******* ******* ******* */
+/** ******* ******* ******* ******* ******* ******* ******* */
+.left {
+  width: 400px;
+  float: left;
+  padding-left: 15px;
+  .medals {
+    width: 100%;
+    height: 0px;
+    padding-bottom: 72%;
+    background-size: cover;
+    margin: 25px auto 10px auto;
+    font-weight: bold;
+    position: relative;
+    &.medals-1 {
+      background-image: url(../images/pdf/Medals-1.png);
+    }
+    &.medals-2 {
+      background-image: url(../images/pdf/Medals-2.png);
+    }
+    &.medals-3 {
+      background-image: url(../images/pdf/Medals-3.png);
+    }
+    &.medals-4 {
+      background-image: url(../images/pdf/Medals-4.png);
+    }
+    &.medals-5 {
+      background-image: url(../images/pdf/Medals-5.png);
+    }
+    > span {
+      color: $secondary;
+      font-size: 85px;
+      position: absolute;
+      width: 100%;
+      text-align: center;
+      margin-top: 100px;
+      z-index: 10;
+      text-shadow: 1px 1px rgba(255, 255, 255, 0.5);
+    }
+    .medalsMark {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      text-align: center;
+      color: #FFF;
+      background-repeat: no-repeat;
+      background-size: cover;
+      padding-top: 203px;
+      font-size: 20px;
+    }
+  }
+}
+.right {
+  width: 560px;
+  float: left;
+  padding-right: 15px;
+}
+/** ******* ******* ******* ******* ******* ******* ******* */
+/** ******* ******* ******* ******* ******* ******* ******* */
+/** ******* ******* ******* ******* ******* ******* ******* */
+.forRecommendedBooksTr {
+  tr:nth-child(odd) {
+    background-color: #e5f5ec;
+  }
+  tr:nth-child(even) {
+    background-color: #fdefe9;
+  }
+}
+/** ******* ******* ******* ******* ******* ******* ******* */
+/** ******* ******* ******* ******* ******* ******* ******* */
+/** ******* ******* ******* ******* ******* ******* ******* */
+h1.order {
+  text-align: center;
+  background-color: #ededed;
+  margin-bottom: 20px;
+}
+p.indent {
+  text-indent: 2em;
+}
+.table-noraml {
+  margin: 0px auto;
+  th {
+    font-weight: bold;
+  }
+  th, td {
+    height: 40px;
+    border: 1px solid #999;
+    text-align: center;
+  }
+  .fillMark {
+    color: #C1C1C1;
+  }
+}
+h2.order {
+  text-decoration: underline;
+  font-weight: bold;
+}
+.table {
+  margin: 0px auto;
+  th {
+    text-align: center;
+    &.noneSpacing {
+      letter-spacing: inherit;
+    }
+    > span {
+      letter-spacing: 0.14em;
+    }
+  }
+  td {
+    height: 42px;
+    border-bottom: 1px solid #999;
+  }
+}
+.schooldimension-text {
+  padding: 0px 81px;
+}
+/** ******* ******* ******* ******* ******* ******* ******* */
+/** ******* ******* ******* ******* ******* ******* ******* */
+/** ******* ******* ******* ******* ******* ******* ******* */
+//@import "radarGraph";
+//
+//.for-resultChart{
+//	margin-top:15px + 15px;
+//	position:relative;
+//	> .block2{
+//		width:100%; 
+//		height:574px + 30px; 
+//		position:absolute; 
+//		top:-15px; 
+//		left:0px; 
+//	}
+//}
+/** ******* ******* ******* ******* ******* ******* ******* */
+/** ******* ******* ******* ******* ******* ******* ******* */
+/** ******* ******* ******* ******* ******* ******* ******* */
+.gradeAverage {
+  max-height: 1060px;
+  overflow: hidden;
+  margin-bottom: 15px;
+  .gradeAverage-item {
+    border-bottom: 1px solid #ddd;
+    > .forValign {
+      display: table-cell;
+      vertical-align: middle;
+      text-align: center;
+    }
+    .block2 {
+      margin: 0px auto;
+      padding: 15px;
+    }
+  }
+  &.gradeNum1, &.gradeNum2 {
+    .gradeAverage-item {
+      width: 960px;
+      height: calc(1060px / 2);
+      margin: 0px auto;
+      > .forValign {
+        width: 960px;
+        height: calc(1060px / 2);
+      }
+      .block2 {
+        width: 80%;
+      }
+    }
+  }
+  &.gradeNum3 {
+    .gradeAverage-item {
+      width: 960px;
+      height: calc(1060px / 3);
+      margin: 0px auto;
+      > .forValign {
+        width: 960px;
+        height: calc(1060px / 3);
+      }
+      .block2 {
+        width: 55%;
+      }
+    }
+  }
+  &.gradeNum4, &.gradeNum5, &.gradeNum6 {
+    .gradeAverage-item {
+      float: left;
+      width: 465px;
+      height: calc(1060px / 3);
+      margin: 0px auto;
+      > .forValign {
+        width: 465px;
+        height: calc(1060px / 3);
+      }
+      .block2 {
+        width: calc(100% - 15px);
+      }
+      &:nth-child(odd) {
+        .block2 {
+          margin-right: 15px;
+        }
+      }
+      &:nth-child(even) {
+        .block2 {
+          margin-left: 15px;
+        }
+      }
+    }
+  }
+  &.gradeNum5 {
+    .gradeAverage-item:nth-child(5) {
+      width: 930px;
+    }
+  }
+}
+table.table-gradelevel {
+  .tech {
+    margin: 10px 0px;
+  }
+}
+/** ******* ******* ******* ******* ******* ******* ******* */
+/** ******* ******* ******* ******* ******* ******* ******* */
+/** ******* ******* ******* ******* ******* ******* ******* */
+.forChart-yAxes-rotate { 
+	margin-top: -5px;
+	padding-right: 10px;
+  position: relative;
+  .yAxes-scaleLabel { 
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: left;
+		font-size: 14px;
+		transform: translateY( calc(-100% - .5em));
+  }
+}
+.encouragingWords {
+  text-align: center;
+  width: calc(100% + 15px + 15px + 1px + 1px);
+  margin: -15px -16px 0 -16px;
+  background-color: $secondary;
+  font-size: 0.9em;
+  color: #f5f5f5;
+  padding: 5px 0px;
+  border: 1px solid #ccc;
+  border-bottom-width: 5px;
+  > label {
+    font-weight: bold;
+    font-size: 1em;
+    text-shadow: 1px 1px rgba(0, 0, 0, .5);
+    color: #fff;
+    color: $tertiary-bg;
+  }
+}
+/** ******* ******* ******* ******* ******* ******* ******* */
+/** ******* ******* ******* ******* ******* ******* ******* */
+/** ******* ******* ******* ******* ******* ******* ******* */
+/*set diffrent color*/
+.parents {
+  .frontCover {
+    background-image: url(../images/pdf/frontCover-parents.jpg);
+  }
+  table.frontCover-table {
+    th {
+      color: $secondary-dark;
+      border-bottom-color: lighten($body-secondary-color, 30%);
+    }
+    td {
+      color: $body-secondary-color;
+      border-bottom-color: lighten($body-secondary-color, 30%);
+    }
+  }
+  h3 > div {
+    background-image: url(../images/pdf/h3-line-parents.png);
+  }
+}
+//.class{
+//	.frontCover {background-image: url(../images/pdf/frontCover-class.jpg);}
+//	table.frontCover-table{
+//		th {
+//			color: #007440;
+//			border-bottom-color: #007440;
+//		}
+//		&.DACC th {color: #007440;}
+//		td {
+//			border-bottom-color: #007440;
+//		}
+//	}
+//	h3 > div { 
+//		background-image:url(../images/pdf/h3-line-class.png);
+//	}
+//}
+//.school{
+//	.frontCover {background-image: url(../images/pdf/frontCover-school.jpg);}
+//	table.frontCover-table{
+//		th {
+//			color: #80422d;
+//			border-bottom-color: #80422d;
+//		}
+//		&.DACC th {color: #80422d;}
+//		td {
+//			border-bottom-color: #80422d;
+//		}
+//	}
+//	h3 > div { 
+//		background-image:url(../images/pdf/h3-line-school.png);
+//	}
+//}
+/** ******* ******* ******* ******* ******* ******* ******* */
+/** ******* ******* ******* ******* ******* ******* ******* */
+/** ******* ******* ******* ******* ******* ******* ******* */
+@media print {
+  body {
+    color: #000;
+  }
+  .scoreBlock {
+    .pen {
+      .myScore, .allScore {
+        color: #000;
+      }
+    }
+  }
+  .forChart-yAxes-rotate {
+    .yAxes-scaleLabel {
+      > span {
+        color: #000;
+      }
+    }
+  }
+  .scoreBlock {
+    .pen {
+      .allScore {
+        color: #333;
+      }
+    }
+  }
+  table.table-dimension {
+    .range {
+      color: #333;
+    }
+  }
+}
