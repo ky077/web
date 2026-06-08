@@ -16,7 +16,7 @@ body {
 }
 a{
 	text-decoration: none;
-	color: $blue;
+	color: darken($blue, 7%);
 }
 a.sr-only-goContent, a.visually-hidden-goContent{
 	background-color: #524932;
@@ -109,7 +109,7 @@ a.sr-only-goContent, a.visually-hidden-goContent{
 	
 	.nav-tools, .nav-main, .nav-sys{ 
 		.nav-link{
-			color: #5a5a5a;
+			color: #545454;
 			font-size: 1.1em;
 			text-shadow: 1px 1px rgba(255,255,255,.5),
 						 2px 2px 4px rgba(255,255,255,1),
@@ -142,10 +142,11 @@ a.sr-only-goContent, a.visually-hidden-goContent{
 		
 		.nav-item.active{ 
 			.nav-link{
-				background-color: lighten($brown, 50%);	
+				background-color: lighten($brown, 20%);	
 				&:hover, &:focus{
-					color:#5a5a5a;
-					background-color: lighten($brown, 50%);	
+					color:#545454;
+					background-color: lighten($brown, 20%);	
+					font-weight: bold;
 				}
 			}
 			.nav-main-sub{ 
@@ -157,7 +158,6 @@ a.sr-only-goContent, a.visually-hidden-goContent{
 					&:active, &.active{
 						color: #fff;
 						background-color: $blue;
-						font-weight: bold;
 					}
 				}
 			}
@@ -226,7 +226,7 @@ a.sr-only-goContent, a.visually-hidden-goContent{
 	.nav-main{ 
 		.nav-link{
 			height:50px;
-			color:#5a5a5a;
+			color:#545454;
 			font-size: 1.1em;
 			line-height: 1;
 			text-shadow:1px 1px rgba(255,255,255,.5),
@@ -246,7 +246,7 @@ a.sr-only-goContent, a.visually-hidden-goContent{
 			.nav-link{
 				background-color: lighten($brown, 50%);	
 				&:hover, &:focus, &:active{
-					color:#5a5a5a;
+					color:#545454;
 					background-color: lighten($brown, 50%);	
 				}
 			}

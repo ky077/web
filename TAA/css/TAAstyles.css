@@ -6,7 +6,7 @@ html { position: relative; min-height: 100%; }
 
 body { font-family: Arial, Helvetica, sans-serif, "Microsoft JhengHei"; font-size: 1.125rem; line-height: 2; color: #555; }
 
-a { text-decoration: none; color: #1d7ab2; }
+a { text-decoration: none; color: #186593; }
 
 a.sr-only-goContent, a.visually-hidden-goContent { background-color: #524932; color: #FFF; position: absolute !important; top: 0; left: 0; text-decoration: none; font-size: 1.125rem; padding: 5px 8px 0px 5px; }
 a.sr-only-goContent:active, a.sr-only-goContent:focus, a.visually-hidden-goContent:active, a.visually-hidden-goContent:focus { position: static; width: auto; height: auto; margin: 0; overflow: visible; clip: auto; }
@@ -23,17 +23,17 @@ a.sr-only-goContent:active, a.sr-only-goContent:focus, a.visually-hidden-goConte
   .header .navbar-collapse.show .nav-tools { order: 12; }
   .header .guide-U { display: inline-block; color: #524932; font-size: .9em; font-weight: bold; position: relative; margin-left: 15px; margin-right: auto; }
   .header .guide-U:focus, .header .guide-U:hover, .header .guide-U:active { background-color: #1e7eb7; color: #FFF !important; text-decoration: none; }
-  .header .nav-tools .nav-link, .header .nav-main .nav-link, .header .nav-sys .nav-link { color: #5a5a5a; font-size: 1.1em; text-shadow: 1px 1px rgba(255, 255, 255, 0.5), 2px 2px 4px white, -1px -1px 5px white; border-bottom: 1px solid #ddd; padding: 5px 15px; }
+  .header .nav-tools .nav-link, .header .nav-main .nav-link, .header .nav-sys .nav-link { color: #545454; font-size: 1.1em; text-shadow: 1px 1px rgba(255, 255, 255, 0.5), 2px 2px 4px white, -1px -1px 5px white; border-bottom: 1px solid #ddd; padding: 5px 15px; }
   .header .nav-tools .nav-link:hover, .header .nav-tools .nav-link:focus, .header .nav-main .nav-link:hover, .header .nav-main .nav-link:focus, .header .nav-sys .nav-link:hover, .header .nav-sys .nav-link:focus { background-color: #ebebeb; }
   .header .nav-tools .nav-main-sub, .header .nav-main .nav-main-sub, .header .nav-sys .nav-main-sub { display: none; border-bottom: 1px solid #ddd; }
   .header .nav-tools .nav-main-sub .nav-link, .header .nav-main .nav-main-sub .nav-link, .header .nav-sys .nav-main-sub .nav-link { font-size: 1em; padding: 0px 15px 0px calc(15px + 1em); text-shadow: none; border-bottom: none; background-color: transparent; }
   .header .nav-tools .nav-main-sub .nav-link:hover, .header .nav-tools .nav-main-sub .nav-link:focus, .header .nav-main .nav-main-sub .nav-link:hover, .header .nav-main .nav-main-sub .nav-link:focus, .header .nav-sys .nav-main-sub .nav-link:hover, .header .nav-sys .nav-main-sub .nav-link:focus { background-color: #ebebeb; }
   .header .nav-tools .nav-main-sub .nav-link:active, .header .nav-tools .nav-main-sub .nav-link.active, .header .nav-main .nav-main-sub .nav-link:active, .header .nav-main .nav-main-sub .nav-link.active, .header .nav-sys .nav-main-sub .nav-link:active, .header .nav-sys .nav-main-sub .nav-link.active { color: #fff; background-color: #1d7ab2; }
-  .header .nav-tools .nav-item.active .nav-link, .header .nav-main .nav-item.active .nav-link, .header .nav-sys .nav-item.active .nav-link { background-color: #d0c8b3; }
-  .header .nav-tools .nav-item.active .nav-link:hover, .header .nav-tools .nav-item.active .nav-link:focus, .header .nav-main .nav-item.active .nav-link:hover, .header .nav-main .nav-item.active .nav-link:focus, .header .nav-sys .nav-item.active .nav-link:hover, .header .nav-sys .nav-item.active .nav-link:focus { color: #5a5a5a; background-color: #d0c8b3; }
+  .header .nav-tools .nav-item.active .nav-link, .header .nav-main .nav-item.active .nav-link, .header .nav-sys .nav-item.active .nav-link { background-color: #918159; }
+  .header .nav-tools .nav-item.active .nav-link:hover, .header .nav-tools .nav-item.active .nav-link:focus, .header .nav-main .nav-item.active .nav-link:hover, .header .nav-main .nav-item.active .nav-link:focus, .header .nav-sys .nav-item.active .nav-link:hover, .header .nav-sys .nav-item.active .nav-link:focus { color: #545454; background-color: #918159; font-weight: bold; }
   .header .nav-tools .nav-item.active .nav-main-sub .nav-link, .header .nav-main .nav-item.active .nav-main-sub .nav-link, .header .nav-sys .nav-item.active .nav-main-sub .nav-link { background-color: #fff; }
   .header .nav-tools .nav-item.active .nav-main-sub .nav-link:hover, .header .nav-tools .nav-item.active .nav-main-sub .nav-link:focus, .header .nav-main .nav-item.active .nav-main-sub .nav-link:hover, .header .nav-main .nav-item.active .nav-main-sub .nav-link:focus, .header .nav-sys .nav-item.active .nav-main-sub .nav-link:hover, .header .nav-sys .nav-item.active .nav-main-sub .nav-link:focus { background-color: #ebebeb; }
-  .header .nav-tools .nav-item.active .nav-main-sub .nav-link:active, .header .nav-tools .nav-item.active .nav-main-sub .nav-link.active, .header .nav-main .nav-item.active .nav-main-sub .nav-link:active, .header .nav-main .nav-item.active .nav-main-sub .nav-link.active, .header .nav-sys .nav-item.active .nav-main-sub .nav-link:active, .header .nav-sys .nav-item.active .nav-main-sub .nav-link.active { color: #fff; background-color: #1d7ab2; font-weight: bold; }
+  .header .nav-tools .nav-item.active .nav-main-sub .nav-link:active, .header .nav-tools .nav-item.active .nav-main-sub .nav-link.active, .header .nav-main .nav-item.active .nav-main-sub .nav-link:active, .header .nav-main .nav-item.active .nav-main-sub .nav-link.active, .header .nav-sys .nav-item.active .nav-main-sub .nav-link:active, .header .nav-sys .nav-item.active .nav-main-sub .nav-link.active { color: #fff; background-color: #1d7ab2; }
   .header .nav-tools .nav-main-sub.show, .header .nav-main .nav-main-sub.show, .header .nav-sys .nav-main-sub.show { display: block; } }
 @media screen and (min-width: 992px) { .header { border-top: 10px solid #524932; border-bottom: 2px solid #524932; background-color: #FFF; background-image: url(../images/indexBG.jpg); background-repeat: no-repeat; background-size: 100% auto; background-position: center bottom 50%; border-bottom: 46px solid #d0c8b3; }
   .header .navbar { padding: 0; }
@@ -44,11 +44,11 @@ a.sr-only-goContent:active, a.sr-only-goContent:focus, a.visually-hidden-goConte
   .header .nav-tools { position: absolute; top: 0; right: .75rem; }
   .header .nav-tools .nav-link { color: #524932; font-size: 0.9em; margin-left: 15px; text-shadow: 1px 1px rgba(255, 255, 255, 0.4); padding: 0; }
   .header .nav-tools .nav-link:hover, .header .nav-tools .nav-link:focus, .header .nav-tools .nav-link:active { text-decoration: none; color: #1d7ab2; }
-  .header .nav-main .nav-link { height: 50px; color: #5a5a5a; font-size: 1.1em; line-height: 1; text-shadow: 1px 1px rgba(255, 255, 255, 0.5), 2px 2px 4px white, -1px -1px 5px white; border-radius: 5px 5px 0 0; padding: 15px 10px; }
+  .header .nav-main .nav-link { height: 50px; color: #545454; font-size: 1.1em; line-height: 1; text-shadow: 1px 1px rgba(255, 255, 255, 0.5), 2px 2px 4px white, -1px -1px 5px white; border-radius: 5px 5px 0 0; padding: 15px 10px; }
   .header .nav-main .nav-link:hover, .header .nav-main .nav-link:focus { background-color: transparent; color: #1d7ab2; }
   .header .nav-main .nav-main-sub { display: none; }
   .header .nav-main .nav-item.active .nav-link { background-color: #d0c8b3; }
-  .header .nav-main .nav-item.active .nav-link:hover, .header .nav-main .nav-item.active .nav-link:focus, .header .nav-main .nav-item.active .nav-link:active { color: #5a5a5a; background-color: #d0c8b3; }
+  .header .nav-main .nav-item.active .nav-link:hover, .header .nav-main .nav-item.active .nav-link:focus, .header .nav-main .nav-item.active .nav-link:active { color: #545454; background-color: #d0c8b3; }
   .header .nav-main .nav-item.active .nav-main-sub { display: flex; flex-wrap: nowrap; white-space: nowrap; max-width: 100%; border-radius: 0; position: absolute; }
   .header .nav-main .nav-item.active .nav-main-sub .nav-link { background-color: transparent; font-size: 1em; text-shadow: none; height: 46px; }
   .header .nav-main .nav-item.active .nav-main-sub .nav-link:hover, .header .nav-main .nav-item.active .nav-main-sub .nav-link:focus, .header .nav-main .nav-item.active .nav-main-sub .nav-link:active, .header .nav-main .nav-item.active .nav-main-sub .nav-link.hover, .header .nav-main .nav-item.active .nav-main-sub .nav-link.focus, .header .nav-main .nav-item.active .nav-main-sub .nav-link.active { color: #1d7ab2; }
