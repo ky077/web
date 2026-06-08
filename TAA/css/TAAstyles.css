@@ -54,7 +54,7 @@ a.sr-only-goContent:active, a.sr-only-goContent:focus, a.visually-hidden-goConte
   .header .nav-main .nav-item.active .nav-main-sub .nav-link:hover, .header .nav-main .nav-item.active .nav-main-sub .nav-link:focus, .header .nav-main .nav-item.active .nav-main-sub .nav-link:active, .header .nav-main .nav-item.active .nav-main-sub .nav-link.hover, .header .nav-main .nav-item.active .nav-main-sub .nav-link.focus, .header .nav-main .nav-item.active .nav-main-sub .nav-link.active { color: #1d7ab2; }
   .header .nav-sys { position: absolute; bottom: -10px; right: .75rem; }
   .header .nav-sys .nav-item { margin-left: 10px; }
-  .header .nav-sys .nav-link { text-align: center; width: 104px; height: 119px; color: #FFF; line-height: 1.4; font-weight: bold; padding-top: 30px; background-repeat: no-repeat; background-position: 0px 0px; text-shadow: 1px 1px rgba(0, 0, 0, 0.5); }
+  .header .nav-sys .nav-link { text-align: center; width: 104px; height: 119px; color: #545454; line-height: 1.4; font-weight: bold; padding-top: 30px; background-repeat: no-repeat; background-position: 0px 0px; text-shadow: 1px 1px rgba(0, 0, 0, 0.5); }
   .header .nav-sys .nav-link.goAdmin { background-image: url(../images/btn-link-orange.png); text-indent: -9999px; overflow: hidden; }
   .header .nav-sys .nav-link.goTest { background-image: url(../images/btn-link-blue.png); text-indent: -9999px; overflow: hidden; }
   .header .nav-sys .nav-link.goReport { background-image: url(../images/btn-link-yellow.png); text-indent: -9999px; overflow: hidden; }
