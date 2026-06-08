@@ -54,13 +54,13 @@ body {
 			padding: 5px 5px;
 			margin: 5px 0 0 0 ;
 			border-left: 5px solid #999;
-			line-height:1.4em;
-			font-size:12px;
+			line-height:1.4;
+			font-size: .75rem;
 			color:#666666;
 			text-shadow:1px 1px rgba(255,255,255,.5);
 			display:inline-block;
 			text-align:left;
-			@media screen and (min-width: 1200px) {font-size:14px;}
+			@media screen and (min-width: 1200px) {font-size: .875rem;}
 		}
 		&.WVS{
 			transform: translateY(15%);

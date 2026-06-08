@@ -1,6 +1,6 @@
 @import "color";
 :root{
-	--bs-primary: $blue;
+	--bs-primary: #1e7eb7;
 }
 /* ******* ******* ******* ******* ******* ******* ******* */
 /*template*/
@@ -10,7 +10,7 @@ html {
 }
 body {
 	font-family:Arial, Helvetica, sans-serif, "Microsoft JhengHei";
-	font-size: 18px;
+	font-size: 1.125rem;
 	line-height: 2;
 	color:#555;
 }
@@ -19,13 +19,13 @@ a{
 	color: $blue;
 }
 a.sr-only-goContent, a.visually-hidden-goContent{
-	background-color:#524932;
+	background-color: #524932;
 	color:#FFF;
 	position:absolute !important;
 	top:0;
 	left:0;
 	text-decoration:none;
-	font-size:12px;
+	font-size: 1.125rem;
 	padding:5px 8px 0px 5px;
 	&:active, &:focus {
 		position: static;
@@ -157,6 +157,7 @@ a.sr-only-goContent, a.visually-hidden-goContent{
 					&:active, &.active{
 						color: #fff;
 						background-color: $blue;
+						font-weight: bold;
 					}
 				}
 			}
@@ -849,10 +850,11 @@ a.sr-only-goContent, a.visually-hidden-goContent{
 			th{
 				text-align:center;
 				vertical-align:middle;
-				&:nth-child(1){ width:12em;}
-				&:nth-child(2){}
-				&:nth-child(3){ width:6em; }
-				&:nth-child(4){ width:6em; }
+				&:nth-child(1){ width: 13rem;}
+				&:nth-child(2){ width: auto; text-align: left;}
+				&:nth-child(3){ width: 6rem;}
+				&:nth-child(4){ width: 8.5rem; }
+				&:nth-child(5){ width: 8.5rem; }
 			}
 		}
 	}
