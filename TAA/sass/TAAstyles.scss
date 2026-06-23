@@ -1,6 +1,6 @@
 @import "color";
 :root{
-	--bs-primary: #1e7eb7;
+	--bs-primary: #1D7CB5;
 }
 /* ******* ******* ******* ******* ******* ******* ******* */
 /*template*/
@@ -12,7 +12,7 @@ body {
 	font-family:Arial, Helvetica, sans-serif, "Microsoft JhengHei";
 	font-size: 1.125rem;
 	line-height: 2;
-	color:#555;
+	color: $body-color;
 }
 a{
 	text-decoration: none;
@@ -35,6 +35,22 @@ a.sr-only-goContent, a.visually-hidden-goContent{
 		overflow: visible;
 		clip: auto;
 	}
+}
+
+a:focus-visible,
+a:focus-visible img, 
+button:focus-visible,
+summary:focus-visible,
+[tabindex]:focus-visible, 
+.btn:focus-visible,
+.navbar-toggler:focus-visible,
+.form-control:focus,
+.form-select:focus,
+.page-link:focus,
+.nav-link:focus-visible,
+.dropdown-item:focus-visible {
+	outline: 2px solid #ffffff !important;
+	box-shadow: 0 0 0 6px #000 !important;
 }
 @media screen and (max-width: 991px) {
 .header{
@@ -101,16 +117,17 @@ a.sr-only-goContent, a.visually-hidden-goContent{
 		margin-left: 15px;
 		margin-right: auto;
 		&:focus, &:hover, &:active{
-			background-color:#1e7eb7;
-			color:#FFF !important;
+			//background-color: var(--bs-primary);
+			//color:#FFF !important;
 			text-decoration:none;
 		}
 	}
 	
 	.nav-tools, .nav-main, .nav-sys{ 
 		.nav-link{
-			color: #545454;
+			color: $body-color;
 			font-size: 1.1em;
+			font-weight: bold;
 			text-shadow: 1px 1px rgba(255,255,255,.5),
 						 2px 2px 4px rgba(255,255,255,1),
 						-1px -1px 5px rgba(255,255,255,1);
@@ -144,7 +161,7 @@ a.sr-only-goContent, a.visually-hidden-goContent{
 			.nav-link{
 				background-color: lighten($brown, 20%);	
 				&:hover, &:focus{
-					color:#545454;
+					color:$body-color;
 					background-color: lighten($brown, 20%);	
 					font-weight: bold;
 				}
@@ -178,7 +195,7 @@ a.sr-only-goContent, a.visually-hidden-goContent{
 	background-repeat:no-repeat;
 	background-size: 100% auto;
 	background-position: center bottom 50%;
-	border-bottom: 46px solid lighten($brown, 50%);	
+	border-bottom: 46px solid lighten($brown, 60%);	
 	.navbar{
 		padding: 0;
 	}
@@ -201,8 +218,8 @@ a.sr-only-goContent, a.visually-hidden-goContent{
 		top: 0;
 		right: calc(.75rem + (1em*4 + 10px)*3 + (1em + 10px));
 		&:focus, &:hover, &:active{
-			background-color:#1e7eb7;
-			color:#FFF !important;
+			//background-color: var(--bs-primary);
+			//color:#FFF !important;
 			text-decoration:none;
 		}
 	}
@@ -226,8 +243,9 @@ a.sr-only-goContent, a.visually-hidden-goContent{
 	.nav-main{ 
 		.nav-link{
 			height:50px;
-			color:#545454;
+			color:$body-color;
 			font-size: 1.1em;
+			font-weight: bold;
 			line-height: 1;
 			text-shadow:1px 1px rgba(255,255,255,.5),
 						2px 2px 4px rgba(255,255,255,1),
@@ -244,10 +262,10 @@ a.sr-only-goContent, a.visually-hidden-goContent{
 		}
 		.nav-item.active{ 
 			.nav-link{
-				background-color: lighten($brown, 50%);	
+				background-color: lighten($brown, 60%);	
 				&:hover, &:focus, &:active{
-					color:#545454;
-					background-color: lighten($brown, 50%);	
+					color:$body-color;
+					background-color: lighten($brown, 60%);	
 				}
 			}
 			.nav-main-sub{
@@ -281,7 +299,7 @@ a.sr-only-goContent, a.visually-hidden-goContent{
 			text-align: center;
 			width: 104px;
 			height: 119px;
-			color: #545454;
+			color: $body-color;
 			line-height: 1.4;
 			font-weight: bold;
 			padding-top: 30px;
@@ -572,8 +590,8 @@ a.sr-only-goContent, a.visually-hidden-goContent{
 	margin-left:-4px;
 	font-size:1em;
 	&:focus, &:hover, &:active{
-		background-color:#1e7eb7;
-		color:#FFF !important;
+		//background-color: var(--bs-primary);
+		//color:#FFF !important;
 		text-decoration:none;
 	}
 }
@@ -583,8 +601,8 @@ a.sr-only-goContent, a.visually-hidden-goContent{
 	line-height: 1.4;
 	font-weight:bold;
 	&:focus, &:hover, &:active{
-		background-color:#1e7eb7;
-		color:#FFF !important;
+		//background-color: var(--bs-primary);
+		//color:#FFF !important;
 		text-decoration:none;
 	}
 	@media screen and (min-width: 768px) {
