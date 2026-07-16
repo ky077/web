@@ -1,0 +1,15 @@
+header{
+	background-color: rgba($white, .5);
+	border-bottom: $border-width $border-style $border-color;
+	.navbar-brand-h1{
+		margin: 0;
+		font-size: $font-size-lg;
+		font-weight: $font-weight-bold; 
+	}
+	.btn{
+		border-radius: $border-radius-pill;
+		padding: $btn-padding-y-sm $btn-padding-x;
+		margin-left: map-get($spacers, 1);
+		margin-right: map-get($spacers, 1);
+	}
+}
