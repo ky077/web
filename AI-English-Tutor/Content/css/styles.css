@@ -9,7 +9,7 @@ header .dropdown-menu { --bs-dropdown-border-color: var(--bs-border-color); --bs
 }*/
 footer { background-color: rgba(255, 255, 255, 0.5); border-top: 3px solid #212529; font-size: 0.75em; margin-top: auto; padding-top: 0.5rem; padding-bottom: 0.5rem; text-align: center; }
 
-html, body { width: 100%; height: 100%; background-color: #fbd88d; scroll-behavior: smooth; font-size: 14px; letter-spacing: .05em; }
+html, body { width: 100%; height: 100%; background-color: #ffffcc; scroll-behavior: smooth; font-size: 14px; letter-spacing: .05em; }
 @media screen and (min-width: 768px) { html, body { font-size: 16px; } }
 @media screen and (min-width: 1200px) { html, body { font-size: 18px; } }
 @media screen and (min-width: 1600px) { html, body { font-size: 20px; } }
