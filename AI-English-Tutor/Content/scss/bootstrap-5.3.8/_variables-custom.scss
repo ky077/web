@@ -7,15 +7,15 @@
 
 // scss-docs-start gray-color-variables
 $white:    #fff !default;
-$gray-100: #f8f9fa !default;
-$gray-200: #e9ecef !default;
-$gray-300: #dee2e6 !default;
-$gray-400: #ced4da !default;
-$gray-500: #adb5bd !default;
-$gray-600: #6c757d !default;
-$gray-700: #495057 !default;
-$gray-800: #343a40 !default;
-$gray-900: #212529 !default;
+$gray-100: #f8f4ed !default;
+$gray-200: #eee7dc !default;
+$gray-300: #ded3c5 !default;
+$gray-400: #c7b9a8 !default;
+$gray-500: #a79582 !default;
+$gray-600: #806f5e !default;
+$gray-700: #675747 !default;
+$gray-800: #504235 !default;
+$gray-900: #3d3128 !default;
 $black:    #000 !default;
 // scss-docs-end gray-color-variables
 
@@ -40,9 +40,9 @@ $blue:    #278fca !default;
 $indigo:  #5964b3 !default;
 $purple:  #7c509d !default;
 $pink:    #e46f91 !default;
-$red:     #db4949 !default;
-$orange:  #f39801 !default;
-$yellow:  #f8b62a !default;
+$red:     #d94b45 !default;
+$orange:  #ff6222 !default; // secondary
+$yellow:  #ffc107 !default; // primary
 $green:   #4c9a35 !default;
 $teal:    #39a99b !default;
 $cyan:    #18b6e3 !default;
@@ -72,7 +72,7 @@ $colors: (
 $min-contrast-ratio:   4.5 !default;
 
 // Customize the light and dark text colors for use in our color contrast function.
-$color-contrast-dark:      $black !default;
+$color-contrast-dark:      $gray-900 !default;//$black !default;
 $color-contrast-light:     $white !default;
 
 // fusv-disable
@@ -299,10 +299,10 @@ $cyans: (
 
 // scss-docs-start theme-color-variables
 $primary:       $yellow !default;
-$secondary:     $gray-600 !default;
+$secondary:     $orange !default; // $gray-600 !default;
 $success:       $green !default;
 $info:          $cyan !default;
-$warning:       $yellow !default;
+$warning:       $orange !default;
 $danger:        $red !default;
 $light:         $gray-100 !default;
 $dark:          $gray-900 !default;
@@ -320,6 +320,52 @@ $theme-colors: (
   "dark":       $dark
 ) !default;
 // scss-docs-end theme-colors-map
+
+//cu theme-color fusv-enable
+$primary-100: tint-color($primary, 80%) !default;
+$primary-200: tint-color($primary, 60%) !default;
+$primary-300: tint-color($primary, 40%) !default;
+$primary-400: tint-color($primary, 20%) !default;
+$primary-500: $primary !default;
+$primary-600: shade-color($primary, 20%) !default;
+$primary-700: shade-color($primary, 40%) !default;
+$primary-800: shade-color($primary, 60%) !default;
+$primary-900: shade-color($primary, 80%) !default;
+
+$primarys: (
+  "primary-100": $primary-100,
+  "primary-200": $primary-200,
+  "primary-300": $primary-300,
+  "primary-400": $primary-400,
+  "primary-500": $primary-500,
+  "primary-600": $primary-600,
+  "primary-700": $primary-700,
+  "primary-800": $primary-800,
+  "primary-900": $primary-900
+) !default;
+
+$secondary-100: tint-color($secondary, 80%) !default;
+$secondary-200: tint-color($secondary, 60%) !default;
+$secondary-300: tint-color($secondary, 40%) !default;
+$secondary-400: tint-color($secondary, 20%) !default;
+$secondary-500: $secondary !default;
+$secondary-600: shade-color($secondary, 20%) !default;
+$secondary-700: shade-color($secondary, 40%) !default;
+$secondary-800: shade-color($secondary, 60%) !default;
+$secondary-900: shade-color($secondary, 80%) !default;
+
+$secondarys: (
+  "secondary-100": $secondary-100,
+  "secondary-200": $secondary-200,
+  "secondary-300": $secondary-300,
+  "secondary-400": $secondary-400,
+  "secondary-500": $secondary-500,
+  "secondary-600": $secondary-600,
+  "secondary-700": $secondary-700,
+  "secondary-800": $secondary-800,
+  "secondary-900": $secondary-900
+) !default;
+//cu theme-color fusv-enable
 
 // scss-docs-start theme-text-variables
 $primary-text-emphasis:   shade-color($primary, 60%) !default;
@@ -437,7 +483,7 @@ $position-values: (
 // Settings for the `<body>` element.
 
 $body-text-align:           null !default;
-$body-color:                $gray-900 !default;
+$body-color:                $gray-800 !default;
 $body-bg:                   $white !default;
 
 $body-secondary-color:      rgba($body-color, .75) !default;
@@ -446,13 +492,13 @@ $body-secondary-bg:         $gray-200 !default;
 $body-tertiary-color:       rgba($body-color, .5) !default;
 $body-tertiary-bg:          $gray-100 !default;
 
-$body-emphasis-color:       $black !default;
+$body-emphasis-color:       $gray-900 !default;//$black !default;
 
 // Links
 //
 // Style anchor elements.
 
-$link-color:                              $primary !default;
+$link-color:                              $secondary !default;
 $link-decoration:                         underline !default;
 $link-shade-percentage:                   20% !default;
 $link-hover-color:                        shift-color($link-color, $link-shade-percentage) !default;
@@ -541,8 +587,8 @@ $border-widths: (
   5: 5px
 ) !default;
 $border-style:                solid !default;
-$border-color:                $body-color !default; //cg. $gray-300 !default;
-$border-color-translucent:    rgba($black, .175) !default;
+$border-color:                $gray-800 !default; //cg. $gray-300 !default;
+$border-color-translucent:    rgba($gray-900, .175) !default;
 // scss-docs-end border-variables
 
 // scss-docs-start border-radius-variables
@@ -558,10 +604,10 @@ $border-radius-2xl:           $border-radius-xxl !default; // Deprecated in v5.3
 // fusv-enable
 
 // scss-docs-start box-shadow-variables
-$box-shadow:                  0 .5rem 1rem rgba($black, .15) !default;
-$box-shadow-sm:               0 .125rem .25rem rgba($black, .075) !default;
-$box-shadow-lg:               0 1rem 3rem rgba($black, .175) !default;
-$box-shadow-inset:            inset 0 1px 2px rgba($black, .075) !default;
+$box-shadow:                  0 .5rem 1rem rgba($dark, .15) !default;
+$box-shadow-sm:               0 .125rem .25rem rgba($dark, .075) !default;
+$box-shadow-lg:               0 1rem 3rem rgba($dark, .175) !default;
+$box-shadow-inset:            inset 0 1px 2px rgba($dark, .075) !default;
 // scss-docs-end box-shadow-variables
 
 $component-active-color:      $white !default;
@@ -836,11 +882,11 @@ $btn-font-size-lg:            $input-btn-font-size-lg !default;
 $btn-border-width:            $input-btn-border-width !default;
 
 $btn-font-weight:             $font-weight-normal !default;
-$btn-box-shadow:              inset 0 1px 0 rgba($white, .15), 0 1px 1px rgba($black, .075) !default;
+$btn-box-shadow:              inset 0 1px 0 rgba($white, .15), 0 1px 1px rgba($dark, .075) !default;
 $btn-focus-width:             $input-btn-focus-width !default;
 $btn-focus-box-shadow:        $input-btn-focus-box-shadow !default;
 $btn-disabled-opacity:        .65 !default;
-$btn-active-box-shadow:       inset 0 3px 5px rgba($black, .125) !default;
+$btn-active-box-shadow:       inset 0 3px 5px rgba($dark, .125) !default;
 
 $btn-link-color:              var(--#{$prefix}link-color) !default;
 $btn-link-hover-color:        var(--#{$prefix}link-hover-color) !default;
@@ -974,7 +1020,7 @@ $form-check-inline-margin-end:    1rem !default;
 // scss-docs-end form-check-variables
 
 // scss-docs-start form-switch-variables
-$form-switch-color:               rgba($black, .25) !default;
+$form-switch-color:               rgba($dark, .25) !default;
 $form-switch-width:               2em !default;
 $form-switch-padding-start:       $form-switch-width + .5em !default;
 $form-switch-bg-image:            url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='3' fill='#{$form-switch-color}'/></svg>") !default;
@@ -1055,7 +1101,7 @@ $form-range-thumb-height:                  $form-range-thumb-width !default;
 $form-range-thumb-bg:                      $component-active-bg !default;
 $form-range-thumb-border:                  0 !default;
 $form-range-thumb-border-radius:           1rem !default;
-$form-range-thumb-box-shadow:              0 .1rem .25rem rgba($black, .1) !default;
+$form-range-thumb-box-shadow:              0 .1rem .25rem rgba($dark, .1) !default;
 $form-range-thumb-focus-box-shadow:        0 0 0 1px $body-bg, $input-focus-box-shadow !default;
 $form-range-thumb-focus-box-shadow-width:  $input-focus-width !default; // For focus box shadow issue in Edge
 $form-range-thumb-active-bg:               tint-color($component-active-bg, 70%) !default;
@@ -1212,7 +1258,7 @@ $navbar-light-color:                rgba(var(--#{$prefix}emphasis-color-rgb), .6
 $navbar-light-hover-color:          rgba(var(--#{$prefix}emphasis-color-rgb), .8) !default;
 $navbar-light-active-color:         rgba(var(--#{$prefix}emphasis-color-rgb), 1) !default;
 $navbar-light-disabled-color:       rgba(var(--#{$prefix}emphasis-color-rgb), .3) !default;
-$navbar-light-icon-color:           rgba($body-color, .75) !default;
+$navbar-light-icon-color:           $dark !default;//rgba($body-color, .75) !default;
 $navbar-light-toggler-icon-bg:      url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='#{$navbar-light-icon-color}' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>") !default;
 $navbar-light-toggler-border-color: rgba(var(--#{$prefix}emphasis-color-rgb), .15) !default;
 $navbar-light-brand-color:          $navbar-light-active-color !default;

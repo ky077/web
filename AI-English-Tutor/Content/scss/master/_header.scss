@@ -1,9 +1,25 @@
 header{
+	background-color: $secondary-200;
 	border-bottom: $border-width $border-style $border-color;
 	.navbar-brand-h1{
 		margin: 0;
 		font-size: $font-size-lg;
 		font-weight: $font-weight-bold; 
+		color: $dark;
+	}
+	.navbar-toggler{
+		background-color: $primary;
+		
+	}
+	.navbar-nav{
+		.nav-link{
+			&:hover, &.hover{
+				color: $secondary;
+			}
+			&:active, &.active{
+				color: $dark;
+			}
+		}
 	}
 	.btn{
 		border-radius: $border-radius-pill;
