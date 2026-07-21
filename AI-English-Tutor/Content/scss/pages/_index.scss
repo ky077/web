@@ -116,7 +116,6 @@
 	display: flex;
   flex-direction: column;
   gap: $spacer*3;
-	
 	.course-list-title{
 		font-size: $h5-font-size;	
 		display: flex;
@@ -150,10 +149,10 @@
 				display: block;
 				width: calc(#{$spacer*2} + #{$card-group-margin});	
 				height: calc(#{$spacer*2} + #{$card-group-margin}); 
-				background-image: escape-svg(url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='6'%3E%3Ccircle cx='3' cy='3' r='3' fill='#{$body-tertiary-color}'/%3E%3C/svg%3E"));
+				background-image: escape-svg(url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='4'%3E%3Crect x='1' y='2' width='8' height='2' fill='#{$body-tertiary-color}'/%3E%3C/svg%3E"));
 				background-position: center left; 
-				background-size: 12px 6px; 
-				background-repeat: repeat-x;
+				background-size: 14px 6px; 
+				background-repeat: repeat-x; 
 				position: absolute;
 				top: 0;
 				left: 50%;
@@ -161,15 +160,8 @@
 			}
 			@media screen and (min-width: 768px) {
 			&::before{
-				content: "";
-				display: block;
 				width: $spacer*2;	
 				height: $spacer*2; 	
-				background-image: escape-svg(url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='15' height='6'%3E%3Ccircle cx='3' cy='3' r='3' fill='#{$body-tertiary-color}'/%3E%3C/svg%3E"));
-				background-position: center left; 
-				background-size: 15px 6px; 
-				background-repeat: repeat-x;
-				position: absolute;
 				top: 50%;
 				left: 0;	
 				transform: rotate(0deg) translate(-100%, -50%);
