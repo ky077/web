@@ -2,7 +2,7 @@ body[class*="lesson-"]{
 	.page-content{
 		.page-content-title{
 			font-size: $h4-font-size;	
-			margin-top: -6.5rem;
+			margin-top: calc(#{map-get($spacers, 6)} * .5 * -1 - 5rem);
 			display: flex;
 			align-items: center;
 			justify-content: center;
