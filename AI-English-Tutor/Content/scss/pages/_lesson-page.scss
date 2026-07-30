@@ -226,7 +226,6 @@ body.lesson-sent{
 			font-size: $font-size-sm;
 			margin-bottom: $spacer;
 		}
-		
 		.quiz-switch{
 			.btn-link{
 				padding-left: .75rem;
@@ -282,14 +281,15 @@ body.lesson-sent{
 		display: flex;
 		flex-direction: row;
 		align-items: center;
-		justify-content: space-between;	
+		justify-content: center;	
+		column-gap: $spacer;
 	}
 }
 .answer-correct{ 
 	background-color: $success;
 	box-shadow: 0 -.5rem 1rem rgba($success, .15);
 }
-.answer-incorrect{ display: none;
+.answer-incorrect{ 
 	background-color: $danger;
 	box-shadow: 0 -.5rem 1rem rgba($danger, .15);
 }
