@@ -171,7 +171,7 @@ footer { background-color: #ffc0a7; border-top: 3px solid #504235; font-size: 0.
 .lesson .page-content .card-group .card-sent .card-title .card-title-text small { color: #2e877c; }
 .lesson .page-content .card-group .card-sent .card-footer { background-color: #39a99b; }
 
-body[class*="lesson-"] .page-content .page-content-title { font-size: 1.5rem; margin-top: calc(2.5rem * .5 * -1 - 5rem); display: flex; align-items: center; justify-content: center; color: #fff; }
+body[class*="lesson-"] .page-content .page-content-title { font-size: 1.5rem; margin-top: calc((15rem - 1rem*2 - 1rem - 1rem*1.5 - 2rem * 1.2 *2)*-1); display: flex; align-items: center; justify-content: center; color: #fff; }
 body[class*="lesson-"] .page-content .page-content-title > span { display: inline-block; padding-bottom: 0; letter-spacing: 0.05em; background-image: none; background-color: rgba(80, 66, 53, 0.75); padding: .5rem 1rem; border: 5px solid #ffc107; position: relative; }
 body[class*="lesson-"] .page-content .page-content-title > span > i { font-size: 1.2em; color: #fff; margin-right: .25rem; }
 body[class*="lesson-"] .page-content .page-content-title > span > small { font-size: #fff; margin-left: .25rem; }
@@ -202,7 +202,8 @@ height: 4px;*/ }
 [class*="quiz-layout"] { background-color: #fff; border: 3px solid #504235; border-radius: 1rem; }
 [class*="quiz-layout"] + [class*="quiz-layout"] { margin-top: 2.5rem; }
 [class*="quiz-layout"] .quiz-question { padding: 2rem; }
-[class*="quiz-layout"] .quiz-question .quiz-instruction { display: flex; flex-direction: row; flex-wrap: wrap; align-items: center; margin-bottom: 1rem; }
+[class*="quiz-layout"] .quiz-question .quiz-instruction { display: flex; flex-direction: column; flex-wrap: wrap; align-items: flex-start; margin-bottom: 1rem; }
+@media screen and (min-width: 576px) { [class*="quiz-layout"] .quiz-question .quiz-instruction { flex-direction: row; align-items: center; } }
 [class*="quiz-layout"] .quiz-question .quiz-instruction .quiz-instruction-num { font-size: 0.875rem; display: inline-block; padding-left: .5rem; padding-right: .5rem; border-radius: 0.375rem; margin-right: .5rem; }
 [class*="quiz-layout"] .quiz-question .quiz-instruction .quiz-instruction-text { font-size: 1rem; font-weight: 600; }
 [class*="quiz-layout"] .quiz-question .quiz-content { text-align: center; }

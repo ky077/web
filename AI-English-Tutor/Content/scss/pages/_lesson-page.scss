@@ -2,7 +2,8 @@ body[class*="lesson-"]{
 	.page-content{
 		.page-content-title{
 			font-size: $h4-font-size;	
-			margin-top: calc(#{map-get($spacers, 6)} * .5 * -1 - 5rem);
+			margin-top: calc((15rem - #{$breadcrumb-margin-bottom}*2 - 1rem - #{$spacer}*1.5 - #{$h2-font-size} * 1.2 *2)*-1);
+				//calc(#{map-get($spacers, 6)} * .5 * -1 - 5rem);
 			display: flex;
 			align-items: center;
 			justify-content: center;
@@ -158,10 +159,14 @@ body.lesson-sent{
 		padding: $spacer*2;
 		.quiz-instruction{
 			display: flex;
-			flex-direction: row;
+			flex-direction: column;
     	flex-wrap: wrap;
-			align-items: center;
+			align-items: flex-start;
 			margin-bottom: $spacer;
+			@media screen and (min-width: 576px) {
+			flex-direction: row;	
+			align-items: center;	
+			}
 			.quiz-instruction-num{
 				//background-color: $primary-100;
 				font-size: $font-size-sm;
