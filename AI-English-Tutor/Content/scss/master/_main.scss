@@ -1,8 +1,8 @@
-/*main{
-	background: linear-gradient(
-  180deg,
-  #ffdc91 0%,
-  #ffda8a 45%,
-  #ffd786 100%
-);
-}*/
+main{
+	background-image: url("../img/course-bg.png");
+	background-position: bottom center;
+	background-repeat: no-repeat;
+	background-size: 100% auto;
+	background-attachment: fixed;
+	flex: 1;
+}

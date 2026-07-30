@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="utf-8">
+<title>AI 英語家教</title>
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<meta content="聽、說、讀、寫，和 AI 一起練英語。" name="description">
+<meta content="AI,英語,家教" name="keywords">
+<link href="Content/img/favicon.ico" rel="icon">
+
+<!-- Open Graph -->
+<meta property="og:title" content="AI 英語家教" />
+<meta property="og:description" content="聽、說、讀、寫，和 AI 一起練英語。" />
+<meta property="og:image" content="https://example.com/path/to/image.jpg" />
+<meta property="og:url" content="https://example.com/page-url" />
+<meta property="og:type" content="website" />
+
+<!-- Google Web Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Noto+Sans+TC:wght@100..900&display=swap">
+
+<!-- Icon Font Stylesheet -->
+<link rel="stylesheet" href="Content/lib/font-awesome-7.3.0/css/all.min.css">
+
+<!-- Customized Bootstrap Stylesheet -->
+<link rel="stylesheet" href="Content/css/bootstrap-custom.css">
+
+<!-- This web Core Stylesheet -->
+<link rel="stylesheet" href="Content/css/styles.css">
+</head>
+
+<body class="lesson-vocab">
+<form>
+  <!-- Spinner Start -->
+  <div id="spinner" class="show">
+    <div class="spinner-ip" role="status">
+      <span class="visually">Loading</span>
+    </div>
+  </div>
+  <!-- Spinner End -->
+  
+  <header>
+  </header>
+  <main>
+    <!-- page-header Start -->
+    <div class="page-header">
+      <div class="container-xl">
+        <div class="page-action">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item">
+                <a href="index.html"><i class="fa-solid fa-house"></i>首頁</a>
+              </li>
+              <li class="breadcrumb-item">
+                <a href="index.html">五上1</a>
+              </li>
+              <li class="breadcrumb-item">
+                <a href="lesson.html">Lesson 4 How Are You?</a>
+              </li>
+              <li class="breadcrumb-item active" aria-current="page">單字 Vocabulary</li>
+            </ol>
+          </nav>
+          <a href="lesson.html"><i class="fa-solid fa-angle-left"></i>回課程選擇</a>
+        </div>
+        <h2 class="page-title"><small>Lesson 4</small>How Are You?</h2>
+      </div>
+    </div>
+    <!-- page-header End -->
+    <!-- page-content lesson Start -->
+    <div class="page-content">
+      <div class="container-xl">
+        <h3 class="page-content-title"><span><i class="fa-solid fa-spell-check"></i>單字<small>Vocabulary</small></span></h3>
+        <!-- 進度條 -->
+        <div class="quiz-progress">
+          <div class="progress-person" style="width: 25%">
+            <div class="progress-person-count">第<span class="mx-1">1</span>/<span class="mx-1">4</span>題</div>
+          </div>
+          <div class="progress" role="progressbar" aria-label="進度條" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+            <div class="progress-bar" style="width: 25%"></div>
+          </div>
+        </div>
+        
+        <!-- 單字版型1：v1 -->
+        <div class="quiz-layout-v1">
+          <div class="quiz-question">
+            <div class="quiz-instruction">
+              <div class="quiz-instruction-num">第<span class="mx-1">1</span>題</div>
+              <div class="quiz-instruction-text">請聽單字，選出正確圖片。</div>
+            </div>
+            <div class="quiz-content">
+              <div class="quiz-content-audio">
+                <button type="button" class="btn btn-outline-dark"><i class="fa-solid fa-volume-high me-1"></i>播放聲音</button>
+              </div>
+            </div>
+          </div>
+          <div class="quiz-response">
+            <div class="quiz-options">
+              <div class="quiz-group quiz-group-horizontal" role="radiogroup" aria-label="第1題選項群組">
+                <input type="radio" class="btn-check" name="1-option" id="1A" autocomplete="off">
+                <label class="btn btn-outline-dark" for="1A"><img src="Content/img/L04/sad.png" alt=""></label>
+                <input type="radio" class="btn-check" name="1-option" id="1B" autocomplete="off">
+                <label class="btn btn-outline-dark" for="1B"><img src="Content/img/L04/angry.png" alt=""></label>
+                <input type="radio" class="btn-check" name="1-option" id="1C" autocomplete="off">
+                <label class="btn btn-outline-dark" for="1C"><img src="Content/img/L04/happy.png" alt=""></label>
+              </div>
+            </div>
+            <div class="quiz-remark">請選 A、B 或 C。</div>
+            <div class="quiz-actions">
+              <button type="button" class="btn btn-primary btn-lg w-100">確認答案</button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- 單字版型2：v2 -->
+        <div class="quiz-layout-v2">
+          <div class="quiz-question">
+            <div class="quiz-instruction">
+              <div class="quiz-instruction-num">第<span class="mx-1">2</span>題</div>
+              <div class="quiz-instruction-text"> 請先聽，再跟著唸。</div>
+            </div>
+            <div class="quiz-content">
+              <div class="quiz-content-img"><img src="Content/img/L04/sad.png" alt="" class="img-fluid"></div>
+              <div class="quiz-content-tip">單字：sad</div>
+              <div class="quiz-content-audio">
+                <button type="button" class="btn btn-outline-dark"><i class="fa-solid fa-volume-high me-1"></i>播放聲音</button>
+              </div>
+            </div>
+          </div>
+          <div class="quiz-response">
+            <div class="quiz-switch" id="2-quizSwitch">
+              <div id="2-phone" class="collapse show" data-bs-parent="#2-quizSwitch">
+                <button type="button" class="btn btn-link btn-sm" data-bs-toggle="collapse" data-bs-target="#2-keyboard"><i class="fa-solid fa-keyboard me-1"></i>我現在不方便說話</button>
+                <button type="button" class="btn btn-primary btn-lg w-100">
+                <i class="fa-solid fa-microphone-lines me-1"></i>請按麥克風，用英文回答 <i class="fa-solid fa-record-vinyl me-1 text-danger"></i>請按這裡結束錄音 </button>
+              </div>
+              <div id="2-keyboard" class="collapse" data-bs-parent="#2-quizSwitch">
+                <button type="button" class="btn btn-link btn-sm"  data-bs-toggle="collapse" data-bs-target="#2-phone"><i class="fa-solid fa-microphone-lines me-1"></i>改用麥克風回答</button>
+                <input type="text" class="form-control form-control-keyboard" placeholder="請輸入英文" aria-label="請輸入英文">
+                <button type="button" class="btn btn-primary btn-lg w-100">確認答案</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- 單字版型3：v3-->
+        <div class="quiz-layout-v3">
+          <div class="quiz-question">
+            <div class="quiz-instruction">
+              <div class="quiz-instruction-num">第<span class="mx-1">3</span>題</div>
+              <div class="quiz-instruction-text"> 請用英文說出這個單字：</div>
+            </div>
+            <div class="quiz-content">
+              <div class="quiz-content-text">生氣的</div>
+            </div>
+          </div>
+          <div class="quiz-response">
+            <div class="quiz-switch" id="3-quizSwitch">
+              <div id="3-phone" class="collapse show" data-bs-parent="#3-quizSwitch">
+                <button type="button" class="btn btn-link btn-sm" data-bs-toggle="collapse" data-bs-target="#3-keyboard"><i class="fa-solid fa-keyboard me-1"></i>我現在不方便說話</button>
+                <button type="button" class="btn btn-primary btn-lg w-100">
+                <i class="fa-solid fa-microphone-lines me-1"></i>請按麥克風，用英文回答 <i class="fa-solid fa-record-vinyl me-1 text-danger"></i>請按這裡結束錄音 </button>
+              </div>
+              <div id="3-keyboard" class="collapse" data-bs-parent="#3-quizSwitch">
+                <button type="button" class="btn btn-link btn-sm"  data-bs-toggle="collapse" data-bs-target="#3-phone"><i class="fa-solid fa-microphone-lines me-1"></i>改用麥克風回答</button>
+                <input type="text" class="form-control form-control-keyboard" placeholder="請輸入英文" aria-label="請輸入英文">
+                <button type="button" class="btn btn-primary btn-lg w-100">確認答案</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- 單字版型4：v4-->
+        <div class="quiz-layout-v4">
+          <div class="quiz-question">
+            <div class="quiz-instruction">
+              <div class="quiz-instruction-num">第<span class="mx-1">4</span>題</div>
+              <div class="quiz-instruction-text">請看圖片，選出正確單字。</div>
+            </div>
+            <div class="quiz-content">
+              <div class="quiz-content-img"><img src="Content/img/L04/sick.png" alt="" class="img-fluid"></div>
+            </div>
+          </div>
+          <div class="quiz-response">
+            <div class="quiz-options">
+              <div class="quiz-group quiz-group-vertical" role="radiogroup" aria-label="第4題選項群組">
+                <input type="radio" class="btn-check" name="4-option" id="4A" autocomplete="off">
+                <label class="btn btn-outline-dark" for="4A">thirty</label>
+                <input type="radio" class="btn-check" name="4-option" id="4B" autocomplete="off">
+                <label class="btn btn-outline-dark" for="4B">fine</label>
+                <input type="radio" class="btn-check" name="4-option" id="4C" autocomplete="off">
+                <label class="btn btn-outline-dark" for="4C">sick</label>
+              </div>
+            </div>
+            <div class="quiz-remark">請選 A、B 或 C。</div>
+            <div class="quiz-actions">
+              <button type="button" class="btn btn-primary btn-lg w-100">確認答案</button>
+            </div>
+          </div>
+        </div>
+				
+        <!-- 單字版型4.2：v4.2-->
+        <div class="quiz-layout-v4.2">
+          <div class="quiz-question">
+            <div class="quiz-instruction">
+              <div class="quiz-instruction-num">第<span class="mx-1">4.2</span>題</div>
+              <div class="quiz-instruction-text">請看圖片，選出正單字。</div>
+            </div>
+            <div class="quiz-content">
+              <div class="quiz-content-img"><img src="Content/img/L04/sick.png" alt="" class="img-fluid"></div>
+            </div>
+          </div>
+          <div class="quiz-response">
+            <div class="quiz-options">
+              <div class="quiz-group quiz-group-horizontal" role="radiogroup" aria-label="第4.2題選項群組">
+                <input type="radio" class="btn-check" name="4.2-option" id="4.2A" autocomplete="off">
+                <label class="btn btn-outline-dark" for="4.2A">thirty</label>
+                <input type="radio" class="btn-check" name="4.2-option" id="4.2B" autocomplete="off">
+                <label class="btn btn-outline-dark" for="4.2B">fine</label>
+                <input type="radio" class="btn-check" name="4.2-option" id="4.2C" autocomplete="off">
+                <label class="btn btn-outline-dark" for="4.2C">sick</label>
+              </div>
+            </div>
+            <div class="quiz-remark">請選 A、B 或 C。</div>
+            <div class="quiz-actions">
+              <button type="button" class="btn btn-primary btn-lg w-100">確認答案</button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- 單字版型5：v5-->
+        <div class="quiz-layout-v5">
+          <div class="quiz-question">
+            <div class="quiz-instruction">
+              <div class="quiz-instruction-num">第<span class="mx-1">5</span>題</div>
+              <div class="quiz-instruction-text"></div>
+            </div>
+            <div class="quiz-content">
+              <div class="quiz-content-text">thirsty 是什麼意思?</div>
+            </div>
+          </div>
+          <div class="quiz-response">
+            <div class="quiz-options">
+              <div class="quiz-group quiz-group-vertical" role="radiogroup" aria-label="第5題選項群組">
+                <input type="radio" class="btn-check" name="5-option" id="5A" autocomplete="off">
+                <label class="btn btn-outline-dark" for="5A">很好的</label>
+                <input type="radio" class="btn-check" name="5-option" id="5B" autocomplete="off">
+                <label class="btn btn-outline-dark" for="5B">非常好的</label>
+                <input type="radio" class="btn-check" name="5-option" id="5C" autocomplete="off">
+                <label class="btn btn-outline-dark" for="5C">口渴的</label>
+              </div>
+            </div>
+            <div class="quiz-remark">請選 A、B 或 C。</div>
+            <div class="quiz-actions">
+              <button type="button" class="btn btn-primary btn-lg w-100">確認答案</button>
+            </div>
+          </div>
+        </div>
+        <!-- 單字版型5：v5.2-->
+        <div class="quiz-layout-v5.2">
+          <div class="quiz-question">
+            <div class="quiz-instruction">
+              <div class="quiz-instruction-num">第<span class="mx-1">5.2</span>題</div>
+              <div class="quiz-instruction-text"></div>
+            </div>
+            <div class="quiz-content">
+              <div class="quiz-content-text">thirsty 是什麼意思?</div>
+            </div>
+          </div>
+          <div class="quiz-response">
+            <div class="quiz-options">
+              <div class="quiz-group quiz-group-horizontal" role="radiogroup" aria-label="第5.2題選項群組">
+                <input type="radio" class="btn-check" name="5.2-option" id="5.2A" autocomplete="off">
+                <label class="btn btn-outline-dark" for="5.2A">很好的</label>
+                <input type="radio" class="btn-check" name="5.2-option" id="5.2B" autocomplete="off">
+                <label class="btn btn-outline-dark" for="5.2B">非常好的</label>
+                <input type="radio" class="btn-check" name="5.2-option" id="5.2C" autocomplete="off">
+                <label class="btn btn-outline-dark" for="5.2C">口渴的</label>
+              </div>
+            </div>
+            <div class="quiz-remark">請選 A、B 或 C。</div>
+            <div class="quiz-actions">
+              <button type="button" class="btn btn-primary btn-lg w-100">確認答案</button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- -->
+      </div>
+      
+      <!-- 答對 -->
+      <div class="answer-correct">
+        <div class="container-xl">
+          <div>答對了！你好棒！</div>
+          <div>
+            <button type="button" class="btn btn-primary">下一題<span class="shoe-rotate ms-1"><i class="fa-solid fa-shoe-prints"></i></span></button>
+          </div>
+        </div>
+      </div>
+      <!-- 答錯 -->
+      <div class="answer-incorrect">
+        <div class="container-xl">
+          <div>再試一次喔 😊 你選的答案是「hungry」，但題目要找的不是這個。</div>
+        </div>
+      </div>
+    </div>
+    <!-- page-content lesson End -->
+  </main>
+  <footer>
+  </footer>
+</form>
+<!-- ------- ------- ------- ------- ------- ------- ------- -->
+<!-- ------- ------- ------- ------- ------- ------- ------- -->
+<!-- ------- ------- ------- ------- ------- ------- ------- -->
+<!-- JavaScript Libraries -->
+<script src="Content/js/jquery-3.4.1.min.js"></script>
+<script src="Content/lib/bootstrap-5.3.8/js/bootstrap.bundle.min.js"></script>
+
+<!-- This web Javascript -->
+<script src="Content/js/main.js"></script>
+<script>
+</script>
+</body>
+</html>

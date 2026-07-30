@@ -15,7 +15,7 @@
 html, body {
 	width: 100%;
 	height: 100%;
-	background-color: $primary-200;
+	background-color: $body-bg-real;
 	scroll-behavior: smooth;
   font-size: 14px;
   @media screen and (min-width: 768px) {
@@ -40,16 +40,9 @@ body {
 		flex-direction: column;
 	}
 }
-%block {
-	background-color: $white;
-	padding: $spacer;
-	border: $border-width $border-style $border-color;
-	border-radius: $border-radius-xl;
-	margin-bottom: map-get($spacers, 6);	
-	box-shadow: $box-shadow-sm;
-}
 
-.btn {
+// 強制修改bootstrap 樣式 /////// /////// /////// /////// /////// /////// ///////
+.btn:not(.btn-link) {
 	border-color: $border-color !important;
 	box-shadow: 3px 3px $border-color;	
 	transition: $transition-base;
@@ -62,3 +55,275 @@ body {
 		transform: translate(3px, 3px);
 	}
 }
+.btn-outline-dark{
+	&:hover{
+		color: $dark;
+	}
+}
+
+.card-group-gap{ //參照card-group 強制改成有gap
+	gap: $spacer*2;	
+  > .card {
+    margin-bottom: var(--#{$prefix}card-group-margin);
+  }
+
+  @include media-breakpoint-up(sm) {
+    display: flex;
+    flex-flow: row wrap;
+    // The child selector allows nested `.card` within `.card-group`
+    // to display properly.
+    > .card {
+      flex: 1 0 0;
+      margin-bottom: 0;
+
+      + .card {
+        margin-left: 0;
+        border-left: solid;
+      }
+
+      // Handle rounded corners
+      @if $enable-rounded {
+        &:not(:last-child) {
+          @include border-end-radius($card-border-radius);
+
+          > .card-img-top,
+          > .card-header {
+            // stylelint-disable-next-line property-disallowed-list
+            border-top-right-radius: $card-inner-border-radius;
+          }
+          > .card-img-bottom,
+          > .card-footer {
+            // stylelint-disable-next-line property-disallowed-list
+            border-bottom-right-radius: $card-inner-border-radius;
+          }
+        }
+
+        &:not(:first-child) {
+          @include border-start-radius($card-border-radius);
+
+          > .card-img-top,
+          > .card-header {
+            // stylelint-disable-next-line property-disallowed-list
+            border-top-left-radius: $card-inner-border-radius;
+          }
+          > .card-img-bottom,
+          > .card-footer {
+            // stylelint-disable-next-line property-disallowed-list
+            border-bottom-left-radius: $card-inner-border-radius;
+          }
+        }
+      }
+    }
+  }
+}
+
+.breadcrumb{
+	a{
+		&:not(:hover){
+			color: $body-secondary-color;	
+		}
+	}
+}
+
+[class*="btn-outline"]{
+	background-color: $white;
+	&:hover{
+		background-color: $body-secondary-bg;
+	}
+}
+
+// 自訂樣式 /////// /////// /////// /////// /////// /////// ///////
+a.card{
+	&:hover{
+		filter: brightness(1.05);
+	}
+}
+
+.shoe-rotate{
+	display: inline-block;
+	transform: rotate(-45deg);
+}
+a, .btn{
+	&:hover{
+		.shoe-rotate{
+			i[class*="shoe"]{
+				animation: fa-wag 1.2s ease-in-out infinite;  // Font Awesome 內建慢速飄浮動畫 
+			}	
+		}
+	}
+}
+
+.page-header{
+	background-color: $banner-color;
+	min-height: 15rem;
+	background-image: url("../img/page-header-bg.png");
+	background-position: bottom right;
+	background-repeat: no-repeat;
+	background-size: contain;	
+	.page-action{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		font-size: $breadcrumb-font-size;
+		padding-top: $breadcrumb-margin-bottom;
+	}
+	.page-title{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		margin-top: map-get($spacers, 4);
+		font-size: $h2-font-size;
+		> small{
+			color: $secondary;
+			font-size: $h5-font-size;
+		}
+	}
+}
+.page-content{ 
+	padding-top: calc(#{map-get($spacers, 6)} * .5);
+	padding-bottom: map-get($spacers, 6);
+	position: relative;
+	&::before{
+		content: "";
+		display: block;
+		width: 100%;
+		height: calc(#{map-get($spacers, 6)} * .5);
+		background: linear-gradient($body-bg-real 0%, transparent 100%); 
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+	}
+	.page-content-title{
+		margin-bottom: map-get($spacers, 6);
+		font-size: $h3-font-size;
+		font-weight: $font-weight-medium;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: $secondary-900;
+		> i{
+			font-size: 1.2em;
+			color: $secondary-800;
+		}
+		> span{
+			display: inline-block;
+			padding-bottom: 12px;
+			position: relative;
+			letter-spacing: 0.05em; 
+			background-image: escape-svg(url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='4'%3E%3Crect x='1' y='2' width='8' height='2' fill='#{$track-color}'/%3E%3C/svg%3E"));
+			background-position: bottom left; 
+			background-size: 14px 6px; 
+			background-repeat: repeat-x; 
+		}
+	}
+}
+
+// radio 選項
+.quiz-group {
+  display: flex;
+  gap: map-get($spacers, 3);
+	margin-bottom: map-get($spacers, 2);
+	counter-reset: option-counter;
+	.btn-check + .btn{
+		font-size: $h5-font-size;
+		&::before{// A、B、C......
+			font-size: $font-size-base;	
+			counter-increment: option-counter;
+			content: counter(option-counter, upper-latin) ". ";
+		}
+		&::after{ //選取圓圈圈
+			content: "\f111";
+			font-family: "Font Awesome 7 Free";
+			font-size: $font-size-base;	
+			font-weight: 900;
+		}
+		img{
+			max-width: 100%;
+			height: auto;
+			border-radius: $btn-border-radius;
+		}
+	}
+	.btn-check:checked + .btn {
+		background-color: $white;
+		box-shadow: inset  .375rem  .375rem $primary,
+								inset -.375rem -.375rem $primary,
+								inset -.375rem  .375rem $primary,
+								inset  .375rem -.375rem $primary;
+		color: $btn-color;
+		&::after{
+			content: "\f058";
+			font-family: "Font Awesome 7 Free";
+			font-weight: 900;
+			color: $primary;
+		}
+		&:hover{
+			box-shadow: inset  .375rem  .375rem $primary,
+								inset -.375rem -.375rem $primary,
+								inset -.375rem  .375rem $primary,
+								inset  .375rem -.375rem $primary;
+			transform: translate(0, 0);
+		}
+	}
+	.btn-check:not(:checked) + .btn {
+		&:hover {
+			background-color: $white;
+		}
+	}
+}
+.quiz-group-vertical { //垂直
+  flex-direction: column;
+	.btn-check{
+	}
+	.btn-check + .btn{
+		display: flex;
+		flex-direction: row;
+		width: 100%;
+		text-align: left;
+		&::before{
+			margin-right: .5rem;
+			margin-top: calc(( #{$h5-font-size} * #{$btn-line-height}
+		                   - #{$font-size-base} * #{$btn-line-height} ) / 2);
+		}
+		&::after{
+			order: -1;
+			margin-right: .5rem;
+			margin-top: calc(( #{$h5-font-size} * #{$btn-line-height}
+								 - #{$font-size-base} * #{$btn-line-height} ) / 2);
+		}
+	}
+}
+.quiz-group-horizontal { //橫向
+  flex-direction: row;
+	.btn-check{
+	}
+	.btn-check + .btn{
+		flex: 1 1 0; 
+		min-height: 6rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		position: relative;
+		&::before{
+			position: absolute;
+			top: $btn-padding-y;
+			left: calc(#{$btn-padding-x} + 1rem + .5rem);
+		}
+		&::after{
+			position: absolute;
+			top: $btn-padding-y;
+			left: $btn-padding-x;
+		}
+	}
+}
+
+
+.form-control-keyboard{
+	background-image: escape-svg(url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 640'%3E%3C!--!Font Awesome Free v7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--%3E%3Cpath fill='#{$border-color}' d='M96 128C60.7 128 32 156.7 32 192L32 448C32 483.3 60.7 512 96 512L544 512C579.3 512 608 483.3 608 448L608 192C608 156.7 579.3 128 544 128L96 128zM112 192L144 192C152.8 192 160 199.2 160 208L160 240C160 248.8 152.8 256 144 256L112 256C103.2 256 96 248.8 96 240L96 208C96 199.2 103.2 192 112 192zM96 304C96 295.2 103.2 288 112 288L144 288C152.8 288 160 295.2 160 304L160 336C160 344.8 152.8 352 144 352L112 352C103.2 352 96 344.8 96 336L96 304zM208 192L240 192C248.8 192 256 199.2 256 208L256 240C256 248.8 248.8 256 240 256L208 256C199.2 256 192 248.8 192 240L192 208C192 199.2 199.2 192 208 192zM192 304C192 295.2 199.2 288 208 288L240 288C248.8 288 256 295.2 256 304L256 336C256 344.8 248.8 352 240 352L208 352C199.2 352 192 344.8 192 336L192 304zM208 384L432 384C440.8 384 448 391.2 448 400L448 432C448 440.8 440.8 448 432 448L208 448C199.2 448 192 440.8 192 432L192 400C192 391.2 199.2 384 208 384zM288 208C288 199.2 295.2 192 304 192L336 192C344.8 192 352 199.2 352 208L352 240C352 248.8 344.8 256 336 256L304 256C295.2 256 288 248.8 288 240L288 208zM304 288L336 288C344.8 288 352 295.2 352 304L352 336C352 344.8 344.8 352 336 352L304 352C295.2 352 288 344.8 288 336L288 304C288 295.2 295.2 288 304 288zM384 208C384 199.2 391.2 192 400 192L432 192C440.8 192 448 199.2 448 208L448 240C448 248.8 440.8 256 432 256L400 256C391.2 256 384 248.8 384 240L384 208zM400 288L432 288C440.8 288 448 295.2 448 304L448 336C448 344.8 440.8 352 432 352L400 352C391.2 352 384 344.8 384 336L384 304C384 295.2 391.2 288 400 288zM480 208C480 199.2 487.2 192 496 192L528 192C536.8 192 544 199.2 544 208L544 240C544 248.8 536.8 256 528 256L496 256C487.2 256 480 248.8 480 240L480 208zM496 288L528 288C536.8 288 544 295.2 544 304L544 336C544 344.8 536.8 352 528 352L496 352C487.2 352 480 344.8 480 336L480 304C480 295.2 487.2 288 496 288z'/%3E%3C/svg%3E"));
+	background-repeat: no-repeat;
+	background-position: left $input-padding-x center;
+	background-size: 1em auto;
+	padding-left: calc(#{$input-padding-x} + 1em + .25em);
+}
+

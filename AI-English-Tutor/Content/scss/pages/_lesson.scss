@@ -1,0 +1,139 @@
+.lesson{
+	//.page-header{}
+	.page-content{
+		.page-content-title{
+			font-size: $h4-font-size;	
+		}
+		.card-group{ 
+			display: flex;
+			flex-flow: column wrap;
+			@media screen and (min-width: 992px) {
+			flex-flow: row wrap;	
+			}
+			.card {
+				@extend .btn;
+				position: relative;
+				&:not(:first-child) {
+					&::before{ 
+						content: "";
+						display: block;
+						width: $spacer*2;	
+						height: $spacer*2; 	
+						background-image: escape-svg(url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='4'%3E%3Crect x='1' y='2' width='8' height='2' fill='#{$track-color-light}'/%3E%3C/svg%3E"));
+						background-position: center left; 
+						background-size: 14px 6px; 
+						background-repeat: repeat-x; 
+						position: absolute;
+						top: 0;
+						left: 50%;
+						transform: rotate(90deg) translate(-100%, 50%);
+					}	
+					@media screen and (min-width: 768px) {
+					&::before{
+						top: 50%;
+						left: 0;	
+						transform: rotate(0deg) translate(-100%, -50%);
+					}	
+					}
+				}
+				.card-title{
+					display: flex;
+					flex-flow: row wrap;
+					align-items: center;
+					gap: $spacer*.5;
+					margin-bottom: $card-title-spacer-y*2;
+					font-size: $h5-font-size;
+					font-weight: $font-weight-bold;
+					.card-title-icon{
+						width: 3rem;
+						height: 3rem;
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						//background-color: rgba($primary, .2);
+						//border: $border-width solid rgba($primary, .5);
+						border-radius: $border-radius-lg;
+						filter: brightness(1.1);
+					}
+					.card-title-text{
+						> small{
+							display: block;
+							font-size: $font-size-sm;
+							text-transform: capitalize;
+						}
+					}
+				}
+				.card-text{
+					color: $body-secondary-color;
+					border-top: 1px solid rgba($body-color, .25);
+					padding-top: $card-title-spacer-y*2;
+					margin-bottom: $card-title-spacer-y*2;
+				}
+				.card-footer{
+					border-top: none;
+					background-color: $primary;
+					color: $white;
+					display: flex;
+					flex-flow: row wrap;
+					align-items: center;
+					justify-content: space-between;filter: brightness(1.1);
+				}
+				&:hover{
+					background-color: tint-color($banner-color, 60%);
+				}
+			}
+			// 卡片色系
+			.card-phon {
+				.card-title{
+					.card-title-icon{
+						background-color: rgba($phon-color, .2);
+						border: $border-width solid rgba($phon-color, .5);	
+						color: $phon-color;
+					}	
+					.card-title-text{
+						small{
+							color: shade-color($phon-color, 20%);
+						}
+					}
+				}
+				.card-footer{
+					background-color: $phon-color;
+				}
+			}
+			.card-vocab {
+				.card-title{
+					.card-title-icon{
+						background-color: rgba($vocab-color, .2);
+						border: $border-width solid rgba($vocab-color, .5);	
+						color: $vocab-color;
+					}	
+					.card-title-text{
+						small{
+							color: shade-color($vocab-color, 20%);
+						}
+					}
+				}
+				.card-footer{
+					background-color: $vocab-color;
+				}
+			}
+			.card-sent {
+				.card-title{
+					.card-title-icon{
+						background-color: rgba($sent-color, .2);
+						border: $border-width solid rgba($sent-color, .5);	
+						color: $sent-color;
+					}	
+					.card-title-text{
+						small{
+							color: shade-color($sent-color, 20%);
+						}
+					}
+				}
+				.card-footer{
+					background-color: $sent-color;
+				}
+			}
+		}
+	}	
+}

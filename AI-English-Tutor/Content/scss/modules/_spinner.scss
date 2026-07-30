@@ -1,0 +1,101 @@
+// 1. 定義地表無縫滑動動畫
+@keyframes track-move {
+  0% {
+    background-position-x: 0px;
+  }
+  100% {
+    background-position-x: -14px; 
+  }
+}
+
+// 2. 定義腳下陰影隨 float 伸縮的動畫
+@keyframes shadow-scale {
+  0%, 100% {
+    transform: translateX(50%) scaleX(1);
+    opacity: 0.3;
+  }
+  50% {
+    transform: translateX(50%) scaleX(0.6); 
+    opacity: 0.15;         
+  }
+}
+
+#spinner {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: $secondary-100; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .5s ease-out, visibility 0s linear .5s;
+  z-index: 99999;
+
+  &.show {
+    transition: opacity .5s ease-out, visibility 0s linear 0s;
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .spinner-ip {  
+    position: relative;
+    // 散步小人
+    &::before {
+      content: "\f554";
+      display: inline-block;
+      font-family: "Font Awesome 7 Free";
+      font-weight: 900;
+      font-size: 2.25rem;
+      color: $primary;
+			text-shadow: 0px 1px $body-color, -1px 0px $body-color, -1px 1px $body-color,
+									 0px 2px $body-color, -2px 0px $body-color, -2px 2px $body-color;
+			width: 2rem;
+			height: auto;
+			text-align: center;
+      position: absolute;
+      bottom: 4px;
+      right: 0;
+      animation: fa-float 2s ease-in-out infinite;  // Font Awesome 內建慢速飄浮動畫 
+    }
+		
+    .visually {  
+      color: $body-color;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+			position: relative;
+			// 小人走路的履帶路徑
+			&::before { 
+				content: "";
+        display: inline-block; 
+        width: 2rem;
+        height: 4px; 
+        background-image: escape-svg(url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='4'%3E%3Crect x='1' y='2' width='8' height='2' fill='#{$track-color}'/%3E%3C/svg%3E"));
+        background-position: bottom left; 
+        background-size: 14px 6px; 
+        background-repeat: repeat-x; 
+        margin-left: 6px;	
+				position: absolute;
+				right: 0;
+				bottom: .25em;
+				animation: track-move 1s linear infinite; 
+			}
+      // 履帶路徑
+      &::after { 
+        content: "";
+        display: inline-block; 
+        width: 2rem;
+        height: 4px; 
+        background-image: escape-svg(url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='4'%3E%3Crect x='1' y='2' width='8' height='2' fill='#{$track-color-light}'/%3E%3C/svg%3E"));
+        background-position: bottom left; 
+        background-size: 14px 6px; 
+        background-repeat: repeat-x; 
+        margin-left: 6px;
+      }
+    }
+  }
+}

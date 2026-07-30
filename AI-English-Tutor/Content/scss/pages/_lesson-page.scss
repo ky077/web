@@ -1,0 +1,297 @@
+body[class*="lesson-"]{
+	.page-content{
+		.page-content-title{
+			font-size: $h4-font-size;	
+			margin-top: -6.5rem;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			color: $white;
+			> span{
+				display: inline-block;
+				padding-bottom: 0;
+				letter-spacing: 0.05em; 
+				background-image: none;
+				background-color: $body-secondary-color;
+				padding: .5rem 1rem;
+				border: 5px solid $primary;
+				position: relative;
+				> i{
+					font-size: 1.2em;
+					color: $white;
+					margin-right: .25rem;
+				}
+				> small{
+					font-size: $white;	
+					margin-left: .25rem;
+				}
+				&::before, &::after{
+					content: "";
+					display: block;
+					width: 10px;
+					height: 200%;
+					background-color: $body-color;
+					position: absolute;
+					top: -10px;
+					border-radius: 10px 10px 0 0;
+				}
+				&::before{
+					left: -5px;
+				}
+				&::after{
+					right: -5px;
+				}
+			}
+		}
+	}
+}
+body.lesson-phon{
+	.page-content{
+		.page-content-title{
+			> span{
+				background-color: $phon-color;
+			}
+		}
+	}
+}
+body.lesson-vocab{
+	.page-content{
+		.page-content-title{
+			> span{
+				background-color: $vocab-color;
+			}
+		}
+	}
+}
+body.lesson-sent{
+	.page-content{
+		.page-content-title{
+			> span{
+				background-color: $sent-color;
+			}
+		}
+	}
+}
+
+.quiz-progress{
+	margin-top: map-get($spacers, 6);
+	margin-bottom: map-get($spacers, 6);
+	.progress-person { 
+		height: 2rem;
+		position: relative;
+		margin-bottom: 2px;
+		.progress-person-count{ // 【對話框：題號進度】
+			display: inline-block;
+			background-color: $primary;
+			border-radius: $border-radius $border-radius $border-radius 0;
+			font-size: $sub-sup-font-size;
+			font-weight: $font-weight-medium;
+			padding: .25rem .5rem;
+			position: absolute;
+			bottom: 0;
+			left: 100%;
+			white-space: nowrap;
+			transform: translate(1em, -100%);
+			&::after{ // 【對話框：三角形】
+				content: "";
+				display: block;
+				width: 0;
+				height: 0;
+				border-bottom: .75em solid $primary;
+				border-left: .75em solid transparent;
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				transform: translateX(-100%);
+			}
+			&::before{ // 【角色：散步小人】
+				content: "\f554";
+				display: inline-block;
+				font-family: "Font Awesome 7 Free";
+				font-weight: 900;
+				position: absolute;
+				top: .75rem;
+				left: -2rem;
+				font-size: 2rem;
+				animation: fa-float 3s ease-in-out infinite;
+				color: $primary;
+				text-shadow: 0px 1px $body-color, -1px 0px $body-color, -1px 1px $body-color,
+					0px 2px $body-color, -2px 0px $body-color, -2px 2px $body-color;
+			}
+		}
+		
+	}
+	.progress{  // 【底座：履帶地面】
+		height: 4px;
+		background-color: transparent;
+		background-image: escape-svg(url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='4'%3E%3Crect x='1' y='2' width='8' height='2' fill='#{$track-color-light}'/%3E%3C/svg%3E"));
+		background-position: bottom left; 
+		background-repeat: repeat-x; 
+		background-size: 14px 6px; 
+		border-radius: 0;
+		.progress-bar{ // 【陰影：小人走過的的地面影】
+			background-color: transparent;
+			background-image: escape-svg(url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='4'%3E%3Crect x='1' y='2' width='8' height='2' fill='#{$track-color}'/%3E%3C/svg%3E"));
+			background-position: bottom left; 
+			background-repeat: repeat-x; 
+			background-size: 14px 6px; 
+			/*background-color: transparent;
+			background-image: escape-svg(url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='6'%3E%3Cellipse cx='10' cy='3' rx='8' ry='2' fill='#{$track-color}'/%3E%3C/svg%3E"));
+			background-position: bottom left; 
+			background-repeat: repeat-x; 
+			background-size: 20px 6px;
+			border-radius: $border-radius;
+			height: 4px;*/
+		}
+	}
+}
+
+[class*="quiz-layout"]{
+	background-color: $white;
+	border: $border-width $border-style $border-color;
+	border-radius: $border-radius-xl;
+	+[class*="quiz-layout"]{
+		margin-top: map-get($spacers, 6);
+	}
+	// 題目區
+	.quiz-question{ 
+		padding: $spacer*2;
+		.quiz-instruction{
+			display: flex;
+			flex-direction: row;
+    	flex-wrap: wrap;
+			align-items: center;
+			margin-bottom: $spacer;
+			.quiz-instruction-num{
+				//background-color: $primary-100;
+				font-size: $font-size-sm;
+				display: inline-block;
+				padding-left: .5rem;
+				padding-right: .5rem;
+				border-radius: $border-radius;
+				margin-right: .5rem;
+			}
+			.quiz-instruction-text{
+				//color: $body-secondary-color;
+				font-size: $font-size-base;
+				font-weight: $font-weight-medium;	
+			}
+		}
+		
+		.quiz-content{
+			text-align: center;
+			.quiz-content-audio{}
+			.quiz-content-img{
+				img{
+					max-width: 25%;	
+				}
+			}
+			.quiz-content-tip{
+				font-size: $font-size-base;
+			}
+			.quiz-content-text{
+				font-size: $h4-font-size;
+				font-weight: $font-weight-medium;
+			}
+			.quiz-content-vocab{
+				> span{
+					display: inline-block;
+					background-color: $body-secondary-bg;
+					//border: $border-width solid $body-secondary-color;
+					border-radius: $border-radius;
+					font-size: $h4-font-size;
+					font-weight: $font-weight-medium;	
+					margin: .5rem;
+					padding: 0 .5rem;
+				}
+				
+			}
+			.quiz-content-dialog{
+				font-size: $h4-font-size;
+				font-weight: $font-weight-medium;	
+				display: inline-block;
+				text-align: left;
+			}
+		}
+	}
+	//作答區
+	.quiz-response{ 
+		padding: $spacer*2;
+		background-color: $body-secondary-bg;
+		border-radius:  0 0 calc(#{$border-radius-xl} - #{$border-width}) calc(#{$border-radius-xl} - #{$border-width});
+		.quiz-options{
+		}
+		.quiz-remark{
+			color: $body-secondary-color;	
+			font-size: $font-size-sm;
+			margin-bottom: $spacer;
+		}
+		
+		.quiz-switch{
+			.btn-link{
+				padding-left: .75rem;
+				padding-right: .75rem;
+			}
+			.form-control{
+				margin-bottom: $spacer;
+			}
+		}
+		.quiz-actions{
+			margin-top: $spacer;
+		}
+	}
+}
+body.lesson-phon{
+	.quiz-instruction-num{
+		background-color: tint-color($phon-color, 80%);
+	}
+	.quiz-content-tip{
+		color: $phon-color;	
+	}
+}
+body.lesson-vocab{
+	.quiz-instruction-num{
+		background-color: tint-color($vocab-color, 80%);
+	}	
+	.quiz-content-tip{
+		color: $vocab-color;	
+	}
+}
+body.lesson-sent{
+	.quiz-instruction-num{
+		background-color: tint-color($sent-color, 80%);
+	}	
+.quiz-content-tip{
+		color: $sent-color;	
+	}
+}
+
+
+.answer-correct, .answer-incorrect{
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	padding: $spacer;
+	
+	color: $white;
+	font-size: $font-size-lg;
+	border-top: $border-width $border-style $body-color;
+	
+	> [class*="container"]{
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;	
+	}
+}
+.answer-correct{ 
+	background-color: $success;
+	box-shadow: 0 -.5rem 1rem rgba($success, .15);
+}
+.answer-incorrect{ display: none;
+	background-color: $danger;
+	box-shadow: 0 -.5rem 1rem rgba($danger, .15);
+}
+
+

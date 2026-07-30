@@ -4,30 +4,31 @@
 @import "bootstrap-5.3.8/scss/maps";
 @import "bootstrap-5.3.8/scss/mixins";
 @import "bootstrap-5.3.8/scss/utilities";
- 
+
+@import "master/var";
+@import "master/UI";  
+
 @import "master/header";
 @import "master/main";
 @import "master/footer";
-@import "master/UI";  
-//
-//
-//@import "modules/TA";  
-//@import "modules/TI";  
 
-//
+
+@import "modules/spinner"; 
+
 //@import "modules/animate"; 
 //@import "modules/back-to-top";  
 //@import "modules/badge"; 
 //@import "modules/helper"; 
 //@import "modules/mend-bs"; 
 //@import "modules/page-header"; 
-//@import "modules/spinner"; 
+
 //@import "modules/trait"; 
 //
 //
 //
 @import "pages/index"; 
-//@import "pages/news"; 
+@import "pages/lesson"; 
+@import "pages/lesson-page"; 
 //@import "pages/intro"; 
 //@import "pages/explore";
 //@import "pages/exploreDetail";
