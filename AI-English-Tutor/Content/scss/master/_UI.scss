@@ -64,7 +64,7 @@ body {
 .card-group-gap{ //參照card-group 強制改成有gap
 	gap: $spacer*2;	
   > .card {
-    margin-bottom: var(--#{$prefix}card-group-margin);
+    margin-bottom: 0;
   }
 
   @include media-breakpoint-up(sm) {
@@ -118,6 +118,7 @@ body {
 }
 
 .breadcrumb{
+	margin-bottom: 0;
 	a{
 		&:not(:hover){
 			color: $body-secondary-color;	
@@ -162,10 +163,14 @@ a, .btn{
 	background-size: contain;	
 	.page-action{
 		display: flex;
+		flex-wrap: wrap;
 		align-items: center;
 		justify-content: space-between;
 		font-size: $breadcrumb-font-size;
 		padding-top: $breadcrumb-margin-bottom;
+		> a {
+			margin-left: auto;
+		}
 	}
 	.page-title{
 		display: flex;
@@ -228,6 +233,7 @@ a, .btn{
 	counter-reset: option-counter;
 	.btn-check + .btn{
 		font-size: $h5-font-size;
+		word-break: break-all;
 		&::before{// A、B、C......
 			font-size: $font-size-base;	
 			counter-increment: option-counter;
@@ -307,6 +313,8 @@ a, .btn{
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
+		padding-top: calc(#{$btn-padding-y} + 1em);
+		text-align: left;
 		position: relative;
 		&::before{
 			position: absolute;

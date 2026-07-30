@@ -275,7 +275,7 @@ body.lesson-sent{
 	
 	color: $white;
 	font-size: $font-size-lg;
-	border-top: $border-width $border-style $body-color;
+	border-top: $border-width $border-style rgba($body-color, .95);
 	
 	> [class*="container"]{
 		display: flex;
@@ -286,11 +286,11 @@ body.lesson-sent{
 	}
 }
 .answer-correct{ 
-	background-color: $success;
+	background-color: rgba($success, .95);
 	box-shadow: 0 -.5rem 1rem rgba($success, .15);
 }
 .answer-incorrect{ 
-	background-color: $danger;
+	background-color: rgba($danger, .95);
 	box-shadow: 0 -.5rem 1rem rgba($danger, .15);
 }
 
