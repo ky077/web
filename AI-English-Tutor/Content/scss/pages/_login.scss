@@ -1,0 +1,15 @@
+.login{
+	.hero{
+		.card{
+			box-shadow: $box-shadow-sm;
+			border-radius: $border-radius-xl;
+		}
+		.hero-title{
+			text-align: center;
+		}
+		.hero-subtitle{
+			text-align: center;
+			margin-bottom: map-get($spacers, 3);
+		}
+	}
+}

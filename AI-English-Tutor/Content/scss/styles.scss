@@ -5,6 +5,7 @@
 @import "bootstrap-5.3.8/scss/mixins";
 @import "bootstrap-5.3.8/scss/utilities";
 
+
 @import "master/var";
 @import "master/UI";  
 
@@ -12,31 +13,10 @@
 @import "master/main";
 @import "master/footer";
 
-
 @import "modules/spinner"; 
 
-//@import "modules/animate"; 
-//@import "modules/back-to-top";  
-//@import "modules/badge"; 
-//@import "modules/helper"; 
-//@import "modules/mend-bs"; 
-//@import "modules/page-header"; 
-
-//@import "modules/trait"; 
-//
-//
-//
+@import "pages/login"; 
+@import "pages/register"; 
 @import "pages/index"; 
 @import "pages/lesson"; 
 @import "pages/lesson-page"; 
-//@import "pages/intro"; 
-//@import "pages/explore";
-//@import "pages/exploreDetail";
-//@import "pages/myRecommend";
-//@import "pages/contact"; 
-//@import "pages/login"; 
-//@import "pages/register"; 
-//@import "pages/resetPD"; 
-
-
-
