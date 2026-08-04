@@ -1,0 +1,68 @@
+{
+  "defaultTermId": "grade5-upper-1",
+  "terms": [
+    {
+      "id": "grade5-upper-1",
+      "label": "五上1",
+      "units": [
+        {
+          "unit": "U1",
+          "title": "自我介紹",
+          "lessons": [
+            { "order": 1, "title": "What Is Your Name?", "href": "lesson.html", "isOpen": true },
+            { "order": 2, "title": "Is Your Name Mary?", "href": "lesson.html", "isOpen": true },
+            { "order": 3, "title": "Review", "href": "lesson.html", "isOpen": true }
+          ]
+        },
+        {
+          "unit": "U2",
+          "title": "心情表達",
+          "lessons": [
+            { "order": 4, "title": "How Are You?", "href": "lesson.html", "isOpen": true },
+            { "order": 5, "title": "Are You Happy?", "href": "lesson.html", "isOpen": true },
+            { "order": 6, "title": "Review", "href": "lesson.html", "isOpen": true }
+          ]
+        },
+        {
+          "unit": "U3",
+          "title": "身分職業",
+          "lessons": [
+            { "order": 7, "title": "I Am a Student", "href": "lesson.html", "isOpen": false },
+            { "order": 8, "title": "Are You a Student?", "href": "lesson.html", "isOpen": false },
+            { "order": 9, "title": "Review", "href": "lesson.html", "isOpen": false }
+          ]
+        },
+        {
+          "unit": "U4",
+          "title": "家人朋友",
+          "lessons": [
+            { "order": 10, "title": "Who Is He?", "href": "lesson.html", "isOpen": false },
+            { "order": 11, "title": "Is She Your Mother?", "href": "lesson.html", "isOpen": false },
+            { "order": 12, "title": "Review", "href": "lesson.html", "isOpen": false }
+          ]
+        },
+        {
+          "unit": "U5",
+          "title": "日常物品",
+          "lessons": [
+            { "order": 13, "title": "What Is This?", "href": "lesson.html", "isOpen": false },
+            { "order": 14, "title": "Is That a Pen?", "href": "lesson.html", "isOpen": false },
+            { "order": 15, "title": "Review", "href": "lesson.html", "isOpen": false }
+          ]
+        },
+        {
+          "unit": "U6",
+          "title": "總複習",
+          "lessons": [
+            { "order": 16, "title": "Review", "href": "lesson.html", "isOpen": false }
+          ]
+        }
+      ]
+    },
+    { "id": "grade5-upper-2", "label": "五上2", "units": [] },
+    { "id": "grade5-lower-1", "label": "五下1", "units": [] },
+    { "id": "grade5-lower-2", "label": "五下2", "units": [] },
+    { "id": "grade6-upper", "label": "六上", "units": [] },
+    { "id": "grade6-lower", "label": "六下", "units": [] }
+  ]
+}

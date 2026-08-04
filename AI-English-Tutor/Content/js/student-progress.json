@@ -1,0 +1,16 @@
+{
+  "studentId": "demo-student",
+  "terms": [
+    {
+      "id": "grade5-upper-1",
+      "lessons": [
+        { "order": 1, "status": "done" },
+        { "order": 2, "status": "done" },
+        { "order": 3, "status": "active" },
+        { "order": 4, "status": "active", "activeIndicator": "你上次在這裡！" },
+        { "order": 5, "status": "pending" },
+        { "order": 6, "status": "done" }
+      ]
+    }
+  ]
+}

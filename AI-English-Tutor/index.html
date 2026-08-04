@@ -39,54 +39,55 @@
     </div>
   </div>
   <!-- Spinner End -->
-	
+  
   <header>
   </header>
   <main>
-		<!-- hero Start -->
-    <div class="hero">
+    <!-- hero Start -->
+    <div class="hero h-100">
       <div class="container-fluid">
         <div class="row justify-content-center">
           <div class="col-sm-10">
             <div class="hero-title">PASSION GO!</div>
             <div class="hero-subtitle">日間教材線上練習平台</div>
             <div class="hero-slogan">聽、說、讀、寫，和 AI 一起練英語。</div>
-            <button type="button" class="btn btn-primary btn-lg">立即開始<span class="shoe-rotate ms-1"><i class="fa-solid fa-shoe-prints"></i></span></button>
+            <a href="login.html" class="btn btn-primary btn-lg btn-hero-start">立即開始<span class="shoe-rotate ms-1"><i class="fa-solid fa-shoe-prints"></i></span></a>
           </div>
         </div>
       </div>
     </div>
-		<!-- hero Start -->
-		<!-- page-content course Start -->
-    <div class="page-content">
+    <!-- hero Start -->
+    <!-- page-content course Start -->
+    <div class="page-content d-none" id="page-content">
       <div class="container-xl">
         <h2 class="page-content-title"><i class="fa-solid fa-person-walking fa-float"></i><span>選擇學習進度，<br class="d-sm-none">
           開始今天的英語課程</span><i class="fa-solid fa-person-walking fa-float"></i></h2>
         <div class="course-nav">
           <ul class="nav nav-pills">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#"> 五上1</a>
+              <a class="nav-link active" aria-current="page" href="#course-list" data-course-term="grade5-upper-1">五上1</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">五上2</a>
+              <a class="nav-link" href="#course-list" data-course-term="grade5-upper-2">五上2</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">五下1</a>
+              <a class="nav-link" href="#course-list" data-course-term="grade5-lower-1">五下1</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">五下2</a>
+              <a class="nav-link" href="#course-list" data-course-term="grade5-lower-2">五下2</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">六上</a>
+              <a class="nav-link" href="#course-list" data-course-term="grade6-upper">六上</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">六下</a>
+              <a class="nav-link" href="#course-list" data-course-term="grade6-lower">六下</a>
             </li>
           </ul>
         </div>
-        <div class="course-list">
-          <h3 class="course-list-title"><i class="fa-solid fa-route"></i>課程地圖
-            <div class="course-list-progress">已完成：<span class="mx-1">3</span>/<span class="mx-1">9</span>課</div>
+        <div class="course-list" id="course-list" aria-live="polite">
+          <!-- 靜態範本：JS 載入 JSON 後會直接取代此區塊 -->
+          <h3 class="course-list-title"><i class="fa-solid fa-route" aria-hidden="true"></i>課程地圖
+            <div class="course-list-progress">已完成：<span class="mx-1">3</span>/<span class="mx-1">16</span>課</div>
           </h3>
           <div class="card-group card-group-gap">
             <div class="card card-unit">
@@ -123,7 +124,7 @@
             </a>
           </div>
           <div class="card-group card-group-gap">
-            <div class="card card-unit" data-card="4">
+            <div class="card card-unit">
               <div class="card-body">
                 <h4 class="card-title">
                   <div class="card-title-unit">U2</div>
@@ -131,28 +132,29 @@
                 </h4>
               </div>
             </div>
-            <a href="lesson.html" class="card" data-card-order="4" data-card-status="locked">
+            <a href="lesson.html" class="card" data-card-order="4" data-card-status="active" data-active-indicator="你上次在這裡！">
+            <div class="active-indicator">你上次在這裡！</div>
             <div class="card-body">
               <h5 class="card-title">How Are You?</h5>
             </div>
             <div class="card-footer">
-              <small class="status-text">未開啟</small>
+              <small class="status-text">進行中</small>
             </div>
             </a>
-            <a href="lesson.html" class="card" data-card-order="5" data-card-status="locked">
+            <a href="lesson.html" class="card" data-card-order="5" data-card-status="pending">
             <div class="card-body">
               <h5 class="card-title">Are You Happy?</h5>
             </div>
             <div class="card-footer">
-              <small class="status-text">未開啟</small>
+              <small class="status-text">準備開始</small>
             </div>
             </a>
-            <a href="lesson.html" class="card" data-card-order="6" data-card-status="locked">
+            <a href="lesson.html" class="card" data-card-order="6" data-card-status="done">
             <div class="card-body">
               <h5 class="card-title">Review</h5>
             </div>
             <div class="card-footer">
-              <small class="status-text">未開啟</small>
+              <small class="status-text">已完成</small>
             </div>
             </a>
           </div>
@@ -165,38 +167,121 @@
                 </h4>
               </div>
             </div>
-            <a href="lesson.html" class="card" data-card-order="7" data-card-status="active" data-active-indicator="你上次在這裡！">
-            <!-- active-indicator 由 [data-active-indicator] 產生 -->
-            <div class="active-indicator">你上次在這裡！</div>
-            <!-- active-indicator 由 [data-active-indicator] 產生 -->
+            <a href="lesson.html" class="card" data-card-order="7" data-card-status="locked">
             <div class="card-body">
               <h5 class="card-title">I Am a Student</h5>
             </div>
             <div class="card-footer">
-              <small class="status-text">進行中</small>
+              <small class="status-text">未開啟</small>
             </div>
             </a>
-            <a href="lesson.html" class="card" data-card-order="8" data-card-status="pending">
+            <a href="lesson.html" class="card" data-card-order="8" data-card-status="locked">
             <div class="card-body">
               <h5 class="card-title">Are You a Student?</h5>
             </div>
             <div class="card-footer">
-              <small class="status-text">準備開始</small>
+              <small class="status-text">未開啟</small>
             </div>
             </a>
-            <a href="lesson.html" class="card" data-card-order="9" data-card-status="done">
+            <a href="lesson.html" class="card" data-card-order="9" data-card-status="locked">
             <div class="card-body">
               <h5 class="card-title">Review</h5>
             </div>
             <div class="card-footer">
-              <small class="status-text">已完成</small>
+              <small class="status-text">未開啟</small>
+            </div>
+            </a>
+          </div>
+          <div class="card-group card-group-gap">
+            <div class="card card-unit">
+              <div class="card-body">
+                <h4 class="card-title">
+                  <div class="card-title-unit">U4</div>
+                  <div class="card-title-unit-text">家人朋友</div>
+                </h4>
+              </div>
+            </div>
+            <a href="lesson.html" class="card" data-card-order="10" data-card-status="locked">
+            <div class="card-body">
+              <h5 class="card-title">Who Is He?</h5>
+            </div>
+            <div class="card-footer">
+              <small class="status-text">未開啟</small>
+            </div>
+            </a>
+            <a href="lesson.html" class="card" data-card-order="11" data-card-status="locked">
+            <div class="card-body">
+              <h5 class="card-title">Is She Your Mother?</h5>
+            </div>
+            <div class="card-footer">
+              <small class="status-text">未開啟</small>
+            </div>
+            </a>
+            <a href="lesson.html" class="card" data-card-order="12" data-card-status="locked">
+            <div class="card-body">
+              <h5 class="card-title">Review</h5>
+            </div>
+            <div class="card-footer">
+              <small class="status-text">未開啟</small>
+            </div>
+            </a>
+          </div>
+          <div class="card-group card-group-gap">
+            <div class="card card-unit">
+              <div class="card-body">
+                <h4 class="card-title">
+                  <div class="card-title-unit">U5</div>
+                  <div class="card-title-unit-text">日常物品</div>
+                </h4>
+              </div>
+            </div>
+            <a href="lesson.html" class="card" data-card-order="13" data-card-status="locked">
+            <div class="card-body">
+              <h5 class="card-title">What Is This?</h5>
+            </div>
+            <div class="card-footer">
+              <small class="status-text">未開啟</small>
+            </div>
+            </a>
+            <a href="lesson.html" class="card" data-card-order="14" data-card-status="locked">
+            <div class="card-body">
+              <h5 class="card-title">Is That a Pen?</h5>
+            </div>
+            <div class="card-footer">
+              <small class="status-text">未開啟</small>
+            </div>
+            </a>
+            <a href="lesson.html" class="card" data-card-order="15" data-card-status="locked">
+            <div class="card-body">
+              <h5 class="card-title">Review</h5>
+            </div>
+            <div class="card-footer">
+              <small class="status-text">未開啟</small>
+            </div>
+            </a>
+          </div>
+          <div class="card-group card-group-gap">
+            <div class="card card-unit">
+              <div class="card-body">
+                <h4 class="card-title">
+                  <div class="card-title-unit">U6</div>
+                  <div class="card-title-unit-text">總複習</div>
+                </h4>
+              </div>
+            </div>
+            <a href="lesson.html" class="card" data-card-order="16" data-card-status="locked">
+            <div class="card-body">
+              <h5 class="card-title">Review</h5>
+            </div>
+            <div class="card-footer">
+              <small class="status-text">未開啟</small>
             </div>
             </a>
           </div>
         </div>
       </div>
     </div>
-		<!-- page-content course Start -->
+    <!-- page-content course Start -->
   </main>
   <footer>
   </footer>
@@ -211,6 +296,271 @@
 <!-- This web Javascript -->
 <script src="Content/js/main.js"></script>
 <script>
+(function () {
+  var courseListElement = document.getElementById('course-list');
+  var navLinks = document.querySelectorAll('[data-course-term]');
+  var courseMapUrl = 'Content/js/course-map.json';
+  var studentProgressUrl = 'Content/js/student-progress.json';
+  var courseMapData = {
+    defaultTermId: 'grade5-upper-1',
+    terms: []
+  };
+  var studentProgressData = {
+    terms: []
+  };
+  var statusText = {
+    done: '已完成',
+    active: '進行中',
+    pending: '準備開始',
+    locked: '未開啟'
+  };
+
+  if (!courseListElement) {
+    return;
+  }
+
+  var createElement = function (tagName, className, text) {
+    var element = document.createElement(tagName);
+
+    if (className) {
+      element.className = className;
+    }
+
+    if (text) {
+      element.textContent = text;
+    }
+
+    return element;
+  };
+
+  var findTerm = function (termId) {
+    for (var i = 0; i < courseMapData.terms.length; i++) {
+      if (courseMapData.terms[i].id === termId) {
+        return courseMapData.terms[i];
+      }
+    }
+
+    return courseMapData.terms[0] || null;
+  };
+
+  var getLessons = function (term) {
+    var lessons = [];
+
+    term.units.forEach(function (unit) {
+      lessons = lessons.concat(unit.lessons);
+    });
+
+    return lessons;
+  };
+
+  var findTermProgress = function (termId) {
+    for (var i = 0; i < studentProgressData.terms.length; i++) {
+      if (studentProgressData.terms[i].id === termId) {
+        return studentProgressData.terms[i];
+      }
+    }
+
+    return null;
+  };
+
+  var findLessonProgress = function (termId, lessonOrder) {
+    var termProgress = findTermProgress(termId);
+
+    if (!termProgress || !termProgress.lessons) {
+      return null;
+    }
+
+    for (var i = 0; i < termProgress.lessons.length; i++) {
+      if (termProgress.lessons[i].order === lessonOrder) {
+        return termProgress.lessons[i];
+      }
+    }
+
+    return null;
+  };
+
+  var getLessonStatus = function (termId, lesson) {
+    var progress = findLessonProgress(termId, lesson.order);
+
+    if (!lesson.isOpen) {
+      return 'locked';
+    }
+
+    return progress ? progress.status : 'pending';
+  };
+
+  var updateCourseNav = function (termId) {
+    navLinks.forEach(function (link) {
+      var isActive = link.getAttribute('data-course-term') === termId;
+
+      link.classList.toggle('active', isActive);
+
+      if (isActive) {
+        link.setAttribute('aria-current', 'page');
+      } else {
+        link.removeAttribute('aria-current');
+      }
+    });
+  };
+
+  var renderTitle = function (term) {
+    var lessons = getLessons(term);
+    var doneCount = lessons.filter(function (lesson) {
+      return getLessonStatus(term.id, lesson) === 'done';
+    }).length;
+    var title = createElement('h3', 'course-list-title');
+    var icon = createElement('i', 'fa-solid fa-route');
+    var progress = createElement('div', 'course-list-progress');
+
+    icon.setAttribute('aria-hidden', 'true');
+    title.appendChild(icon);
+    title.appendChild(document.createTextNode('課程地圖'));
+
+    progress.appendChild(document.createTextNode('已完成：'));
+    progress.appendChild(createElement('span', 'mx-1', String(doneCount)));
+    progress.appendChild(document.createTextNode('/'));
+    progress.appendChild(createElement('span', 'mx-1', String(lessons.length)));
+    progress.appendChild(document.createTextNode('課'));
+    title.appendChild(progress);
+
+    courseListElement.appendChild(title);
+  };
+
+  var renderEmptyState = function () {
+    var empty = createElement('div', 'text-center py-4', '課程資料準備中');
+    courseListElement.appendChild(empty);
+  };
+
+  var renderLoadError = function () {
+    var empty = createElement('div', 'text-center py-4', '課程資料載入失敗');
+    courseListElement.appendChild(empty);
+  };
+
+  var renderUnit = function (term, unit) {
+    var group = createElement('div', 'card-group card-group-gap');
+    var unitCard = createElement('div', 'card card-unit');
+    var unitBody = createElement('div', 'card-body');
+    var unitTitle = createElement('h4', 'card-title');
+
+    unitTitle.appendChild(createElement('div', 'card-title-unit', unit.unit));
+    unitTitle.appendChild(createElement('div', 'card-title-unit-text', unit.title));
+    unitBody.appendChild(unitTitle);
+    unitCard.appendChild(unitBody);
+    group.appendChild(unitCard);
+
+    unit.lessons.forEach(function (lesson) {
+      var progress = findLessonProgress(term.id, lesson.order);
+      var status = getLessonStatus(term.id, lesson);
+      var activeIndicator = progress && progress.activeIndicator ? progress.activeIndicator : lesson.activeIndicator;
+      var lessonCard = createElement('a', 'card');
+      var cardBody = createElement('div', 'card-body');
+      var cardFooter = createElement('div', 'card-footer');
+
+      lessonCard.href = lesson.href || '#';
+      lessonCard.setAttribute('data-card-order', String(lesson.order));
+      lessonCard.setAttribute('data-card-status', status);
+      cardBody.appendChild(createElement('h5', 'card-title', lesson.title));
+      cardFooter.appendChild(createElement('small', 'status-text', statusText[status]));
+
+      if (activeIndicator) {
+        lessonCard.setAttribute('data-active-indicator', activeIndicator);
+        lessonCard.appendChild(createElement('div', 'active-indicator', activeIndicator));
+      }
+
+      lessonCard.appendChild(cardBody);
+      lessonCard.appendChild(cardFooter);
+      group.appendChild(lessonCard);
+    });
+
+    courseListElement.appendChild(group);
+  };
+
+  var renderCourseTerm = function (termId) {
+    var term = findTerm(termId);
+
+    courseListElement.replaceChildren();
+
+    if (!term) {
+      renderLoadError();
+      return;
+    }
+
+    updateCourseNav(term.id);
+    renderTitle(term);
+
+    if (!term.units.length) {
+      renderEmptyState();
+      return;
+    }
+
+    term.units.forEach(function (unit) {
+      renderUnit(term, unit);
+    });
+  };
+
+  var loadCourseMap = function (callback) {
+    if (!window.fetch) {
+      callback();
+      return;
+    }
+
+    fetch(courseMapUrl, {
+      cache: 'no-store'
+    })
+      .then(function (response) {
+        if (!response.ok) {
+          throw new Error('Course map not found');
+        }
+
+        return response.json();
+      })
+      .then(function (data) {
+        courseMapData = data;
+        callback();
+      })
+      .catch(function () {
+        callback();
+      });
+  };
+
+  var loadStudentProgress = function (callback) {
+    if (!window.fetch) {
+      callback();
+      return;
+    }
+
+    fetch(studentProgressUrl, {
+      cache: 'no-store'
+    })
+      .then(function (response) {
+        if (!response.ok) {
+          throw new Error('Student progress not found');
+        }
+
+        return response.json();
+      })
+      .then(function (data) {
+        studentProgressData = data;
+        callback();
+      })
+      .catch(function () {
+        callback();
+      });
+  };
+
+  navLinks.forEach(function (link) {
+    link.addEventListener('click', function (event) {
+      event.preventDefault();
+      renderCourseTerm(link.getAttribute('data-course-term'));
+    });
+  });
+
+  loadCourseMap(function () {
+    loadStudentProgress(function () {
+      renderCourseTerm(courseMapData.defaultTermId);
+    });
+  });
+})();
 </script>
 </body>
 </html>
