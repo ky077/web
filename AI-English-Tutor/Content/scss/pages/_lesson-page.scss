@@ -2,8 +2,7 @@ body[class*="lesson-"]{
 	.page-content{
 		.page-content-title{
 			font-size: $h4-font-size;	
-			margin-top: calc((15rem - #{$breadcrumb-margin-bottom}*2 - 1rem - #{$spacer}*1.5 - #{$h2-font-size} * 1.2 *2)*-1);
-				//calc(#{map-get($spacers, 6)} * .5 * -1 - 5rem);
+			margin-top: -5rem;
 			display: flex;
 			align-items: center;
 			justify-content: center;
@@ -23,7 +22,6 @@ body[class*="lesson-"]{
 					margin-right: .25rem;
 				}
 				> small{
-					font-size: $white;	
 					margin-left: .25rem;
 				}
 				&::before, &::after{

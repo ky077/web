@@ -171,10 +171,10 @@ footer { background-color: #ffc0a7; border-top: 3px solid #504235; font-size: 0.
 .lesson .page-content .card-group .card-sent .card-title .card-title-text small { color: #2e877c; }
 .lesson .page-content .card-group .card-sent .card-footer { background-color: #39a99b; }
 
-body[class*="lesson-"] .page-content .page-content-title { font-size: 1.5rem; margin-top: calc((15rem - 1rem*2 - 1rem - 1rem*1.5 - 2rem * 1.2 *2)*-1); display: flex; align-items: center; justify-content: center; color: #fff; }
+body[class*="lesson-"] .page-content .page-content-title { font-size: 1.5rem; margin-top: -5rem; display: flex; align-items: center; justify-content: center; color: #fff; }
 body[class*="lesson-"] .page-content .page-content-title > span { display: inline-block; padding-bottom: 0; letter-spacing: 0.05em; background-image: none; background-color: rgba(80, 66, 53, 0.75); padding: .5rem 1rem; border: 5px solid #ffc107; position: relative; }
 body[class*="lesson-"] .page-content .page-content-title > span > i { font-size: 1.2em; color: #fff; margin-right: .25rem; }
-body[class*="lesson-"] .page-content .page-content-title > span > small { font-size: #fff; margin-left: .25rem; }
+body[class*="lesson-"] .page-content .page-content-title > span > small { margin-left: .25rem; }
 body[class*="lesson-"] .page-content .page-content-title > span::before, body[class*="lesson-"] .page-content .page-content-title > span::after { content: ""; display: block; width: 10px; height: 200%; background-color: #504235; position: absolute; top: -10px; border-radius: 10px 10px 0 0; }
 body[class*="lesson-"] .page-content .page-content-title > span::before { left: -5px; }
 body[class*="lesson-"] .page-content .page-content-title > span::after { right: -5px; }
