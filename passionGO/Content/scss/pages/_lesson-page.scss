@@ -321,6 +321,52 @@ body.lesson-sent{
   padding: $spacer*2;
   text-align: center;
   box-shadow:  $box-shadow-sm;
+	margin-top: 12.5rem*.33;
+	background-image: url("../img/cracker.png");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 100% auto;
+	.quiz-done-badge {
+		width: 12.5rem;
+		height: calc(12.5rem * 171/249);
+		background-image: url("../img/done-badge.png");
+		background-position: center;
+		background-size: 100% auto;
+		background-repeat: no-repeat;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+		justify-content: center;
+		margin: 0 auto;
+		margin-top: 12.5rem*-.33;
+		margin-bottom: map-get($spacers, 5);
+		position: relative;
+		filter: drop-shadow(0 0 5px rgba($primary, .5));
+		animation: badge-flash 1s infinite linear;
+		i{
+			font-size: 12.5rem*.2;
+			margin: 0 auto;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, calc(-50% - .5rem));
+		}
+		.quiz-done-ribbon{ 
+			color: $white;
+			width: 100%;
+			height: 12.5rem * 83/233;
+			transform: translateY(calc(50% + .5rem));
+			background-image: url("../img/done-ribbon-phon.png");
+			background-position: bottom center;
+			background-size: 100% auto;
+			background-repeat: no-repeat;
+			display: flex;
+			justify-content: center;
+			align-items: flex-end;
+			padding-bottom: 1rem;
+			text-transform:uppercase
+		}
+	}
 	.quiz-done-title {
 		color: #331407;
 		font-size: 1.75rem;
@@ -346,22 +392,11 @@ body.lesson-sent{
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
-			.num{ 
-				font-size: $h1-font-size;
-			}
-		}
-		.quiz-done-total{
-			background-color: rgba($primary .1);
+			background-color: rgba($primary, .1);
 			border: 1px solid  rgba($primary, .5);
 			.num{ 
-				color: $phon-color;
-			}
-		}
-		.quiz-done-correct {
-			background-color: rgba($phon-color .1);
-			border: 1px solid  rgba($phon-color, .5);
-			.num{ 
-				color: $phon-color;
+				font-size: $h1-font-size;
+				font-weight: $font-weight-medium;
 			}
 		}
 	}
@@ -377,6 +412,57 @@ body.lesson-sent{
 		.btn{
 			flex: 1;	
 		}	
+	}
+}
+body.lesson-phon{
+	.quiz-done-badge { 
+		i{
+			color: $phon-color;		
+		}
+		.quiz-done-ribbon{
+			background-image: url("../img/done-ribbon-phon.png");
+		}
+	}
+	.quiz-done-stats{
+		.quiz-done-correct {
+			background-color: rgba($phon-color, .1);
+			border: 1px solid  rgba($phon-color, .5);
+			color: shade-color($phon-color, 20%);
+		}
+	}
+}
+body.lesson-vocab{
+	.quiz-done-badge { 
+		i{
+			color: $vocab-color;	
+		}
+		.quiz-done-ribbon{
+			background-image: url("../img/done-ribbon-vocab.png");
+		}
+	}
+	.quiz-done-stats{
+		.quiz-done-correct {
+			background-color: rgba($vocab-color, .1);
+			border: 1px solid  rgba($vocab-color, .5);
+			color: shade-color($vocab-color, 20%);
+		}
+	}
+}
+body.lesson-sent{
+	.quiz-done-badge { 
+		i{
+			color: $sent-color;	
+		}
+		.quiz-done-ribbon{
+			background-image: url("../img/done-ribbon-sent.png");
+		}
+	}
+	.quiz-done-stats{
+		.quiz-done-correct {
+			background-color: rgba($sent-color, .1);
+			border: 1px solid  rgba($sent-color, .5);
+			color: shade-color($sent-color, 20%);
+		}
 	}
 }
 

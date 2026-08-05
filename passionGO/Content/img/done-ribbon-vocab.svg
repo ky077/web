@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_圖層_2" data-name="圖層 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 231.53 81.49">
+  <defs>
+    <style>
+      .cls-1 {
+        opacity: .75;
+      }
+
+      .cls-1, .cls-2, .cls-3 {
+        fill: #1d7fb8;
+      }
+
+      .cls-4 {
+        fill: #124c63;
+      }
+
+      .cls-5 {
+        fill: #18677f;
+      }
+
+      .cls-3 {
+        opacity: .5;
+      }
+    </style>
+  </defs>
+  <g id="_圖層_1-2" data-name="圖層 1">
+    <g>
+      <g>
+        <polygon class="cls-5" points="0 81.49 48 81.49 48 44.88 0 44.88 14.12 63.18 0 81.49"/>
+        <polygon class="cls-4" points="24 69.35 48 69.35 48 81.49 24 69.35"/>
+      </g>
+      <g>
+        <polygon class="cls-5" points="231.53 81.49 183.53 81.49 183.53 44.88 231.53 44.88 217.41 63.18 231.53 81.49"/>
+        <polygon class="cls-4" points="207.53 69.35 183.53 69.35 183.53 81.49 207.53 69.35"/>
+      </g>
+      <rect class="cls-2" x="24" y="31.87" width="183.53" height="37.48"/>
+    </g>
+    <polygon class="cls-1" points="77.74 0 80.98 8.76 89.74 12 80.98 15.24 77.74 24 74.5 15.24 65.74 12 74.5 8.76 77.74 0"/>
+    <polygon class="cls-3" points="153.79 0 157.03 8.76 165.79 12 157.03 15.24 153.79 24 150.55 15.24 141.79 12 150.55 8.76 153.79 0"/>
+  </g>
+</svg>

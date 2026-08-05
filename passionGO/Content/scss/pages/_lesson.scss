@@ -81,6 +81,18 @@
 				&:hover{
 					background-color: tint-color($banner-color, 60%);
 				}
+				/*&[data-card-status="done"]{
+					&::after{
+						content: "\f024";
+						font-family: "Font Awesome 7 Free";
+						font-weight: 900;
+						position: absolute;
+						top: 0;
+						right: 0;
+						font-size: $font-size-lg;
+						color: $primary;
+					}
+				}*/
 			}
 			// 卡片色系
 			.card-phon {

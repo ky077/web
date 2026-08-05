@@ -6,6 +6,7 @@
       id: 'phonics',
       href: 'lesson-phon.html',
       label: '發音',
+      badgeText: 'PHONICS',
       actionText: '前往發音練習',
       iconClass: 'fa-solid fa-microphone-lines'
     },
@@ -13,6 +14,7 @@
       id: 'vocabulary',
       href: 'lesson-vocab.html',
       label: '單字',
+      badgeText: 'VOCABULARY',
       actionText: '前往單字練習',
       iconClass: 'fa-solid fa-spell-check'
     },
@@ -20,6 +22,7 @@
       id: 'sentence',
       href: 'lesson-sent.html',
       label: '句型',
+      badgeText: 'SENTENCE PATTERN',
       actionText: '前往句型練習',
       iconClass: 'fa-solid fa-comments'
     }
@@ -424,6 +427,17 @@
     panel.setAttribute('aria-hidden', visible ? 'false' : 'true');
   }
 
+  function setProgressVisible(visible) {
+    var progress = document.querySelector('.quiz-progress');
+
+    if (!progress) {
+      return;
+    }
+
+    progress.style.display = visible ? '' : 'none';
+    progress.setAttribute('aria-hidden', visible ? 'false' : 'true');
+  }
+
   function getFeedbackElements() {
     return {
       correct: document.querySelector('.answer-correct'),
@@ -552,6 +566,7 @@
 
     done.setAttribute('aria-live', 'polite');
     done.setAttribute('aria-hidden', 'true');
+    updateQuizDoneBadge(done, section);
 
     if (title) {
       summary = title.querySelector('.quiz-done-summary');
@@ -588,6 +603,47 @@
       correctLabel.textContent = state.correctCount;
     } else if (done.children[2]) {
       done.children[2].textContent = '答對題數：' + state.correctCount;
+    }
+  }
+
+  function getPracticeBySection(sectionId) {
+    var index;
+
+    for (index = 0; index < LESSON_PRACTICES.length; index += 1) {
+      if (LESSON_PRACTICES[index].id === sectionId) {
+        return LESSON_PRACTICES[index];
+      }
+    }
+
+    return null;
+  }
+
+  function updateQuizDoneBadge(done, section) {
+    var badge = done ? done.querySelector('.quiz-done-badge') : null;
+    var practice = getPracticeBySection(section.id);
+    var icon;
+    var badgeTextNode;
+
+    if (!badge || !practice) {
+      return;
+    }
+
+    icon = badge.querySelector('i');
+    if (!icon) {
+      icon = document.createElement('i');
+      badge.insertBefore(icon, badge.firstChild);
+    }
+
+    icon.className = practice.iconClass;
+    icon.setAttribute('aria-hidden', 'true');
+    badgeTextNode = toArray(badge.childNodes).filter(function (node) {
+      return node.nodeType === 3 && normalizeText(node.nodeValue);
+    })[0];
+
+    if (badgeTextNode) {
+      badgeTextNode.nodeValue = practice.badgeText;
+    } else {
+      badge.appendChild(document.createTextNode(practice.badgeText));
     }
   }
 
@@ -664,20 +720,28 @@
   }
 
   function updateNextPracticeAction(done, lesson, section) {
-    var action = done ? done.querySelector('.quiz-done-actions .btn-primary') : null;
+    var actions = done ? done.querySelector('.quiz-done-actions') : null;
+    var action = actions ? actions.querySelector('.btn-primary') : null;
     var nextPractice;
 
-    if (!action) {
+    if (!actions) {
       return;
     }
 
     nextPractice = findNextUndonePractice(lesson, section);
 
     if (!nextPractice) {
-      action.style.display = 'none';
-      action.setAttribute('aria-hidden', 'true');
-      action.setAttribute('tabindex', '-1');
+      if (action) {
+        action.style.display = 'none';
+        action.setAttribute('aria-hidden', 'true');
+        action.setAttribute('tabindex', '-1');
+      }
       return;
+    }
+
+    if (!action) {
+      action = document.createElement('a');
+      actions.appendChild(action);
     }
 
     action.style.display = '';
@@ -740,6 +804,7 @@
       updateConfirmButtonsState(state.layouts[index]);
     }
 
+    setProgressVisible(true);
     updateProgress(index + 1, state.questions.length);
     setFeedbackVisible(state.feedback.correct, false);
     setFeedbackVisible(state.feedback.incorrect, false);
@@ -782,6 +847,7 @@
     updateProgress(state.questions.length, state.questions.length);
     updateQuizDone(state.feedback.done, state);
     updateNextPracticeAction(state.feedback.done, state.lesson, state.section);
+    setProgressVisible(false);
     setFeedbackVisible(state.feedback.correct, false);
     setFeedbackVisible(state.feedback.incorrect, false);
     setFeedbackVisible(state.feedback.done, true);

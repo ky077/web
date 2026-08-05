@@ -5,7 +5,6 @@
 @import "bootstrap-5.3.8/scss/mixins";
 @import "bootstrap-5.3.8/scss/utilities";
 
-
 @import "master/var";
 @import "master/UI";  
 
@@ -14,6 +13,7 @@
 @import "master/footer";
 
 @import "modules/spinner"; 
+@import "modules/keyframes"; 
 
 @import "pages/login"; 
 @import "pages/register"; 
