@@ -1,6 +1,32 @@
 (function (window, document) {
   'use strict';
 
+  var LESSON_PRACTICES = [
+    {
+      id: 'phonics',
+      href: 'lesson-phon.html',
+      label: '發音',
+      actionText: '前往發音練習',
+      iconClass: 'fa-solid fa-microphone-lines'
+    },
+    {
+      id: 'vocabulary',
+      href: 'lesson-vocab.html',
+      label: '單字',
+      actionText: '前往單字練習',
+      iconClass: 'fa-solid fa-spell-check'
+    },
+    {
+      id: 'sentence',
+      href: 'lesson-sent.html',
+      label: '句型',
+      actionText: '前往句型練習',
+      iconClass: 'fa-solid fa-comments'
+    }
+  ];
+
+  var LESSON_PRACTICE_PROGRESS_PREFIX = 'aiEnglishTutor.lessonPracticeProgress.';
+
   function toArray(list) {
     return Array.prototype.slice.call(list || []);
   }
@@ -210,7 +236,7 @@
           } else {
             delete button.dataset.audioText;
           }
-          button.setAttribute('aria-label', '播放題目音檔');
+          button.setAttribute('aria-label', '播放題目聲音');
           if (!button.dataset.audioBound) {
             button.dataset.audioBound = 'true';
             button.addEventListener('click', function () {
@@ -517,11 +543,31 @@
       return;
     }
 
+    var sectionTitle = section.titleZh || '練習';
+    var title = done.querySelector('.quiz-done-title');
+    var summary;
+    var icon;
+    var titleText;
+    var titleTextNode;
+
     done.setAttribute('aria-live', 'polite');
     done.setAttribute('aria-hidden', 'true');
 
-    if (done.children[0]) {
-      done.children[0].textContent = '你完成了「' + (section.titleZh || '練習') + '」！';
+    if (title) {
+      summary = title.querySelector('.quiz-done-summary');
+      icon = title.querySelector('.fs-1');
+      titleText = (icon ? '' : '🎉 ') + '你完成了「' + sectionTitle + '」！ ';
+      titleTextNode = toArray(title.childNodes).filter(function (node) {
+        return node.nodeType === 3 && normalizeText(node.nodeValue);
+      })[0];
+
+      if (titleTextNode) {
+        titleTextNode.nodeValue = titleText;
+      } else {
+        title.insertBefore(document.createTextNode(titleText), summary || null);
+      }
+    } else if (done.children[0]) {
+      done.children[0].textContent = '🎉 你完成了「' + sectionTitle + '」！';
     }
   }
 
@@ -530,12 +576,117 @@
       return;
     }
 
-    if (done.children[1]) {
+    var totalLabel = done.querySelector('.quiz-done-total label');
+    var correctLabel = done.querySelector('.quiz-done-correct label');
+
+    if (totalLabel) {
+      totalLabel.textContent = state.completedCount;
+    } else if (done.children[1]) {
       done.children[1].textContent = '完成題數：' + state.completedCount;
     }
-    if (done.children[2]) {
+    if (correctLabel) {
+      correctLabel.textContent = state.correctCount;
+    } else if (done.children[2]) {
       done.children[2].textContent = '答對題數：' + state.correctCount;
     }
+  }
+
+  function getLessonPracticeProgressKey(lesson) {
+    return LESSON_PRACTICE_PROGRESS_PREFIX + (lesson.lessonOrder || lesson.id || normalizeText(lesson.title) || 'current');
+  }
+
+  function readLessonPracticeProgress(lesson) {
+    var raw;
+
+    try {
+      raw = window.localStorage && window.localStorage.getItem(getLessonPracticeProgressKey(lesson));
+      return raw ? JSON.parse(raw) : {};
+    } catch (error) {
+      return {};
+    }
+  }
+
+  function writeLessonPracticeProgress(lesson, progress) {
+    try {
+      if (window.localStorage) {
+        window.localStorage.setItem(getLessonPracticeProgressKey(lesson), JSON.stringify(progress || {}));
+      }
+    } catch (error) {
+      // Ignore storage errors so the quiz still works in restricted browsers.
+    }
+  }
+
+  function markPracticeDone(lesson, section) {
+    var progress;
+
+    if (!section.id) {
+      return;
+    }
+
+    progress = readLessonPracticeProgress(lesson);
+    progress[section.id] = 'done';
+    writeLessonPracticeProgress(lesson, progress);
+  }
+
+  function findPracticeIndex(sectionId) {
+    var index;
+
+    for (index = 0; index < LESSON_PRACTICES.length; index += 1) {
+      if (LESSON_PRACTICES[index].id === sectionId) {
+        return index;
+      }
+    }
+
+    return -1;
+  }
+
+  function findNextUndonePractice(lesson, section) {
+    var progress = readLessonPracticeProgress(lesson);
+    var currentIndex = findPracticeIndex(section.id);
+    var practice;
+    var index;
+    var offset;
+
+    if (currentIndex < 0) {
+      currentIndex = -1;
+    }
+
+    for (offset = 1; offset <= LESSON_PRACTICES.length; offset += 1) {
+      index = (currentIndex + offset) % LESSON_PRACTICES.length;
+      practice = LESSON_PRACTICES[index];
+
+      if (progress[practice.id] !== 'done') {
+        return practice;
+      }
+    }
+
+    return null;
+  }
+
+  function updateNextPracticeAction(done, lesson, section) {
+    var action = done ? done.querySelector('.quiz-done-actions .btn-primary') : null;
+    var nextPractice;
+
+    if (!action) {
+      return;
+    }
+
+    nextPractice = findNextUndonePractice(lesson, section);
+
+    if (!nextPractice) {
+      action.style.display = 'none';
+      action.setAttribute('aria-hidden', 'true');
+      action.setAttribute('tabindex', '-1');
+      return;
+    }
+
+    action.style.display = '';
+    action.removeAttribute('aria-hidden');
+    action.removeAttribute('tabindex');
+    action.setAttribute('href', nextPractice.href);
+    action.setAttribute('role', 'button');
+    action.className = 'btn btn-primary btn-lg';
+    action.innerHTML = '<i class="' + nextPractice.iconClass + ' me-1" aria-hidden="true"></i>' + nextPractice.actionText;
   }
 
   function triggerConfetti() {
@@ -611,7 +762,7 @@
     var isLast = state.currentIndex >= state.questions.length - 1;
 
     if (nextButton) {
-      nextButton.innerHTML = (isLast ? '完成' : '下一題') + '<span class="shoe-rotate ms-1"><i class="fa-solid fa-shoe-prints"></i></span>';
+      nextButton.innerHTML = (isLast ? '完成' : '下一題') + '<span class="shoe-rotate ms-1"><i class="fa-solid fa-shoe-prints" aria-hidden="true"></i></span>';
       nextButton.disabled = false;
     }
 
@@ -626,9 +777,11 @@
       layout.dataset.quizActive = 'false';
     });
 
+    markPracticeDone(state.lesson, state.section);
     state.completedCount = state.questions.length;
     updateProgress(state.questions.length, state.questions.length);
     updateQuizDone(state.feedback.done, state);
+    updateNextPracticeAction(state.feedback.done, state.lesson, state.section);
     setFeedbackVisible(state.feedback.correct, false);
     setFeedbackVisible(state.feedback.incorrect, false);
     setFeedbackVisible(state.feedback.done, true);
@@ -940,10 +1093,11 @@
     }
   }
 
-  function initQuizFlow(questions, layouts, section) {
+  function initQuizFlow(questions, layouts, lesson, section) {
     var state = {
       questions: questions,
       layouts: layouts.slice(0, questions.length),
+      lesson: lesson,
       section: section,
       feedback: getFeedbackElements(),
       currentIndex: 0,
@@ -955,6 +1109,7 @@
 
     ensureQuizDone(state.feedback.done, section);
     updateQuizDone(state.feedback.done, state);
+    updateNextPracticeAction(state.feedback.done, lesson, section);
     setFeedbackVisible(state.feedback.correct, false);
     setFeedbackVisible(state.feedback.incorrect, false);
     setFeedbackVisible(state.feedback.done, false);
@@ -981,7 +1136,7 @@
       updateOptions(layout, question);
     });
 
-    initQuizFlow(questions, layouts, section);
+    initQuizFlow(questions, layouts, lesson, section);
   }
 
   function load(config) {

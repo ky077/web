@@ -249,7 +249,14 @@ body.lesson-sent .quiz-content-tip { color: #39a99b; }
 .answer-incorrect { background-color: rgba(217, 75, 69, 0.95); box-shadow: 0 -0.5rem 1rem rgba(217, 75, 69, 0.15); }
 
 .quiz-done { background-color: #fff; border: 3px solid #504235; border-radius: 1rem; padding: 2rem; text-align: center; box-shadow: 0 0.125rem 0.25rem rgba(61, 49, 40, 0.075); }
-.quiz-done .quiz-done-title { color: #331407; font-size: 1.75rem; font-weight: 800; margin-bottom: 1rem; }
+.quiz-done .quiz-done-title { color: #331407; font-size: 1.75rem; font-weight: 700; }
+.quiz-done .quiz-done-title .quiz-done-summary { display: block; font-size: 1.25rem; font-weight: 500; margin-top: 0.5rem; }
+.quiz-done .quiz-done-stats { display: flex; flex-direction: row; flex-flow: wrap; gap: 2rem; margin-top: 2rem; margin-bottom: 2rem; }
+.quiz-done .quiz-done-stats .quiz-done-total, .quiz-done .quiz-done-stats .quiz-done-correct { flex: 1; background-color: rgba(124, 80, 157, 0.25); border: 1px solid rgba(124, 80, 157, 0.5); padding: 1rem; border-radius: 1rem; display: flex; flex-direction: column; justify-content: center; }
+.quiz-done .quiz-done-stats .quiz-done-total .num, .quiz-done .quiz-done-stats .quiz-done-correct .num { font-size: 2.5rem; color: #7c509d; }
+.quiz-done .quiz-done-actions { display: flex; flex-direction: column; flex-flow: wrap; gap: 1rem; }
+@media screen and (min-width: 992px) { .quiz-done .quiz-done-actions { flex-direction: row; } }
+.quiz-done .quiz-done-actions .btn, .quiz-done .quiz-done-actions .course-nav .nav-link, .course-nav .quiz-done .quiz-done-actions .nav-link, .quiz-done .quiz-done-actions .course-list .card-group .card:not(.card-unit), .course-list .card-group .quiz-done .quiz-done-actions .card:not(.card-unit), .quiz-done .quiz-done-actions .lesson .page-content .card-group .card, .lesson .page-content .card-group .quiz-done .quiz-done-actions .card { flex: 1; }
 
 .quiz-confetti { position: fixed; inset: 0; z-index: 1090; overflow: hidden; pointer-events: none; }
 .quiz-confetti-piece { position: absolute; top: 50%; left: 50%; width: .55rem; height: .9rem; border-radius: .125rem; animation: quiz-confetti-burst var(--confetti-duration, 1.2s) cubic-bezier(0.12, 0.82, 0.22, 1) forwards; animation-delay: var(--confetti-delay, 0s); }
