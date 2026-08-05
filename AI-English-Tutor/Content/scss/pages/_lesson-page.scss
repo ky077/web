@@ -328,13 +328,23 @@ body.lesson-sent{
   padding: $spacer*2;
   text-align: center;
   box-shadow:  $box-shadow-sm;
+	.quiz-done-title {
+		color: #331407;
+		font-size: 1.75rem;
+		font-weight: 800;
+		margin-bottom: 1rem;
+	}
+	.quiz-done-summary{
+			
+		}
+	.quiz-done-total {
+	}
+	.quiz-done-correct{
+		
+	}
+	.quiz-done-actions{}
 }
-.quiz-done-title {
-  color: #331407;
-  font-size: 1.75rem;
-  font-weight: 800;
-  margin-bottom: 1rem;
-}
+
 
 .quiz-confetti{
 	position: fixed;

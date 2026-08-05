@@ -249,8 +249,7 @@ body.lesson-sent .quiz-content-tip { color: #39a99b; }
 .answer-incorrect { background-color: rgba(217, 75, 69, 0.95); box-shadow: 0 -0.5rem 1rem rgba(217, 75, 69, 0.15); }
 
 .quiz-done { background-color: #fff; border: 3px solid #504235; border-radius: 1rem; padding: 2rem; text-align: center; box-shadow: 0 0.125rem 0.25rem rgba(61, 49, 40, 0.075); }
-
-.quiz-done-title { color: #331407; font-size: 1.75rem; font-weight: 800; margin-bottom: 1rem; }
+.quiz-done .quiz-done-title { color: #331407; font-size: 1.75rem; font-weight: 800; margin-bottom: 1rem; }
 
 .quiz-confetti { position: fixed; inset: 0; z-index: 1090; overflow: hidden; pointer-events: none; }
 .quiz-confetti-piece { position: absolute; top: 50%; left: 50%; width: .55rem; height: .9rem; border-radius: .125rem; animation: quiz-confetti-burst var(--confetti-duration, 1.2s) cubic-bezier(0.12, 0.82, 0.22, 1) forwards; animation-delay: var(--confetti-delay, 0s); }
