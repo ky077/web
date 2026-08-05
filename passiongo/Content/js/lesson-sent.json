@@ -49,6 +49,7 @@
       "instruction": "你是 B，請說出 B 的回答",
       "questionAudio": "Content/temp/lesson-4-sent-q4-how-are-you.mp3",
       "questionAudioText": "how are you",
+      "promptImage": { "src": "Content/img/L04/sick.png", "alt": "sick" },
       "answer": "I am sick",
       "answerType": "text"
     },

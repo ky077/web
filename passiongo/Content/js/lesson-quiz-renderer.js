@@ -131,18 +131,31 @@
 
   function setImage(root, selector, image) {
     var target = root.querySelector(selector);
-    if (!target || !image) {
+    var container = target ? target.closest('.quiz-content-img') : null;
+    var src = typeof image === 'string' ? image : image && image.src;
+    var alt = typeof image === 'string' ? '' : image && image.alt;
+
+    if (!target) {
       return;
     }
 
-    var src = typeof image === 'string' ? image : image.src;
-    var alt = typeof image === 'string' ? '' : image.alt;
-
-    if (src) {
-      target.setAttribute('src', src);
+    if (!src) {
+      target.removeAttribute('src');
+      target.setAttribute('alt', '');
+      if (container) {
+        container.hidden = true;
+        container.setAttribute('aria-hidden', 'true');
+      }
+      return;
     }
+
+    target.setAttribute('src', src);
     if (alt !== undefined && alt !== null) {
       target.setAttribute('alt', alt);
+    }
+    if (container) {
+      container.hidden = false;
+      container.removeAttribute('aria-hidden');
     }
   }
 
@@ -622,7 +635,7 @@
     var badge = done ? done.querySelector('.quiz-done-badge') : null;
     var practice = getPracticeBySection(section.id);
     var icon;
-    var badgeTextNode;
+    var ribbon;
 
     if (!badge || !practice) {
       return;
@@ -636,15 +649,21 @@
 
     icon.className = practice.iconClass;
     icon.setAttribute('aria-hidden', 'true');
-    badgeTextNode = toArray(badge.childNodes).filter(function (node) {
-      return node.nodeType === 3 && normalizeText(node.nodeValue);
-    })[0];
+    ribbon = badge.querySelector('.quiz-done-ribbon');
 
-    if (badgeTextNode) {
-      badgeTextNode.nodeValue = practice.badgeText;
-    } else {
-      badge.appendChild(document.createTextNode(practice.badgeText));
+    if (!ribbon) {
+      ribbon = document.createElement('div');
+      ribbon.className = 'quiz-done-ribbon';
+      badge.appendChild(ribbon);
     }
+
+    ribbon.textContent = practice.badgeText;
+
+    toArray(badge.childNodes).forEach(function (node) {
+      if (node.nodeType === 3 && normalizeText(node.nodeValue)) {
+        node.remove();
+      }
+    });
   }
 
   function getLessonPracticeProgressKey(lesson) {
