@@ -52,14 +52,14 @@
               <li class="breadcrumb-item">
                 <a href="index.html"><i class="fa-solid fa-house"></i>首頁</a>
               </li>
-              <li class="breadcrumb-item"><a href="index.html#五上1">五上1</a></li>
-              <li class="breadcrumb-item active" aria-current="page">Lesson 4 How Are You?</li>
+              <li class="breadcrumb-item"><a class="lesson-term-link" href="index.html#course-list">五上1</a></li>
+              <li class="breadcrumb-item active lesson-current-breadcrumb" aria-current="page">Lesson 4 How Are You?</li>
             </ol>
           </nav>
 					
           <a href="index.html"><i class="fa-solid fa-angle-left"></i>回課程地圖</a>
         </div>
-        <h2 class="page-title"><small>Lesson 4 </small>How Are You?</h2>
+        <h2 class="page-title"><small class="lesson-number">Lesson 4</small><span class="lesson-title">How Are You?</span></h2>
       </div>
     </div>
     <!-- page-header End -->
@@ -121,6 +121,94 @@
 <!-- This web Javascript -->
 <script src="Content/js/main.js"></script>
 <script>
+(function () {
+  var courseMapUrl = 'Content/js/course-map.json';
+  var defaultTermId = 'grade5-upper-1';
+  var defaultLessonOrder = 4;
+
+  var getQueryValue = function (key) {
+    return new URLSearchParams(window.location.search).get(key);
+  };
+
+  var findTerm = function (courseMapData, termId) {
+    for (var i = 0; i < courseMapData.terms.length; i++) {
+      if (courseMapData.terms[i].id === termId) {
+        return courseMapData.terms[i];
+      }
+    }
+
+    return courseMapData.terms[0] || null;
+  };
+
+  var findLesson = function (term, lessonOrder) {
+    for (var unitIndex = 0; unitIndex < term.units.length; unitIndex++) {
+      var unit = term.units[unitIndex];
+
+      for (var lessonIndex = 0; lessonIndex < unit.lessons.length; lessonIndex++) {
+        if (unit.lessons[lessonIndex].order === lessonOrder) {
+          return {
+            unit: unit,
+            lesson: unit.lessons[lessonIndex]
+          };
+        }
+      }
+    }
+
+    return null;
+  };
+
+  var setText = function (selector, text) {
+    var element = document.querySelector(selector);
+
+    if (element) {
+      element.textContent = text;
+    }
+  };
+
+  var renderLessonHeader = function (courseMapData) {
+    var termId = getQueryValue('term') || courseMapData.defaultTermId || defaultTermId;
+    var lessonOrder = parseInt(getQueryValue('lesson') || defaultLessonOrder, 10);
+    var term = findTerm(courseMapData, termId);
+    var lessonData = term ? findLesson(term, lessonOrder) : null;
+
+    if (!term || !lessonData) {
+      return;
+    }
+
+    var lessonLabel = 'Lesson ' + lessonData.lesson.order;
+    var fullLessonTitle = lessonLabel + ' ' + lessonData.lesson.title;
+    var termLink = document.querySelector('.lesson-term-link');
+
+    if (termLink) {
+      termLink.textContent = term.label;
+      termLink.href = 'index.html#course-list';
+    }
+
+    setText('.lesson-current-breadcrumb', fullLessonTitle);
+    setText('.lesson-number', lessonLabel);
+    setText('.lesson-title', lessonData.lesson.title);
+    document.title = fullLessonTitle + ' - AI 英語家教';
+  };
+
+  if (!window.fetch) {
+    return;
+  }
+
+  fetch(courseMapUrl, {
+    cache: 'no-store'
+  })
+    .then(function (response) {
+      if (!response.ok) {
+        throw new Error('Course map not found');
+      }
+
+      return response.json();
+    })
+    .then(renderLessonHeader)
+    .catch(function () {
+      return;
+    });
+})();
 </script>
 </body>
 </html>

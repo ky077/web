@@ -234,8 +234,31 @@ body.lesson-sent{
 				padding-left: .75rem;
 				padding-right: .75rem;
 			}
+			.quiz-recording-icon{
+				animation: quiz-recording-blink .8s ease-in-out infinite;
+			}
 			.form-control{
 				margin-bottom: $spacer;
+			}
+			.quiz-speech-status{
+				display: none;
+				margin-top: $spacer;
+				padding: .75rem 1rem;
+				background-color: rgba($white, .75);
+				border: 1px solid rgba($body-color, .25);
+				border-radius: $border-radius;
+				color: $body-secondary-color;
+				font-size: $font-size-sm;
+				font-weight: $font-weight-medium;
+				.quiz-speech-actions{
+					display: flex;
+					flex-wrap: wrap;
+					gap: map-get($spacers, 2);
+					margin-top: .75rem;
+					.btn{
+						flex: 1;
+					}
+				}
 			}
 		}
 		.quiz-actions{
@@ -274,6 +297,7 @@ body.lesson-sent{
 	bottom: 0;
 	left: 0;
 	right: 0;
+	z-index: 1080;
 	padding: $spacer;
 	
 	color: $white;
@@ -297,4 +321,61 @@ body.lesson-sent{
 	box-shadow: 0 -.5rem 1rem rgba($danger, .15);
 }
 
+.quiz-done {
+  background-color: $white;
+  border: $border-width solid $border-color;
+  border-radius: $border-radius-xl;
+  padding: $spacer*2;
+  text-align: center;
+  box-shadow:  $box-shadow-sm;
+}
+.quiz-done-title {
+  color: #331407;
+  font-size: 1.75rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.quiz-confetti{
+	position: fixed;
+	inset: 0;
+	z-index: 1090;
+	overflow: hidden;
+	pointer-events: none;
+	&-piece{
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: .55rem;
+		height: .9rem;
+		border-radius: .125rem;
+		animation: quiz-confetti-burst var(--confetti-duration, 1.2s) cubic-bezier(0.12, 0.82, 0.22, 1) forwards;
+		animation-delay: var(--confetti-delay, 0s);
+	}
+}
+
+@keyframes quiz-confetti-burst{
+	0%{
+		opacity: 0;
+		transform: translate3d(-50%, -50%, 0) scale(0.4) rotate(0deg);
+	}
+	12%{
+		opacity: 1;
+	}
+	100%{
+		opacity: 0;
+		transform: translate3d(calc(-50% + var(--confetti-x, 0px)), calc(-50% + var(--confetti-y, 0px)), 0) scale(1) rotate(var(--confetti-spin, 720deg));
+	}
+}
+
+@keyframes quiz-recording-blink{
+	0%, 100%{
+		opacity: 1;
+		transform: scale(1);
+	}
+	50%{
+		opacity: .2;
+		transform: scale(1.25);
+	}
+}
 

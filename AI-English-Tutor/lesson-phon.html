@@ -193,7 +193,14 @@
               <div id="4-phone" class="collapse show" data-bs-parent="#4-quizSwitch">
                 <button type="button" class="btn btn-link btn-sm" data-bs-toggle="collapse" data-bs-target="#4-keyboard"><i class="fa-solid fa-keyboard me-1"></i>我現在不方便說話</button>
                 <button type="button" class="btn btn-primary btn-lg w-100">
-                <i class="fa-solid fa-microphone-lines me-1"></i>請按麥克風，用英文回答 <i class="fa-solid fa-record-vinyl me-1 text-danger"></i>請按這裡結束錄音 </button>
+                <i class="fa-solid fa-microphone-lines me-1"></i>請按麥克風，用英文回答<!--<i class="fa-solid fa-record-vinyl me-1 text-danger" aria-hidden="true"></i>請按這裡結束錄音--></button>
+								<div class="quiz-speech-status" style="display: none;">
+                  <div class="quiz-speech-status-text">沒有聽到聲音，請再試一次。</div>
+                  <div class="quiz-speech-actions">
+                    <button type="button" class="btn btn-outline-dark btn-lg">重新錄音</button>
+                    <button type="button" class="btn btn-primary btn-lg">送出這個答案</button>
+                  </div>
+                </div>
               </div>
               <div id="4-keyboard" class="collapse" data-bs-parent="#4-quizSwitch">
                 <button type="button" class="btn btn-link btn-sm"  data-bs-toggle="collapse" data-bs-target="#4-phone"><i class="fa-solid fa-microphone-lines me-1"></i>改用麥克風回答</button>
@@ -203,15 +210,28 @@
             </div>
           </div>
         </div>
+        
+        <!-- 完成 -->
+        <div class="quiz-done" style="display: none;">
+          <div class="quiz-done-title"> 🎉 你完成了「發音」！
+					<small>每個聲音都聽得很仔細，表現真棒！</small></div>
+          <div class="quiz-done-total">完成題數：4</div>
+          <div class="quiz-done-correct">答對題數：4</div>
+					<div class="quiz-done-actions">
+						<button type="button" class="btn btn-outline-primary btn-lg">再做一次</button>	
+						<button type="button" class="btn btn-outline-primary btn-lg">回到課程</button>	
+						<button type="button" class="btn btn-primary btn-lg">前往單字練習</button>	
+					</div>
+        </div>
+				
         <!-- -->
       </div>
-      
       <!-- 答對 -->
-      <div class="answer-correct">
+      <div class="answer-correct" style="display: none;">
         <div class="container-xl">
           <div>Great job! 答對了！你好棒！</div>
           <div>
-            <button type="button" class="btn btn-primary">下一題<span class="shoe-rotate ms-1"><i class="fa-solid fa-shoe-prints"></i></span></button>
+            <button type="button" class="btn btn-primary btn-lg">下一題<span class="shoe-rotate ms-1"><i class="fa-solid fa-shoe-prints"></i></span></button>
           </div>
         </div>
       </div>
@@ -236,7 +256,17 @@
 
 <!-- This web Javascript -->
 <script src="Content/js/main.js"></script>
+<script src="Content/js/lesson-quiz-renderer.js"></script>
 <script>
+(function (window) {
+  'use strict';
+
+  if (window.lessonQuizRenderer) {
+    window.lessonQuizRenderer.load({
+      jsonUrl: 'Content/js/lesson-phon.json'
+    });
+  }
+})(window);
 </script>
 </body>
 </html>

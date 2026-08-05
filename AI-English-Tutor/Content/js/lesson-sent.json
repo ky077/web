@@ -1,0 +1,88 @@
+{
+  "lesson": {
+    "termId": "grade5-upper-1",
+    "lessonOrder": 4,
+    "title": "How Are You?"
+  },
+  "section": {
+    "id": "sentence",
+    "titleZh": "句型",
+    "titleEn": "Sentence Pattern"
+  },
+  "questions": [
+    {
+      "id": "1",
+      "layout": "s1",
+      "instruction": "請聽音檔，選出符合音檔內容的圖片。",
+      "questionAudio": "Content/temp/lesson-4-sent-q1-i-am-happy.mp3",
+      "questionAudioText": "I am happy",
+      "answer": "happy.png",
+      "answerType": "image",
+      "options": [
+        { "label": "sad", "value": "sad.png", "image": "Content/img/L04/sad.png", "alt": "sad" },
+        { "label": "angry", "value": "angry.png", "image": "Content/img/L04/angry.png", "alt": "angry" },
+        { "label": "happy", "value": "happy.png", "image": "Content/img/L04/happy.png", "alt": "happy" }
+      ]
+    },
+    {
+      "id": "2",
+      "layout": "s2",
+      "instruction": "請先聽句子，再跟著說一次。",
+      "questionAudio": "Content/temp/lesson-4-sent-q2-i-am-sad.mp3",
+      "questionAudioText": "I am sad.",
+      "answer": "I am sad",
+      "answerType": "text",
+      "promptImage": { "src": "Content/img/L04/sad.png", "alt": "sad" },
+      "tip": "I am sad."
+    },
+    {
+      "id": "3",
+      "layout": "s3",
+      "instruction": "看以下單字，用說的說出正確句子",
+      "answer": "I am angry",
+      "answerType": "text",
+      "vocabWords": ["I", "angry", "am"]
+    },
+    {
+      "id": "4",
+      "layout": "s4",
+      "instruction": "你是 B，請說出 B 的回答",
+      "questionAudio": "Content/temp/lesson-4-sent-q4-how-are-you.mp3",
+      "questionAudioText": "how are you",
+      "answer": "I am sick",
+      "answerType": "text"
+    },
+    {
+      "id": "5",
+      "layout": "s5",
+      "instruction": "你是 A，請說出 A 的問題",
+      "answer": "how are you",
+      "answerType": "text"
+    },
+    {
+      "id": "6",
+      "layout": "s3",
+      "instruction": "看以下單字，用打的打出正確句子",
+      "answer": "I am fine",
+      "answerType": "text",
+      "vocabWords": ["I", "fine", "am"]
+    },
+    {
+      "id": "7",
+      "layout": "s6",
+      "instruction": "請用完整英文回答。",
+      "answer": "I am great",
+      "answerType": "text",
+      "promptText": "Question: How are you?",
+      "promptImage": { "src": "Content/img/L04/great.png", "alt": "great" },
+      "tip": "提示：回答「我非常好」"
+    },
+    {
+      "id": "8",
+      "layout": "s5",
+      "instruction": "你是 A，請打出 A 的問題",
+      "answer": "how are you",
+      "answerType": "text"
+    }
+  ]
+}
