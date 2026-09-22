@@ -1,8 +1,0 @@
-	@keyframes badge-flash{
-		0%, 100%{
-			filter: drop-shadow(0 0 5px rgba($primary, .75));
-		}
-		50%{
-			filter: drop-shadow(0 0 5px rgba($primary, .1));
-		}
-	}
