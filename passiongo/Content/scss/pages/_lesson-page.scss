@@ -123,12 +123,23 @@
 			.panel-title{
 				color: $color;
 				display: flex;
-				justify-content: space-between;
+				align-items: center;
 				font-weight: $font-weight-medium;
 				.badge{
 					color: $color;
 					font-size: $font-size-sm;
 					font-weight: $font-weight-normal;
+					margin-left: auto;
+				}
+				&::before{
+					content: "";
+					display: inline-block;
+					width: 1.5em;
+					height: 1.5em;
+					background-position: center center;
+					background-repeat: no-repeat;
+					background-size: 100% auto;
+					margin-right: 0.125em;
 				}
 			}
 			.card{
@@ -191,12 +202,27 @@
 		}
 		&.phon{
 			@include gameCardStyle($green);
+			.panel-title{
+				&::before{
+					background-image: url("../img/lesson-game/lesson-game-1.png");
+				}
+			}
 		}
 		&.vocab{
 			@include gameCardStyle($purple);
+			.panel-title{
+				&::before{
+					background-image: url("../img/lesson-game/lesson-game-2.png");
+				}
+			}
 		}
 		&.sent{
 			@include gameCardStyle($teal);
+			.panel-title{
+				&::before{
+					background-image: url("../img/lesson-game/lesson-game-3.png");
+				}
+			}
 		}
 	}
 }

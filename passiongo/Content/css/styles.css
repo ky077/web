@@ -294,8 +294,9 @@ footer { background-color: #fff; font-size: 0.75em; color: #675747; margin-top: 
 .lesson-game .lesson-page-title::before { background-image: url("../img/lesson-icon-game.png"); }
 .lesson-game .lesson-page-panel { margin-bottom: 1.5rem; }
 .lesson-game .lesson-page-panel.phon { border-color: #b7d7ae; background-color: #edf5eb; counter-reset: cardNum; }
-.lesson-game .lesson-page-panel.phon .panel-title { color: #4c9a35; display: flex; justify-content: space-between; font-weight: 600; }
-.lesson-game .lesson-page-panel.phon .panel-title .badge { color: #4c9a35; font-size: 0.875rem; font-weight: 500; }
+.lesson-game .lesson-page-panel.phon .panel-title { color: #4c9a35; display: flex; align-items: center; font-weight: 600; }
+.lesson-game .lesson-page-panel.phon .panel-title .badge { color: #4c9a35; font-size: 0.875rem; font-weight: 500; margin-left: auto; }
+.lesson-game .lesson-page-panel.phon .panel-title::before { content: ""; display: inline-block; width: 1.5em; height: 1.5em; background-position: center center; background-repeat: no-repeat; background-size: 100% auto; margin-right: 0.125em; }
 .lesson-game .lesson-page-panel.phon .card { --bs-card-border-width: 0; --bs-card-cap-bg: transparent; display: flex; box-shadow: 0 0.125rem 0.25rem rgba(76, 154, 53, 0.075); transition: all 0.2s ease-in-out; counter-increment: cardNum; }
 .lesson-game .lesson-page-panel.phon .card:hover { transform: scale(1.1); }
 .lesson-game .lesson-page-panel.phon .card .card-body { display: grid; grid-template-columns: auto 1fr; grid-template-rows: auto 1fr; grid-template-areas: "icon title" "text text"; align-items: center; gap: 1rem .75rem; }
@@ -305,9 +306,11 @@ footer { background-color: #fff; font-size: 0.75em; color: #675747; margin-top: 
 .lesson-game .lesson-page-panel.phon .card .card-body .card-text { grid-area: text; align-self: start; color: #675747; font-size: 0.875rem; }
 .lesson-game .lesson-page-panel.phon .card .card-footer { box-shadow: 0 -1px 0 rgba(76, 154, 53, 0.075); display: flex; align-items: center; justify-content: space-between; color: #4c9a35; }
 .lesson-game .lesson-page-panel.phon .card .card-footer::after { content: "\f061"; font-family: "Font Awesome 7 Free"; font-weight: 900; }
+.lesson-game .lesson-page-panel.phon .panel-title::before { background-image: url("../img/lesson-game/lesson-game-1.png"); }
 .lesson-game .lesson-page-panel.vocab { border-color: #cbb9d8; background-color: #f2eef5; counter-reset: cardNum; }
-.lesson-game .lesson-page-panel.vocab .panel-title { color: #7c509d; display: flex; justify-content: space-between; font-weight: 600; }
-.lesson-game .lesson-page-panel.vocab .panel-title .badge { color: #7c509d; font-size: 0.875rem; font-weight: 500; }
+.lesson-game .lesson-page-panel.vocab .panel-title { color: #7c509d; display: flex; align-items: center; font-weight: 600; }
+.lesson-game .lesson-page-panel.vocab .panel-title .badge { color: #7c509d; font-size: 0.875rem; font-weight: 500; margin-left: auto; }
+.lesson-game .lesson-page-panel.vocab .panel-title::before { content: ""; display: inline-block; width: 1.5em; height: 1.5em; background-position: center center; background-repeat: no-repeat; background-size: 100% auto; margin-right: 0.125em; }
 .lesson-game .lesson-page-panel.vocab .card { --bs-card-border-width: 0; --bs-card-cap-bg: transparent; display: flex; box-shadow: 0 0.125rem 0.25rem rgba(124, 80, 157, 0.075); transition: all 0.2s ease-in-out; counter-increment: cardNum; }
 .lesson-game .lesson-page-panel.vocab .card:hover { transform: scale(1.1); }
 .lesson-game .lesson-page-panel.vocab .card .card-body { display: grid; grid-template-columns: auto 1fr; grid-template-rows: auto 1fr; grid-template-areas: "icon title" "text text"; align-items: center; gap: 1rem .75rem; }
@@ -317,9 +320,11 @@ footer { background-color: #fff; font-size: 0.75em; color: #675747; margin-top: 
 .lesson-game .lesson-page-panel.vocab .card .card-body .card-text { grid-area: text; align-self: start; color: #675747; font-size: 0.875rem; }
 .lesson-game .lesson-page-panel.vocab .card .card-footer { box-shadow: 0 -1px 0 rgba(124, 80, 157, 0.075); display: flex; align-items: center; justify-content: space-between; color: #7c509d; }
 .lesson-game .lesson-page-panel.vocab .card .card-footer::after { content: "\f061"; font-family: "Font Awesome 7 Free"; font-weight: 900; }
+.lesson-game .lesson-page-panel.vocab .panel-title::before { background-image: url("../img/lesson-game/lesson-game-2.png"); }
 .lesson-game .lesson-page-panel.sent { border-color: #b0ddd7; background-color: #ebf6f5; counter-reset: cardNum; }
-.lesson-game .lesson-page-panel.sent .panel-title { color: #39a99b; display: flex; justify-content: space-between; font-weight: 600; }
-.lesson-game .lesson-page-panel.sent .panel-title .badge { color: #39a99b; font-size: 0.875rem; font-weight: 500; }
+.lesson-game .lesson-page-panel.sent .panel-title { color: #39a99b; display: flex; align-items: center; font-weight: 600; }
+.lesson-game .lesson-page-panel.sent .panel-title .badge { color: #39a99b; font-size: 0.875rem; font-weight: 500; margin-left: auto; }
+.lesson-game .lesson-page-panel.sent .panel-title::before { content: ""; display: inline-block; width: 1.5em; height: 1.5em; background-position: center center; background-repeat: no-repeat; background-size: 100% auto; margin-right: 0.125em; }
 .lesson-game .lesson-page-panel.sent .card { --bs-card-border-width: 0; --bs-card-cap-bg: transparent; display: flex; box-shadow: 0 0.125rem 0.25rem rgba(57, 169, 155, 0.075); transition: all 0.2s ease-in-out; counter-increment: cardNum; }
 .lesson-game .lesson-page-panel.sent .card:hover { transform: scale(1.1); }
 .lesson-game .lesson-page-panel.sent .card .card-body { display: grid; grid-template-columns: auto 1fr; grid-template-rows: auto 1fr; grid-template-areas: "icon title" "text text"; align-items: center; gap: 1rem .75rem; }
@@ -329,3 +334,4 @@ footer { background-color: #fff; font-size: 0.75em; color: #675747; margin-top: 
 .lesson-game .lesson-page-panel.sent .card .card-body .card-text { grid-area: text; align-self: start; color: #675747; font-size: 0.875rem; }
 .lesson-game .lesson-page-panel.sent .card .card-footer { box-shadow: 0 -1px 0 rgba(57, 169, 155, 0.075); display: flex; align-items: center; justify-content: space-between; color: #39a99b; }
 .lesson-game .lesson-page-panel.sent .card .card-footer::after { content: "\f061"; font-family: "Font Awesome 7 Free"; font-weight: 900; }
+.lesson-game .lesson-page-panel.sent .panel-title::before { background-image: url("../img/lesson-game/lesson-game-3.png"); }
