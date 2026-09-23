@@ -1,0 +1,202 @@
+.lesson-page-title{
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	&::before{
+		/*content: "";
+		display: inline;
+    font-family: "Font Awesome 7 Free"; 
+		font-weight: 900;
+		margin-right: .25em;*/
+		content: "";
+		display: inline-block;
+		width: 1.5em;
+		height: 1.5em;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: 100%;
+		margin-right: .125em;
+	}
+	> small{
+		color: $gray-700;
+		font-size: $font-size-base;
+		margin-left: .5em;
+	}
+}
+.lesson-page-panel{
+	border-width: $border-width;
+	border-style: $border-style;
+	border-radius: $border-radius-xl;
+	padding: $spacer;
+}
+
+@mixin lessonPageStyle($color) {
+	.lesson-page-title{
+		color: $color;
+	}
+	.lesson-page-panel{
+		border-color: tint-color($color, 60%);
+		background-color: tint-color($color, 90%);
+	}
+}
+//課程動畫
+.lesson-animation{
+	@include lessonPageStyle($pink);
+	.lesson-page-title{
+		&::before{
+			//content: "\f72b";
+			background-image: url("../img/lesson-icon-animation.png");
+		}
+	}
+	.card-frame{
+		.card-frame-inner{
+			padding: $spacer;
+		}
+		.card-frame-title{
+			font-size: $h4-font-size;
+			font-weight: $font-weight-semibold;
+			text-align: center;
+			> small{
+				display: block	
+			}
+		}
+		.card-frame-text{
+			color: $gray-700;	
+			font-size: $font-size-sm;
+			font-weight: $font-weight-normal;
+			text-align: center;
+			margin-bottom: $spacer*.5;
+		}
+		.card-frame-icon{
+			display: block;
+			font-size: 2.5rem;
+			margin: 0 auto;
+		}
+	}
+	//顏色
+	.card-frame.phon{
+		.card-frame-inner{
+			background-color: $pink-100;	
+		}
+		.card-frame-title, .card-frame-icon{
+			color: $pink;	
+		}
+	}
+	.card-frame.vocab{
+		.card-frame-inner{
+			background-color: $blue-100;
+		}
+		.card-frame-title, .card-frame-icon{
+			color: $blue;	
+		}
+	}
+}
+
+//教學影片
+.lesson-video{
+	@include lessonPageStyle($blue);
+	.lesson-page-title{
+		&::before{
+			//content: "\f008";
+			background-image: url("../img/lesson-icon-video.png");
+		}
+	}
+}
+
+//遊戲練習
+.lesson-game{
+	@include lessonPageStyle($green);
+	
+	.lesson-page-title{
+		font-weight: $font-weight-medium;
+		&::before{
+			//content: "\f11b";
+			background-image: url("../img/lesson-icon-game.png");
+		}
+	}
+	.lesson-page-panel{
+		margin-bottom: map-get($spacers, 4);
+		@mixin gameCardStyle($color) {
+			border-color: tint-color($color, 60%);
+			background-color: tint-color($color, 90%);
+			counter-reset: cardNum; 
+			.panel-title{
+				color: $color;
+				display: flex;
+				justify-content: space-between;
+				font-weight: $font-weight-medium;
+				.badge{
+					color: $color;
+					font-size: $font-size-sm;
+					font-weight: $font-weight-normal;
+				}
+			}
+			.card{
+				--bs-card-border-width: 0;
+				--bs-card-cap-bg: transparent;
+				display: flex;
+				box-shadow: 0 .125rem .25rem rgba($color, .075);
+				transition: $transition-base;
+				counter-increment: cardNum; 
+				&:hover{
+					transform: scale(1.1);
+				}
+				.card-body{
+					display: grid;
+					grid-template-columns: auto 1fr;
+					grid-template-rows: auto 1fr;
+					grid-template-areas: "icon title"
+															 "text text";
+					align-items: center;
+					gap: 1rem .75rem;
+					.card-icon{
+						grid-area: icon;
+						width: 3.6rem;
+						height: 3.6rem;
+						background-color: tint-color($color, 90%);
+						border-radius: $border-radius-lg;
+						overflow: hidden;
+					}
+					.card-title{
+						grid-area: title;
+						margin-bottom: 0;
+						&::before{
+        			content: counter(cardNum, decimal-leading-zero);
+							display: block;
+							font-size: $font-size-sm;
+							color: $cyan;
+							margin-bottom: .25rem;
+						}
+					}
+					.card-text{
+						grid-area: text;
+						align-self: start;
+						color: $gray-700;
+						font-size: $font-size-sm;
+					}
+				}
+				.card-footer{
+					box-shadow: 0 -1px 0 rgba($color, .075);
+						display: flex;
+						align-items: center;
+						justify-content: space-between;
+						color: $color;
+						&::after{
+							content: "\f061";
+							font-family: "Font Awesome 7 Free"; 
+							font-weight: 900;
+						}
+				}
+			}
+		}
+		&.phon{
+			@include gameCardStyle($green);
+		}
+		&.vocab{
+			@include gameCardStyle($purple);
+		}
+		&.sent{
+			@include gameCardStyle($teal);
+		}
+	}
+}

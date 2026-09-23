@@ -1,0 +1,13 @@
+.register{
+	.hero{
+		.hero-title{
+			text-align: center;
+		}
+		.hero-subtitle{
+			text-align: center;
+			margin-bottom: map-get($spacers, 3);
+			font-size: $h4-font-size;
+			color: $quaternary-800;
+		}
+	}
+}

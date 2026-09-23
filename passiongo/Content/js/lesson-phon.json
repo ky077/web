@@ -1,0 +1,66 @@
+{
+  "lesson": {
+    "termId": "grade5-upper-1",
+    "lessonOrder": 4,
+    "title": "How Are You?"
+  },
+  "section": {
+    "id": "phonics",
+    "titleZh": "發音",
+    "titleEn": "Phonics"
+  },
+  "questions": [
+    {
+      "id": "1",
+      "layout": "p1",
+      "instruction": "請聽字母名稱，選出正確的字母。",
+      "questionAudio": "Content/temp/lesson-4-phon-q1-kk.mp3",
+      "questionAudioText": "K",
+      "answer": "Kk",
+      "answerType": "text",
+      "options": [
+        { "label": "Ll", "value": "Ll" },
+        { "label": "Mm", "value": "Mm" },
+        { "label": "Kk", "value": "Kk" }
+      ]
+    },
+    {
+      "id": "2",
+      "layout": "p2",
+      "instruction": "請聽字母的發音，選出正確的字母。",
+      "questionAudio": "Content/temp/lesson-4-phon-q2-luh.mp3",
+      "questionAudioText": "luh",
+      "answer": "Ll",
+      "answerType": "text",
+      "options": [
+        { "label": "Kk", "value": "Kk" },
+        { "label": "Mm", "value": "Mm" },
+        { "label": "Ll", "value": "Ll" }
+      ]
+    },
+    {
+      "id": "3",
+      "layout": "p2",
+      "instruction": "請聽單字，選出它的開頭字母。",
+      "questionAudio": "Content/temp/lesson-4-phon-q3-kiss.mp3",
+      "questionAudioText": "kiss",
+      "answer": "K",
+      "answerType": "text",
+      "options": [
+        { "label": "L", "value": "L" },
+        { "label": "M", "value": "M" },
+        { "label": "K", "value": "K" }
+      ]
+    },
+    {
+      "id": "4",
+      "layout": "p3",
+      "instruction": "請先聽口訣，再跟著唸一次。",
+      "questionAudio": "Content/temp/lesson-4-phon-q4-nose-neck-nail.mp3",
+      "questionAudioText": "a nose, a neck, and a nail",
+      "answer": "a nose, a neck, and a nail",
+      "answerType": "text",
+      "tip": "a nose, a neck, and a nail"
+    }
+  ]
+}

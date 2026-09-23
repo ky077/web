@@ -1,0 +1,34 @@
+.index{
+	.hero.h-100{
+		background-color: $banner-color;
+		background-image: url("../img/logo.png"), url("../img/index-hero-students.png"), url("../img/index-hero-bg.jpg");
+		background-position: center top, center bottom, center center;
+		background-repeat: no-repeat;
+		background-size: 80% auto, 100% auto, cover;	
+		position: relative;
+		/*.hero-title{
+			position: absolute;	-
+			top: 0;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 11/12*100%;
+		}
+		.hero-students{
+			position: absolute;	
+			bottom: 0;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 150%;
+			aspect-ratio: 1608 / 564;
+		}*/
+		.hero-btn{
+			position: absolute;
+			bottom: $spacer;
+			left: 50%;
+			transform: translateX(-50%);
+			&:hover {
+        transform: translateX(-50%) scale(1.1);
+      }
+		}
+	}
+}
