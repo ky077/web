@@ -12,6 +12,7 @@
 		.hero-title{
 			text-align: center;
 			filter: drop-shadow(.125rem .125rem .5rem $white) drop-shadow(0.25rem 0.25rem 1rem $white);
+			margin-bottom: $spacer;
 		}
 		.hero-subtitle{
 			text-align: center;
