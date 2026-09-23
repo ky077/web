@@ -50,8 +50,8 @@ body > form { min-width: 100%; min-height: 100%; display: flex; flex-direction: 
 .form-floating > label { color: #806f5e; }
 
 .input-group-password { position: relative; }
-.input-group-password .btn { box-shadow: none; border-left: 0; position: absolute; top: 0; right: 0; bottom: 0; z-index: 5; }
-.input-group-password .btn:hover { box-shadow: none; transform: scale(1); }
+.input-group-password .btn { box-shadow: none; border-left: 0; color: #675747; position: absolute; top: 0; right: 0; bottom: 0; z-index: 5; }
+.input-group-password .btn:hover { border-color: #ded3c5; box-shadow: none; transform: scale(1); }
 
 .page-header { width: 100%; height: 0; padding-bottom: 20.8333333333%; background-color: #fcefe1; background-image: url("../img/page-header-bg.jpg"); background-position: top center; background-repeat: no-repeat; background-size: 100% auto; }
 
@@ -125,14 +125,14 @@ footer { background-color: #fff; font-size: 0.75em; color: #675747; margin-top: 
   50% { filter: drop-shadow(0 0 5px rgba(255, 204, 51, 0.1)); } }
 @keyframes action-transform { 0%, 100% { transform: translateX(0%); }
   50% { transform: translateX(10%); } }
-.login .hero { background-color: #fcefe1; background-image: url("../img/login.jpg"); background-position: center right; background-repeat: no-repeat; background-size: cover; }
+.login .hero { background-color: #fcefe1; background-image: url("../img/login.jpg"); background-attachment: fixed; background-position: bottom right; background-repeat: no-repeat; background-size: 100% 100%; }
 .login .hero .card { box-shadow: 0 0.125rem 0.25rem rgba(61, 49, 40, 0.075); border-radius: 1rem; }
-.login .hero .hero-title { text-align: center; filter: drop-shadow(0.125rem 0.125rem 0.5rem #fff) drop-shadow(0.25rem 0.25rem 1rem #fff); margin-bottom: 1rem; }
+.login .hero .hero-title { text-align: center; filter: drop-shadow(0.125rem 0.125rem 0.5rem #fff) drop-shadow(0.25rem 0.25rem 1rem #fff); margin-top: 1rem; margin-bottom: 1rem; }
 .login .hero .hero-subtitle { text-align: center; margin-bottom: 1rem; font-size: 1.5rem; color: #663e10; }
-.login .hero .input-group-password .btn-showHidePD { color: #675747; }
-.login .hero .input-group-password .btn-showHidePD:hover, .login .hero .input-group-password .btn-showHidePD:active, .login .hero .input-group-password .btn-showHidePD:focus { border-color: #ded3c5; }
 
-.register .hero .hero-title { text-align: center; }
+.register .hero { background-color: #fcefe1; background-image: url("../img/login.jpg"); background-attachment: fixed; background-position: bottom right; background-repeat: no-repeat; background-size: 100% 100%; }
+.register .hero .card { box-shadow: 0 0.125rem 0.25rem rgba(61, 49, 40, 0.075); border-radius: 1rem; }
+.register .hero .hero-title { text-align: center; filter: drop-shadow(0.125rem 0.125rem 0.5rem #fff) drop-shadow(0.25rem 0.25rem 1rem #fff); margin-top: 1rem; margin-bottom: 1rem; }
 .register .hero .hero-subtitle { text-align: center; margin-bottom: 1rem; font-size: 1.5rem; color: #663e10; }
 
 .index .hero.h-100 { background-color: #fcefe1; background-image: url("../img/index-hero-bg.jpg"); background-position: center bottom; background-repeat: no-repeat; background-size: 100% auto; }

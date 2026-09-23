@@ -27,15 +27,15 @@
   var isAuthenticatedPage = function () {
     var bodyClass = $("body").attr("class") || "";
 
-    return bodyClass.split(/\s+/).some(function (className) {
-      return className === 'index-logged' || className.indexOf('lesson') === 0;
-    });
+    return bodyClass.split(/\s+/).indexOf('index') === -1 &&
+      bodyClass.split(/\s+/).indexOf('login') === -1;
   };
 
   var applyHeaderAuthState = function () {
     var loggedIn = isAuthenticatedPage();
     var isLoggedIndex = $('body').hasClass('index-logged');
     var $homeLink = $('.nav-index .nav-link');
+    var homeHref = loggedIn ? 'index-logged.html' : 'index.html';
 
     $('.nav-user').toggleClass('d-none', !loggedIn);
     $('.nav-register, .nav-login').toggleClass('d-none', loggedIn);
@@ -46,7 +46,8 @@
     } else {
       $homeLink.removeAttr('aria-current');
     }
-    $homeLink.attr('href', isLoggedIndex ? 'index-logged.html' : 'index.html');
+    $homeLink.attr('href', homeHref);
+    $('.navbar-brand').attr('href', homeHref);
   };
 
   var applyAuthState = function () {

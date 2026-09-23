@@ -2,9 +2,10 @@
 	.hero{
 		background-color: $banner-color;
 		background-image: url("../img/login.jpg");
-		background-position: center right;
+		background-attachment: fixed;
+		background-position: bottom right;
 		background-repeat: no-repeat;
-		background-size: cover;	
+		background-size: 100% 100%;	
 		.card{
 			box-shadow: $box-shadow-sm;
 			border-radius: $border-radius-xl;
@@ -12,6 +13,7 @@
 		.hero-title{
 			text-align: center;
 			filter: drop-shadow(.125rem .125rem .5rem $white) drop-shadow(0.25rem 0.25rem 1rem $white);
+			margin-top: $spacer;
 			margin-bottom: $spacer;
 		}
 		.hero-subtitle{
@@ -19,14 +21,6 @@
 			margin-bottom: map-get($spacers, 3);
 			font-size: $h4-font-size;
 			color: $quaternary-800;
-		}
-		.input-group-password{
-			.btn-showHidePD{
-				color: $gray-700;
-				&:hover, &:active, &:focus{
-					border-color: $border-color;
-				}
-			}
 		}
 	}
 }

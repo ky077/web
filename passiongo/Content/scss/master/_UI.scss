@@ -122,12 +122,14 @@ body {
 	.btn{
 		box-shadow: none;
 		border-left: 0;
+		color: $gray-700;
 		position: absolute;
 		top:0;
 		right: 0;
 		bottom: 0;
 		z-index: 5;
 		&:hover{
+			border-color: $border-color;
 			box-shadow: none;
 			transform: scale(1);
 		}
