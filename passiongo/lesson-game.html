@@ -400,7 +400,7 @@
   if (showPanels) {
     const panelsToShow = showPanels.split(',');
     document.querySelectorAll('.lesson-page-panel.phon, .lesson-page-panel.vocab, .lesson-page-panel.sent').forEach((panel) => {
-      panel.hidden = !panelsToShow.some((panelType) => panel.classList.contains(panelType));
+      panel.style.display = panelsToShow.some((panelType) => panel.classList.contains(panelType)) ? '' : 'none';
     });
   }
 </script>
