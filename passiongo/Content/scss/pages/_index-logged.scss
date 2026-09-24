@@ -1,0 +1,275 @@
+.index-logged{
+	//.page-header{}
+	.page-content{
+		.page-content-title{
+			margin-bottom: map-get($spacers, 3);
+			font-size: $h3-font-size;
+			font-weight: $font-weight-medium;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			color: $red-700;
+			> img{
+				height: 1.5em;
+			}
+			> span{
+				display: inline-block;
+				padding-bottom: 6px;
+				position: relative;
+				letter-spacing: 0.05em; 
+				border-bottom: 4px solid $quaternary;
+			}
+		}
+	}
+}
+.course-nav{
+	margin-bottom: map-get($spacers, 3);	
+	padding: $spacer;
+	.nav{
+		justify-content: space-evenly;
+		gap: .5rem;
+	}
+	.nav-item{
+		flex: 1 1 auto;	
+		text-align: center;
+		@media screen and (min-width: 992px) {
+		flex-grow: 1;
+    flex-basis: 0;
+    text-align: center;	
+		}
+	}
+	.nav-link{
+		background-color: $body-bg;
+		border-radius: $border-radius-pill;
+		box-shadow: $box-shadow-sm;
+		color: $body-color;
+		&:hover, &.hover{
+			background-color: $tertiary-100;
+		}
+		&:active, &.active{
+			background-color: $secondary;
+			color: $white;
+		}
+	}
+}
+.course-list{
+	background-color: $white;
+	border-radius: $border-radius-xl;
+	box-shadow: $box-shadow-sm;
+	padding: $spacer*2;
+	.course-list-unselected{ //未選冊數
+		padding-top: map-get($spacers, 3);
+		.course-list-title{
+			font-size: $h3-font-size;	
+			font-weight: $font-weight-semibold;
+			text-align: center;
+			margin-top: 1rem;
+			> small {
+				display: block;
+				color: $gray-700;
+				font-size: $font-size-base;
+				font-weight: $font-weight-normal;
+				margin-top: 1rem;
+			}
+		}	
+	}
+	.course-list-selected{ //已選冊數
+		display: flex;
+		flex-direction: column;
+		gap: $spacer;
+		.course-list-title{
+			font-size: $h5-font-size;	
+			display: flex;
+			flex-flow: row wrap;
+			align-items: center;
+			> i{
+				color: $secondary;
+				margin-right: .25em;
+			}
+		}	
+	}
+	
+	.course-list-progress{
+		margin-left: auto;
+		font-size: $font-size-sm;
+		color: $body-secondary-color;
+	}
+	
+	//卡片樣式
+	.card-group{ 
+		display: flex;
+		flex-flow: column wrap;
+		@media screen and (min-width: 768px) {
+		flex-flow: row wrap;	
+		}
+		.card:not(.card-unit) {
+			transition: $transition-base;
+			&::after{
+				content: attr(data-card-lesson);
+				display: block;
+				position: absolute;
+				bottom: .75rem;
+    		right: .75rem;
+				font-size: 5rem;
+				font-weight: $font-weight-bolder;
+				line-height: 1;
+				color: rgba($body-color, .1);
+			}
+			.card-body{
+				padding-top: $card-spacer-y*.5;
+				padding-bottom: $card-spacer-y*.5;
+			}
+			.card-footer{
+				border-top: none;
+				background-color: transparent;
+			}
+			&:hover{
+				transform: scale(1.1);
+			}
+		}
+		.card-unit{ //單元 U
+			flex: 0 0 100%;
+			border-color: transparent;
+			box-shadow: none;
+			.card-body{ 
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+			.card-title{
+				text-align: center;
+				margin-bottom: 0;
+			}
+			@media screen and (min-width: 992px) {
+			flex: 0 0 12.5%;	
+			}
+		}
+		.card-title{
+			font-size: $font-size-base;
+			font-weight: $font-weight-bolder;
+			.card-title-unit{
+				font-size: $h3-font-size;	
+			}
+			.card-title-unit-text{
+				font-size: $font-size-sm;	
+				font-weight: $font-weight-normal;
+				color: $gray-700;
+			}
+		}
+		.status-text{
+			background-color: $white;
+			border-radius: $border-radius-pill;
+			display: inline-block;
+			padding: .25rem .75rem;
+			&::before{
+				content: "";
+				display: inline-block;
+				font-family: "Font Awesome 7 Free";
+				margin-right: .25em;
+				font-size: 120%;
+				font-weight: 900;
+			}
+			&::after{
+				content: "";
+				display: inline-block;
+				font-family: "Font Awesome 7 Free";
+				margin-left: .5em;
+				font-size: 100%;
+				font-weight: 900;
+			}
+		}
+		//卡片狀態icon
+		.card{
+			&[data-card-status="locked"]{ // 尚未解鎖
+				pointer-events: none;
+				filter: opacity($btn-disabled-opacity) grayscale(.9);
+				.status-text{
+					color: $gray-700;
+					&::before{
+						content: "\f023";
+					}
+				}
+			}
+			&[data-card-status="pending"]{ // 開始練習
+				.status-text{
+					&::before{
+						content: "\f144";
+					}
+					&::after{
+						content: "\f105";
+					}
+				}
+			}
+			&[data-card-status="active"]{ // 進行中
+				.status-text{
+					&::before{
+						content: "\f017";
+					}
+					&::after{
+						content: "\f105";
+					}
+				}
+			}
+			&[data-card-status="done"]{ // 已完成
+				.status-text{ 
+					&::before{
+						content: "\f058";
+					}
+				}
+			}
+		}
+	}
+
+	//卡片顏色
+	//.card-group{ 
+	//	.card:not(.card-unit) {	
+	@mixin courseStyle($color) {
+		background-color: tint-color($color, 80%);
+			&::after{
+				color: tint-color($color, 60%);
+			}
+			.card-lesson{
+				color: shade-color($color, 10%);
+			}
+			.card-title{
+				color: shade-color($color, 20%);
+			}
+			.status-text{
+				color: shade-color($color, 10%);
+			}
+			&:hover{
+				background-color: tint-color($color, 70%);
+				&::after{
+					color: tint-color($color, 60%);
+				}
+			}
+		//}
+	}
+	.card-group:nth-child(even){
+		.card:not(.card-unit) {
+			&:nth-of-type(1){
+				@include courseStyle($blue);
+			}
+			&:nth-of-type(2){
+				@include courseStyle($pink);
+			}
+			&:nth-of-type(3){
+				@include courseStyle($green);
+			}
+		}
+	}
+	.card-group:nth-child(odd){
+		.card:not(.card-unit) {
+			&:nth-of-type(1){
+				@include courseStyle($teal);
+			}
+			&:nth-of-type(2){
+				@include courseStyle($yellow);
+			}
+			&:nth-of-type(3){
+				@include courseStyle($purple);
+			}
+		}
+	}
+	
+}

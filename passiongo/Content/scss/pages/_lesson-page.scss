@@ -1,0 +1,279 @@
+.lesson-page-title{
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	&::before{
+		content: "";
+		display: inline-block;
+		width: 1.5em;
+		height: 1.5em;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: 100%;
+		margin-right: .125em;
+	}
+	> small{
+		color: $gray-700;
+		font-size: $font-size-base;
+		margin-left: .5em;
+	}
+}
+.lesson-page-panel{
+	border-width: $border-width;
+	border-style: $border-style;
+	border-radius: $border-radius-xl;
+	padding: $spacer;
+	[data-card-status="done"]{
+		position: relative;
+		&::after{
+			content: "";
+			display: block;
+			width: 3.25rem;
+			height: 3.25rem;
+			background-image: url("../img/done.png");
+			background-repeat: no-repeat;
+			background-size: cover;
+			position: absolute;
+			top: .5rem;
+			right: .75rem;
+			transform: rotate(-15deg);
+		}
+	}
+}
+
+@mixin lessonPageStyle($color) {
+	.lesson-page-title{
+		color: $color;
+	}
+	.lesson-page-panel{
+		border-color: tint-color($color, 60%);
+		background-color: tint-color($color, 90%);
+	}
+}
+//課程動畫
+.lesson-animation{
+	@include lessonPageStyle($pink);
+	.lesson-page-title{
+		&::before{
+			background-image: url("../img/lesson-icon-animation.png");
+		}
+	}
+	.card-frame{
+		.card-frame-inner{
+			padding: $spacer;
+		}
+		.card-frame-title{
+			font-size: $h4-font-size;
+			font-weight: $font-weight-semibold;
+			text-align: center;
+			> small{
+				display: block	
+			}
+		}
+		.card-frame-text{
+			color: $gray-700;	
+			font-size: $font-size-sm;
+			font-weight: $font-weight-normal;
+			text-align: center;
+			margin-bottom: $spacer*.5;
+		}
+		.card-frame-icon{
+			display: block;
+			font-size: 2.5rem;
+			margin: 0 auto;
+		}
+	}
+	//顏色
+	.card-frame.phon{
+		.card-frame-inner{
+			background-color: $pink-100;	
+		}
+		.card-frame-title, .card-frame-icon{
+			color: $pink;	
+		}
+	}
+	.card-frame.vocab{
+		.card-frame-inner{
+			background-color: $blue-100;
+		}
+		.card-frame-title, .card-frame-icon{
+			color: $blue;	
+		}
+	}
+}
+
+//教學影片
+.lesson-video{
+	@include lessonPageStyle($blue);
+	.lesson-page-title{
+		&::before{
+			background-image: url("../img/lesson-icon-video.png");
+		}
+	}
+}
+
+//遊戲練習
+.lesson-game{
+	@include lessonPageStyle($green);
+	
+	.lesson-page-title{
+		font-weight: $font-weight-medium;
+		&::before{
+			background-image: url("../img/lesson-icon-game.png");
+		}
+	}
+	.lesson-page-panel{
+		margin-bottom: map-get($spacers, 4);
+		@mixin gameCardStyle($color) {
+			border-color: tint-color($color, 60%);
+			background-color: tint-color($color, 90%);
+			counter-reset: cardNum; 
+			.panel-title{
+				color: $color;
+				display: flex;
+				align-items: center;
+				font-weight: $font-weight-medium;
+				.badge{
+					color: $color;
+					font-size: $font-size-sm;
+					font-weight: $font-weight-normal;
+					margin-left: auto;
+				}
+				&::before{
+					content: "";
+					display: inline-block;
+					width: 1.5em;
+					height: 1.5em;
+					background-position: center center;
+					background-repeat: no-repeat;
+					background-size: 100% auto;
+					margin-right: 0.125em;
+				}
+			}
+			.card{
+				--bs-card-border-width: 0;
+				--bs-card-cap-bg: transparent;
+				display: flex;
+				box-shadow: 0 .125rem .25rem rgba($color, .075);
+				transition: $transition-base;
+				counter-increment: cardNum; 
+				&:hover{
+					transform: scale(1.1);
+				}
+				.card-body{
+					display: grid;
+					grid-template-columns: auto 1fr;
+					grid-template-rows: auto 1fr;
+					grid-template-areas: "icon title"
+															 "text text";
+					align-items: center;
+					gap: 1rem .75rem;
+					.card-icon{
+						grid-area: icon;
+						width: 3.6rem;
+						height: 3.6rem;
+						background-color: tint-color($color, 90%);
+						border-radius: $border-radius-lg;
+						overflow: hidden;
+					}
+					.card-title{
+						grid-area: title;
+						margin-bottom: 0;
+						&::before{
+        			content: counter(cardNum, decimal-leading-zero);
+							display: block;
+							font-size: $font-size-sm;
+							color: $cyan;
+							margin-bottom: .25rem;
+						}
+					}
+					.card-text{
+						grid-area: text;
+						align-self: start;
+						color: $gray-700;
+						font-size: $font-size-sm;
+					}
+				}
+				.card-footer{
+					box-shadow: 0 -1px 0 rgba($color, .075);
+						display: flex;
+						align-items: center;
+						justify-content: space-between;
+						color: $color;
+						&::after{
+							content: "\f061";
+							font-family: "Font Awesome 7 Free"; 
+							font-weight: 900;
+						}
+				}
+			}
+		}
+		&.phon{
+			@include gameCardStyle($green);
+			.panel-title{
+				&::before{
+					background-image: url("../img/lesson-game/lesson-game-1.png");
+				}
+			}
+		}
+		&.vocab{
+			@include gameCardStyle($purple);
+			.panel-title{
+				&::before{
+					background-image: url("../img/lesson-game/lesson-game-2.png");
+				}
+			}
+		}
+		&.sent{
+			@include gameCardStyle($teal);
+			.panel-title{
+				&::before{
+					background-image: url("../img/lesson-game/lesson-game-3.png");
+				}
+			}
+		}
+	}
+}
+
+.modal-all-done{
+	.modal-content{
+		background-color: $pink-100;
+		background-image: url("../img/done-star-flash.png");
+		background-repeat: no-repeat;
+		background-position: center top;
+		background-size: 100% auto;
+		.modal-body{
+			.btn-close{
+				position: absolute;
+				top: $modal-inner-padding*.5;
+				right: $modal-inner-padding*.5;
+				border-radius: 100%;
+				width: 1.5em;
+				height: 1.5em;
+			}	
+			.btn-close-white{
+				background-color: $white;
+			}
+		}
+	}
+	.all-done-title{
+		margin: 1rem auto;
+		background-color: $pink;
+		color: $white;
+		padding: $spacer*.5 $spacer*1.5;
+		border-radius: $border-radius-pill;
+		text-align: center;
+		font-size: $h1-font-size;
+		max-width: 80%;
+		border: 3px solid $white;
+		box-shadow: $box-shadow;
+	}
+	.all-done-subtitle{
+		color: $gray-900;
+		text-align: center;
+	}
+	.all-done-text{
+		color: $gray-900;
+		text-align: center;
+	}
+}

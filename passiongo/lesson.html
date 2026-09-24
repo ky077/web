@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="utf-8">
+<title>PASSION GO! 教材線上練習平台</title>
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<meta content="聽、說、讀、寫，和 AI 一起快樂學英語！" name="description">
+<meta content="聽,說,讀,寫,AI,英語,家教,PASSION,教材,線上,練習" name="keywords">
+<link href="Content/img/favicon.ico" rel="icon">
+
+<!-- Open Graph -->
+<meta property="og:title" content="PASSION GO! 教材線上練習平台" />
+<meta property="og:description" content="聽、說、讀、寫，和 AI 一起快樂學英語！" />
+<meta property="og:image" content="Content/img/logo.png" />
+<meta property="og:url" content="http://140.122.118.47/passiongo/index.aspx" />
+<meta property="og:type" content="website" />
+
+<!-- Google Web Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Noto+Sans+TC:wght@100..900&display=swap">
+
+<!-- Icon Font Stylesheet -->
+<link rel="stylesheet" href="Content/lib/font-awesome-7.3.0/css/all.min.css">
+
+<!-- Customized Bootstrap Stylesheet -->
+<link rel="stylesheet" href="Content/css/bootstrap-custom.css">
+
+<!-- This web Core Stylesheet -->
+<link rel="stylesheet" href="Content/css/styles.css">
+</head>
+
+<body class="lesson">
+<form>
+  <!-- Spinner Start -->
+  <div id="spinner" class="show">
+    <div class="spinner-ip" role="status">
+      <span class="visually">Loading</span>
+    </div>
+  </div>
+  <!-- Spinner End -->
+  
+  <header>
+  </header>
+  <main>
+    <!-- page-header Start -->
+    <div class="page-header">
+    </div>
+    <!-- page-header End -->
+    
+    <!-- page-content lesson Start -->
+    <div class="page-content">
+      <div class="container-xl">
+        <!--  -->
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+              <a href="index-logged.html"><i class="fa-solid fa-arrow-left me-1"></i>返回課程地圖</a>
+            </li>
+            <li class="breadcrumb-item">
+              <a class="lesson-term-link" href="index-logged.html">五上</a>
+            </li>
+            <li class="breadcrumb-item active lesson-current-breadcrumb" aria-current="page">Lesson 1 What Is Your Name?</li>
+          </ol>
+        </nav>
+        <!--  -->
+        <div class="lesson-panel">
+          <div class="lesson-panel-header">
+            <div class="lesson-panel-meta">
+              <div class="meta-grade">五上</div>
+              <div class="meta-range">L1-L16</div>
+            </div>
+            <div class="lesson-panel-main">
+							<small class="main-lesson">Lesson 1</small>
+              <h2 class="main-title">What Is Your Name?</h2>
+              <div class="main-text">自我介紹</div>
+            </div>
+            <div class="lesson-panel-keypoints">
+              <div class="keypoints-title">本課重點：</div>
+              <div class="keypoints-text">字母：Aa,Bb,Cc,Dd,Ee</div>
+              <div class="keypoints-text">單字：my,your,name,yes,no</div>
+              <div class="keypoints-text">句型：What is your name? / My name is ...</div>
+            </div>
+          </div>
+          <div class="lesson-panel-list">
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+              <div class="col">
+                <a class="card h-100 card-animation" href="lesson-animation.html">
+                <img src="Content/img/lesson-img-animation.png" class="card-img-top" alt=""/>
+                <div class="card-body">
+                  <h5 class="card-title">課程動畫</h5>
+                  <p class="card-text">看動畫，學英語</p>
+                </div>
+                </a>
+              </div>
+              <div class="col">
+                <a class="card h-100 card-video" href="lesson-video.html">
+                <img src="Content/img/lesson-img-video.png" class="card-img-top" alt=""/>
+                <div class="card-body">
+                  <h5 class="card-title">教學影片</h5>
+                  <p class="card-text">跟著老師一起學</p>
+                </div>
+                </a>
+              </div>
+              <div class="col">
+                <a class="card h-100 card-game" href="lesson-game.html">
+                <img src="Content/img/lesson-img-game.png" class="card-img-top" alt=""/>
+                <div class="card-body">
+                  <h5 class="card-title">遊戲練習</h5>
+                  <p class="card-text">動動腦，練一練</p>
+                </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- page-content lesson End -->
+  </main>
+  <footer>
+  </footer>
+</form>
+<!-- ------- ------- ------- ------- ------- ------- ------- -->
+<!-- ------- ------- ------- ------- ------- ------- ------- -->
+<!-- ------- ------- ------- ------- ------- ------- ------- -->
+<!-- JavaScript Libraries -->
+<script src="Content/js/jquery-3.4.1.min.js"></script>
+<script src="Content/lib/bootstrap-5.3.8/js/bootstrap.bundle.min.js"></script>
+
+<!-- This web Javascript -->
+<script src="Content/js/main.js"></script>
+<script>
+(function () {
+  var courseMapUrl = 'Content/js/course-map.json';
+  var defaultTermId = 'grade5-upper-1';
+  var defaultLessonOrder = 4;
+
+  var getQueryValue = function (key) {
+    return new URLSearchParams(window.location.search).get(key);
+  };
+
+  var findTerm = function (courseMapData, termId) {
+    for (var i = 0; i < courseMapData.terms.length; i++) {
+      if (courseMapData.terms[i].id === termId) {
+        return courseMapData.terms[i];
+      }
+    }
+
+    return courseMapData.terms[0] || null;
+  };
+
+  var findLesson = function (term, lessonOrder) {
+    for (var unitIndex = 0; unitIndex < term.units.length; unitIndex++) {
+      var unit = term.units[unitIndex];
+
+      for (var lessonIndex = 0; lessonIndex < unit.lessons.length; lessonIndex++) {
+        if (unit.lessons[lessonIndex].order === lessonOrder) {
+          return {
+            unit: unit,
+            lesson: unit.lessons[lessonIndex]
+          };
+        }
+      }
+    }
+
+    return null;
+  };
+
+  var setText = function (selector, text) {
+    var element = document.querySelector(selector);
+
+    if (element) {
+      element.textContent = text;
+    }
+  };
+
+  var renderLessonHeader = function (courseMapData) {
+    var termId = getQueryValue('term') || courseMapData.defaultTermId || defaultTermId;
+    var lessonOrder = parseInt(getQueryValue('lesson') || defaultLessonOrder, 10);
+    var term = findTerm(courseMapData, termId);
+    var lessonData = term ? findLesson(term, lessonOrder) : null;
+
+    if (!term || !lessonData) {
+      return;
+    }
+
+    var lessonLabel = 'Lesson ' + lessonData.lesson.order;
+    var fullLessonTitle = lessonLabel + ' ' + lessonData.lesson.title;
+    var termLink = document.querySelector('.lesson-term-link');
+
+    if (termLink) {
+      var lessons = (term.units || []).reduce(function (allLessons, unit) {
+        return allLessons.concat(unit.lessons || []);
+      }, []);
+      var firstLesson = lessons.length ? lessons[0].order : '';
+      var lastLesson = lessons.length ? lessons[lessons.length - 1].order : '';
+      termLink.textContent = term.label + (firstLesson !== '' ? ' L' + firstLesson + '-L' + lastLesson : '');
+      var courseMapHref = 'index-logged.html?term=' + encodeURIComponent(term.id) + '#course-list';
+      termLink.href = courseMapHref;
+      var backLink = document.querySelector('nav .breadcrumb-item:first-child a');
+      if (backLink) {
+        backLink.href = courseMapHref;
+      }
+      document.querySelectorAll('a[href="lesson-animation.html"], a[href="lesson-video.html"], a[href="lesson-game.html"]').forEach(function (link) {
+        link.href += '?term=' + encodeURIComponent(term.id);
+      });
+    }
+
+    setText('.lesson-current-breadcrumb', fullLessonTitle);
+    setText('.lesson-number', lessonLabel);
+    setText('.lesson-title', lessonData.lesson.title);
+    document.title = fullLessonTitle + ' - AI 英語家教';
+  };
+
+  if (!window.fetch) {
+    return;
+  }
+
+  fetch(courseMapUrl, {
+    cache: 'no-store'
+  })
+    .then(function (response) {
+      if (!response.ok) {
+        throw new Error('Course map not found');
+      }
+
+      return response.json();
+    })
+    .then(renderLessonHeader)
+    .catch(function () {
+      return;
+    });
+})();
+</script>
+</body>
+</html>

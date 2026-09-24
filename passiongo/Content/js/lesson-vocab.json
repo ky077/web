@@ -1,0 +1,99 @@
+{
+  "lesson": {
+    "termId": "grade5-upper-1",
+    "lessonOrder": 4,
+    "title": "How Are You?"
+  },
+  "section": {
+    "id": "vocabulary",
+    "titleZh": "單字",
+    "titleEn": "Vocabulary"
+  },
+  "questions": [
+    {
+      "id": "1",
+      "layout": "v1",
+      "instruction": "請聽單字，選出正確圖片。",
+      "questionAudio": "Content/temp/lesson-4-vocab-q1-happy.mp3",
+      "questionAudioText": "happy",
+      "answer": "happy.png",
+      "answerType": "image",
+      "options": [
+        { "label": "sad", "value": "sad.png", "image": "Content/img/L04/sad.png", "alt": "sad" },
+        { "label": "angry", "value": "angry.png", "image": "Content/img/L04/angry.png", "alt": "angry" },
+        { "label": "happy", "value": "happy.png", "image": "Content/img/L04/happy.png", "alt": "happy" }
+      ]
+    },
+    {
+      "id": "2",
+      "layout": "v2",
+      "instruction": "請先聽，再跟著唸。",
+      "questionAudio": "Content/temp/lesson-4-vocab-q2-sad.mp3",
+      "questionAudioText": "sad",
+      "answer": "sad",
+      "answerType": "text",
+      "promptImage": { "src": "Content/img/L04/sad.png", "alt": "sad" },
+      "tip": "單字：sad"
+    },
+    {
+      "id": "3",
+      "layout": "v3",
+      "instruction": "請用英文說出這個單字：",
+      "answer": "angry",
+      "answerType": "text",
+      "promptText": "生氣的"
+    },
+    {
+      "id": "4",
+      "layout": "v4",
+      "instruction": "請看圖片，選出正確單字。",
+      "answer": "sick",
+      "answerType": "text",
+      "promptImage": { "src": "Content/img/L04/sick.png", "alt": "sick" },
+      "options": [
+        { "label": "thirty", "value": "thirty" },
+        { "label": "fine", "value": "fine" },
+        { "label": "sick", "value": "sick" }
+      ]
+    },
+    {
+      "id": "4.2",
+      "layout": "v4.2",
+      "instruction": "請看圖片，選出正確單字。",
+      "answer": "sick",
+      "answerType": "text",
+      "promptImage": { "src": "Content/img/L04/sick.png", "alt": "sick" },
+      "options": [
+        { "label": "thirty", "value": "thirty" },
+        { "label": "fine", "value": "fine" },
+        { "label": "sick", "value": "sick" }
+      ]
+    },
+    {
+      "id": "5",
+      "layout": "v5",
+      "instruction": "",
+      "answer": "口渴的",
+      "answerType": "text",
+      "promptText": "thirsty 是什麼意思?",
+      "options": [
+        { "label": "很好的", "value": "很好的" },
+        { "label": "非常好的", "value": "非常好的" },
+        { "label": "口渴的", "value": "口渴的" }
+      ]
+    },
+    {
+      "id": "5.2",
+      "layout": "v5.2",
+      "instruction": "",
+      "answer": "口渴的",
+      "answerType": "text",
+      "promptText": "thirsty 是什麼意思?",
+      "options": [
+        { "label": "很好的", "value": "很好的" },
+        { "label": "非常好的", "value": "非常好的" },
+        { "label": "口渴的", "value": "口渴的" }
+      ]
+    }
+  ]
+}

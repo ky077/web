@@ -1,0 +1,9 @@
+footer{
+	background-color: $white;
+	font-size: $sub-sup-font-size;
+	color: $gray-700;
+	margin-top: auto;
+	padding-top: map-get($spacers, 2);
+	padding-bottom: map-get($spacers, 2);
+	text-align: center;
+}
