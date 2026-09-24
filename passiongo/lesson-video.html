@@ -102,6 +102,22 @@
 <script src="Content/js/main.js"></script>
 <script src="Content/js/lesson-quiz-renderer.js"></script>
 <script>
+  fetch('Content/js/course-map.json', { cache: 'no-store' })
+    .then(function (response) { return response.json(); })
+    .then(function (courseMap) {
+      var termId = new URLSearchParams(window.location.search).get('term') || courseMap.defaultTermId;
+      var term = (courseMap.terms || []).find(function (item) { return item.id === termId; });
+      var termLink = document.querySelector('.lesson-term-link');
+      if (!term || !termLink) return;
+      var lessons = (term.units || []).reduce(function (allLessons, unit) {
+        return allLessons.concat(unit.lessons || []);
+      }, []);
+      termLink.textContent = term.label + (lessons.length ? ' L' + lessons[0].order + '-L' + lessons[lessons.length - 1].order : '');
+      document.querySelectorAll('a[href^="lesson-game.html"]').forEach(function (link) {
+        link.href += '&term=' + encodeURIComponent(term.id);
+      });
+    })
+    .catch(function () {});
 </script>
 </body>
 </html>

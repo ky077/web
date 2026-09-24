@@ -54,7 +54,7 @@
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb">
             <li class="breadcrumb-item">
-              <a href="index-logged.html"><i class="fa-solid fa-arrow-left me-1"></i>返回課程地圖</a>
+              <a href="index-logged.html"><i class="fa-solid fa-arrow-left me-1" aria-hidden="true"></i>返回課程地圖</a>
             </li>
             <li class="breadcrumb-item">
               <a class="lesson-term-link" href="index-logged.html">五上</a>
@@ -93,7 +93,7 @@
                     <h3 class="card-frame-title">單字<small>Vocabulary</small></h3>
                     <p class="card-frame-text">動畫學單字，<br>
                       輕鬆記住不忘記！</p>
-                    <i class="fa-solid fa-circle-arrow-right card-frame-icon"></i></div>
+                    <i class="fa-solid fa-circle-arrow-right card-frame-icon" aria-hidden="true"></i></div>
                 </div>
               </div>
               </a>
@@ -122,6 +122,22 @@
 <script src="Content/js/main.js"></script>
 <script src="Content/js/lesson-quiz-renderer.js"></script>
 <script>
+  fetch('Content/js/course-map.json', { cache: 'no-store' })
+    .then(function (response) { return response.json(); })
+    .then(function (courseMap) {
+      var termId = new URLSearchParams(window.location.search).get('term') || courseMap.defaultTermId;
+      var term = (courseMap.terms || []).find(function (item) { return item.id === termId; });
+      var termLink = document.querySelector('.lesson-term-link');
+      if (!term || !termLink) return;
+      var lessons = (term.units || []).reduce(function (allLessons, unit) {
+        return allLessons.concat(unit.lessons || []);
+      }, []);
+      termLink.textContent = term.label + (lessons.length ? ' L' + lessons[0].order + '-L' + lessons[lessons.length - 1].order : '');
+      document.querySelectorAll('a[href^="lesson-game.html"]').forEach(function (link) {
+        link.href += '&term=' + encodeURIComponent(term.id);
+      });
+    })
+    .catch(function () {});
 </script>
 </body>
 </html>

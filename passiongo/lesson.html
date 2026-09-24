@@ -190,8 +190,16 @@
     var termLink = document.querySelector('.lesson-term-link');
 
     if (termLink) {
-      termLink.textContent = term.label;
+      var lessons = (term.units || []).reduce(function (allLessons, unit) {
+        return allLessons.concat(unit.lessons || []);
+      }, []);
+      var firstLesson = lessons.length ? lessons[0].order : '';
+      var lastLesson = lessons.length ? lessons[lessons.length - 1].order : '';
+      termLink.textContent = term.label + (firstLesson !== '' ? ' L' + firstLesson + '-L' + lastLesson : '');
       termLink.href = 'index-logged.html#course-list';
+      document.querySelectorAll('a[href="lesson-animation.html"], a[href="lesson-video.html"], a[href="lesson-game.html"]').forEach(function (link) {
+        link.href += '?term=' + encodeURIComponent(term.id);
+      });
     }
 
     setText('.lesson-current-breadcrumb', fullLessonTitle);
