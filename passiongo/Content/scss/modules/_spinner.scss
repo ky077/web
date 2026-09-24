@@ -55,10 +55,11 @@
 			background-size: contain;
 			transform-origin: center;
 			animation: an-grow 1s ease-in-out infinite;
+			margin-left: .125em;
 		}
     .visually {  
       color: $pink-400;
-			font-size: $font-size-lg;
+			font-size: 2rem;
       font-weight: 600;
       letter-spacing: 0.5px;
     }

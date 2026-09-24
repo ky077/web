@@ -69,7 +69,7 @@
       if ($('#spinner').length > 0) {
         $('#spinner').removeClass('show');
       }
-    }, 1500);
+    }, 500000000);
   };
   spinner();
 
