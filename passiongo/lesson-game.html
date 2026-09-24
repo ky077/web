@@ -388,6 +388,9 @@
       }, []);
       termLink.textContent = term.label + (lessons.length ? ' L' + lessons[0].order + '-L' + lessons[lessons.length - 1].order : '');
       var courseMapHref = 'index-logged.html?term=' + encodeURIComponent(term.id) + '#course-list';
+      document.querySelectorAll('a[href="index-logged.html"]').forEach(function (link) {
+        link.href = courseMapHref;
+      });
       termLink.href = courseMapHref;
       var backLink = document.querySelector('nav .breadcrumb-item:first-child a');
       if (backLink) backLink.href = courseMapHref;
@@ -395,9 +398,8 @@
       document.querySelectorAll('a[href="lesson-video.html"]').forEach(function (link) {
         link.href = 'lesson-video.html' + lessonQuery;
       });
-      document.querySelector('#game-flow-video').href = 'index-logged.html';
+      document.querySelector('#game-flow-video').href = courseMapHref;
       document.querySelector('#game-flow-next').href = 'lesson.html' + lessonQuery;
-      document.querySelector('#game-flow-main').href = 'index-logged.html';
     })
     .catch(function () {});
 
