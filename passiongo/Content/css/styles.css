@@ -330,3 +330,10 @@ footer { background-color: #fff; font-size: 0.75em; color: #675747; margin-top: 
 .lesson-game .lesson-page-panel.sent .card .card-footer { box-shadow: 0 -1px 0 rgba(57, 169, 155, 0.075); display: flex; align-items: center; justify-content: space-between; color: #39a99b; }
 .lesson-game .lesson-page-panel.sent .card .card-footer::after { content: "\f061"; font-family: "Font Awesome 7 Free"; font-weight: 900; }
 .lesson-game .lesson-page-panel.sent .panel-title::before { background-image: url("../img/lesson-game/lesson-game-3.png"); }
+
+.modal-all-done .modal-content { background-color: #fed9e3; background-image: url("../img/done-star-flash.png"); background-repeat: no-repeat; background-position: center top; background-size: 100% auto; }
+.modal-all-done .modal-content .modal-body .btn-close { position: absolute; top: 0.5rem; right: 0.5rem; border-radius: 100%; width: 1.5em; height: 1.5em; }
+.modal-all-done .modal-content .modal-body .btn-close-white { background-color: #fff; }
+.modal-all-done .all-done-title { margin: 1rem auto; background-color: #fb4075; color: #fff; padding: 0.5rem 1.5rem; border-radius: 50rem; text-align: center; font-size: 2.5rem; max-width: 80%; border: 3px solid #fff; box-shadow: 0 0.5rem 1rem rgba(61, 49, 40, 0.15); }
+.modal-all-done .all-done-subtitle { color: #3d3128; text-align: center; }
+.modal-all-done .all-done-text { color: #3d3128; text-align: center; }

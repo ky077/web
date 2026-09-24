@@ -234,3 +234,46 @@
 		}
 	}
 }
+
+.modal-all-done{
+	.modal-content{
+		background-color: $pink-100;
+		background-image: url("../img/done-star-flash.png");
+		background-repeat: no-repeat;
+		background-position: center top;
+		background-size: 100% auto;
+		.modal-body{
+			.btn-close{
+				position: absolute;
+				top: $modal-inner-padding*.5;
+				right: $modal-inner-padding*.5;
+				border-radius: 100%;
+				width: 1.5em;
+				height: 1.5em;
+			}	
+			.btn-close-white{
+				background-color: $white;
+			}
+		}
+	}
+	.all-done-title{
+		margin: 1rem auto;
+		background-color: $pink;
+		color: $white;
+		padding: $spacer*.5 $spacer*1.5;
+		border-radius: $border-radius-pill;
+		text-align: center;
+		font-size: $h1-font-size;
+		max-width: 80%;
+		border: 3px solid $white;
+		box-shadow: $box-shadow;
+	}
+	.all-done-subtitle{
+		color: $gray-900;
+		text-align: center;
+	}
+	.all-done-text{
+		color: $gray-900;
+		text-align: center;
+	}
+}
