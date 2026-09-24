@@ -81,7 +81,7 @@
           </div>
         </div>
         <div class="mt-5 text-center">
-          <a class="btn btn-primary btn-lg rounded-pill px-5" href="lesson-game.html?show=sent">看完影片嗎?來玩句型遊戲吧!</a>
+          <a class="btn btn-primary btn-lg rounded-pill px-5" href="lesson-game.html">看完影片嗎?來玩句型遊戲吧!</a>
         </div>
         <!-- -->
       </div>
@@ -113,8 +113,12 @@
         return allLessons.concat(unit.lessons || []);
       }, []);
       termLink.textContent = term.label + (lessons.length ? ' L' + lessons[0].order + '-L' + lessons[lessons.length - 1].order : '');
-      document.querySelectorAll('a[href^="lesson-game.html"]').forEach(function (link) {
-        link.href += '&term=' + encodeURIComponent(term.id);
+      var courseMapHref = 'index-logged.html?term=' + encodeURIComponent(term.id) + '#course-list';
+      termLink.href = courseMapHref;
+      var backLink = document.querySelector('nav .breadcrumb-item:first-child a');
+      if (backLink) backLink.href = courseMapHref;
+      document.querySelectorAll('a[href="lesson-game.html"]').forEach(function (link) {
+        link.href = 'lesson-game.html?show=sent&term=' + encodeURIComponent(term.id);
       });
     })
     .catch(function () {});

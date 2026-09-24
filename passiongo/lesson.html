@@ -196,7 +196,12 @@
       var firstLesson = lessons.length ? lessons[0].order : '';
       var lastLesson = lessons.length ? lessons[lessons.length - 1].order : '';
       termLink.textContent = term.label + (firstLesson !== '' ? ' L' + firstLesson + '-L' + lastLesson : '');
-      termLink.href = 'index-logged.html#course-list';
+      var courseMapHref = 'index-logged.html?term=' + encodeURIComponent(term.id) + '#course-list';
+      termLink.href = courseMapHref;
+      var backLink = document.querySelector('nav .breadcrumb-item:first-child a');
+      if (backLink) {
+        backLink.href = courseMapHref;
+      }
       document.querySelectorAll('a[href="lesson-animation.html"], a[href="lesson-video.html"], a[href="lesson-game.html"]').forEach(function (link) {
         link.href += '?term=' + encodeURIComponent(term.id);
       });

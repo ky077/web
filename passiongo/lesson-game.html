@@ -376,14 +376,14 @@
         <!-- -->
         <div class="mt-5 text-center">
 					<!-- -->
-          <a class="btn btn-primary btn-lg rounded-pill px-5 mx-1" href="lesson-video.html">玩完遊戲了嗎?來看影片學句型吧!</a>
+          <a id="game-flow-animation" class="btn btn-primary btn-lg rounded-pill px-5 mx-1" href="lesson-video.html">玩完遊戲了嗎?來看影片學句型吧!</a>
 					
 					<!-- -->
-					<a class="btn btn-primary btn-lg rounded-pill px-5 mx-1" href="lesson.html?">玩完遊戲了嗎?回去主選單吧</a>
+					<a id="game-flow-video" class="btn btn-primary btn-lg rounded-pill px-5 mx-1" href="index-logged.html">玩完遊戲了嗎?回去主選單吧</a>
 					
 					<!-- -->
-					<a class="btn btn-tertiary btn-lg rounded-pill px-5 mx-1" href="index.html?"><i class="fa-solid fa-house ms-1" aria-hidden="true"></i>回課程地圖</a>
-					<a class="btn btn-quaternary btn-lg rounded-pill px-5 mx-1" href="lesson.html?">繼續下一課<i class="fa-solid fa-circle-arrow-right me-1" aria-hidden="true"></i></a>
+					<a id="game-flow-main" class="btn btn-tertiary btn-lg rounded-pill px-5 mx-1" href="index-logged.html"><i class="fa-solid fa-house ms-1" aria-hidden="true"></i>回課程地圖</a>
+					<a id="game-flow-next" class="btn btn-quaternary btn-lg rounded-pill px-5 mx-1" href="lesson.html?">繼續下一課<i class="fa-solid fa-circle-arrow-right me-1" aria-hidden="true"></i></a>
         </div>
         <!-- -->
       </div>
@@ -407,7 +407,8 @@
   fetch('Content/js/course-map.json', { cache: 'no-store' })
     .then(function (response) { return response.json(); })
     .then(function (courseMap) {
-      var termId = new URLSearchParams(window.location.search).get('term') || courseMap.defaultTermId;
+      var params = new URLSearchParams(window.location.search);
+      var termId = params.get('term') || courseMap.defaultTermId;
       var term = (courseMap.terms || []).find(function (item) { return item.id === termId; });
       var termLink = document.querySelector('.lesson-term-link');
       if (!term || !termLink) return;
@@ -415,18 +416,49 @@
         return allLessons.concat(unit.lessons || []);
       }, []);
       termLink.textContent = term.label + (lessons.length ? ' L' + lessons[0].order + '-L' + lessons[lessons.length - 1].order : '');
+      var courseMapHref = 'index-logged.html?term=' + encodeURIComponent(term.id) + '#course-list';
+      termLink.href = courseMapHref;
+      var backLink = document.querySelector('nav .breadcrumb-item:first-child a');
+      if (backLink) backLink.href = courseMapHref;
+      var lessonQuery = '?term=' + encodeURIComponent(term.id);
       document.querySelectorAll('a[href="lesson-video.html"]').forEach(function (link) {
-        link.href += '?term=' + encodeURIComponent(term.id);
+        link.href = 'lesson-video.html' + lessonQuery;
       });
+      document.querySelector('#game-flow-video').href = 'index-logged.html';
+      document.querySelector('#game-flow-next').href = 'lesson.html' + lessonQuery;
+      document.querySelector('#game-flow-main').href = 'index-logged.html';
     })
     .catch(function () {});
 
   const showPanels = new URLSearchParams(window.location.search).get('show');
+  const panels = document.querySelectorAll('.lesson-page-panel.phon, .lesson-page-panel.vocab, .lesson-page-panel.sent');
+  const flowButtons = {
+    animation: document.querySelector('#game-flow-animation'),
+    video: document.querySelector('#game-flow-video'),
+    main: document.querySelector('#game-flow-main'),
+    next: document.querySelector('#game-flow-next')
+  };
   if (showPanels) {
     const panelsToShow = showPanels.split(',');
-    document.querySelectorAll('.lesson-page-panel.phon, .lesson-page-panel.vocab, .lesson-page-panel.sent').forEach((panel) => {
+    panels.forEach((panel) => {
       panel.style.display = panelsToShow.some((panelType) => panel.classList.contains(panelType)) ? '' : 'none';
     });
+    if (showPanels === 'sent') {
+      flowButtons.animation.style.display = 'none';
+      flowButtons.video.style.display = '';
+      flowButtons.main.style.display = 'none';
+      flowButtons.next.style.display = 'none';
+    } else {
+      flowButtons.animation.style.display = '';
+      flowButtons.video.style.display = 'none';
+      flowButtons.main.style.display = 'none';
+      flowButtons.next.style.display = 'none';
+    }
+  } else {
+    flowButtons.animation.style.display = 'none';
+    flowButtons.video.style.display = 'none';
+    flowButtons.main.style.display = '';
+    flowButtons.next.style.display = '';
   }
 </script>
 </body>

@@ -131,7 +131,15 @@
     });
 
     $.when($.getJSON('Content/js/course-map.json'), $.getJSON('Content/js/student-progress.json'))
-      .done(function (map, progress) { courseMap = map[0]; progressMap = progress[0]; })
+      .done(function (map, progress) {
+        courseMap = map[0];
+        progressMap = progress[0];
+        var requestedTerm = new URLSearchParams(window.location.search).get('term');
+        var $requestedLink = requestedTerm ? $('.course-nav .nav-link[data-course-term="' + requestedTerm + '"]') : $();
+        if ($requestedLink.length) {
+          $requestedLink.trigger('click');
+        }
+      })
       .fail(function () { courseMap = { terms: [] }; progressMap = { terms: [] }; });
   };
 
