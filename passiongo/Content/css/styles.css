@@ -29,7 +29,7 @@ body > form { min-width: 100%; min-height: 100%; display: flex; flex-direction: 
 .btn-primary { text-shadow: 0 0 0.25em rgba(255, 255, 255, 0.25); }
 
 .btn-secondary, .btn-tertiary, .btn-quaternary { color: #fff; text-shadow: 0 0 0.25em rgba(0, 0, 0, 0.25); }
-.btn-secondary:hover, .btn-tertiary:hover, .btn-quaternary:hover { color: #fff; }
+.btn-secondary:hover, .btn-secondary:focus, .btn-secondary:active, .btn-tertiary:hover, .btn-tertiary:focus, .btn-tertiary:active, .btn-quaternary:hover, .btn-quaternary:focus, .btn-quaternary:active { color: #fff; }
 
 .btn { transition: all 0.2s ease-in-out; }
 .btn:hover { transform: scale(1.1); }
