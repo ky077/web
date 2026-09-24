@@ -122,7 +122,7 @@ footer { background-color: #fff; font-size: 0.75em; color: #675747; margin-top: 
 #spinner.show { transition: opacity .5s ease-out, visibility 0s linear 0s; visibility: visible; opacity: 1; }
 #spinner .spinner-ip { position: relative; }
 #spinner .spinner-ip ::after { content: ""; display: inline-block; width: 2rem; height: 2rem; background-image: url("../img/favicon.png"); background-repeat: no-repeat; background-size: contain; transform-origin: center; animation: an-grow 1s ease-in-out infinite; }
-#spinner .spinner-ip .visually { color: #fc6691; font-weight: 600; letter-spacing: 0.5px; }
+#spinner .spinner-ip .visually { color: #fc6691; font-size: 1.25rem; font-weight: 600; letter-spacing: 0.5px; }
 
 @keyframes badge-flash { 0%, 100% { filter: drop-shadow(0 0 5px rgba(255, 204, 51, 0.75)); }
   50% { filter: drop-shadow(0 0 5px rgba(255, 204, 51, 0.1)); } }
