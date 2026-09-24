@@ -145,6 +145,8 @@ footer { background-color: #fff; font-size: 0.75em; color: #675747; margin-top: 
 
 .course-nav { margin-bottom: 1rem; padding: 1rem; }
 .course-nav .nav { justify-content: space-evenly; gap: .5rem; }
+.course-nav .nav-item { flex: 1 1 auto; text-align: center; }
+@media screen and (min-width: 992px) { .course-nav .nav-item { flex-grow: 1; flex-basis: 0; text-align: center; } }
 .course-nav .nav-link { background-color: #fff; border-radius: 50rem; box-shadow: 0 0.125rem 0.25rem rgba(61, 49, 40, 0.075); color: #004b91; }
 .course-nav .nav-link:hover, .course-nav .nav-link.hover { background-color: #cce5fc; }
 .course-nav .nav-link:active, .course-nav .nav-link.active { background-color: #fb4075; color: #fff; }
