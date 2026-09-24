@@ -3,11 +3,6 @@
 	flex-wrap: wrap;
 	align-items: center;
 	&::before{
-		/*content: "";
-		display: inline;
-    font-family: "Font Awesome 7 Free"; 
-		font-weight: 900;
-		margin-right: .25em;*/
 		content: "";
 		display: inline-block;
 		width: 1.5em;
@@ -28,6 +23,22 @@
 	border-style: $border-style;
 	border-radius: $border-radius-xl;
 	padding: $spacer;
+	[data-card-status="done"]{
+		position: relative;
+		&::after{
+			content: "";
+			display: block;
+			width: 3.25rem;
+			height: 3.25rem;
+			background-image: url("../img/done.png");
+			background-repeat: no-repeat;
+			background-size: cover;
+			position: absolute;
+			top: .5rem;
+			right: .75rem;
+			transform: rotate(-15deg);
+		}
+	}
 }
 
 @mixin lessonPageStyle($color) {
@@ -44,7 +55,6 @@
 	@include lessonPageStyle($pink);
 	.lesson-page-title{
 		&::before{
-			//content: "\f72b";
 			background-image: url("../img/lesson-icon-animation.png");
 		}
 	}
@@ -97,7 +107,6 @@
 	@include lessonPageStyle($blue);
 	.lesson-page-title{
 		&::before{
-			//content: "\f008";
 			background-image: url("../img/lesson-icon-video.png");
 		}
 	}
@@ -110,7 +119,6 @@
 	.lesson-page-title{
 		font-weight: $font-weight-medium;
 		&::before{
-			//content: "\f11b";
 			background-image: url("../img/lesson-icon-game.png");
 		}
 	}

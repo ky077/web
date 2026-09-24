@@ -257,13 +257,12 @@ footer { background-color: #fff; font-size: 0.75em; color: #675747; margin-top: 
 .lesson .page-content .lesson-panel-list .card[class*="game"] .card-title { color: #4c9a35; }
 
 .lesson-page-title { display: flex; flex-wrap: wrap; align-items: center; }
-.lesson-page-title::before { 		/*content: "";
-		display: inline; font-family: "Font Awesome 7 Free"; 
-		font-weight: 900;
-		margin-right: .25em;*/ content: ""; display: inline-block; width: 1.5em; height: 1.5em; background-position: center; background-repeat: no-repeat; background-size: 100%; margin-right: .125em; }
+.lesson-page-title::before { content: ""; display: inline-block; width: 1.5em; height: 1.5em; background-position: center; background-repeat: no-repeat; background-size: 100%; margin-right: .125em; }
 .lesson-page-title > small { color: #675747; font-size: 1rem; margin-left: .5em; }
 
 .lesson-page-panel { border-width: 1px; border-style: solid; border-radius: 1rem; padding: 1rem; }
+.lesson-page-panel [data-card-status="done"] { position: relative; }
+.lesson-page-panel [data-card-status="done"]::after { content: ""; display: block; width: 3.25rem; height: 3.25rem; background-image: url("../img/done.png"); background-repeat: no-repeat; background-size: cover; position: absolute; top: .5rem; right: .75rem; transform: rotate(-15deg); }
 
 .lesson-animation .lesson-page-title { color: #fb4075; }
 .lesson-animation .lesson-page-panel { border-color: #fdb3c8; background-color: #ffecf1; }
