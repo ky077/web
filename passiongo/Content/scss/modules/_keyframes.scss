@@ -1,17 +1,28 @@
-	@keyframes badge-flash{
-		0%, 100%{
-			filter: drop-shadow(0 0 5px rgba($primary, .75));
-		}
-		50%{
-			filter: drop-shadow(0 0 5px rgba($primary, .1));
-		}
+@keyframes badge-flash{
+	0%, 100%{
+		filter: drop-shadow(0 0 5px rgba($primary, .75));
 	}
+	50%{
+		filter: drop-shadow(0 0 5px rgba($primary, .1));
+	}
+}
 
-	@keyframes action-transform{
-		0%, 100%{
-			transform: translateX(0%);
-		}
-		50%{
-			transform: translateX(10%);
-		}
+@keyframes action-transform{
+	0%, 100%{
+		transform: translateX(0%);
 	}
+	50%{
+		transform: translateX(10%);
+	}
+}
+
+
+@keyframes an-grow{
+	0%, 100%{
+		transform: scale(0);
+	}
+	50%{
+		transform: scale(1);
+	}
+}
+
