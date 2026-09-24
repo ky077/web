@@ -31,7 +31,7 @@
 </head>
 
 <body class="index">
-<form>
+<form id="loginForm">
   <!-- Spinner Start -->
   <div id="spinner" class="show">
     <div class="spinner-ip" role="status">
@@ -43,23 +43,37 @@
   <header>
   </header>
   <main>
-    <!-- hero Start -->
-    <div class="hero h-100">
-      <div class="container-fluid h-100">
-        <div class="row justify-content-center h-100">
-          <div class="col-sm-10 h-100">
-            <div class="index-hero">
-              <div class="hero-title">
-                <img src="Content/img/logo.png" class="img-fluid hero-title-img" alt="PASSION GO! 教材線上練習平台"/>
-                <a href="login.html" class="btn btn-primary btn-lg rounded-pill px-5 hero-title-btn">立即開始</a>
+    <!-- page-header Start -->
+    <div class="page-header">
+    </div>
+    <!-- page-header End -->
+    <!-- page-content lesson Start -->
+    <div class="page-content">
+      <div class="container-xl">
+        <div class="row align-items-center justify-content-center">
+          <div class="col-sm-9 col-lg-7 col-xl-6">
+            <div class="card p-5">
+              <h2 class="login-title">立即登入，和 AI 一起快樂學英語！</h2>
+              <div class="form-floating mb-4">
+                <input type="email" class="form-control rounded-4" id="floatingAccount" name="account" placeholder="name@example.com">
+                <label for="floatingAccount">帳號/email</label>
               </div>
-              <div class="hero-img"><img src="Content/img/index-hero-students.png" class="img-fluid" alt=""/></div>
+              <div class="input-group mb-4 input-group-password">
+                <div class="form-floating">
+                  <input type="password" class="form-control rounded-4" id="floatingPassword" name="password" placeholder="Password">
+                  <label for="floatingPassword">密碼</label>
+                </div>
+                <button class="btn rounded-end-4 btn-showHidePD" type="button" aria-label="顯示密碼" aria-pressed="false" aria-controls="floatingPassword">
+                <i class="fa-solid fa-eye" aria-hidden="true"></i>
+                </button>
+              </div>
+              <button class="btn btn-primary btn-lg rounded-4 w-100 btn-login-submit" type="submit">登入</button>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <!-- hero Start -->
+    <!-- page-content lesson End -->
   </main>
   <footer>
   </footer>

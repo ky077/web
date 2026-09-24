@@ -396,6 +396,13 @@
 <script src="Content/js/main.js"></script>
 <script src="Content/js/lesson-quiz-renderer.js"></script>
 <script>
+  const showPanels = new URLSearchParams(window.location.search).get('show');
+  if (showPanels) {
+    const panelsToShow = showPanels.split(',');
+    document.querySelectorAll('.lesson-page-panel.phon, .lesson-page-panel.vocab, .lesson-page-panel.sent').forEach((panel) => {
+      panel.hidden = !panelsToShow.some((panelType) => panel.classList.contains(panelType));
+    });
+  }
 </script>
 </body>
 </html>

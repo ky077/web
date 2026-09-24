@@ -147,8 +147,8 @@ body {
 	background-size: 100% auto;	
 }
 .page-content{ 
-	background-color: rgba($white, .65);
-	padding-bottom: map-get($spacers, 6);
+	padding-top: map-get($spacers, 3);
+	padding-bottom: map-get($spacers, 5);
 }
 
 // radio 選項

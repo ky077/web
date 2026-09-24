@@ -28,7 +28,8 @@
     var bodyClass = $("body").attr("class") || "";
 
     return bodyClass.split(/\s+/).indexOf('index') === -1 &&
-      bodyClass.split(/\s+/).indexOf('login') === -1;
+      bodyClass.split(/\s+/).indexOf('login') === -1 &&
+      bodyClass.split(/\s+/).indexOf('register') === -1;
   };
 
   var applyHeaderAuthState = function () {
@@ -136,7 +137,12 @@
 
   initCourseSelector();
 
-  $(document).on('click', '.btn-login-submit', function () {
+  $(document).on('submit', '#loginForm', function (event) {
+    event.preventDefault();
+    if (!this.checkValidity()) {
+      this.reportValidity();
+      return;
+    }
     setLoggedIn(true);
     window.location.href = 'index-logged.html';
   });
