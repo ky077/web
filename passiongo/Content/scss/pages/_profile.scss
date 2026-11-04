@@ -1,0 +1,110 @@
+.profile {
+  .profile-page-title {
+    color: #004b91;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    &::before {
+      content: "";
+      display: inline-block;
+      width: 1.5em;
+      height: 1.5em;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 100%;
+      margin-right: .125em;
+      background-image: url("../img/profile-icon.png");
+    }
+    > small {
+      color: $gray-700;
+      font-size: $font-size-base;
+      margin-left: .5em;
+    }
+  }
+	
+	.profile-avatar-fieldset{
+		border: $border-width solid $border-color;
+		padding: .625rem .75rem; 
+		legend {
+			float: none;
+			width: auto;
+			font-size: 1rem;
+			margin-bottom: 0;
+			color: $gray-600;
+			transform: scale(0.85);
+			transform-origin: 0 0;
+		}
+	}
+	.profile-avatar-options {
+		display: grid;
+		grid-template-columns: repeat(4, minmax(0, 1fr));
+		gap: 1rem;
+	}
+	.profile-avatar-option {
+		position: relative;
+		cursor: pointer;
+		input {
+			position: absolute;
+			opacity: 0;
+			width: 1px;
+			height: 1px;
+		}
+	}
+	.profile-avatar-card {
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		min-height: 10rem;
+		padding: 1rem;
+		border-radius: 1rem;
+		background: #f7f5f2;
+		transition: background-color .2s ease;
+		img {
+			width: 100%;
+			max-width: 120px;
+			aspect-ratio: 1;
+			object-fit: contain;
+		}
+	}
+	.profile-avatar-check {
+		visibility: hidden;
+		position: absolute;
+		top: .625rem;
+		right: .625rem;
+		display: grid;
+		place-items: center;
+		width: 1.75rem;
+		height: 1.75rem;
+		border-radius: 50%;
+		background: #004b91;
+		color: #fff;
+		font-size: .875rem;
+	}
+	.profile-avatar-option:hover .profile-avatar-card {
+  background: #edf2f7;
+	}
+	.profile-avatar-option input:checked + .profile-avatar-card {
+		background: #d8ebff;
+	}
+	.profile-avatar-option input:checked + .profile-avatar-card .profile-avatar-check {
+		visibility: visible;
+	}
+	.profile-avatar-option input:focus-visible + .profile-avatar-card {
+		outline: 3px solid #004b91;
+		outline-offset: 3px;
+	}
+	@media(max-width:575.98px) {
+		.profile-avatar-options {
+			grid-template-columns: repeat(2, minmax(0, 1fr));
+			gap: .75rem;
+		}
+	}
+	
+	.btn:hover {
+    transform: scale(1.05);
+	}
+}
+
+
+

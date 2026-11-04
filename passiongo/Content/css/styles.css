@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html, body { width: 100%; height: 100%; background-color: #fef9f5; scroll-behavior: smooth; font-size: 14px; letter-spacing: .05em; }
 @media screen and (min-width: 768px) { html, body { font-size: 16px; } }
 @media screen and (min-width: 1200px) { html, body { font-size: 18px; } }
@@ -337,3 +338,47 @@ footer { background-color: #fff; font-size: 0.75em; color: #675747; margin-top: 
 .modal-all-done .all-done-title { margin: 1rem auto; background-color: #fb4075; color: #fff; padding: 0.5rem 1.5rem; border-radius: 50rem; text-align: center; font-size: 2.5rem; max-width: 80%; border: 3px solid #fff; box-shadow: 0 0.5rem 1rem rgba(61, 49, 40, 0.15); }
 .modal-all-done .all-done-subtitle { color: #3d3128; text-align: center; }
 .modal-all-done .all-done-text { color: #3d3128; text-align: center; }
+
+.badges .badges-page-title { display: flex; flex-wrap: wrap; align-items: center; color: #3d3128; }
+.badges .badges-page-title::before { content: ""; display: inline-block; width: 1.5em; height: 1.5em; background-position: center; background-repeat: no-repeat; background-size: contain; flex-shrink: 0; margin-right: .125em; background-image: url("../img/badges-icon.png"); }
+.badges .badges-page-title > small { color: #675747; font-size: 1rem; margin-left: .5em; }
+.badges .badges-book { --badges-color: #d5eff9; --badges-label-color: #675747; --badges-bg: #d5eff9; --badges-text-color: #3d3128; display: flex; flex-direction: column; height: 100%; min-width: 0; padding: 0.75rem; border-top: 0.3rem solid var(--badges-color); border-radius: 0.5rem; background-color: var(--badges-bg); box-shadow: 0 0.125rem 0.25rem rgba(61, 49, 40, 0.075); }
+.badges .badges-book[data-course-term^="grade5-upper"] { --badges-color: #1b76bc; --badges-label-color: #1b76bc; --badges-bg: #1b76bc; --badges-text-color: #fff; }
+.badges .badges-book[data-course-term^="grade5-lower"] { --badges-color: #fcb040; --badges-label-color: #65461a; --badges-bg: #fcb040; }
+.badges .badges-book-heading { display: flex; flex-wrap: wrap; align-items: center; gap: .25rem .5rem; margin-bottom: 0.5rem; }
+.badges .badges-book-title { margin-bottom: 0; font-size: 1.25rem; font-weight: 700; color: var(--badges-text-color); }
+.badges .badges-book-lessons { white-space: nowrap; font-weight: 600; }
+.badges .badges-book-lessons::before { content: "︱"; }
+.badges .badges-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .5rem; margin: 0 0 0.5rem; padding: 0; list-style: none; }
+@media (min-width: 576px) { .badges .badges-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+@media (min-width: 768px) { .badges .badges-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (min-width: 992px) { .badges .badges-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+.badges .badges-stamp { min-width: 0; padding: .25rem; border: 1px solid var(--badges-color); border-radius: 0.25rem; background-color: #fff; text-align: center; box-shadow: 0 0.125rem 0.25rem rgba(61, 49, 40, 0.175); }
+.badges .badges-stamp[data-badge-status="locked"] { box-shadow: inset 0.125rem 0.125rem 0.25rem rgba(61, 49, 40, 0.25); }
+.badges .badges-stamp[data-badge-status="locked"] .badges-stamp-art { filter: brightness(0); opacity: .25; }
+.badges .badges-stamp-unit { display: block; color: var(--badges-label-color); font-size: 0.875rem; font-weight: 800; line-height: 1.25; letter-spacing: 0; }
+.badges .badges-stamp-art { position: relative; display: flex; flex-direction: column; align-items: center; height: 5rem; }
+@media (min-width: 992px) { .badges .badges-stamp-art { height: 6rem; } }
+.badges .badges-stamp-art > img { display: block; width: 100%; height: 100%; min-height: 0; object-fit: contain; }
+.badges .badges-stamp-message { position: absolute; top: 0; z-index: 1; color: #822d29; font-size: .625rem; font-weight: 800; line-height: 1.1; letter-spacing: 0; }
+.badges .badges-stamp-message + img { padding-top: .625rem; }
+.badges .badges-book-progress { margin: auto 0 0; text-align: right; font-size: 0.875rem; font-weight: 600; color: var(--badges-text-color); }
+.badges .badges-book-progress > span { margin-left: .25em; margin-right: .25em; }
+
+.profile .profile-page-title { color: #004b91; display: flex; flex-wrap: wrap; align-items: center; }
+.profile .profile-page-title::before { content: ""; display: inline-block; width: 1.5em; height: 1.5em; background-position: center; background-repeat: no-repeat; background-size: 100%; margin-right: .125em; background-image: url("../img/profile-icon.png"); }
+.profile .profile-page-title > small { color: #675747; font-size: 1rem; margin-left: .5em; }
+.profile .profile-avatar-fieldset { border: 1px solid #ded3c5; padding: .625rem .75rem; }
+.profile .profile-avatar-fieldset legend { float: none; width: auto; font-size: 1rem; margin-bottom: 0; color: #806f5e; transform: scale(0.85); transform-origin: 0 0; }
+.profile .profile-avatar-options { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1rem; }
+.profile .profile-avatar-option { position: relative; cursor: pointer; }
+.profile .profile-avatar-option input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+.profile .profile-avatar-card { position: relative; display: flex; align-items: center; justify-content: center; min-height: 10rem; padding: 1rem; border-radius: 1rem; background: #f7f5f2; transition: background-color .2s ease; }
+.profile .profile-avatar-card img { width: 100%; max-width: 120px; aspect-ratio: 1; object-fit: contain; }
+.profile .profile-avatar-check { visibility: hidden; position: absolute; top: .625rem; right: .625rem; display: grid; place-items: center; width: 1.75rem; height: 1.75rem; border-radius: 50%; background: #004b91; color: #fff; font-size: .875rem; }
+.profile .profile-avatar-option:hover .profile-avatar-card { background: #edf2f7; }
+.profile .profile-avatar-option input:checked + .profile-avatar-card { background: #d8ebff; }
+.profile .profile-avatar-option input:checked + .profile-avatar-card .profile-avatar-check { visibility: visible; }
+.profile .profile-avatar-option input:focus-visible + .profile-avatar-card { outline: 3px solid #004b91; outline-offset: 3px; }
+@media (max-width: 575.98px) { .profile .profile-avatar-options { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .75rem; } }
+.profile .btn:hover { transform: scale(1.05); }

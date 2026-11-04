@@ -102,6 +102,7 @@
 <script src="Content/js/main.js"></script>
 <script src="Content/js/lesson-quiz-renderer.js"></script>
 <script>
+	//載入課程地圖資料後，依目前的 term 動態更新頁面導覽
   fetch('Content/js/course-map.json', { cache: 'no-store' })
     .then(function (response) { return response.json(); })
     .then(function (courseMap) {

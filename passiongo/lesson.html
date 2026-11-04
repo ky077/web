@@ -189,6 +189,7 @@
     var fullLessonTitle = lessonLabel + ' ' + lessonData.lesson.title;
     var termLink = document.querySelector('.lesson-term-link');
 
+		//讓 lesson 頁面的「回到學期／課程地圖」及相關內容連結，都對應到目前正在查看的學期
     if (termLink) {
       var lessons = (term.units || []).reduce(function (allLessons, unit) {
         return allLessons.concat(unit.lessons || []);

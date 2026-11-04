@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="utf-8">
+<title>PASSION GO! 教材線上練習平台</title>
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<meta content="聽、說、讀、寫，和 AI 一起快樂學英語！" name="description">
+<meta content="聽,說,讀,寫,AI,英語,家教,PASSION,教材,線上,練習" name="keywords">
+<link href="Content/img/favicon.ico" rel="icon">
+
+<!-- Open Graph -->
+<meta property="og:title" content="PASSION GO! 教材線上練習平台" />
+<meta property="og:description" content="聽、說、讀、寫，和 AI 一起快樂學英語！" />
+<meta property="og:image" content="Content/img/logo.png" />
+<meta property="og:url" content="http://140.122.118.47/passiongo/index.aspx" />
+<meta property="og:type" content="website" />
+
+<!-- Google Web Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Noto+Sans+TC:wght@100..900&display=swap">
+
+<!-- Icon Font Stylesheet -->
+<link rel="stylesheet" href="Content/lib/font-awesome-7.3.0/css/all.min.css">
+
+<!-- Customized Bootstrap Stylesheet -->
+<link rel="stylesheet" href="Content/css/bootstrap-custom.css">
+
+<!-- This web Core Stylesheet -->
+<link rel="stylesheet" href="Content/css/styles.css">
+</head>
+
+<body class="profile">
+<!-- Spinner Start -->
+<div id="spinner" class="show">
+  <div class="spinner-ip" role="status">
+    <span class="visually">Loading</span>
+  </div>
+</div>
+<!-- Spinner End -->
+
+<header>
+</header>
+<main>
+  <!-- page-header Start -->
+  <div class="page-header">
+  </div>
+  <!-- page-header End -->
+  <!-- page-content badges Start -->
+  <div class="page-content">
+    <div class="container-xl">
+      <!-- -->
+      <h2 class="profile-page-title">修改個人資料<small>更新你的個人資料、頭像與密碼。</small></h2>
+      <!-- -->
+      <div class="mb-5">
+        <ul class="nav nav-tabs" id="profileTabs" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="profile-info-tab" data-bs-toggle="tab" data-bs-target="#profile-info-pane" type="button" role="tab" aria-controls="profile-info-pane" aria-selected="true">個人資料</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="profile-password-tab" data-bs-toggle="tab" data-bs-target="#profile-password-pane" type="button" role="tab" aria-controls="profile-password-pane" aria-selected="false">密碼</button>
+          </li>
+        </ul>
+        <div class="tab-content card p-5 rounded-top-0 border-top-0" id="profileTabsContent">
+          <div class="tab-pane fade show active" id="profile-info-pane" role="tabpanel" aria-labelledby="profile-info-tab" tabindex="0">
+            <div class="form-floating mb-4">
+              <input type="email" class="form-control rounded-4" id="floatingAccount" placeholder="name@example.com" value="ming@gmail.com" disabled>
+              <label for="floatingAccount">帳號/email</label>
+            </div>
+            <div class="form-floating mb-4">
+              <input type="text" class="form-control rounded-4" id="floatingName" placeholder="" value="王小明">
+              <label for="floatingName">姓名</label>
+            </div>
+            <div class="form-floating mb-4">
+              <input type="date" class="form-control rounded-4" id="floatingYear" placeholder="" value="2016-11-03">
+              <label for="floatingYear">生日</label>
+            </div>
+            <div class="form-floating mb-4">
+              <input type="text" class="form-control rounded-4" id="floatingSchool" placeholder="" value="師範附小">
+              <label for="floatingSchool">學校</label>
+            </div>
+            <div class="profile-avatar-fieldset rounded-4 mb-4">
+              <legend>更改頭像</legend>
+              <div class="profile-avatar-options">
+                <label class="profile-avatar-option">
+                  <input type="radio" name="avatar" value="student-1.png" aria-label="頭像 1" checked>
+                  <span class="profile-avatar-card"><img src="Content/img/avatar/student-1.png" alt=""><span class="profile-avatar-check" aria-hidden="true"><i class="fa-solid fa-check"></i></span></span></label>
+                <label class="profile-avatar-option">
+                  <input type="radio" name="avatar" value="student-2.png" aria-label="頭像 2">
+                  <span class="profile-avatar-card"><img src="Content/img/avatar/student-2.png" alt=""><span class="profile-avatar-check" aria-hidden="true"><i class="fa-solid fa-check"></i></span></span></label>
+                <label class="profile-avatar-option">
+                  <input type="radio" name="avatar" value="student-3.png" aria-label="頭像 3">
+                  <span class="profile-avatar-card"><img src="Content/img/avatar/student-3.png" alt=""><span class="profile-avatar-check" aria-hidden="true"><i class="fa-solid fa-check"></i></span></span></label>
+                <label class="profile-avatar-option">
+                  <input type="radio" name="avatar" value="student-4.png" aria-label="頭像 4">
+                  <span class="profile-avatar-card"><img src="Content/img/avatar/student-4.png" alt=""><span class="profile-avatar-check" aria-hidden="true"><i class="fa-solid fa-check"></i></span></span></label>
+              </div>
+            </div>
+            <button class="btn btn-primary btn-lg rounded-4 w-100" type="button">修改個人資料</button>
+          </div>
+          <div class="tab-pane fade" id="profile-password-pane" role="tabpanel" aria-labelledby="profile-password-tab" tabindex="0">
+            <div class="input-group mb-4 input-group-password">
+              <div class="form-floating">
+                <input type="password" class="form-control rounded-4" id="profileCurrentPassword" placeholder="目前密碼" autocomplete="current-password">
+                <label for="profileCurrentPassword">目前密碼</label>
+              </div>
+              <button class="btn rounded-end-4 btn-showHidePD" type="button" aria-label="顯示密碼" aria-pressed="false" aria-controls="profileCurrentPassword">
+                <i class="fa-solid fa-eye" aria-hidden="true"></i>
+              </button>
+            </div>
+            <div class="input-group mb-4 input-group-password">
+              <div class="form-floating">
+                <input type="password" class="form-control rounded-4" id="profileNewPassword" placeholder="新密碼" autocomplete="new-password">
+                <label for="profileNewPassword">新密碼</label>
+              </div>
+              <button class="btn rounded-end-4 btn-showHidePD" type="button" aria-label="顯示密碼" aria-pressed="false" aria-controls="profileNewPassword">
+                <i class="fa-solid fa-eye" aria-hidden="true"></i>
+              </button>
+            </div>
+            <div class="input-group mb-4 input-group-password">
+              <div class="form-floating">
+                <input type="password" class="form-control rounded-4" id="profileConfirmPassword" placeholder="確認新密碼" autocomplete="new-password">
+                <label for="profileConfirmPassword">確認新密碼</label>
+              </div>
+              <button class="btn rounded-end-4 btn-showHidePD" type="button" aria-label="顯示密碼" aria-pressed="false" aria-controls="profileConfirmPassword">
+                <i class="fa-solid fa-eye" aria-hidden="true"></i>
+              </button>
+            </div>
+            <button class="btn btn-primary btn-lg rounded-4 w-100" type="button">修改密碼</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- page-content badges End -->
+</main>
+<!-- ------- ------- ------- ------- ------- ------- ------- -->
+<!-- ------- ------- ------- ------- ------- ------- ------- -->
+<!-- ------- ------- ------- ------- ------- ------- ------- -->
+<!-- JavaScript Libraries -->
+<script src="Content/js/jquery-3.4.1.min.js"></script>
+<script src="Content/lib/bootstrap-5.3.8/js/bootstrap.bundle.min.js"></script>
+
+<!-- This web Javascript -->
+<script src="Content/js/main.js"></script>
+<footer>
+</footer>
+</body>
+</html>
