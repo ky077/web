@@ -24,11 +24,6 @@
 	}
 
 	.badges-book{
-		// 六上、六下共用淺藍底色；五年級依冊別覆寫。
-		--badges-color: #d5eff9;
-		--badges-label-color: #{$gray-700};
-		--badges-bg: #d5eff9;
-		--badges-text-color: #{$gray-900};
 		display: flex;
 		flex-direction: column;
 		height: 100%;
@@ -38,16 +33,33 @@
 		border-radius: $border-radius-lg;
 		background-color: var(--badges-bg);
 		box-shadow: $box-shadow-sm;
+		// 五上
 		&[data-course-term^="grade5-upper"]{
 			--badges-color: #1b76bc;
 			--badges-label-color: #1b76bc;
 			--badges-bg: #1b76bc;
 			--badges-text-color: #{$white};
 		}
+		// 五下
 		&[data-course-term^="grade5-lower"]{
 			--badges-color: #fcb040;
-			--badges-label-color: #{shade-color(#fcb040, 60%)};
+			--badges-label-color: #fcb040;
 			--badges-bg: #fcb040;
+			--badges-text-color: #{$gray-900};
+		}
+		// 六上
+		&[data-course-term="grade6-upper"]{
+			--badges-color: #d5eff9;
+			--badges-label-color: #{$cyan};
+			--badges-bg: #d5eff9;
+			--badges-text-color: #{$blue};
+		}
+		// 六下
+		&[data-course-term="grade6-lower"]{
+			--badges-color: #d5eff9;
+			--badges-label-color: #{$cyan};
+			--badges-bg: #d5eff9;
+			--badges-text-color: #{$blue};
 		}
 	}
 	.badges-book-heading{

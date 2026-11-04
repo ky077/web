@@ -342,9 +342,11 @@ footer { background-color: #fff; font-size: 0.75em; color: #675747; margin-top: 
 .badges .badges-page-title { display: flex; flex-wrap: wrap; align-items: center; color: #3d3128; }
 .badges .badges-page-title::before { content: ""; display: inline-block; width: 1.5em; height: 1.5em; background-position: center; background-repeat: no-repeat; background-size: contain; flex-shrink: 0; margin-right: .125em; background-image: url("../img/badges-icon.png"); }
 .badges .badges-page-title > small { color: #675747; font-size: 1rem; margin-left: .5em; }
-.badges .badges-book { --badges-color: #d5eff9; --badges-label-color: #675747; --badges-bg: #d5eff9; --badges-text-color: #3d3128; display: flex; flex-direction: column; height: 100%; min-width: 0; padding: 0.75rem; border-top: 0.3rem solid var(--badges-color); border-radius: 0.5rem; background-color: var(--badges-bg); box-shadow: 0 0.125rem 0.25rem rgba(61, 49, 40, 0.075); }
+.badges .badges-book { display: flex; flex-direction: column; height: 100%; min-width: 0; padding: 0.75rem; border-top: 0.3rem solid var(--badges-color); border-radius: 0.5rem; background-color: var(--badges-bg); box-shadow: 0 0.125rem 0.25rem rgba(61, 49, 40, 0.075); }
 .badges .badges-book[data-course-term^="grade5-upper"] { --badges-color: #1b76bc; --badges-label-color: #1b76bc; --badges-bg: #1b76bc; --badges-text-color: #fff; }
-.badges .badges-book[data-course-term^="grade5-lower"] { --badges-color: #fcb040; --badges-label-color: #65461a; --badges-bg: #fcb040; }
+.badges .badges-book[data-course-term^="grade5-lower"] { --badges-color: #fcb040; --badges-label-color: #fcb040; --badges-bg: #fcb040; --badges-text-color: #3d3128; }
+.badges .badges-book[data-course-term="grade6-upper"] { --badges-color: #d5eff9; --badges-label-color: #40b5ff; --badges-bg: #d5eff9; --badges-text-color: #007df2; }
+.badges .badges-book[data-course-term="grade6-lower"] { --badges-color: #d5eff9; --badges-label-color: #40b5ff; --badges-bg: #d5eff9; --badges-text-color: #007df2; }
 .badges .badges-book-heading { display: flex; flex-wrap: wrap; align-items: center; gap: .25rem .5rem; margin-bottom: 0.5rem; }
 .badges .badges-book-title { margin-bottom: 0; font-size: 1.25rem; font-weight: 700; color: var(--badges-text-color); }
 .badges .badges-book-lessons { white-space: nowrap; font-weight: 600; }
