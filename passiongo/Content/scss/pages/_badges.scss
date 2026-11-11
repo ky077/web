@@ -111,8 +111,8 @@
 		box-shadow: 0 .125rem .25rem rgba($dark, .175);
 		&[data-badge-status="locked"] {
 			box-shadow: inset .125rem .125rem .25rem rgba($dark, .25);
-			.badges-stamp-art{ // 灰色剪影只作用於貼圖；Unit 編號維持冊別色彩。
-				filter: brightness(0);
+			.badges-stamp-art{ // 灰階淡化只作用於貼圖，兼容透明與白底 PNG；Unit 編號維持冊別色彩。
+				filter: grayscale(1);
 				opacity: .25;
 			}
 		}
