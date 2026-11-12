@@ -112,8 +112,10 @@
 		&[data-badge-status="locked"] {
 			box-shadow: inset .125rem .125rem .25rem rgba($dark, .25);
 			.badges-stamp-art{ // 灰階淡化只作用於貼圖，兼容透明與白底 PNG；Unit 編號維持冊別色彩。
-				filter: grayscale(1);
-				opacity: .25;
+				> img { 
+					filter: grayscale(1);
+					opacity: .25; 
+				}
 			}
 		}
 	}
