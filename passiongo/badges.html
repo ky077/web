@@ -73,25 +73,25 @@
                 </div>
               </li>
               <li class="badges-stamp" data-unit="U3" data-badge-status="done">
-                <span class="badges-stamp-unit">U3<span class="visually-hidden">，未集章</span></span>
+                <span class="badges-stamp-unit">U3<span class="visually-hidden">，已集章</span></span>
                 <div class="badges-stamp-art" aria-hidden="true">
                   <img src="Content/img/badges/grade5-upper-1/09_Great_Job.png" width="768" height="768" alt=""/>
                 </div>
               </li>
               <li class="badges-stamp" data-unit="U4" data-badge-status="done">
-                <span class="badges-stamp-unit">U4<span class="visually-hidden">，未集章</span></span>
+                <span class="badges-stamp-unit">U4<span class="visually-hidden">，已集章</span></span>
                 <div class="badges-stamp-art" aria-hidden="true">
                   <img src="Content/img/badges/grade5-upper-1/11_You_Rock.png" width="768" height="768" alt=""/>
                 </div>
               </li>
               <li class="badges-stamp" data-unit="U5" data-badge-status="done">
-                <span class="badges-stamp-unit">U5<span class="visually-hidden">，未集章</span></span>
+                <span class="badges-stamp-unit">U5<span class="visually-hidden">，已集章</span></span>
                 <div class="badges-stamp-art" aria-hidden="true">
                   <img src="Content/img/badges/grade5-upper-1/04_Outstanding.png" width="768" height="768" alt=""/>
                 </div>
               </li>
               <li class="badges-stamp" data-unit="U6" data-badge-status="done">
-                <span class="badges-stamp-unit">U6<span class="visually-hidden">，未集章</span></span>
+                <span class="badges-stamp-unit">U6<span class="visually-hidden">，已集章</span></span>
                 <div class="badges-stamp-art" aria-hidden="true">
                   <img src="Content/img/badges/grade5-upper-1/12_Way_to_Go.png" width="768" height="768" alt=""/>
                 </div>
@@ -107,7 +107,7 @@
             </div>
             <ul class="badges-grid badges-grid-8" role="list">
               <li class="badges-stamp" data-unit="U7" data-badge-status="done">
-                <span class="badges-stamp-unit">U7<span class="visually-hidden">，未集章</span></span>
+                <span class="badges-stamp-unit">U7<span class="visually-hidden">，已集章</span></span>
                 <div class="badges-stamp-art" aria-hidden="true">
                   <img src="Content/img/badges/grade5-upper-2/14_Keep_It_Up.png" width="768" height="768" alt=""/>
                 </div>
@@ -119,7 +119,7 @@
                 </div>
               </li>
               <li class="badges-stamp" data-unit="U9" data-badge-status="done">
-                <span class="badges-stamp-unit">U9<span class="visually-hidden">，未集章</span></span>
+                <span class="badges-stamp-unit">U9<span class="visually-hidden">，已集章</span></span>
                 <div class="badges-stamp-art" aria-hidden="true">
                   <img src="Content/img/badges/grade5-upper-2/10_Awesome.png" width="768" height="768" alt=""/>
                 </div>
@@ -467,5 +467,22 @@
 
 <!-- This web Javascript -->
 <script src="Content/js/main.js"></script>
+<script>
+(function ($) {
+  "use strict";
+
+  // Demo：badges.html?done=all 顯示全部集章完成。
+  if (new URLSearchParams(window.location.search).get('done') !== 'all') return;
+
+  $('.badges-book').each(function () {
+    var $book = $(this);
+    var $stamps = $book.find('.badges-stamp');
+
+    $stamps.attr('data-badge-status', 'done');
+    $stamps.find('.badges-stamp-unit .visually-hidden').text('，已集章');
+    $book.find('.badges-book-progress > span').text($stamps.length);
+  });
+})(jQuery);
+</script>
 </body>
 </html>
